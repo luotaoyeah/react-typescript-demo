@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 50px !important;
+  font-family: 宋体, sans-serif !important;
+}
+
+.chosen-select {
+  width: 200px;
+}
