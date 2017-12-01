@@ -5,54 +5,67 @@ import {
   Link,
   Route
 } from 'react-router-dom';
+import {
+  Button,
+  Dropdown,
+  Menu
+} from 'antd';
 import Basic from './components/react-router/basic';
 import UrlParameter from './components/react-router/url-parameter';
+import Redirects from './components/react-router/redirect';
 
 interface Props {
-
 }
 
 interface State {
-  time: string;
 }
 
 class App extends React.Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = {
-      time: new Date().toLocaleTimeString()
-    };
-  }
-
-  componentDidMount() {
-    setInterval(
-      () => {
-        this.setState({
-          time: new Date().toLocaleTimeString()
-        });
-      },
-      1000
-    );
-  }
+  menus: JSX.Element = (
+    <Menu
+      mode="vertical"
+      style={
+        {
+          width: '120px'
+        }
+      }
+    >
+      <Menu.SubMenu
+        key="react-router"
+        title="react-router"
+      >
+        <Menu.Item key="1">
+          <Link to="/basic">{Basic.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="2">
+          <Link to="/url-parameter">{UrlParameter.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="3">
+          <Link to="/redirect">{Redirects.name}</Link>
+        </Menu.Item>
+      </Menu.SubMenu>
+    </Menu>
+  );
 
   render() {
     return (
       <div>
-        <div className="Border">{this.state.time}</div>
-        <hr/>
         <Router>
           <div>
-            <ol
-              style={
-                {
-                  listStyle: 'initial'
-                }
-              }
+            <Dropdown
+              overlay={this.menus}
+              placement="bottomLeft"
             >
-              <li><Link to="/basic">{Basic.name}</Link></li>
-              <li><Link to="/url-parameter">{UrlParameter.name}</Link></li>
-            </ol>
-            <hr/>
+              <Button
+                style={
+                  {
+                    width: '100%'
+                  }
+                }
+              >
+                Contents
+              </Button>
+            </Dropdown>
 
             <Route
               path="/basic"
@@ -61,6 +74,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/url-parameter"
               component={UrlParameter}
+            />
+            <Route
+              path="/redirect"
+              component={Redirects}
             />
           </div>
         </Router>
