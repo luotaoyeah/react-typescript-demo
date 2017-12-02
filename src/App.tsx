@@ -15,6 +15,7 @@ import UrlParameter from './components/react-router/url-parameter';
 import Redirects from './components/react-router/redirect';
 import CustomLinkComponent from './components/react-router/custom-link';
 import PreventTransition from './components/react-router/prevent-transition';
+import NotMatch from './components/react-router/404';
 
 interface Props {
 }
@@ -50,6 +51,9 @@ class App extends React.Component<Props, State> {
         </Menu.Item>
         <Menu.Item key="5">
           <Link to="/prevent-transition">{PreventTransition.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="6">
+          <Link to="/not-match">{NotMatch.name}</Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -95,6 +99,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/prevent-transition"
               component={PreventTransition}
+            />
+            <Route
+              path="/not-match"
+              component={NotMatch}
             />
           </div>
         </Router>
