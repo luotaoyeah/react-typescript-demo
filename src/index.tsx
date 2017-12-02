@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import 'antd/dist/antd.css';
+import './assets/iconfont/iconfont.css';
 import App from './App';
 
 ReactDOM.render(
