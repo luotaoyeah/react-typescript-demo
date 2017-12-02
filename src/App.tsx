@@ -14,6 +14,7 @@ import Basic from './components/react-router/basic';
 import UrlParameter from './components/react-router/url-parameter';
 import Redirects from './components/react-router/redirect';
 import CustomLinkComponent from './components/react-router/custom-link';
+import PreventTransition from './components/react-router/prevent-transition';
 
 interface Props {
 }
@@ -46,6 +47,9 @@ class App extends React.Component<Props, State> {
         </Menu.Item>
         <Menu.Item key="4">
           <Link to="/custom-link">{CustomLinkComponent.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="5">
+          <Link to="/prevent-transition">{PreventTransition.name}</Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -87,6 +91,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/custom-link"
               component={CustomLinkComponent}
+            />
+            <Route
+              path="/prevent-transition"
+              component={PreventTransition}
             />
           </div>
         </Router>
