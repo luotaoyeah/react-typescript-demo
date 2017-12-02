@@ -29,7 +29,10 @@ class UserInfo extends React.Component <Props & RouteComponentProps<any>, State>
       <div>
         {
           AuthenticationService.isAuthenticated ?
-            <Button onClick={this.handleClick}>Log out</Button>
+            <div>
+              welcome
+              <Button onClick={this.handleClick}>Log out</Button>
+            </div>
             :
             null
         }

@@ -13,6 +13,7 @@ import {
 import Basic from './components/react-router/basic';
 import UrlParameter from './components/react-router/url-parameter';
 import Redirects from './components/react-router/redirect';
+import CustomLinkComponent from './components/react-router/custom-link';
 
 interface Props {
 }
@@ -43,6 +44,9 @@ class App extends React.Component<Props, State> {
         <Menu.Item key="3">
           <Link to="/redirect">{Redirects.name}</Link>
         </Menu.Item>
+        <Menu.Item key="4">
+          <Link to="/custom-link">{CustomLinkComponent.name}</Link>
+        </Menu.Item>
       </Menu.SubMenu>
     </Menu>
   );
@@ -55,6 +59,7 @@ class App extends React.Component<Props, State> {
             <Dropdown
               overlay={this.menus}
               placement="bottomLeft"
+              trigger={['click']}
             >
               <Button
                 style={
@@ -78,6 +83,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/redirect"
               component={Redirects}
+            />
+            <Route
+              path="/custom-link"
+              component={CustomLinkComponent}
             />
           </div>
         </Router>
