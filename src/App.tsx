@@ -16,6 +16,7 @@ import Redirects from './components/react-router/redirect';
 import CustomLinkComponent from './components/react-router/custom-link';
 import PreventTransition from './components/react-router/prevent-transition';
 import NotMatch from './components/react-router/404';
+import Sidebar from './components/react-router/sidebar';
 
 interface Props {
 }
@@ -54,6 +55,9 @@ class App extends React.Component<Props, State> {
         </Menu.Item>
         <Menu.Item key="6">
           <Link to="/not-match">{NotMatch.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="7">
+          <Link to="/sidebar">{Sidebar.name}</Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -103,6 +107,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/not-match"
               component={NotMatch}
+            />
+            <Route
+              path="/sidebar"
+              component={Sidebar}
             />
           </div>
         </Router>
