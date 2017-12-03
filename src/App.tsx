@@ -17,6 +17,7 @@ import CustomLinkComponent from './components/react-router/custom-link';
 import PreventTransition from './components/react-router/prevent-transition';
 import NotMatch from './components/react-router/404';
 import Sidebar from './components/react-router/sidebar';
+import AnimateTransition from './components/react-router/animate-transition';
 
 interface Props {
 }
@@ -58,6 +59,9 @@ class App extends React.Component<Props, State> {
         </Menu.Item>
         <Menu.Item key="7">
           <Link to="/sidebar">{Sidebar.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="8">
+          <Link to="/animate-transition">{AnimateTransition.name}</Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -111,6 +115,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/sidebar"
               component={Sidebar}
+            />
+            <Route
+              path="/animate-transition"
+              component={AnimateTransition}
             />
           </div>
         </Router>
