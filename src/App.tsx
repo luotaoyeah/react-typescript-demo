@@ -82,7 +82,12 @@ class App extends React.Component<Props, State> {
         <Router
           getUserConfirmation={
             /*
-             * customize prompt for 'Prompt' using 'Modal.confirm()' from 'antd'
+             * A function to use to confirm navigation.
+             * Defaults to using 'window.confirm'.
+             */
+
+            /*
+             * Customize prompt for 'Prompt' using 'Modal.confirm()' from 'antd'
              */
             (message: string, callback: (ok: boolean) => void) => {
               Modal.confirm({
@@ -98,6 +103,13 @@ class App extends React.Component<Props, State> {
                 }
               });
             }
+          }
+          forceRefresh={
+            /*
+             * If true the router will use full page refreshes on page navigation.
+             * You probably only want this in browsers that don’t support the HTML5 history API.
+             */
+            false
           }
         >
           <div>
