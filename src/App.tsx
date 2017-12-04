@@ -8,7 +8,8 @@ import {
 import {
   Button,
   Dropdown,
-  Menu
+  Menu,
+  Modal
 } from 'antd';
 import Basic from './components/react-router/basic';
 import UrlParameter from './components/react-router/url-parameter';
@@ -78,7 +79,27 @@ class App extends React.Component<Props, State> {
   render() {
     return (
       <div>
-        <Router>
+        <Router
+          getUserConfirmation={
+            /*
+             * customize prompt for 'Prompt' using 'Modal.confirm()' from 'antd'
+             */
+            (message: string, callback: (ok: boolean) => void) => {
+              Modal.confirm({
+                title: 'CONFIRM TO LEAVE',
+                content: message,
+                okText: 'OK',
+                cancelText: 'CANCEL',
+                onOk() {
+                  callback(true);
+                },
+                onCancel() {
+                  callback(false);
+                }
+              });
+            }
+          }
+        >
           <div>
             <Dropdown
               overlay={this.menus}
