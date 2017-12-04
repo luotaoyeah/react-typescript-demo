@@ -19,18 +19,18 @@ class MultipleInput extends React.Component <Props, State> {
   }
 
   handleChange(e: React.SyntheticEvent<HTMLSelectElement | HTMLInputElement>) {
-/*
-    const type = (e.target as (HTMLSelectElement | HTMLInputElement)).type;
-    if (type === 'checkbox') {
-      this.setState({
-        booleanValue: (e.target as HTMLInputElement).checked
-      });
-    } else {
-      this.setState({
-        numberValue: Number((e.target as HTMLInputElement).value)
-      });
-    }
-*/
+    /*
+        const type = (e.target as (HTMLSelectElement | HTMLInputElement)).type;
+        if (type === 'checkbox') {
+          this.setState({
+            booleanValue: (e.target as HTMLInputElement).checked
+          });
+        } else {
+          this.setState({
+            numberValue: Number((e.target as HTMLInputElement).value)
+          });
+        }
+    */
   }
 
   render() {
