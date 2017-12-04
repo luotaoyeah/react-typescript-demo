@@ -19,6 +19,7 @@ import NotMatch from './components/react-router/404';
 import Sidebar from './components/react-router/sidebar';
 import AnimateTransition from './components/react-router/animate-transition';
 import AmbiguousMatch from './components/react-router/ambiguous-match';
+import ModalGallery from './components/react-router/modal-gallery';
 
 interface Props {
 }
@@ -66,6 +67,9 @@ class App extends React.Component<Props, State> {
         </Menu.Item>
         <Menu.Item key="9">
           <Link to="/ambiguous-match">{AmbiguousMatch.name}</Link>
+        </Menu.Item>
+        <Menu.Item key="10">
+          <Link to="/modal-gallery">{ModalGallery.name}</Link>
         </Menu.Item>
       </Menu.SubMenu>
     </Menu>
@@ -127,6 +131,10 @@ class App extends React.Component<Props, State> {
             <Route
               path="/ambiguous-match"
               component={AmbiguousMatch}
+            />
+            <Route
+              path="/modal-gallery"
+              component={ModalGallery}
             />
           </div>
         </Router>
