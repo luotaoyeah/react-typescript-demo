@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { Render } from './Render';
 import { RouteComponentProps } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { RouteComponentProps } from 'react-router-dom';
 import { Image } from './Image';
 import { ImageService } from './ImageService';

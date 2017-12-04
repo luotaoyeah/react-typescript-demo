@@ -7,15 +7,12 @@ interface Props {
 interface State {
 }
 
-interface RouteParam {
-  id: string;
-}
-
-export class Child extends React.Component<Props & RouteComponentProps<RouteParam>, State> {
+export default class ApiLink extends React.Component<Props & RouteComponentProps<any>, State> {
   render() {
     return (
       <div>
-        id:{this.props.match.params.id}
+        <h1>NotFound</h1>
+        <div className="Border">TODO</div>
       </div>
     );
   }

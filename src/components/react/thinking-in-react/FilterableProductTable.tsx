@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Product from './Product';
 import ProductTable from './ProductTable';
 import SearchBar from './SearchBar';

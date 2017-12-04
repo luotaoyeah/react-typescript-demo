@@ -1,6 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import Product from './Product';
-import * as _ from 'lodash';
+import _ from 'lodash';
 import ProductCategoryRow from './ProductCategoryRow';
 import ProductByCategory from './ProductByCategory';
 

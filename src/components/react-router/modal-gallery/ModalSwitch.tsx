@@ -1,10 +1,10 @@
-import * as React from 'react';
+import React from 'react';
 import {
   Route,
   RouteComponentProps,
   Switch
 } from 'react-router-dom';
-import * as History from 'history';
+import History from 'history';
 import { Gallery } from './Gallery';
 import { ModalView } from './ModalView';
 import { Home } from './Home';
