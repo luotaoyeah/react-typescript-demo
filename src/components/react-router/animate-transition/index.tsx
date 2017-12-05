@@ -22,13 +22,7 @@ export default class AnimateTransition extends React.Component<Props & RouteComp
         <Route
           render={({ location }: RouteComponentProps<any>) => (
             <div
-              style={{
-                position: 'absolute',
-                left: 0,
-                right: 0,
-                top: '50px',
-                bottom: 0
-              }}
+              style={{}}
             >
               <Route
                 exact={true}
@@ -42,8 +36,6 @@ export default class AnimateTransition extends React.Component<Props & RouteComp
                 style={{
                   padding: 0,
                   margin: 0,
-                  position: 'absolute',
-                  top: '50px',
                   height: '40px',
                   width: '100%',
                   display: 'flex'
@@ -58,18 +50,13 @@ export default class AnimateTransition extends React.Component<Props & RouteComp
 
               <div
                 style={{
-                  position: 'absolute',
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
-                  top: '90px',
                   textAlign: 'center'
                 }}
               >
                 <CSSTransitionGroup
                   transitionName="fade"
                   transitionEnterTimeout={1000}
-                  transitionLeaveTimeout={1000}
+                  transitionLeaveTimeout={0}
                 >
                   <Route
                     location={location}
