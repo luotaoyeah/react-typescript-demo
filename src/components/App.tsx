@@ -1,25 +1,32 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
-  Link,
+  BrowserRouter,
+  NavLink,
   Route
 } from 'react-router-dom';
 import {
-  Button,
-  Dropdown,
+  Breadcrumb,
+  Icon,
+  Layout,
   Menu,
   Modal
 } from 'antd';
-import Basic from './react-router/basic/index';
-import UrlParameter from './react-router/url-parameter/index';
-import Redirects from './react-router/redirect/index';
-import CustomLinkComponent from './react-router/custom-link/index';
-import PreventTransition from './react-router/prevent-transition/index';
-import NotMatch from './react-router/404/index';
-import Sidebar from './react-router/sidebar/index';
-import AnimateTransition from './react-router/animate-transition/index';
-import AmbiguousMatch from './react-router/ambiguous-match/index';
-import ModalGallery from './react-router/modal-gallery/index';
+import Basic from './react-router/basic';
+import UrlParameter from './react-router/url-parameter';
+import Redirects from './react-router/redirect';
+import CustomLinkComponent from './react-router/custom-link';
+import PreventTransition from './react-router/prevent-transition';
+import NotMatch from './react-router/404';
+import Sidebar from './react-router/sidebar';
+import AnimateTransition from './react-router/animate-transition';
+import AmbiguousMatch from './react-router/ambiguous-match';
+import ModalGallery from './react-router/modal-gallery';
+
+const Header = Layout.Header;
+const Content = Layout.Content;
+const Sider = Layout.Sider;
+const SubMenu = Menu.SubMenu;
+const MenuItem = Menu.Item;
 
 interface Props {
 }
@@ -28,149 +35,169 @@ interface State {
 }
 
 class App extends React.Component<Props, State> {
-  menus: JSX.Element = (
-    <Menu
-      mode="vertical"
-      style={
-        {
-          width: '120px'
-        }
-      }
-    >
-      <Menu.SubMenu
-        key="react-router"
-        title="react-router"
-      >
-        <Menu.Item key="1">
-          <Link to="/basic">{Basic.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="2">
-          <Link to="/url-parameter">{UrlParameter.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="3">
-          <Link to="/redirect">{Redirects.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="4">
-          <Link to="/custom-link">{CustomLinkComponent.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="5">
-          <Link to="/prevent-transition">{PreventTransition.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="6">
-          <Link to="/not-match">{NotMatch.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="7">
-          <Link to="/sidebar">{Sidebar.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="8">
-          <Link to="/animate-transition">{AnimateTransition.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="9">
-          <Link to="/ambiguous-match">{AmbiguousMatch.name}</Link>
-        </Menu.Item>
-        <Menu.Item key="10">
-          <Link to="/modal-gallery">{ModalGallery.name}</Link>
-        </Menu.Item>
-      </Menu.SubMenu>
-    </Menu>
-  );
-
   render() {
     return (
-      <div>
-        <Router
-          getUserConfirmation={
-            /*
-             * A function to use to confirm navigation.
-             * Defaults to using 'window.confirm'.
-             */
+      <BrowserRouter
+        getUserConfirmation={
+          /*
+           * A function to use to confirm navigation.
+           * Defaults to using 'window.confirm'.
+           */
 
-            /*
-             * Customize prompt for 'Prompt' using 'Modal.confirm()' from 'antd'
-             */
-            (message: string, callback: (ok: boolean) => void) => {
-              Modal.confirm({
-                title: 'CONFIRM TO LEAVE',
-                content: message,
-                okText: 'OK',
-                cancelText: 'CANCEL',
-                onOk() {
-                  callback(true);
-                },
-                onCancel() {
-                  callback(false);
-                }
-              });
-            }
+          /*
+           * Customize prompt for 'Prompt' using 'Modal.confirm()' from 'antd'
+           */
+          (message: string, callback: (ok: boolean) => void) => {
+            Modal.confirm({
+              title: 'CONFIRM TO LEAVE',
+              content: message,
+              okText: 'OK',
+              cancelText: 'CANCEL',
+              onOk() {
+                callback(true);
+              },
+              onCancel() {
+                callback(false);
+              }
+            });
           }
-          forceRefresh={
-            /*
-             * If true the router will use full page refreshes on page navigation.
-             * You probably only want this in browsers that don’t support the HTML5 history API.
-             */
-            false
-          }
-        >
-          <div>
-            <Dropdown
-              overlay={this.menus}
-              placement="bottomLeft"
-              trigger={['click']}
+        }
+        forceRefresh={
+          /*
+           * If true the router will use full page refreshes on page navigation.
+           * You probably only want this in browsers that don’t support the HTML5 history API.
+           */
+          false
+        }
+      >
+        <Layout>
+          <Header className="header">
+            <div className="logo"/>
+            <Menu
+              theme="dark"
+              mode="horizontal"
+              defaultSelectedKeys={['2']}
+              style={{ lineHeight: '64px' }}
             >
-              <Button
-                style={
-                  {
-                    width: '100%'
-                  }
-                }
+              <MenuItem key="1">nav 1</MenuItem>
+              <MenuItem key="2">nav 2</MenuItem>
+              <MenuItem key="3">nav 3</MenuItem>
+            </Menu>
+          </Header>
+          <Layout>
+            <Sider
+              width={200}
+              style={{ background: '#fff' }}
+            >
+              <Menu
+                mode="inline"
+                defaultOpenKeys={['react-router']}
+                style={{
+                  height: '100%',
+                  borderRight: 0
+                }}
               >
-                Contents
-              </Button>
-            </Dropdown>
-
-            <Route
-              path="/basic"
-              component={Basic}
-            />
-            <Route
-              path="/url-parameter"
-              component={UrlParameter}
-            />
-            <Route
-              path="/redirect"
-              component={Redirects}
-            />
-            <Route
-              path="/custom-link"
-              component={CustomLinkComponent}
-            />
-            <Route
-              path="/prevent-transition"
-              component={PreventTransition}
-            />
-            <Route
-              path="/not-match"
-              component={NotMatch}
-            />
-            <Route
-              path="/sidebar"
-              component={Sidebar}
-            />
-            <Route
-              path="/animate-transition"
-              component={AnimateTransition}
-            />
-            <Route
-              path="/ambiguous-match"
-              component={AmbiguousMatch}
-            />
-            <Route
-              path="/modal-gallery"
-              component={ModalGallery}
-            />
-          </div>
-        </Router>
-      </div>
+                <SubMenu
+                  key="react-router"
+                  title={<span><Icon type="user"/>React Router</span>}
+                >
+                  <MenuItem key="1">
+                    <NavLink to="/basic">{Basic.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="2">
+                    <NavLink
+                      to="/url-parameter"
+                      activeClassName="ant-menu-item-selected"
+                    >
+                      {UrlParameter.name}
+                    </NavLink>
+                  </MenuItem>
+                  <MenuItem key="3">
+                    <NavLink to="/redirect">{Redirects.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="4">
+                    <NavLink to="/custom-link">{CustomLinkComponent.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="5">
+                    <NavLink to="/prevent-transition">{PreventTransition.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="6">
+                    <NavLink to="/not-match">{NotMatch.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="7">
+                    <NavLink to="/sidebar">{Sidebar.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="8">
+                    <NavLink to="/animate-transition">{AnimateTransition.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="9">
+                    <NavLink to="/ambiguous-match">{AmbiguousMatch.name}</NavLink>
+                  </MenuItem>
+                  <MenuItem key="10">
+                    <NavLink to="/modal-gallery">{ModalGallery.name}</NavLink>
+                  </MenuItem>
+                </SubMenu>
+              </Menu>
+            </Sider>
+            <Layout style={{ padding: '0 24px 24px' }}>
+              <Breadcrumb style={{ margin: '16px 0' }}>
+                <Breadcrumb.Item>Home</Breadcrumb.Item>
+                <Breadcrumb.Item>List</Breadcrumb.Item>
+                <Breadcrumb.Item>App</Breadcrumb.Item>
+              </Breadcrumb>
+              <Content
+                style={{
+                  background: '#fff',
+                  padding: 24,
+                  margin: 0,
+                  minHeight: 280
+                }}
+              >
+                <Route
+                  path="/basic"
+                  component={Basic}
+                />
+                <Route
+                  path="/url-parameter"
+                  component={UrlParameter}
+                />
+                <Route
+                  path="/redirect"
+                  component={Redirects}
+                />
+                <Route
+                  path="/custom-link"
+                  component={CustomLinkComponent}
+                />
+                <Route
+                  path="/prevent-transition"
+                  component={PreventTransition}
+                />
+                <Route
+                  path="/not-match"
+                  component={NotMatch}
+                />
+                <Route
+                  path="/sidebar"
+                  component={Sidebar}
+                />
+                <Route
+                  path="/animate-transition"
+                  component={AnimateTransition}
+                />
+                <Route
+                  path="/ambiguous-match"
+                  component={AmbiguousMatch}
+                />
+                <Route
+                  path="/modal-gallery"
+                  component={ModalGallery}
+                />
+              </Content>
+            </Layout>
+          </Layout>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }
