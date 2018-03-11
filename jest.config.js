@@ -34,7 +34,7 @@ module.exports = {
   globals: {
     "ts-jest": {
       tsConfigFile:
-        "/Users/luotao/Documents/project/git/luotaoyeah/react-typescript-demo/tsconfig.test.json"
+        "/Users/luotao/Documents/project/git/luotaoyeah/learning-react/tsconfig.test.json"
     }
   }
 };
