@@ -1,2 +1,2 @@
-#1 learning-react
+# learning-react
 Learning React
