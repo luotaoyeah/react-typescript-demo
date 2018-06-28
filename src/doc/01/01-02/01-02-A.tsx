@@ -1,3 +1,7 @@
+/*
+ * Introducing JSX
+ */
+
 import * as React from "react";
 
 /*
