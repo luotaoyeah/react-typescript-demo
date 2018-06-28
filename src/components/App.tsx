@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Button } from "antd";
+import { C0102A } from "../doc/01/01-02/01-02-A";
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <Button type="primary">hello world</Button>
+        <C0102A />
       </div>
     );
   }
