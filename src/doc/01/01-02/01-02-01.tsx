@@ -16,10 +16,10 @@ import * as React from "react";
  */
 console.log("\n-------------------------------------------------- 01");
 
-class C0102A extends React.Component {
+class C010201 extends React.Component {
   render(): React.ReactNode {
     return <h1>hello world</h1>;
   }
 }
 
-export { C0102A };
+export { C010201 };

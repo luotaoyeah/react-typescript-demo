@@ -9,7 +9,7 @@ import * as React from "react";
  */
 console.log("\n-------------------------------------------------- 01");
 
-class C0102B extends React.Component {
+class C010202 extends React.Component {
   private person = { name: "luotao" };
 
   private hello(): string {
@@ -29,4 +29,4 @@ class C0102B extends React.Component {
   }
 }
 
-export { C0102B };
+export { C010202 };
