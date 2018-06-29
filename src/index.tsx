@@ -5,5 +5,5 @@ import "./assets/iconfont/iconfont.css";
 import registerServiceWorker from "./components/registerServiceWorker";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root") as HTMLElement);
+ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

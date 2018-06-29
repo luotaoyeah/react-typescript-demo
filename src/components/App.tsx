@@ -1,5 +1,5 @@
 import * as React from "react";
-import "../doc/01/01-03/01-03-02";
+import "../doc/01/01-03/01-03-03";
 
 class App extends React.Component {
   public render() {
