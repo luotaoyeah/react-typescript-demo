@@ -3,27 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "react-scripts-ts build",
+    "dev": "npm run start",
+    "eject": "react-scripts-ts eject",
     "precommit": "lint-staged",
     "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "test": "react-scripts-ts test --env=jsdom"
   },
   "dependencies": {
-    "antd": "^3.6.4",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts-ts": "2.16.0"
+    "antd": "^3.8.3",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-scripts-ts": "^2.17.0"
   },
   "devDependencies": {
-    "@types/jest": "^22.2.3",
-    "@types/node": "^10.1.2",
-    "@types/react": "^16.4.4",
-    "@types/react-dom": "^16.0.6",
+    "@types/jest": "^23.3.1",
+    "@types/node": "^8.10.28",
+    "@types/react": "^16.4.11",
+    "@types/react-dom": "^16.0.7",
     "husky": "^0.14.3",
-    "lint-staged": "^7.2.0",
-    "prettier": "^1.13.6",
-    "tslint-config-prettier": "^1.13.0",
-    "typescript": "^2.9.2"
+    "lint-staged": "^7.2.2",
+    "prettier": "^1.14.2",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.1"
   }
 }
