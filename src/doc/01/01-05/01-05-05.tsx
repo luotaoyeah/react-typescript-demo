@@ -37,7 +37,7 @@ class C010505 extends React.Component<IProps, IState> {
     console.log("this.state.count", this.state.age);
 
     /*
-     * 如果需要保证 state 的值完成更新，需要使用回到函数的参数；
+     * 如果需要保证 state 的值完成更新，需要使用回到函数参数；
      */
     this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => {
       return { age: this.state.age + 1 };
