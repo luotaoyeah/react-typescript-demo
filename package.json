@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "react-scripts-ts build",
+    "build": "react-app-rewired build --scripts-version react-scripts-ts",
     "dev": "npm run start",
     "eject": "react-scripts-ts eject",
     "precommit": "lint-staged",
-    "start": "react-scripts-ts start",
-    "test": "react-scripts-ts test --env=jsdom"
+    "start": "react-app-rewired start --scripts-version react-scripts-ts",
+    "test": "react-app-rewired test --scripts-version react-scripts-ts --env=jsdom"
   },
   "dependencies": {
     "antd": "^3.8.4",
@@ -19,11 +19,13 @@
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^8.10.28",
-    "@types/react": "^16.4.11",
+    "@types/react": "^16.4.13",
     "@types/react-dom": "^16.0.7",
     "husky": "^0.14.3",
     "lint-staged": "^7.2.2",
     "prettier": "^1.14.2",
+    "react-app-rewire-less": "^2.1.2",
+    "react-app-rewired": "^1.5.2",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.0.1"
   }
