@@ -20,8 +20,11 @@ class BoilingVerdict extends React.Component<{ celsius: number }> {
   }
 }
 
-class Calculator extends React.Component<{}, { temperature: number }> {
-  constructor(props: {}) {
+class TemperatureInput extends React.Component<
+  { scale: "C" | "F" },
+  { temperature: number }
+> {
+  constructor(props: any) {
     super(props);
     this.state = { temperature: 0 };
     this.handleChange = this.handleChange.bind(this);
@@ -36,7 +39,7 @@ class Calculator extends React.Component<{}, { temperature: number }> {
   render(): React.ReactNode {
     return (
       <fieldset>
-        <legend>temperature in C</legend>
+        <legend>temperature in {this.props.scale}</legend>
         <input
           type="number"
           value={this.state.temperature}
@@ -57,7 +60,8 @@ class C011001 extends React.Component<IProps, IState> {
   render(): React.ReactNode {
     return (
       <div>
-        <Calculator />
+        <TemperatureInput scale={"C"} />
+        <TemperatureInput scale={"F"} />
       </div>
     );
   }
