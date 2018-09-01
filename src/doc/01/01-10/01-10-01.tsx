@@ -10,6 +10,14 @@ import { SyntheticEvent } from "react";
  * 如果多个组件需要共享状态数据，可以将状态数据放到离他们最近的相同父组件中；
  */
 
+function toC(f: number): number {
+  return ((f - 32) * 5) / 9;
+}
+
+function toF(c: number): number {
+  return (c * 9) / 5 + 32;
+}
+
 class BoilingVerdict extends React.Component<{ celsius: number }> {
   render(): React.ReactNode {
     if (this.props.celsius >= 100) {
