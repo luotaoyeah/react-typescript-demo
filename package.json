@@ -27,6 +27,6 @@
     "react-app-rewire-less": "^2.1.2",
     "react-app-rewired": "^1.5.2",
     "tslint-config-prettier": "^1.15.0",
-    "typescript": "^3.0.1"
+    "typescript": "^3.0.3"
   }
 }
