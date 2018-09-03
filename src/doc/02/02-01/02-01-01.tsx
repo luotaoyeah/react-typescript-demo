@@ -10,7 +10,7 @@ interface IProps {}
 
 interface IState {}
 
-class C010201 extends React.Component<IProps, IState> {
+class C020101 extends React.Component<IProps, IState> {
   inputRef: RefObject<HTMLInputElement>;
 
   constructor(props: IProps, context: any) {
@@ -52,4 +52,4 @@ class C010201 extends React.Component<IProps, IState> {
   }
 }
 
-export { C010201 };
+export { C020101 };
