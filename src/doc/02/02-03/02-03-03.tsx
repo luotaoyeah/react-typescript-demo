@@ -18,6 +18,11 @@ class A extends React.Component<{}, { age: number }> {
   }
 
   componentDidMount() {
+    /*
+     * 当 Provider 的 value 属性值改变时，
+     * 下面所有的 Consumer 都会自动更新，
+     * 而且不受 shouldComponentUpdate() 方法的影响；
+     */
     setInterval(() => {
       this.setState((prevState: any) => ({
         age: prevState.age + 1
