@@ -1,0 +1,80 @@
+/*
+ * Forwarding Refs: Forwarding refs in higher-order components
+ */
+
+import * as React from "react";
+
+/**
+ *
+ */
+const FancyButton = React.forwardRef(
+  (props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => {
+    return (
+      <button onClick={props.onClick} ref={ref}>
+        button
+      </button>
+    );
+  }
+);
+
+/**
+ * HOC
+ * @param Component
+ * @constructor
+ */
+function LoggerHOC(Component: React.ComponentType<any>) {
+  /*
+   * 通过一个普通的 props 属性 forwardRef 将 ref 传递进来，
+   * 然后继续传递给下级组件；
+   */
+  class LoggerComponent extends React.Component<{
+    forwardRef: React.RefObject<HTMLButtonElement>;
+  }> {
+    componentDidMount() {
+      console.log("LOGGER");
+    }
+
+    render(): React.ReactNode {
+      return <Component {...this.props} ref={this.props.forwardRef} />;
+    }
+  }
+
+  return React.forwardRef((props: any, ref?: React.Ref<HTMLButtonElement>) => {
+    return <LoggerComponent {...props} forwardRef={ref} />;
+  });
+}
+
+/**
+ *
+ */
+const LoggerFancyButton = LoggerHOC(FancyButton);
+
+/**
+ *
+ */
+class C020502 extends React.Component {
+  constructor(props: {}, context: any) {
+    super(props, context);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  ref: React.RefObject<HTMLButtonElement> = React.createRef();
+
+  handleClick() {
+    const vm = this;
+    if (vm.ref.current) {
+      vm.ref.current.style.color = "red";
+      vm.ref.current.style.borderRadius = "3px";
+    }
+  }
+
+  render(): React.ReactNode {
+    return (
+      <div>
+        <LoggerFancyButton ref={this.ref} onClick={this.handleClick} />
+      </div>
+    );
+  }
+}
+
+export { C020502 };
