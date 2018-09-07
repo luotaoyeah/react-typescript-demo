@@ -22,7 +22,9 @@ const FancyButton = React.forwardRef(
  * @param Component
  * @constructor
  */
-function LoggerHOC(Component: React.ComponentType<any>) {
+function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
+  Component: React.ComponentType<P>
+) {
   /*
    * 通过一个普通的 props 属性 forwardRef 将 ref 传递进来，
    * 然后继续传递给下级组件；
@@ -35,7 +37,9 @@ function LoggerHOC(Component: React.ComponentType<any>) {
     }
 
     render(): React.ReactNode {
-      return <Component {...this.props} ref={this.props.forwardRef} />;
+      const { forwardRef, ...rest } = this.props;
+
+      return <Component {...rest} ref={forwardRef} />;
     }
   }
 
