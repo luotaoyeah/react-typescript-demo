@@ -15,7 +15,7 @@ const D = ({ match }: RouteComponentProps<{ id: string }>) => {
 };
 
 /**  */
-class C0102 extends React.Component {
+class C0201 extends React.Component {
   render(): React.ReactNode {
     return (
       <div>
@@ -41,4 +41,4 @@ class C0102 extends React.Component {
   }
 }
 
-export { C0102 };
+export { C0201 };
