@@ -7,7 +7,7 @@ import * as React from "react";
 import { Button, Divider } from "antd";
 
 /*
- * JSX 的 props 可以有多中形式；
+ * JSX 的 props 可以有多种形式；
  */
 class C020903 extends React.Component {
   render(): React.ReactNode {
