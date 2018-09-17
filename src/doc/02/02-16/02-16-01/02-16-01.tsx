@@ -4,6 +4,7 @@
 
 import React from "react";
 import { Button } from "antd";
+import { Mouse } from "./Mouse";
 
 /*
  * render props 指的是一种特殊的 props，
@@ -44,8 +45,29 @@ class C021601 extends React.Component {
     return <Button>{state.text}</Button>;
   }
 
+  renderMouse(state: any) {
+    return (
+      <Button
+        style={{
+          position: "absolute",
+          left: `${state.x - 42}px`,
+          top: `${state.y - 32}px`,
+          transition: "none"
+        }}
+      >
+        A
+      </Button>
+    );
+  }
+
   render(): React.ReactNode {
-    return <A render={this.renderA} />;
+    return (
+      <React.Fragment>
+        <A render={this.renderA} />
+        <Mouse />
+        <Mouse render={this.renderMouse} />
+      </React.Fragment>
+    );
   }
 }
 
