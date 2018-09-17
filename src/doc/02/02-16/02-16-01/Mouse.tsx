@@ -1,22 +1,22 @@
 import React from "react";
 
-interface IProps {
-  render?: (state: IState) => React.ReactNode;
+export interface IMouseProps {
+  render?: (state: IMouseState) => React.ReactNode;
 }
 
-interface IState {
+export interface IMouseState {
   x: number;
   y: number;
 }
 
 /**  */
-class Mouse extends React.Component<IProps, IState> {
-  state: IState = {
+class Mouse extends React.Component<IMouseProps, IMouseState> {
+  state: IMouseState = {
     x: 0,
     y: 0
   };
 
-  constructor(props: IProps) {
+  constructor(props: IMouseProps) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
   }

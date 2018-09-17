@@ -4,7 +4,8 @@
 
 import React from "react";
 import { Button } from "antd";
-import { Mouse } from "./Mouse";
+import { IMouseState, Mouse } from "./Mouse";
+import { withMouse } from "./withMouse";
 
 /*
  * render props 指的是一种特殊的 props，
@@ -39,6 +40,25 @@ class A extends React.Component<IAProps, IAState> {
   }
 }
 
+class CatButton extends React.Component<{ mouse: IMouseState }, {}> {
+  render(): React.ReactNode {
+    return (
+      <Button
+        style={{
+          position: "absolute",
+          left: `${this.props.mouse.x - 42 + window.scrollX}px`,
+          top: `${this.props.mouse.y - 32 + window.scrollY}px`,
+          transition: "none"
+        }}
+      >
+        B
+      </Button>
+    );
+  }
+}
+
+const CatButtonWithMouse = withMouse(CatButton);
+
 /**  */
 class C021601 extends React.Component {
   renderA(state: IAState) {
@@ -50,8 +70,8 @@ class C021601 extends React.Component {
       <Button
         style={{
           position: "absolute",
-          left: `${state.x - 42}px`,
-          top: `${state.y - 32}px`,
+          left: `${state.x - 42 + window.scrollX}px`,
+          top: `${state.y - 32 + window.scrollY}px`,
           transition: "none"
         }}
       >
@@ -66,6 +86,7 @@ class C021601 extends React.Component {
         <A render={this.renderA} />
         <Mouse />
         <Mouse render={this.renderMouse} />
+        <CatButtonWithMouse />
       </React.Fragment>
     );
   }
