@@ -27,7 +27,7 @@ class A extends React.Component<IAProps, IAState> {
 }
 
 /**  */
-class C021602 extends React.Component {
+class C021602A extends React.Component {
   renderA(state: IAState) {
     return <Button>A</Button>;
   }
@@ -37,4 +37,4 @@ class C021602 extends React.Component {
   }
 }
 
-export { C021602 };
+export { C021602A };
