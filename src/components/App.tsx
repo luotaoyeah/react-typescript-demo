@@ -1,11 +1,11 @@
 import * as React from "react";
-import { ApiRouteComponent } from "../react-router/api/Route/component";
+import { ApiRouteRender } from "../react-router/api/Route/render";
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <ApiRouteComponent />
+        <ApiRouteRender />
       </div>
     );
   }
