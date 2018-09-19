@@ -28,11 +28,7 @@ class A extends React.Component {
   }
 
   render(): React.ReactNode {
-    return (
-      <div>
-        <input type="text" ref={"inputRef"} />
-      </div>
-    );
+    return <div>{/*<input type="text" ref={"inputRef"} />*/}</div>;
   }
 }
 
