@@ -1,11 +1,11 @@
 import * as React from "react";
-import { C030102 } from "../doc/03/03-01/03-01-02";
+import { C030103 } from "../doc/03/03-01/03-01-03";
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <C030102 />
+        <C030103 />
       </div>
     );
   }
