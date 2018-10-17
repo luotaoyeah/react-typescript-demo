@@ -9,7 +9,7 @@ import React from "react";
 /*
  *
  */
-class C030107A extends React.Component {
+class C03010701 extends React.Component {
   render(): React.ReactNode {
     /*
      * React.Fragment 是一种特殊的组件，
@@ -46,4 +46,4 @@ class C030107A extends React.Component {
   }
 }
 
-export { C030107A };
+export { C03010701 };

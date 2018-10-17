@@ -7,7 +7,7 @@ import ColorInput from "./ColorInput";
 import { Button } from "antd";
 
 class C020309 extends React.Component {
-  refInput: React.RefObject<any> = React.createRef();
+  inputRef = React.createRef<any>();
 
   constructor(props: any) {
     super(props);
@@ -15,13 +15,13 @@ class C020309 extends React.Component {
   }
 
   handleClick() {
-    this.refInput.current!.focus();
+    this.inputRef.current!.focus();
   }
 
   render(): React.ReactNode {
     return (
       <div>
-        <ColorInput ref={this.refInput} />
+        <ColorInput ref={this.inputRef} />
         <Button onClick={this.handleClick}>focus</Button>
       </div>
     );

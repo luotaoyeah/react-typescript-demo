@@ -16,7 +16,7 @@ import { Divider } from "antd";
 
 /**  */
 class C022003 extends React.Component {
-  inputRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputRef = React.createRef<HTMLInputElement>();
 
   constructor(props: any, context: any) {
     super(props, context);

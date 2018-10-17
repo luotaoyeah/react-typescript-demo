@@ -30,7 +30,7 @@ class C021501 extends React.Component {
      * 使用 React.createRef() 方法创建一个 ref 对象，
      * 通常将 ref 对象保存到组件的实例属性上面；
      */
-    this.inputRef = React.createRef();
+    this.inputRef = React.createRef<HTMLInputElement>();
   }
 
   render(): React.ReactNode {

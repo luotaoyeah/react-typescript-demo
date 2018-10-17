@@ -28,7 +28,7 @@ class C020501 extends React.Component {
     this.onClick = this.onClick.bind(this);
   }
 
-  ref: React.RefObject<HTMLButtonElement> = React.createRef();
+  ref = React.createRef<HTMLButtonElement>();
 
   onClick() {
     const vm = this;

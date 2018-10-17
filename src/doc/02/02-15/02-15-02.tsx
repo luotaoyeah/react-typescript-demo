@@ -11,7 +11,7 @@ class C021502 extends React.Component {
 
   constructor(props: any) {
     super(props);
-    this.inputRef = React.createRef();
+    this.inputRef = React.createRef<HTMLInputElement>();
     this.handleClick = this.handleClick.bind(this);
   }
 

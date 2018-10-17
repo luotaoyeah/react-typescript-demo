@@ -14,9 +14,9 @@ import { Divider } from "antd";
 
 /**  */
 class C022002 extends React.Component {
-  inputRef: React.RefObject<HTMLInputElement> = React.createRef();
-  checkboxRef: React.RefObject<HTMLInputElement> = React.createRef();
-  radioRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputRef = React.createRef<HTMLInputElement>();
+  checkboxRef = React.createRef<HTMLInputElement>();
+  radioRef = React.createRef<HTMLInputElement>();
 
   constructor(props: any, context: any) {
     super(props, context);

@@ -20,7 +20,7 @@ class C020101 extends React.Component<IProps, IState> {
      * 创建一个 RefObject 对象，并绑定到组件的 ref 属性，
      * 然后通过该对象访问组件的 DOM 对象；
      */
-    this.inputRef = React.createRef();
+    this.inputRef = React.createRef<HTMLInputElement>();
 
     this.handleClick = this.handleClick.bind(this);
   }

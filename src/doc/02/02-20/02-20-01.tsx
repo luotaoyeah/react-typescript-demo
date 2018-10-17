@@ -11,7 +11,7 @@ import React from "react";
 
 /**  */
 class C022001 extends React.Component {
-  inputRef: React.RefObject<HTMLInputElement> = React.createRef();
+  inputRef = React.createRef<HTMLInputElement>();
 
   constructor(props: any, context: any) {
     super(props, context);

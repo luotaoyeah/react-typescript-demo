@@ -2,16 +2,16 @@ import * as React from "react";
 import { ColorContext } from "./ColorContext";
 
 class ColorInput extends React.Component<{ color: string }> {
-  refInput: React.RefObject<HTMLInputElement> = React.createRef();
+  inputRef = React.createRef<HTMLInputElement>();
 
   focus() {
-    this.refInput.current!.focus();
+    this.inputRef.current!.focus();
   }
 
   render() {
     return (
       <input
-        ref={this.refInput}
+        ref={this.inputRef}
         style={{
           color: this.props.color,
           borderRadius: "3px",

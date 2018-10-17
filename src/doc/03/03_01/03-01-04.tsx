@@ -9,7 +9,7 @@ import { Button, Divider, message } from "antd";
 
 /**  */
 class C030104 extends React.Component {
-  buttonRef: React.RefObject<Button> = React.createRef();
+  buttonRef = React.createRef<Button>();
 
   constructor(props: any, context: any) {
     super(props, context);
