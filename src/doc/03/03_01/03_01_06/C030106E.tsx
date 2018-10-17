@@ -21,7 +21,7 @@ class C030110 extends React.Component {
 
     /*
      * React.Children.toArray() 将 children 转换为普通的数组，
-     * 并给每个元素设置 key 属性；
+     * 并给每个元素设置 key 属性（加上前缀）；
      */
 
     const element02 = (
