@@ -32,7 +32,7 @@ import { Button } from "antd";
 
 /*
  * 如何定义一个 ErrorBoundary ？
- * 在一个组件中实现了 componentDidCatch() 声明周期方法，
+ * 在一个组件中实现了 componentDidCatch() 生命周期方法，
  * 则该组件就是一个 ErrorBoundary 组件；
  */
 
