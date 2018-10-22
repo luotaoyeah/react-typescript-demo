@@ -15,7 +15,7 @@ interface IState {
 }
 
 /*
- * 在 mounting 阶段，react 组件的生命周期包括了下面四个函数的顺序执行：
+ * 在 mounting 阶段，react 组件的生命周期包括了下面4个函数的顺序执行：
  *     渲染阶段（Render Phase）：
  *         constructor()
  *         getDerivedStateFromProps()
