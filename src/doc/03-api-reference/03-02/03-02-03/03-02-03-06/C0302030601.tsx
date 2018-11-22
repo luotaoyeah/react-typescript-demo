@@ -45,7 +45,7 @@ class A extends React.Component<IProps, IState> {
    * 当 shouldComponentUpdate() 方法返回 false 时，
    * 组件不会更新，即 render() 方法不会调用；
    * 但是子组件的状态不受影响，即：
-   *     当子组件的状态发生变更时，子组件依然会重新渲染；
+   *     当子组件的内部状态发生变更时，子组件依然会重新渲染；
    */
   shouldComponentUpdate(
     nextProps: Readonly<IProps>,

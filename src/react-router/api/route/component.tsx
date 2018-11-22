@@ -39,10 +39,10 @@ class ApiRouteComponent extends React.Component {
         </ul>
         <Divider />
         {/*
-          * 使用 component 属性，指定对应的组件，
-          * 当地址匹配时，会调用 React.createElement() 方法创建组件实例，
-          * 同时传递三个 props 给该组件（match，location，history）；
-          */}
+         * 使用 component 属性，指定对应的组件，
+         * 当地址匹配时，会调用 React.createElement() 方法创建组件实例，
+         * 同时传递三个 props 给该组件（match，location，history）；
+         */}
         <Route path={"/users/:name"} component={User} />
       </div>
     );

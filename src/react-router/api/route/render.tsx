@@ -72,9 +72,9 @@ class ApiRouteRender extends React.Component {
         </ul>
         <Divider />
         {/*
-          * 使用 render 属性，可以自定义组件的渲染方式；
-          * 此处用到了 React 的 render props 特性；
-          */}
+         * 使用 render 属性，可以自定义组件的渲染方式；
+         * 此处用到了 React 的 render props 特性；
+         */}
         <Route path={"/users/:name"} render={this.renderUser} />
         <MyRoute path={"/users/:name"} component={User} />
       </div>

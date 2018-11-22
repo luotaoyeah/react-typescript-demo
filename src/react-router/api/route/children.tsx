@@ -46,12 +46,12 @@ class ApiRouteChildren extends React.Component {
         <MyLink to={"/a"}>a</MyLink>
         <Divider />
         {/*
-          * RouteProps.children 和 RouteProps.render 类似，
-          * 区别在于：
-          *     对于 render，当路径不匹配时，不会渲染组件；
-          *     对于 children，当路径不匹配时，也会渲染组件，此时的 match 为 null，
-          *         因此可以根据是否匹配，渲染不同的组件；
-          */}
+         * RouteProps.children 和 RouteProps.render 类似，
+         * 区别在于：
+         *     对于 render，当路径不匹配时，不会渲染组件；
+         *     对于 children，当路径不匹配时，也会渲染组件，此时的 match 为 null，
+         *         因此可以根据是否匹配，渲染不同的组件；
+         */}
         <Route path={"/a"} children={this.render01} />
         <Route path={"/a"} render={this.render02} />
       </div>
