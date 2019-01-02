@@ -19,11 +19,12 @@ const FancyButton = React.forwardRef(
 
 /**
  * HOC
+ * TODO 修复类型错误 React.ComponentType<P>
  * @param Component
  * @constructor
  */
 function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<any>
 ) {
   /*
    * 通过一个普通的 props 属性 forwardRef 将 ref 传递进来，

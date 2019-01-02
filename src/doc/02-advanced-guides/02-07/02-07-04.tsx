@@ -6,10 +6,8 @@
 import * as React from "react";
 import { Button } from "antd";
 
-/*
- *
- */
-function withNothing<P>(Component: React.ComponentType<P>) {
+/* TODO 修复类型错误 React.ComponentType<P> */
+function withNothing<P>(Component: React.ComponentType<any>) {
   return class extends React.Component {
     /*
      * 通过设置返回的组件的 displayName 属性，

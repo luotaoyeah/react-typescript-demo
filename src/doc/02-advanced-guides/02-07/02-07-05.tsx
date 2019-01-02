@@ -20,7 +20,7 @@ import { Button } from "antd";
  * 而是直接输入 staticMethod 方法，然后直接调用 staticMethod()；
  */
 
-function withNothing<P>(Component: React.ComponentType<P>) {
+function withNothing<P>(Component: React.ComponentType<any>) {
   return class extends React.Component {
     componentDidMount(): void {
       console.log("componentDidMount()");

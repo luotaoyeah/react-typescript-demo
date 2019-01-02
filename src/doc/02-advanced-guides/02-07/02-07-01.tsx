@@ -15,9 +15,9 @@ import { Button, Input } from "antd";
 interface IWIthRadiusProps {
   radius: number | string;
 }
-
+/* TODO 修复类型错误 React.ComponentType<P> */
 function withRadius<P extends HTMLAttributes<Element>>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<any>
 ) {
   class HOC extends React.Component<P & IWIthRadiusProps> {
     render(): React.ReactNode {
