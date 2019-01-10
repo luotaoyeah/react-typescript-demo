@@ -1,5 +1,5 @@
 import * as React from "react";
-import { C03030201 as C } from "../doc/03-api-reference/03-03-react-dom/03-03-02-unmountComponentAtNode/C03030201";
+import { C03030301 as C } from "../doc/03-api-reference/03-03-react-dom/03-03-03-createPortal/C03030301";
 
 class App extends React.Component {
   public render() {
