@@ -1,5 +1,5 @@
 import * as React from "react";
-import { C03030301 as C } from "../doc/03-api-reference/03-03-react-dom/03-03-03-createPortal/C03030301";
+import { C03040101 as C } from "../doc/03-api-reference/03-04-dom-elements/03-04-01-differences-in-attributes/C03040101";
 
 class App extends React.Component {
   public render() {
