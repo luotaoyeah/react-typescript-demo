@@ -1,11 +1,11 @@
 import * as React from "react";
-import { C03040109 as C } from "../doc/03-api-reference/03-04-dom-elements/03-04-01-differences-in-attributes/C03040109";
+import { C03050101 as COMP } from "../doc/03-api-reference/03-05-synthetic-event/03-05-01-overview/C03050101";
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <C />
+        <COMP />
       </div>
     );
   }
