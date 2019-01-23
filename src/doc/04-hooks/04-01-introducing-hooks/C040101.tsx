@@ -18,7 +18,7 @@ function H01() {
   return <Button onClick={() => setCount(count + 1)}>{count}</Button>;
 }
 
-class C04010101 extends React.Component<{}, {}> {
+class C040101 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
@@ -28,4 +28,4 @@ class C04010101 extends React.Component<{}, {}> {
   }
 }
 
-export { C04010101 };
+export { C040101 };
