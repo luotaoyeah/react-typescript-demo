@@ -12,8 +12,8 @@
     "chosen-js": "^1.8.7",
     "jquery": "^3.3.1",
     "lodash": "^4.17.11",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.8.0-alpha.1",
+    "react-dom": "^16.8.0-alpha.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.3"
   },
