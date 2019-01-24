@@ -9,7 +9,7 @@ import { Button, Divider } from "antd";
 function H01() {
   /*
    * 这儿的 useState() 函数，就是一个 hook，
-   * 它接收一个参数：初始数据，返回两个数据，分别是：
+   * 它接收一个参数：初始状态数据，返回两个数据，分别是：
    *     1. state 数据，类似于 class 组件中的 this.state.xxx
    *     2. setXXX() 函数，用来更新对应的 state 数据
    */
