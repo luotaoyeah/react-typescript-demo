@@ -15,6 +15,10 @@ import { Button, Divider } from "antd";
  * 那么这个 function 就是一个 hook 函数
  */
 
+/**
+ *
+ * @param init
+ */
 function useStatus(
   init: boolean = false
 ): [boolean, (status: boolean | ((prevState: boolean) => boolean)) => void] {
