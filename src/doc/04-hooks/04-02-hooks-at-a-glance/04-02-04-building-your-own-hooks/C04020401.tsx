@@ -31,7 +31,7 @@ function useStatus(
   return [status, setStatus];
 }
 
-function H01(): React.ReactElement<{}> {
+function F01(): React.ReactElement<{}> {
   const [status01, setStatus01] = useStatus(true);
   const [status02, setStatus02] = useStatus(false);
 
@@ -64,7 +64,7 @@ class C04020401 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

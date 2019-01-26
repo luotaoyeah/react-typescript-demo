@@ -6,7 +6,7 @@
 import React, { useState } from "react";
 import { Button, Divider } from "antd";
 
-function H01() {
+function F01() {
   /*
    * 这儿的 useState() 函数，就是一个 hook，
    * 它接收一个参数：初始状态数据，返回两个数据，分别是：
@@ -42,7 +42,7 @@ class C04020101 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

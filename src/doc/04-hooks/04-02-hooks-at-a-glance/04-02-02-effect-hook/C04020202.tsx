@@ -7,7 +7,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Divider } from "antd";
 
-function H01(): React.ReactElement<{}> {
+function F01(): React.ReactElement<{}> {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ class C04020202 extends React.Component<{}, { visible: boolean }> {
           TOGGLE
         </Button>
         <Divider />
-        {this.state.visible && <H01 />}
+        {this.state.visible && <F01 />}
       </div>
     );
   }

@@ -15,7 +15,7 @@ import { Button } from "antd";
  * 可以通过 useState() 方法的泛型参数，指定 count 的数据类型
  */
 
-const H01 = (): React.ReactElement<{}> => {
+const F01 = (): React.ReactElement<{}> => {
   /*
    * useState() 函数返回的第二个数据是一个函数，
    * 用来更新对应的 state 变量，它们是成对出现的，
@@ -42,7 +42,7 @@ class C04030401 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

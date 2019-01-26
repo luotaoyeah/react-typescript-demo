@@ -13,7 +13,7 @@ import { Button } from "antd";
  * 必须使用 class 组件，不能使用 function 组件
  */
 
-function H01() {
+function F01() {
   const [count, setCount] = useState<number>(0);
   return <Button onClick={() => setCount(count + 1)}>{count}</Button>;
 }
@@ -22,7 +22,7 @@ class C040101 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

@@ -11,7 +11,7 @@ import { Button } from "antd";
  * 用来替代 class 组件中的 lifecycle methods
  * 包括 componentDidMount，componentDidUpdate，componentWillUnmount
  */
-function H01(): React.ReactElement<{}> {
+function F01(): React.ReactElement<{}> {
   const [count, setCount] = useState<number>(0);
 
   /*
@@ -40,7 +40,7 @@ class C04020201 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

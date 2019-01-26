@@ -12,7 +12,7 @@ import { Button } from "antd";
  * hooks 的作用是：通过 hooks 在 function 组件中实现 class 组件的功能
  */
 
-const H01 = (): React.ReactElement<{}> => {
+const F01 = (): React.ReactElement<{}> => {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ class C04030301 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

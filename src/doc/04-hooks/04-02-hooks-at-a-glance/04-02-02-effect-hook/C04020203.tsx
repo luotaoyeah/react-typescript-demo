@@ -10,7 +10,7 @@ import { Button } from "antd";
 /*
  * 跟 useState() 一样，在同一个组件中可以多次调用 useEffect()
  */
-function H01(): React.ReactElement<{}> {
+function F01(): React.ReactElement<{}> {
   const [count, setCount] = useState<number>(0);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ class C04020203 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

@@ -12,7 +12,7 @@ import { Button } from "antd";
  *     1. 只能在 function 组件中使用
  *     2. 只能在 function 组件中的最顶层使用，不能在循环，条件语句，嵌套函数中使用
  */
-function H01(): React.ReactElement<{}> {
+function F01(): React.ReactElement<{}> {
   const [count, setCount] = useState<number>(0);
 
   /*
@@ -41,7 +41,7 @@ class C04020301 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

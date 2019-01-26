@@ -12,7 +12,7 @@ import { Button } from "antd";
  * 并且 hooks 只能在 function 组件中使用，不能在 class 组件中使用
  */
 
-const H01 = (): React.ReactElement<{}> => {
+const F01 = (): React.ReactElement<{}> => {
   const [count, setCount] = useState<number>(0);
 
   return (
@@ -30,7 +30,7 @@ class C04030201 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }

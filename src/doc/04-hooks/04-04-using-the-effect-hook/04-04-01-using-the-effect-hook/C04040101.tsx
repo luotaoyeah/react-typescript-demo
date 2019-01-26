@@ -1,21 +1,28 @@
 /*
- * Using the State Hook
- *     Equivalent Class Example
+ * Using the Effect Hook
  */
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Divider } from "antd";
+
+/*
+ * useEffect() 可以看作是 componentDidMount，componentDidUpdate，componentWillUnmount 的结合
+ */
 
 /**
  *
  */
 function F01(): React.ReactElement<{}> {
-  const [count, SetCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(0);
+
+  useEffect(() => {
+    document.title = String(count);
+  });
 
   return (
     <Button
       onClick={() => {
-        SetCount((prevCount: number) => prevCount + 1);
+        setCount(count + 1);
       }}
     >
       {count}
@@ -24,14 +31,24 @@ function F01(): React.ReactElement<{}> {
 }
 
 /**
- * 下面的 class 组件 C01 和上面的 function 组件 F01 是等价的
+ *
  */
 class C01 extends React.Component<{}, { count: number }> {
   constructor(props: {}, context: any) {
     super(props, context);
-    this.state = {
-      count: 0
-    };
+    this.state = { count: 0 };
+  }
+
+  componentDidMount(): void {
+    document.title = String(this.state.count);
+  }
+
+  componentDidUpdate(
+    prevProps: Readonly<{}>,
+    prevState: Readonly<{ count: number }>,
+    snapshot?: any
+  ): void {
+    document.title = String(this.state.count);
   }
 
   render(): React.ReactNode {
@@ -51,7 +68,7 @@ class C01 extends React.Component<{}, { count: number }> {
   }
 }
 
-class C04030101 extends React.Component<{}, {}> {
+class C04040101 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
@@ -63,4 +80,4 @@ class C04030101 extends React.Component<{}, {}> {
   }
 }
 
-export { C04030101 };
+export { C04040101 };

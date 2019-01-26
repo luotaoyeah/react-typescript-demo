@@ -7,7 +7,7 @@
 import React, { useState } from "react";
 import { Button, Divider } from "antd";
 
-function H01() {
+function F01() {
   /*
    * 在同一个组件中，可以多次调用 useState() 函数，
    * 创建多个不同的 state 数据（以及其对应的更新函数）
@@ -53,7 +53,7 @@ class C04020102 extends React.Component<{}, {}> {
   render(): React.ReactNode {
     return (
       <div>
-        <H01 />
+        <F01 />
       </div>
     );
   }
