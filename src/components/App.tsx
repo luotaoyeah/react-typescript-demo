@@ -1,5 +1,5 @@
 import * as React from "react";
-import { C04040301 as COMP } from "../doc/04-hooks/04-04-using-the-effect-hook/04-04-03-effects-with-cleanup/C04040301";
+import { C04040302 as COMP } from "../doc/04-hooks/04-04-using-the-effect-hook/04-04-03-effects-with-cleanup/C04040302";
 
 class App extends React.Component {
   public render() {
