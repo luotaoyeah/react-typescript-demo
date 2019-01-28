@@ -1,14 +1,13 @@
-const webpack = require("webpack");
+const { override, fixBabelImports, addLessLoader } = require("customize-cra");
 
-module.exports = function override(config) {
-  config.plugins = (config.plugins || []).concat([
-    new webpack.ProvidePlugin({
-      $: "jquery",
-      jQuery: "jquery",
-      "window.jQuery": "jquery",
-      "window.$": "jquery"
-    })
-  ]);
-
-  return config;
-};
+module.exports = override(
+  fixBabelImports("import", {
+    libraryName: "antd",
+    libraryDirectory: "es",
+    style: true
+  }),
+  addLessLoader({
+    javascriptEnabled: true,
+    modifyVars: { "@border-radius-base": "3px" }
+  })
+);
