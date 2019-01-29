@@ -4,7 +4,7 @@
  *         Example Using Hooks
  */
 
-import React, { useEffect, useState } from "react";
+import React, { EffectCallback, useEffect, useState } from "react";
 import { Button } from "antd";
 
 /*
@@ -16,9 +16,9 @@ const useEffectProxy = new Proxy(useEffect, {
       effect: React.EffectCallback,
       inputs?: React.InputIdentityList
     ) => void,
-    thisArg: any,
-    argArray?: any
-  ): any {
+    thisArg: unknown,
+    argArray: [EffectCallback, (ReadonlyArray<unknown> | undefined)?]
+  ): unknown {
     console.log("useEffectProxy");
     return target.apply(thisArg, argArray);
   }
