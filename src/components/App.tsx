@@ -1,5 +1,5 @@
 import * as React from "react";
-import { C04050201 as COMP } from "../doc/04-hooks/04-05-rules-of-hooks/04-05-02/C04050201";
+import { C04060101 as COMP } from "../doc/04-hooks/04-06-building-your-own-hooks/04-06-01/C04060101";
 
 class App extends React.Component {
   public render() {

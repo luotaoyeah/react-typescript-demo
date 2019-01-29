@@ -15,7 +15,8 @@ import { Button } from "antd";
 
 /*
  * 之所以 hooks 必须遵守这些规则，是因为：
- *     react 需要保证在每次 render 的时候，所有的 hooks 的执行顺序是固定的，
+ *     在同一个 function 组件中可以多次调用同一个 hook 函数，
+ *     而 react 需要保证在每次 render 的时候，所有的 hooks 的执行顺序是固定的，
  *     否则 hooks 无法正确工作
  */
 
