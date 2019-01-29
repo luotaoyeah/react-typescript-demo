@@ -18,7 +18,7 @@ class C020309 extends React.Component {
     this.inputRef.current!.focus();
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ColorInput ref={this.inputRef} />

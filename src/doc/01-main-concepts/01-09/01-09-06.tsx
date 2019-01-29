@@ -29,7 +29,7 @@ class C010906 extends React.Component<IProps, IState> {
     console.log(this.state);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>

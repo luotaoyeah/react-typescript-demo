@@ -24,7 +24,7 @@ class C010602 extends React.Component<IProps, IState> {
     message.info(`hello ${this.state.name} ${age}`);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {/*

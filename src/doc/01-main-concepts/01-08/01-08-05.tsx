@@ -5,7 +5,7 @@
 import * as React from "react";
 
 class Item extends React.Component<{ id: string; key: string; name: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <li>
         {/*
@@ -36,7 +36,7 @@ interface IProps {}
 interface IState {}
 
 class C010805 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {[

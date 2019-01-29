@@ -9,7 +9,7 @@ import { Link, Route, RouteComponentProps } from "react-router-dom";
 interface IAProps {}
 
 class A extends React.Component<IAProps & RouteComponentProps<any>> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Alert message={"A"} type={"error"} />
@@ -18,9 +18,9 @@ class A extends React.Component<IAProps & RouteComponentProps<any>> {
         </Button>
         <Divider />
         {/*
-          * 因为 Route 就是普通的组件，所以可以像嵌套普通的组件一样，
-          * 在 Route 的组件中，可以嵌套其他的 Route 组件；
-          */}
+         * 因为 Route 就是普通的组件，所以可以像嵌套普通的组件一样，
+         * 在 Route 的组件中，可以嵌套其他的 Route 组件；
+         */}
         <Route path={this.props.match.url + "/b"} component={B} />
       </div>
     );
@@ -30,7 +30,7 @@ class A extends React.Component<IAProps & RouteComponentProps<any>> {
 interface IBProps {}
 
 class B extends React.Component<IBProps & RouteComponentProps<any>> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Alert message={"B"} type={"error"} />
@@ -41,7 +41,7 @@ class B extends React.Component<IBProps & RouteComponentProps<any>> {
 
 /**  */
 class C0102 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button type={"dashed"}>

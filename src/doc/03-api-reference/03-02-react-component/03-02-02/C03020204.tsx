@@ -11,7 +11,7 @@ class A extends React.Component {
     console.log("A:", error.message);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     throw new Error("A.render()");
   }
 }
@@ -25,7 +25,7 @@ class B extends React.Component {
     throw new Error("B.componentDidMouont()");
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return "B";
   }
 }
@@ -36,7 +36,7 @@ class C extends React.Component {
     throw new Error("C.constructor()");
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return "C";
   }
 }
@@ -57,7 +57,7 @@ class C03020204 extends React.Component<IProps, IState> {
     console.log("C03020204:", error.message);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

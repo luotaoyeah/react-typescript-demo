@@ -38,7 +38,7 @@ class C020501 extends React.Component {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <FancyButton ref={this.ref} onClick={this.onClick} />

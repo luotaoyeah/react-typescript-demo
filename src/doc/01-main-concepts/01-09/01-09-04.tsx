@@ -6,7 +6,7 @@ import * as React from "react";
 import { SyntheticEvent } from "react";
 
 class SelectOfHtml extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 在 HTML 中，<select> 标签可以通过在 <option> 上设置 selected，
      * 设置默认的选中项；
@@ -64,7 +64,7 @@ class C010904 extends React.Component<IProps, IState> {
     console.log(this.state.option, this.state.options);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <SelectOfHtml />

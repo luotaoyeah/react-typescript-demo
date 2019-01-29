@@ -15,7 +15,7 @@ const About = () => {
 };
 
 class Topics extends React.Component<{} & RouteComponentProps<any>> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <ul>
         <li>
@@ -37,14 +37,14 @@ interface ITopicParam {
 }
 
 class Topic extends React.Component<{} & RouteComponentProps<ITopicParam>> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Alert message={this.props.match.params.topicId} />;
   }
 }
 
 /**  */
 class C0101 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ul>

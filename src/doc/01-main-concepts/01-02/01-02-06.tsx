@@ -11,7 +11,7 @@ import * as React from "react";
 console.log("\n-------------------------------------------------- 01");
 
 class C010206 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const message = "<script>{alert('hello')}</script>";
     return <div>{message}</div>;
   }

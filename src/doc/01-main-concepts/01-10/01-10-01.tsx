@@ -19,7 +19,7 @@ function toF(c: number): number {
 }
 
 class BoilingVerdict extends React.Component<{ celsius: number }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     if (this.props.celsius >= 100) {
       return <Tag color="green">BOIL</Tag>;
     }
@@ -42,7 +42,7 @@ class TemperatureInput extends React.Component<{
     this.props.onChange(Number((e.target as HTMLInputElement).value));
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <fieldset>
         <legend>temperature in {this.props.scale}</legend>
@@ -81,7 +81,7 @@ class Calculator extends React.Component<
     this.setState({ scale: "F", temperature });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const c =
       this.state.scale === "F"
         ? toC(this.state.temperature)
@@ -105,7 +105,7 @@ interface IProps {}
 interface IState {}
 
 class C011001 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Calculator />

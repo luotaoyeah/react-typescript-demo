@@ -21,7 +21,7 @@ class B extends React.Component<{}, { count: number }> {
     }, 1000);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button>{this.state.count}</Button>;
   }
 }
@@ -61,7 +61,7 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button onClick={this.handleClick}>{this.state.count}</Button>
@@ -73,7 +73,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302030601 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <A />;
   }
 }

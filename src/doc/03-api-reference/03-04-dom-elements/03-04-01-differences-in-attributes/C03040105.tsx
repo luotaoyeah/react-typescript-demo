@@ -19,7 +19,7 @@ class C03040105 extends React.Component<{}, {}> {
     console.log(e.target.value);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <input type="text" onChange={this.handleChange} />

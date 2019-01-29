@@ -22,7 +22,7 @@ class A extends React.Component<IAProps, IAState> {
     text: "foo"
   };
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     if (this.props.children) {
       return this.props.children(this.state);
     }
@@ -37,7 +37,7 @@ class C021602B extends React.Component {
     return <Button>{state.text}</Button>;
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <React.Fragment>
         <A children={this.renderA} />

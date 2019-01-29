@@ -13,7 +13,7 @@ import React from "react";
  *    计划是让 hooks 实现 class 组件的所有功能；
  */
 class C040102 extends React.Component<{}, {}> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div />;
   }
 }

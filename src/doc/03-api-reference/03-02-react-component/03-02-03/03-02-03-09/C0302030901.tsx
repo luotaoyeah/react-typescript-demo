@@ -26,7 +26,7 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     if (this.state.count > 5) {
       throw new Error("GREATOR THAN FIVE");
     }
@@ -55,7 +55,7 @@ class C0302030901 extends React.Component<{}, { hasError: boolean }> {
     console.log(errorInfo);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     if (this.state.hasError) {
       return <Button type="danger">ERROR</Button>;
     }

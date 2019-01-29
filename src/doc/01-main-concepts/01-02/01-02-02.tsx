@@ -16,7 +16,7 @@ class C010202 extends React.Component {
     return "hello";
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * JSX 可以跨越多行，此时应该用 () 包裹起来，
      * 以避免 automatic semicolon insertioin；

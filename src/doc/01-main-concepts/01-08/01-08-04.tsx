@@ -5,7 +5,7 @@
 import * as React from "react";
 
 class MyLi extends React.Component<{ value: string }> {
-  render() {
+  public render() {
     return <li>{this.props.value}</li>;
   }
 }
@@ -19,7 +19,7 @@ interface IState {}
  * key 属性需要设置在循环项的最顶层标签上；
  */
 class C010804 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {["a", "b", "c"].map((n: string) => {

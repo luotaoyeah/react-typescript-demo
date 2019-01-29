@@ -14,7 +14,7 @@ import { Link, LinkProps } from "react-router-dom";
  * 根据当前地址是否匹配，设置不同的样式；
  */
 class MyLink extends React.Component<LinkProps> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const { to } = this.props;
     return (
       <Route path={to as any}>
@@ -40,7 +40,7 @@ class ApiRouteChildren extends React.Component {
     return <Button>RENDER</Button>;
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <MyLink to={"/a"}>a</MyLink>

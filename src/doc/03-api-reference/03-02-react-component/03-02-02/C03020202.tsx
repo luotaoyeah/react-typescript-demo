@@ -82,7 +82,7 @@ class C03020202 extends React.Component<IProps, IState> {
     this.forceUpdate();
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     console.log("render()");
     return (
       <div>

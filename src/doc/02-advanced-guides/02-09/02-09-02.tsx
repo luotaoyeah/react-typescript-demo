@@ -50,7 +50,7 @@ function hello() {
 }
 
 class C020902 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const Hello = hello;
 
     /*

@@ -15,19 +15,19 @@ import { Context } from "react";
  *
  */
 class Button extends React.Component<{ theme: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <button className={this.props.theme}>button</button>;
   }
 }
 
 class ThemeButton extends React.Component<{ theme: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button theme={this.props.theme} />;
   }
 }
 
 class Toolbar extends React.Component<{ theme: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <ThemeButton theme={this.props.theme} />;
   }
 }
@@ -38,7 +38,7 @@ class Toolbar extends React.Component<{ theme: string }> {
 const ThemeContext: Context<string> = React.createContext<string>("red");
 
 class Button02 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 使用 React.Context.Consumer 消费 context；
      */
@@ -51,19 +51,19 @@ class Button02 extends React.Component {
 }
 
 class ThemeButton02 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button02 />;
   }
 }
 
 class Toolbar02 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <ThemeButton02 />;
   }
 }
 
 class C020301 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Toolbar theme={"red"} />

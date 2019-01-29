@@ -15,7 +15,7 @@ import * as React from "react";
  * 类似于 try/catch 在 JS 代码中的作用；
  */
 class C020403 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 在开发环境中，组件中的错误会打印到浏览器控制台：
      *

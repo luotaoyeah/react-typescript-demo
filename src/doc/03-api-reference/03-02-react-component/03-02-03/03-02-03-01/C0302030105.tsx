@@ -11,7 +11,7 @@ class A extends React.Component {
   /*
    * render() 方法可以直接返回 string 或者 number；
    */
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return [9, <Divider key={2} />, "foo"];
   }
 }
@@ -21,7 +21,7 @@ interface IProps {}
 interface IState {}
 
 class C0302030105 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

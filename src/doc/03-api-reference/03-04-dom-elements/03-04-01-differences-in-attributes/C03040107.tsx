@@ -7,7 +7,7 @@
 import React from "react";
 
 class C03040107 extends React.Component<{}, {}> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {/*

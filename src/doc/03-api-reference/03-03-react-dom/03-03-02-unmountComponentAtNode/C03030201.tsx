@@ -32,12 +32,12 @@ class C03030201 extends React.Component {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const vm = this;
 
     return (
       <div>
-        <Button onClick={vm.handleClick01}>render()</Button>
+        <Button onClick={vm.handleClick01}>public render()</Button>
         <Button onClick={vm.handleClick02}>unmountComponentAtNode()</Button>
         <Divider />
         <div id="div01">DIV01</div>

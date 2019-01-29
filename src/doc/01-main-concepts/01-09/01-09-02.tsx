@@ -51,7 +51,7 @@ class C010902 extends React.Component<IProps, IState> {
     alert("name: " + this.state.name);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>

@@ -18,7 +18,7 @@ class C03030301 extends React.Component {
    *     在 react 组件的角度上，它们还是父子关系，
    *     但是在 DOM 结构的角度上，它们没有直接的父子关系
    */
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {ReactDOM.createPortal(

@@ -30,7 +30,7 @@ class Mouse extends React.Component<IMouseProps, IMouseState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const vm = this;
 
     return (

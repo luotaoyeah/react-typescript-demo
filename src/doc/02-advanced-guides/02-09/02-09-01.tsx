@@ -18,7 +18,7 @@ class C020901 extends React.Component {
     message.success("hello");
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const button01 = (
       <Button type={"primary"} onClick={this.handleClick}>
         button

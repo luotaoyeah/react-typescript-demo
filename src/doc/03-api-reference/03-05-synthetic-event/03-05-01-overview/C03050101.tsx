@@ -24,7 +24,7 @@ class C03050101 extends React.Component<{}, {}> {
     console.log(prototypeOf.constructor.name); // SyntheticEvent
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button onClick={this.handleClick}>FOO</Button>

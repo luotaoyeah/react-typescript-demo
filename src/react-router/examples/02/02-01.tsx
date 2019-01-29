@@ -16,7 +16,7 @@ const D = ({ match }: RouteComponentProps<{ id: string }>) => {
 
 /**  */
 class C0201 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ul>
@@ -33,8 +33,8 @@ class C0201 extends React.Component {
         <Divider />
         <Route path={"/:id"} exact={true} render={C} />
         {/*
-          * 可以通过正则表达式，指定参数的匹配规则；
-          */}
+         * 可以通过正则表达式，指定参数的匹配规则；
+         */}
         <Route path={"/:id([ac])"} exact={true} render={D} />
       </div>
     );

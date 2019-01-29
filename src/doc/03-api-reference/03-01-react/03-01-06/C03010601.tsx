@@ -67,7 +67,7 @@ class C030106 extends React.Component {
     ); // [3]
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div />;
   }
 }

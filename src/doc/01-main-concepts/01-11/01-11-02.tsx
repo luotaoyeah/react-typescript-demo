@@ -12,13 +12,13 @@ import { Button } from "antd";
  */
 
 class PrimaryButton extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button type={"primary"}>PRIMARY</Button>;
   }
 }
 
 class DangerButton extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button type={"danger"}>DANGER</Button>;
   }
 }
@@ -37,7 +37,7 @@ class C011102 extends React.Component<IProps, IState> {
     console.log("click");
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <p>

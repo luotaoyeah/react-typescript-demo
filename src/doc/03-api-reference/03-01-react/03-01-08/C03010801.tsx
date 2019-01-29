@@ -27,7 +27,7 @@ class C03010801 extends React.Component {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <input

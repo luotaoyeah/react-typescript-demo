@@ -24,7 +24,7 @@ interface IState {
  */
 
 class C010506A extends React.Component<{ username: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <i>{this.props.username}</i>;
   }
 }
@@ -35,7 +35,7 @@ class C010506 extends React.Component<IProps, IState> {
     this.state = { name: "foo" };
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <C010506A username={this.state.name} />

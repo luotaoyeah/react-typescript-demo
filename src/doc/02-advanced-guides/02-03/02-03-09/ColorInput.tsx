@@ -8,7 +8,7 @@ class ColorInput extends React.Component<{ color: string }> {
     this.inputRef.current!.focus();
   }
 
-  render() {
+  public render() {
     return (
       <input
         ref={this.inputRef}

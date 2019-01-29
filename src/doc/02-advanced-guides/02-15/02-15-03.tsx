@@ -26,7 +26,7 @@ class C021503 extends React.Component {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Input ref={this.inputRef} style={{ width: "200px" }} />

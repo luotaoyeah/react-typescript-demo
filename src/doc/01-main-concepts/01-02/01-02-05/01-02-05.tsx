@@ -11,7 +11,7 @@ import ico from "./01-02-05.ico";
 console.log("\n-------------------------------------------------- 01");
 
 class C010205 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <h1>picture</h1>

@@ -15,7 +15,7 @@ class PanelBad extends React.Component<{
   body: string;
   footer: string;
 }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div className="panel">
         <div className="panel-heading">
@@ -33,7 +33,7 @@ class PanelGood extends React.Component<{
   body: string;
   footer: string;
 }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div className="panel">
         <PanelHead title={this.props.title} />
@@ -45,7 +45,7 @@ class PanelGood extends React.Component<{
 }
 
 class PanelHead extends React.Component<{ title: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div className="panel-heading">
         <div className="panel-title">{this.props.title}</div>
@@ -55,19 +55,19 @@ class PanelHead extends React.Component<{ title: string }> {
 }
 
 class PanelBody extends React.Component<{ body: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div className="panel-body">{this.props.body}</div>;
   }
 }
 
 class PanelFooter extends React.Component<{ footer: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div className="panel-footer">{this.props.footer}</div>;
   }
 }
 
 class C010404 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <PanelBad title={"title"} body={"body"} footer={"footer"} />

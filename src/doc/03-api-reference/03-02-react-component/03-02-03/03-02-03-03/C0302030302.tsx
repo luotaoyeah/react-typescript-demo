@@ -33,14 +33,14 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     console.log(`render(): ${this.state.name}`);
     return <Button>{this.state.name}</Button>;
   }
 }
 
 class C0302030302 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

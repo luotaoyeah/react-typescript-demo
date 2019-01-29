@@ -19,7 +19,7 @@ function C010402A(props: {
 }
 
 class C010402 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <p>
         <C010402A name={"luotao"} />

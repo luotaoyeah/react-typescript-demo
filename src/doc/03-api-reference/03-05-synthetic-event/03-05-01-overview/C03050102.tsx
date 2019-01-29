@@ -21,7 +21,7 @@ class C03050102 extends React.Component<{}, {}> {
     console.log(e.nativeEvent instanceof MouseEvent); // true
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button onClick={this.handleClick}>FOO</Button>

@@ -44,7 +44,7 @@ class C04020202 extends React.Component<{}, { visible: boolean }> {
     this.state = { visible: true };
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button

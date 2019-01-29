@@ -16,7 +16,7 @@ function C0104003A(props: {
 }
 
 class C010403 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <C0104003A name={"foo"} />

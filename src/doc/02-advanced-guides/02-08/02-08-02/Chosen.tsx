@@ -51,7 +51,7 @@ class Chosen extends React.Component<IProps, IState> {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     console.log("render()");
     /*
      * 通过将所有的 DOM 元素包裹在一个 div 里面，

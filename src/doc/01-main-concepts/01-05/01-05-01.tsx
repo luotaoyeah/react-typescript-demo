@@ -40,7 +40,7 @@ setInterval(() => {
 }, 1000);
 
 class C010501 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div />;
   }
 }

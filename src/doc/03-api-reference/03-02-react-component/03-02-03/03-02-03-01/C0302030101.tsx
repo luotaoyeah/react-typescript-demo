@@ -30,7 +30,7 @@ class C0302030101 extends React.Component<IProps, IState> {
    * render() 方法是 class 组件中唯一一个必须实现的方法，它的作用是：当 props 或者 state 变更时，
    * 重新渲染组件，更新 DOM；
    */
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     console.log("render()");
     return (
       <div>

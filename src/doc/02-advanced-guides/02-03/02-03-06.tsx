@@ -17,7 +17,7 @@ const NameContext: React.Context<string> = React.createContext("luotao");
  * 这是为了让 Context 的重新渲染更快；
  */
 class ThemeButton extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <NameContext.Consumer>
         {(name: string) => (
@@ -42,7 +42,7 @@ class ThemeButton extends React.Component {
 }
 
 class C020306 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ColorContext.Provider value={COLORS.green}>

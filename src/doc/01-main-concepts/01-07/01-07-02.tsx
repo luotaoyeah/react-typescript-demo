@@ -6,7 +6,7 @@ import * as React from "react";
 import { Button } from "antd";
 
 class LoginButton extends React.Component<{ onClick: () => void }> {
-  render() {
+  public render() {
     /*
      * 通过 props 传入事件回调函数
      */
@@ -19,7 +19,7 @@ class LoginButton extends React.Component<{ onClick: () => void }> {
 }
 
 class LogoutButton extends React.Component<{ onClick: () => void }> {
-  render() {
+  public render() {
     return (
       <Button type={"danger"} onClick={this.props.onClick}>
         退出
@@ -54,7 +54,7 @@ class C010702 extends React.Component<IProps, IState> {
     this.setState({ isLoggedIn: false });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 将 react 元素存储到变量中，根据不同的状态，
      * 渲染不同的组件；

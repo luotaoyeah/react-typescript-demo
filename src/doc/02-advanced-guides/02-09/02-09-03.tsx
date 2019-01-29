@@ -10,7 +10,7 @@ import { Button, Divider } from "antd";
  * JSX 的 props 可以有多种形式；
  */
 class C020903 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 可以使用'对象解构'的方式，
      * 将一个 props 对象的所有属性一次性全部应用到组件上；

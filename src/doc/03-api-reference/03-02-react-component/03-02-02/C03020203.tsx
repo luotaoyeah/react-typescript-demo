@@ -18,7 +18,7 @@ class A extends React.Component {
     console.log("componentWillUnmount()");
   }
 
-  render() {
+  public render() {
     return "A";
   }
 }
@@ -45,7 +45,7 @@ class C03020203 extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {this.state.show && <A />}

@@ -10,7 +10,7 @@ import { Button } from "antd";
  * TODO
  */
 class C03050301 extends React.Component<{}, {}> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button>FOO</Button>

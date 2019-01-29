@@ -20,7 +20,7 @@ function withRadius<P extends HTMLAttributes<Element>>(
   Component: React.ComponentType<any>
 ) {
   class HOC extends React.Component<P & IWIthRadiusProps> {
-    render(): React.ReactNode {
+    public render(): React.ReactNode {
       const { radius, ...rest } = this.props as IWIthRadiusProps;
       return <Component {...rest} style={{ borderRadius: radius }} />;
     }
@@ -33,7 +33,7 @@ const RadiusButton = withRadius<any>(Button);
 const RadiusInput = withRadius<any>(Input);
 
 class C020701 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <RadiusButton radius={"50%"}>button</RadiusButton>

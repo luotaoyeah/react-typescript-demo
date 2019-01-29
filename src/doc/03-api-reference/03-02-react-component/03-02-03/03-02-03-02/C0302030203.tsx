@@ -24,13 +24,13 @@ class A extends React.Component<IProps, IState> {
     */
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Button>A</Button>;
   }
 }
 
 class C0302030203 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

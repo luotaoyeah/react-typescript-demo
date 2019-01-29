@@ -37,7 +37,7 @@ function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
       console.log("LOGGER");
     }
 
-    render(): React.ReactNode {
+    public render(): React.ReactNode {
       const { forwardRef, ...rest } = this.props;
 
       return <Component {...rest} ref={forwardRef} />;
@@ -73,7 +73,7 @@ class C020502 extends React.Component {
     }
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <LoggerFancyButton ref={this.ref} onClick={this.handleClick} />

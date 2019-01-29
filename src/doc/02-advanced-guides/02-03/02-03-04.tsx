@@ -12,7 +12,7 @@ const COLORS = {
 const ColorContext: React.Context<string> = React.createContext(COLORS.red);
 
 class ThemeButton extends React.Component<{ onClick: () => void }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <ColorContext.Consumer>
         {(color: string) => (
@@ -50,7 +50,7 @@ class ThemeToolbar extends React.Component<{}, { color: string }> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <ColorContext.Provider value={this.state.color}>
         <ThemeButton onClick={this.handleToggleColor}>toggle color</ThemeButton>
@@ -60,7 +60,7 @@ class ThemeToolbar extends React.Component<{}, { color: string }> {
 }
 
 class C020304 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ThemeToolbar />

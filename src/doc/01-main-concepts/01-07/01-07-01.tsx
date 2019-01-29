@@ -6,7 +6,7 @@ import * as React from "react";
 import { Button, Input } from "antd";
 
 class ButtonOrInput extends React.Component<{ type: string }> {
-  render() {
+  public render() {
     /*
      * 因为 react 元素就是普通的 JS 表达式，
      * 所以可以使用 JS 中的条件语句，如：if 和 三元条件表达式，
@@ -24,7 +24,7 @@ interface IProps {}
 interface IState {}
 
 class C010701 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ButtonOrInput type={"button"} />

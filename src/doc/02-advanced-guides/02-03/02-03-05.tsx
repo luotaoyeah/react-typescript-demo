@@ -26,7 +26,7 @@ const ColorContext: React.Context<IColorContext> = React.createContext({
 });
 
 class ThemeButton extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <ColorContext.Consumer>
         {(colorContext: IColorContext) => (
@@ -75,7 +75,7 @@ class ThemeToolbar extends React.Component<
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <ColorContext.Provider value={this.state.colorContext}>
         <ThemeButton>toggle color</ThemeButton>
@@ -85,7 +85,7 @@ class ThemeToolbar extends React.Component<
 }
 
 class C020305 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ThemeToolbar />

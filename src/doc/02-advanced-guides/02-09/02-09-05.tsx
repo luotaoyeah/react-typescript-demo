@@ -7,7 +7,7 @@
 import * as React from "react";
 
 class C020905 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * 类似 HTML，JSX 标签中间可以混合字符串和其他组件，
      */

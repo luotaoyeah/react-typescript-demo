@@ -9,13 +9,13 @@ import * as React from "react";
 import { Button, Divider } from "antd";
 
 class A extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <div>{(this.props.children as any)(9)}</div>;
   }
 }
 
 class C020906 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const button = <Button>button</Button>;
 
     /*

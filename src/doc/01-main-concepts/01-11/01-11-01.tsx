@@ -16,7 +16,7 @@ import { Button } from "antd";
  * 都会作为组件的 children 属性，传入组件；
  */
 class Dialog extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div
         style={{
@@ -40,7 +40,7 @@ class Panel extends React.Component<{
   content: React.ReactNode;
   footer: React.ReactNode;
 }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div
         className={"panel"}
@@ -72,7 +72,7 @@ class C011101 extends React.Component<IProps, IState> {
     console.log("click");
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Dialog>

@@ -2,7 +2,7 @@ import * as React from "react";
 import { ColorContext } from "./ColorContext";
 
 class ColorButton extends React.Component<{ color: string }> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <button
         style={{

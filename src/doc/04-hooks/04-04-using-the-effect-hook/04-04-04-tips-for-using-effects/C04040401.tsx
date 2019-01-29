@@ -60,7 +60,7 @@ class C01 extends React.Component<
     window.removeEventListener("resize", this.handleWindowResize);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button
@@ -87,7 +87,7 @@ class C01 extends React.Component<
 }
 
 class C04040401 extends React.Component<{}, {}> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <C01 />

@@ -12,7 +12,7 @@ interface IProps {}
 interface IState {}
 
 class A extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * render() 可以返回多个 react elements 组成的数组；
      */
@@ -25,7 +25,7 @@ class A extends React.Component {
 }
 
 class B extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     /*
      * render() 可以返回一个 React.Fragment，
      * 注意 React.Fragment 和 react elements 数组的区别；
@@ -41,7 +41,7 @@ class B extends React.Component {
 }
 
 class C0302030103 extends React.Component<IProps, IState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

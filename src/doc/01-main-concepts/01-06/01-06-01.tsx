@@ -57,7 +57,7 @@ class C010601 extends React.Component<IProps, IState> {
     message.info(`hello ${this.state.name}`);
   };
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <p>

@@ -18,7 +18,7 @@ interface IAProps {
 interface IAState {}
 
 class A extends React.Component<IAProps, IAState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     if (this.props.render02) {
       return this.props.render02(this.state);
     }
@@ -32,7 +32,7 @@ class C021602A extends React.Component {
     return <Button>A</Button>;
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <A render02={this.renderA} />;
   }
 }

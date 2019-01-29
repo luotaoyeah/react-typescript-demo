@@ -12,7 +12,7 @@ import { Button, Divider } from "antd";
  */
 
 class C020904 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {/*

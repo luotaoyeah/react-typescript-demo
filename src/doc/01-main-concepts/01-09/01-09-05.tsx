@@ -48,7 +48,7 @@ class C010905 extends React.Component<IProps, IState> {
     e.preventDefault();
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>

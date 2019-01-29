@@ -20,7 +20,7 @@ class C03040109 extends React.Component<{}, { message: string }> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {/*

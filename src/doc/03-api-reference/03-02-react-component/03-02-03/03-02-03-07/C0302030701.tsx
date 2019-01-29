@@ -49,7 +49,7 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <Button onClick={this.handleClick} style={{ color: this.state.color }}>
         {this.state.count}
@@ -59,7 +59,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302030701 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <A />;
   }
 }

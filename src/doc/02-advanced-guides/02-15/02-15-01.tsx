@@ -33,7 +33,7 @@ class C021501 extends React.Component {
     this.inputRef = React.createRef<HTMLInputElement>();
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         {/*

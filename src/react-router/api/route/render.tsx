@@ -21,7 +21,7 @@ interface IUserState {}
 
 /**  */
 class User extends React.Component<IUserProps, IUserState> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <Button type={"primary"}>
         {this.props.match.params.name}，{this.props.age}
@@ -59,7 +59,7 @@ class ApiRouteRender extends React.Component {
     return <User {...props} age={18} />;
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ul>

@@ -85,7 +85,7 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <>
         <Card
@@ -102,7 +102,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302030301 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <A />

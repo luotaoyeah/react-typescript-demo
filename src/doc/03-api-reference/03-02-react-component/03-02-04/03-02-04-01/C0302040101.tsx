@@ -22,7 +22,7 @@ class A extends React.Component<IProps, IState> {
    */
   static defaultProps = { color: "blue" };
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <Button style={{ color: this.props.color }}>{this.props.color}</Button>
     );
@@ -30,7 +30,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302040101 extends React.Component<{}, {}> {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <A />;
   }
 }

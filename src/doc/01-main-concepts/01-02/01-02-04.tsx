@@ -18,7 +18,7 @@ class C010204 extends React.Component {
    * 因此其属性使用的是 DOM 对象的 property 形式，
    * 而不是 HTML 标签的 attribute 形式；
    */
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     const id = "id_01_02_04";
     return (
       <div id={id} className="class-01">

@@ -12,7 +12,7 @@ const COLORS = {
 };
 
 class C020307 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <ColorContext.Provider value={COLORS.green}>

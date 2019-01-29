@@ -11,13 +11,13 @@ import ReactDOM from "react-dom";
  * 而使用 ReactDOM.createPortal() 可以将组件渲染到任意的节点下面；
  */
 class PortalComponent extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return ReactDOM.createPortal(this.props.children, document.body);
   }
 }
 
 class C021101 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <PortalComponent>

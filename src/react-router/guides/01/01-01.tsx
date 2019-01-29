@@ -14,14 +14,14 @@ class Dashboard extends React.Component<
     console.log(this.props);
   }
 
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return <Tag>DASHBOARD</Tag>;
   }
 }
 
 /**  */
 class C0101 extends React.Component {
-  render(): React.ReactNode {
+  public render(): React.ReactNode {
     return (
       <div>
         <Button>
