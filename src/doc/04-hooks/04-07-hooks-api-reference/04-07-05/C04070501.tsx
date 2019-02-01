@@ -3,21 +3,24 @@
  *     useCallback
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "antd";
 
 function F01(): React.ReactElement<{}> {
   const [count, setCount] = useState<number>(0);
-  const [odd, setOdd] = useState<number>(0);
 
   /*
-   * useCallback() 接收两个参数：回调函数，数据列表，返回一个记忆化的（memoized）函数
-   * 当数据列表中的某个数据发生变更时，记忆化的函数才会发生变更，
-   * 如下：当 odd 发生变更时，cb 才会变更，当 cb 发生变更时，useEffect() 才会调用
+   * 对于内联函数来说，默认情况下，每次 render 之后都会创建一个新的内联函数，
+   * 当某个地方需要根据该内联函数是否发生变更（即是否是重新创建的内联函数），来执行某些操作时，
+   * 由于每次 render 之后都会创建新的内联函数，因此每次 render 之后该操作都会执行
    */
-  const cb = useCallback(() => {
-    /* do something */
-  }, [odd]);
+
+  /*
+   * 如下，cb 是一个内联函数，每次 render 之后，cb 都是指向一个新的内联函数，
+   * 而 useEffect() 依赖于 cb 是否发生变更，
+   * 因此每次 render 之后，useEffect() 都会执行
+   */
+  const cb = () => {}; // tslint:disable-line:no-empty
 
   useEffect(() => {
     console.log("ODD:", count);
@@ -26,11 +29,7 @@ function F01(): React.ReactElement<{}> {
   return (
     <Button
       onClick={() => {
-        const newCount = count + 1;
-        setCount(newCount);
-        if (newCount % 3 === 0) {
-          setOdd(newCount);
-        }
+        setCount(count + 1);
       }}
     >
       {count}
