@@ -4,13 +4,13 @@
  *         React.Children.map()
  */
 
-import React from "react";
+import React, { ReactChild } from "react";
 
 /*
  *
  */
 class C030106 extends React.Component {
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const element01 = (
       <div>
         <span>A</span>
@@ -27,9 +27,10 @@ class C030106 extends React.Component {
      * 如果 children 是 null 或者 undefined，则返回的也是 null 或者 undefined；
      */
     console.log(
-      React.Children.map<string>(
+      React.Children.map<string, ReactChild>(
         element01.props.children,
         (child: React.ReactChild) => {
+          // tslint:disable-next-line:no-any
           return (child as React.ReactElement<any>).props.children;
         }
       )
@@ -58,9 +59,9 @@ class C030106 extends React.Component {
      * 如果 children 是一个 React.Fragment，则会被当成单个节点；
      */
     console.log(
-      React.Children.map<React.ReactFragment>(
+      React.Children.map<number, React.ReactFragment>(
         element03.props.children,
-        (child: React.ReactChild) => {
+        (child: React.ReactFragment) => {
           return (child as React.ReactElement<any>).props.children.length;
         }
       )

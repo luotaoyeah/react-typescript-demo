@@ -14,7 +14,7 @@ const useEffectProxy = new Proxy(useEffect, {
   apply(
     target: (
       effect: React.EffectCallback,
-      inputs?: React.InputIdentityList
+      inputs?: React.DependencyList
     ) => void,
     thisArg: unknown,
     argArray: [EffectCallback, (ReadonlyArray<unknown> | undefined)?]

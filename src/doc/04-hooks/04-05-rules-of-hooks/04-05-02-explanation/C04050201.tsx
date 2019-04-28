@@ -5,12 +5,7 @@
  *         Explanation
  */
 
-import React, {
-  EffectCallback,
-  InputIdentityList,
-  useEffect,
-  useState
-} from "react";
+import React, { EffectCallback, useEffect, useState } from "react";
 import { Button } from "antd";
 
 /*
@@ -25,10 +20,10 @@ const useEffectProxy = new Proxy(useEffect, {
   apply(
     target: (
       effect: React.EffectCallback,
-      inputs?: React.InputIdentityList
+      inputs?: React.DependencyList
     ) => void,
     thisArg: unknown,
-    argArray: [EffectCallback, InputIdentityList | undefined]
+    argArray: [EffectCallback, React.DependencyList | undefined]
   ): unknown {
     console.log("%cuseEffectProxy", "color: #ff0000");
     return target.apply(thisArg, argArray);

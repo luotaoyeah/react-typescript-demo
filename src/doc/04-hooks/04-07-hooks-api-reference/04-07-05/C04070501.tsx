@@ -24,7 +24,7 @@ function F01(): React.ReactElement<{}> {
 
   useEffect(() => {
     console.log("ODD:", count);
-  }, [cb]);
+  }, [cb]); // eslint-disable-line
 
   return (
     <Button
