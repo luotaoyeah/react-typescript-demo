@@ -1,5 +1,5 @@
 # learning-react
 
-[![CircleCI](https://circleci.com/gh/luotaoyeah/learning-react.svg?style=shield)](https://circleci.com/gh/luotaoyeah/learning-react)
+![CircleCI (all branches)](https://img.shields.io/circleci/project/github/luotaoyeah/learning-react.svg)
 
 Learning React
