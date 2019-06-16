@@ -9,9 +9,9 @@ import React, { EffectCallback, useEffect, useState } from "react";
 import { Button } from "antd";
 
 /*
- * 之所以 hooks 必须遵守这些规则，是因为：
- *     在同一个 function 组件中可以多次调用同一个 hook 函数，
- *     而 react 需要保证在每次 render 的时候，所有的 hooks 的执行顺序是固定的，
+ * 之所以 hooks 必须遵守这些规则, 是因为:
+ *     在同一个 function 组件中可以多次调用同一个 hook 函数,
+ *     而 react 需要保证在每次 render 的时候, 所有的 hooks 的执行顺序是固定的,
  *     否则 hooks 无法正确工作
  */
 
@@ -33,12 +33,17 @@ const useEffectProxy = new Proxy(useEffect, {
 /**  */
 const useStateProxy = new Proxy(useState, {
   apply(
-    target: <S>(
-      initialState: (() => S) | S
-    ) => [S, React.Dispatch<React.SetStateAction<S>>],
-    thisArg: unknown,
-    argArray: [{} | (() => {})]
-  ): unknown {
+    target:
+      | (<S>(
+          initialState: (() => S) | S
+        ) => [S, React.Dispatch<React.SetStateAction<S>>])
+      | (<S = undefined>() => [
+          (S | undefined),
+          React.Dispatch<React.SetStateAction<S | undefined>>
+        ]),
+    thisArg: any,
+    argArray?: any
+  ): any {
     console.log("%cuseStateProxy", "color: #0000ff");
     return target.apply(thisArg, argArray);
   }
@@ -46,6 +51,7 @@ const useStateProxy = new Proxy(useState, {
 
 /**  */
 function F01(): React.ReactElement<{}> {
+  // @ts-ignore FIXME
   const [count, setCount] = useStateProxy<number>(0);
 
   useEffectProxy(() => {
