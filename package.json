@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+    "test": "react-app-rewired test --env=jsdom --watchAll=false",
+    "codecov": "codecov --token=2797cb08-8345-433d-8007-f75db0314dee"
   },
   "dependencies": {
     "antd": "^3.19.8",
@@ -28,6 +29,7 @@
     "@types/react-router-dom": "^4.3.4",
     "babel-plugin-import": "^1.12.0",
     "chalk": "^2.4.2",
+    "codecov": "^3.5.0",
     "customize-cra": "^0.2.14",
     "husky": "^2.7.0",
     "less": "^3.9.0",
@@ -39,5 +41,16 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.5.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageReporters": [
+      "lcovonly",
+      "text-summary"
+    ]
   }
 }
