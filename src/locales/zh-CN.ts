@@ -1,8 +1,8 @@
 import component from './zh-CN/component';
-import globalHeader from './zh-CN/globalHeader';
+import globalHeader from './zh-CN/global-header';
 import menu from './zh-CN/menu';
 import pwa from './zh-CN/pwa';
-import settingDrawer from './zh-CN/settingDrawer';
+import settingDrawer from './zh-CN/setting-drawer';
 import settings from './zh-CN/settings';
 
 export default {

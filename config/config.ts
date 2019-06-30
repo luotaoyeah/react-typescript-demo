@@ -30,7 +30,7 @@ const plugins: IPlugin[] = [
         baseNavigator: true,
       },
       dynamicImport: {
-        loadingComponent: './components/PageLoading/index',
+        loadingComponent: './components/page-loading/index',
         webpackChunkName: true,
         level: 3,
       },
@@ -91,20 +91,20 @@ export default {
   routes: [
     {
       path: '/',
-      component: '../layouts/BasicLayout',
-      Routes: ['src/pages/Authorized'],
+      component: '../layouts/basic-layout',
+      Routes: ['src/pages/authorized'],
       authority: ['admin', 'user'],
       routes: [
         {
           path: '/',
           name: 'welcome',
-          icon: 'plus',
-          component: './Welcome',
+          icon: 'info-circle',
+          component: './welcome',
         },
         {
           path: '/doc',
           name: 'DOC',
-          icon: 'plus',
+          icon: 'info-circle',
           component: '../components/doc/01-main-concepts/01-02/01-02-01',
         },
         {

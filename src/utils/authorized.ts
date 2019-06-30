@@ -1,4 +1,4 @@
-import RenderAuthorize from '@/components/Authorized';
+import RenderAuthorize from '@/components/authorized';
 import { getAuthority } from './authority';
 /* eslint-disable eslint-comments/disable-enable-pair */
 /* eslint-disable import/no-mutable-exports */

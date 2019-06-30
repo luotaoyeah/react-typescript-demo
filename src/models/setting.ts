@@ -1,7 +1,7 @@
 import { Reducer } from 'redux';
 import { message } from 'antd';
 import defaultSettings, { DefaultSettings } from '../../config/defaultSettings';
-import themeColorClient from '../components/SettingDrawer/themeColorClient';
+import themeColorClient from '../components/setting-drawer/theme-color-client';
 
 export interface SettingModelType {
   namespace: 'settings';

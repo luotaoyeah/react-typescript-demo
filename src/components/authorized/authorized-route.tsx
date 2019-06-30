@@ -1,8 +1,8 @@
 import { Redirect, Route } from 'umi';
 
 import React from 'react';
-import Authorized from './Authorized';
-import { IAuthorityType } from './CheckPermissions';
+import Authorized from './authorized';
+import { IAuthorityType } from './check-permissions';
 
 interface AuthorizedRoutePops {
   currentAuthority: string;

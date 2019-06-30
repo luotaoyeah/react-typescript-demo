@@ -1,7 +1,7 @@
 import React from 'react';
-import { CURRENT } from './renderAuthorize';
+import { CURRENT } from './render-authorize';
 // eslint-disable-next-line import/no-cycle
-import PromiseRender from './PromiseRender';
+import PromiseRender from './promise-render';
 
 export type IAuthorityType =
   | undefined

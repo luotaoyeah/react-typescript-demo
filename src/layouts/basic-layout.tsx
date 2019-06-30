@@ -5,19 +5,17 @@
  */
 
 import ProLayout, {
-  MenuDataItem,
   BasicLayoutProps as ProLayoutProps,
+  MenuDataItem,
   Settings,
 } from '@ant-design/pro-layout';
 import React, { useEffect } from 'react';
 import Link from 'umi/link';
 import { connect } from 'dva';
 import { formatMessage } from 'umi-plugin-react/locale';
-
-import Authorized from '@/utils/Authorized';
-import RightContent from '@/components/GlobalHeader/RightContent';
+import Authorized from '@/utils/authorized';
+import RightContent from '@/components/global-header/right-content';
 import { ConnectProps, ConnectState } from '@/models/connect';
-import { isAntDesignPro } from '@/utils/utils';
 import logo from '../assets/logo.svg';
 
 export interface BasicLayoutProps extends ProLayoutProps, Omit<ConnectProps, 'location'> {
@@ -44,29 +42,8 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
     return Authorized.check(item.authority, localItem, null) as MenuDataItem;
   });
 
-const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
-  if (!isAntDesignPro()) {
-    return defaultDom;
-  }
-  return (
-    <>
-      {defaultDom}
-      <div
-        style={{
-          padding: '0px 24px 24px',
-          textAlign: 'center',
-        }}
-      >
-        <a href="https://www.netlify.com" target="_blank" rel="noopener noreferrer">
-          <img
-            src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
-            width="82px"
-            alt="netlify logo"
-          />
-        </a>
-      </div>
-    </>
-  );
+const footerRender: BasicLayoutProps['footerRender'] = () => {
+  return '';
 };
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {

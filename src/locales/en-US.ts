@@ -1,8 +1,8 @@
 import component from './en-US/component';
-import globalHeader from './en-US/globalHeader';
+import globalHeader from './en-US/global-header';
 import menu from './en-US/menu';
 import pwa from './en-US/pwa';
-import settingDrawer from './en-US/settingDrawer';
+import settingDrawer from './en-US/setting-drawer';
 import settings from './en-US/settings';
 
 export default {

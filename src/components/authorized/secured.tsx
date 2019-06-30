@@ -1,5 +1,5 @@
 import React from 'react';
-import CheckPermissions from './CheckPermissions';
+import CheckPermissions from './check-permissions';
 
 /**
  * 默认不能访问任何页面

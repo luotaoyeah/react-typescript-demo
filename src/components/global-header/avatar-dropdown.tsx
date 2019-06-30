@@ -7,7 +7,7 @@ import router from 'umi/router';
 
 import { ConnectProps, ConnectState } from '@/models/connect';
 import { CurrentUser } from '@/models/user';
-import HeaderDropdown from '../HeaderDropdown';
+import HeaderDropdown from '../header-dropdown';
 import styles from './index.less';
 
 export interface GlobalHeaderRightProps extends ConnectProps {

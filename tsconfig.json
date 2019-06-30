@@ -27,7 +27,7 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts",
+    "src/setup-tests.ts",
     "tslint:latest",
     "tslint-config-prettier"
   ]
