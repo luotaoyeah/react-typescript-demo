@@ -10,8 +10,6 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "suppressImplicitAnyIndexErrors": true,
