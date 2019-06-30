@@ -1,6 +1,6 @@
 import { isUrl } from './utils';
 
-describe('isUrl tests', (): void => {
+describe('src/utils/utils.ts', (): void => {
   it('should return false for invalid and corner case inputs', (): void => {
     expect(isUrl([] as any)).toBeFalsy();
     expect(isUrl({} as any)).toBeFalsy();
