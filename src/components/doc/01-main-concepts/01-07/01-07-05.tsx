@@ -2,7 +2,7 @@
  * Conditional Rendering: Preventing Component from Rendering
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Alert, Button } from 'antd';
 
 interface IProps {}

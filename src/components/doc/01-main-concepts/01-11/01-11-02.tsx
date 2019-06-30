@@ -2,7 +2,7 @@
  * Composition vs Inheritance: Specialization
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 /*

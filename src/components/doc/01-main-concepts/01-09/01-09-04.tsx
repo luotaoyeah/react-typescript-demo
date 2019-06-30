@@ -2,7 +2,7 @@
  * Forms: The <select> Tag
  */
 
-import * as React from 'react';
+import React from 'react';
 import { SyntheticEvent } from 'react';
 
 class SelectOfHtml extends React.Component {

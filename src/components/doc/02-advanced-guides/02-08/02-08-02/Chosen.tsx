@@ -2,7 +2,7 @@
  * 对 chosen-js 的封装
  */
 
-import * as React from 'react';
+import React from 'react';
 import 'chosen-js';
 import 'chosen-js/chosen.css';
 

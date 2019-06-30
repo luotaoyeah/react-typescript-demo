@@ -2,7 +2,7 @@
  * Lists and Keys: Extracting Components with Keys
  */
 
-import * as React from 'react';
+import React from 'react';
 
 class MyLi extends React.Component<{ value: string }> {
   public render() {

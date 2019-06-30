@@ -2,7 +2,7 @@
  * Code-Splitting
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 默认情况下，应用会被打包（bundle）到一个文件中；

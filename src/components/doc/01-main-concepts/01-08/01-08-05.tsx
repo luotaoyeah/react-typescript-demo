@@ -2,7 +2,7 @@
  * Lists and Keys: Keys Must Only Be Unique Among Siblings
  */
 
-import * as React from 'react';
+import React from 'react';
 
 class Item extends React.Component<{ id: string; key: string; name: string }> {
   public render(): React.ReactNode {

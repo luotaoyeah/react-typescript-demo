@@ -10,6 +10,7 @@ import styles from './index.less';
 interface SelectLangProps {
   className?: string;
 }
+
 const SelectLang: React.FC<SelectLangProps> = props => {
   const { className } = props;
   const selectedLang = getLocale();
@@ -17,25 +18,12 @@ const SelectLang: React.FC<SelectLangProps> = props => {
   const locales = ['zh-CN', 'zh-TW', 'en-US', 'pt-BR'];
   const languageLabels = {
     'zh-CN': '简体中文',
-    'zh-TW': '繁体中文',
     'en-US': 'English',
-    'pt-BR': 'Português',
-  };
-  const languageIcons = {
-    'zh-CN': '🇨🇳',
-    'zh-TW': '🇭🇰',
-    'en-US': '🇬🇧',
-    'pt-BR': '🇧🇷',
   };
   const langMenu = (
     <Menu className={styles.menu} selectedKeys={[selectedLang]} onClick={changeLang}>
       {locales.map(locale => (
-        <Menu.Item key={locale}>
-          <span role="img" aria-label={languageLabels[locale]}>
-            {languageIcons[locale]}
-          </span>{' '}
-          {languageLabels[locale]}
-        </Menu.Item>
+        <Menu.Item key={locale}>{languageLabels[locale]}</Menu.Item>
       ))}
     </Menu>
   );

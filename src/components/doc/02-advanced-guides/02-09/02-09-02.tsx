@@ -7,7 +7,7 @@
  *     Choosing the Type at Runtime
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Divider } from 'antd';
 
 /*

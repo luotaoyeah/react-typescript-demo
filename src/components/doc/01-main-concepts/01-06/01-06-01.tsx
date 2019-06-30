@@ -2,7 +2,7 @@
  * Handling Events
  */
 
-import * as React from 'react';
+import React from 'react';
 import { MouseEvent } from 'react';
 import { Button, message } from 'antd';
 

@@ -2,7 +2,7 @@
  * Basic Components: Route Matching
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Alert, Button, Divider } from 'antd';
 import { Link, Route, Switch } from 'react-router-dom';
 

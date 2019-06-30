@@ -3,7 +3,7 @@
  *     Convention: Pass Unrelated Props Through to the Wrapped Component
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 /*

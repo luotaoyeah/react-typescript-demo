@@ -2,7 +2,7 @@
  * Forwarding Refs: Forwarding refs to DOM components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * React.forwardRef() 可以将 ref 自动传递给组件的下级组件；

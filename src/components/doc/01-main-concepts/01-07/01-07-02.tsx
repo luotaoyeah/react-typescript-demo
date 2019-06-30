@@ -2,7 +2,7 @@
  * Conditional Rendering: Element Variables
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 class LoginButton extends React.Component<{ onClick: () => void }> {

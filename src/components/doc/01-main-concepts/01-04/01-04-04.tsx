@@ -2,7 +2,7 @@
  * Components and Props: Extracting Components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 组件拆分的原则：

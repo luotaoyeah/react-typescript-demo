@@ -2,7 +2,7 @@
  * Context: Accessing Context in Lifecycle Methods
  */
 
-import * as React from 'react';
+import React from 'react';
 import ColorButton from './ColorButton';
 import { ColorContext } from './ColorContext';
 

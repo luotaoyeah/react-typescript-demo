@@ -4,7 +4,7 @@
  *         Booleans, Null, and Undefined Are Ignored
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Divider } from 'antd';
 
 class C020907 extends React.Component {

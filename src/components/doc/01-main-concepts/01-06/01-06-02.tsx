@@ -2,7 +2,7 @@
  * Handling Events: Pass Arguments to Event Handlers
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button, message } from 'antd';
 import { MouseEvent } from 'react';
 

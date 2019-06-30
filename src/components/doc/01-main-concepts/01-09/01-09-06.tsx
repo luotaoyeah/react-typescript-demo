@@ -2,7 +2,7 @@
  * Forms: Controlled Input Null Value
  */
 
-import * as React from 'react';
+import React from 'react';
 import { SyntheticEvent } from 'react';
 
 interface IProps {}

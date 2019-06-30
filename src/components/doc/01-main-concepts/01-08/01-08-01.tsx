@@ -2,7 +2,7 @@
  * Lists and Keys: Rendering Multiple Components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 在 JS 中，对数组元素进行转换，

@@ -2,7 +2,7 @@
  * Basic Components: Navigation
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Divider, Button, Alert } from 'antd';
 import { Link, NavLink, Redirect, Route, Switch } from 'react-router-dom';
 

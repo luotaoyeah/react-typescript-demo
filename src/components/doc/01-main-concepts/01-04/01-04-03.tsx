@@ -2,7 +2,7 @@
  * Components and Props: Composing Components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 简单的组件可以组合成复杂的组件，

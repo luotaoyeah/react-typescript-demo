@@ -2,7 +2,7 @@
  * Components and Props: Rendering a Component
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * react 中的元素有两种，一种是普通的 HTML 元素，

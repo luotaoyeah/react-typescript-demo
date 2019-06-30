@@ -2,7 +2,7 @@
  * Forwarding Refs: Forwarding refs in higher-order components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /**
  *

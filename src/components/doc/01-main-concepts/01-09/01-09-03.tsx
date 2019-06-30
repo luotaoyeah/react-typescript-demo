@@ -2,7 +2,7 @@
  * Forms: The <textarea> Tag
  */
 
-import * as React from 'react';
+import React from 'react';
 import { SyntheticEvent } from 'react';
 
 /*

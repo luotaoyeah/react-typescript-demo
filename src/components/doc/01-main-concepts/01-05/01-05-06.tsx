@@ -2,7 +2,7 @@
  * State and Lifecycle: The Data Flows Down
  */
 
-import * as React from 'react';
+import React from 'react';
 
 interface IProps {}
 

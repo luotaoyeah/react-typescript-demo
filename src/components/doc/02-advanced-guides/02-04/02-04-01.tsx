@@ -2,7 +2,7 @@
  * Error Boundaries: Introducing Error Boundaries
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 /*

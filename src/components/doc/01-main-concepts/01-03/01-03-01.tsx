@@ -1,7 +1,7 @@
 /*
  * Rendering Elements
  */
-import * as React from 'react';
+import React from 'react';
 
 /*
  * React 的 elements 是构建应用的最小单元，React 的 element 是 JS 对象，

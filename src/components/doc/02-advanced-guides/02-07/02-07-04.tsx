@@ -3,7 +3,7 @@
  *     Convention: Wrap the Display Name for Easy Debugging
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 /* TODO 修复类型错误 React.ComponentType<P> */

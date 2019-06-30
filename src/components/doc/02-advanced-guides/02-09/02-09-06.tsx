@@ -5,7 +5,7 @@
  *         Functions as Children
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button, Divider } from 'antd';
 
 class A extends React.Component {

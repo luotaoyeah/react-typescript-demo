@@ -2,7 +2,7 @@
  * Lists and Keys: Embedding map() in JSX
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 在 JSX 中，{} 中间可以包含任意的 JS 表达式；

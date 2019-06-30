@@ -2,7 +2,7 @@
  * State and Lifecycle: Converting a Function to a Class
  */
 
-import * as React from 'react';
+import React from 'react';
 
 function Clock01(props: { date: Date }) {
   return <p>{props.date.toISOString()}</p>;

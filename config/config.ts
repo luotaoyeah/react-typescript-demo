@@ -98,8 +98,14 @@ export default {
         {
           path: '/',
           name: 'welcome',
-          icon: 'smile',
+          icon: 'plus',
           component: './Welcome',
+        },
+        {
+          path: '/doc',
+          name: 'DOC',
+          icon: 'plus',
+          component: '../components/doc/01-main-concepts/01-02/01-02-01',
         },
         {
           component: './404',

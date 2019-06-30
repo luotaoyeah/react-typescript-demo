@@ -3,7 +3,7 @@
  *     Integrating with DOM Manipulation Plugins
  */
 
-import * as React from 'react';
+import React from 'react';
 import $ from 'jquery';
 
 /*

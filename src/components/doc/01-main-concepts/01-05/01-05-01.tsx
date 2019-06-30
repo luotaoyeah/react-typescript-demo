@@ -2,7 +2,7 @@
  * State and Lifecycle
  */
 
-import * as React from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
 
 /*

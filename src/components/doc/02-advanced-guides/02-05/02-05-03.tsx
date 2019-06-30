@@ -2,7 +2,7 @@
  * Forwarding Refs: Displaying a custom name in DevTools
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 默认情况下，在 devtools 中，React.forwardRef() 创建的组件，

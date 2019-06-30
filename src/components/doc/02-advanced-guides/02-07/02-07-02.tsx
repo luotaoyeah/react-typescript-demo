@@ -2,7 +2,7 @@
  * Higher-Order Components: Don’t Mutate the Original Component. Use Composition
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 /*

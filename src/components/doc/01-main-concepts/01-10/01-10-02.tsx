@@ -2,7 +2,7 @@
  * Lifting State Up: Lessons Learned
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 通常这样规划组件的状态数据：

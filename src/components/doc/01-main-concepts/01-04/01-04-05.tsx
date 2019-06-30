@@ -2,7 +2,7 @@
  * Components and Props: Props are Read-Only
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * pure function：

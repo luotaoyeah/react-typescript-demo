@@ -3,7 +3,7 @@
  *     <Route>
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button, Divider } from 'antd';
 import { Route } from 'react-router';
 import { Link } from 'react-router-dom';

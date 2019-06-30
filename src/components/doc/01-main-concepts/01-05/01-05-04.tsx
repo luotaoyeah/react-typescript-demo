@@ -2,7 +2,7 @@
  * State and Lifecycle: Adding Lifecycle Methods to a Class
  */
 
-import * as React from 'react';
+import React from 'react';
 
 interface IProps {}
 

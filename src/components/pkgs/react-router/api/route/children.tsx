@@ -4,7 +4,7 @@
  *         children
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Route, RouteComponentProps } from 'react-router';
 import { Button, Divider } from 'antd';
 import { Link, LinkProps } from 'react-router-dom';

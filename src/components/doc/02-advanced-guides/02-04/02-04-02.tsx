@@ -2,7 +2,7 @@
  * Error Boundaries: componentDidCatch Parameters
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button } from 'antd';
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessage: string }> {

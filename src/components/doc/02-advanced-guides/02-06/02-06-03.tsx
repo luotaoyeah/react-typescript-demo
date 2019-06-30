@@ -2,7 +2,7 @@
  * Fragments: Usage
  */
 
-import * as React from 'react';
+import React from 'react';
 
 class C020603 extends React.Component {
   public render(): React.ReactNode {

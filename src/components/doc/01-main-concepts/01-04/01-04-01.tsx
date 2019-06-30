@@ -2,7 +2,7 @@
  * Components and Props：Functional and Class Components
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * 从概念上来讲，组件（component）类似 JS 里面的函数，

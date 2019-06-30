@@ -2,7 +2,7 @@
  * Context: Before You Use Context
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Input } from 'antd';
 
 /*

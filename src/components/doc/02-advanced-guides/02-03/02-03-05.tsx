@@ -2,7 +2,7 @@
  * Context: Updating Context from a Nested Component
  */
 
-import * as React from 'react';
+import React from 'react';
 import _ from 'lodash';
 
 interface IColorContext {

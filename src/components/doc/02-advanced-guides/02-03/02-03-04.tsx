@@ -2,7 +2,7 @@
  * Context: Dynamic Context
  */
 
-import * as React from 'react';
+import React from 'react';
 
 const COLORS = {
   red: '#ff0000',

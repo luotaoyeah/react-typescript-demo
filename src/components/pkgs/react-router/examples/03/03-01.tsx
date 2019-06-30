@@ -3,7 +3,7 @@
  * TODO
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /**  */
 class C0301 extends React.Component {

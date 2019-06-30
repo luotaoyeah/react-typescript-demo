@@ -2,7 +2,7 @@
  * Examples: Basic
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Link, Route, RouteComponentProps } from 'react-router-dom';
 import { Alert, Divider } from 'antd';
 

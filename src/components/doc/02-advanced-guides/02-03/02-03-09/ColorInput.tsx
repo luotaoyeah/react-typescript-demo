@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { ColorContext } from './ColorContext';
 
 class ColorInput extends React.Component<{ color: string }> {

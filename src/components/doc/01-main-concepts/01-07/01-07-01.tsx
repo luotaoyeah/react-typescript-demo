@@ -2,7 +2,7 @@
  * Conditional Rendering
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Button, Input } from 'antd';
 
 class ButtonOrInput extends React.Component<{ type: string }> {

@@ -2,7 +2,7 @@
  * Context: Forwarding Refs to Context Consumers
  */
 
-import * as React from 'react';
+import React from 'react';
 import ColorInput from './ColorInput';
 import { Button } from 'antd';
 

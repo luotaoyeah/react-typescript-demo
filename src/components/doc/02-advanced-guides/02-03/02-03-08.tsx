@@ -2,7 +2,7 @@
  * Context: Consuming Context with a HOC
  */
 
-import * as React from 'react';
+import React from 'react';
 
 const ColorContext: React.Context<string> = React.createContext('red');
 

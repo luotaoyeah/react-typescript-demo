@@ -2,7 +2,7 @@
  * Context: API
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Context, Fragment } from 'react';
 
 /*

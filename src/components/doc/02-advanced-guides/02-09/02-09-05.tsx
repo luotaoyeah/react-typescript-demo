@@ -4,7 +4,7 @@
  *         JSX Children
  */
 
-import * as React from 'react';
+import React from 'react';
 
 class C020905 extends React.Component {
   public render(): React.ReactNode {

@@ -2,7 +2,7 @@
  * Introducing JSX
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * Why JSX?
@@ -16,10 +16,8 @@ import * as React from 'react';
  */
 console.log('\n-------------------------------------------------- 01');
 
-class C010201 extends React.Component {
+export default class C010201 extends React.Component {
   public render(): React.ReactNode {
     return <h1>hello world</h1>;
   }
 }
-
-export { C010201 };

@@ -2,7 +2,7 @@
  * Higher-Order Components
  */
 
-import * as React from 'react';
+import React from 'react';
 import { HTMLAttributes } from 'react';
 import { Button, Input } from 'antd';
 

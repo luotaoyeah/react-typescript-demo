@@ -2,7 +2,7 @@
  * Error Boundaries: Component Stack Traces
  */
 
-import * as React from 'react';
+import React from 'react';
 
 /*
  * ErrorBoundary 使得应用中的某一部分崩溃之后，不会影响到其他的部分；

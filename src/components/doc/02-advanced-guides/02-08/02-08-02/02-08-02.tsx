@@ -3,7 +3,7 @@
  *     Integrating with jQuery Chosen Plugin
  */
 
-import * as React from 'react';
+import React from 'react';
 import { Chosen } from './Chosen';
 import { Button, Divider, message } from 'antd';
 
