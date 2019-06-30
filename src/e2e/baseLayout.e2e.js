@@ -36,4 +36,8 @@ describe('Homepage', () => {
     // FIXME 暂时禁用 e2e 测试
     // it(`test pages ${route}`, testPage(route));
   });
+
+  it('should work', () => {
+    expect(1).toEqual(1);
+  });
 });
