@@ -41,17 +41,17 @@ class C022002 extends React.Component {
     return (
       <div>
         <form onSubmit={vm.handleSubmit}>
-          <label>
+          <label htmlFor="input01">
             NAME：
-            <input type="text" ref={vm.inputRef} defaultValue="foobar" />
+            <input id="input01" type="text" ref={vm.inputRef} defaultValue="foobar" />
           </label>
           <Divider />
-          <label>
+          <label htmlFor="input02">
             BOY
-            <input type="checkbox" defaultChecked ref={vm.checkboxRef} />
+            <input id="input02" type="checkbox" defaultChecked ref={vm.checkboxRef} />
           </label>
           <Divider />
-          <label>
+          <label htmlFor="gender">
             GENDER
             <input type="radio" name="gender" ref={vm.radioRef} />
             <input type="radio" name="gender" defaultChecked />
