@@ -1,5 +1,7 @@
 {
   "linters": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,ts,jsx,tsx}": "npm run lint-staged:js",
     "*.{js,ts,tsx,json,html,css,scss,less,md,yml}": ["prettier --write", "git add"]
   }
 }
