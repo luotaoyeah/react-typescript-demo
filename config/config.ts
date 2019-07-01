@@ -111,6 +111,11 @@ export default {
                   name: '01',
                   component: '../components/doc/01-main-concepts/01-hello-world/01-01',
                 },
+                {
+                  path: '02',
+                  name: '02',
+                  component: '../components/doc/01-main-concepts/02-introducing-jsx/01-02',
+                },
               ],
             },
           ],

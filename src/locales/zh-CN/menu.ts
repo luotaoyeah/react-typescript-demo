@@ -50,4 +50,5 @@ export default {
   'menu.doc': 'DOC',
   'menu.doc.01': 'MAIN CONCEPTS',
   'menu.doc.01.01': 'Hello World',
+  'menu.doc.01.02': 'Introducing JSX',
 };
