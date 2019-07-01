@@ -48,5 +48,6 @@ export default {
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
   'menu.doc': 'DOC',
-  'menu.doc.main-concepts': 'MAIN CONCEPTS',
+  'menu.doc.01': 'MAIN CONCEPTS',
+  'menu.doc.01.01': 'Hello World',
 };

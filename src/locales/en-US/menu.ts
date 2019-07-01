@@ -48,5 +48,6 @@ export default {
   'menu.editor.mind': 'Mind Editor',
   'menu.editor.koni': 'Koni Editor',
   'menu.doc': 'DOC',
-  'menu.doc.main-concepts': 'MAIN CONCEPTS',
+  'menu.doc.01': 'MAIN CONCEPTS',
+  'menu.doc.01.01': 'Hello World',
 };

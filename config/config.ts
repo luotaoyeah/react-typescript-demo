@@ -104,8 +104,14 @@ export default {
           routes: [
             {
               path: '01',
-              name: 'main-concepts',
-              component: '../components/doc/01-main-concepts/01-hello-world/01-01',
+              name: '01',
+              routes: [
+                {
+                  path: '01',
+                  name: '01',
+                  component: '../components/doc/01-main-concepts/01-hello-world/01-01',
+                },
+              ],
             },
           ],
         },

@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import * as ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 import { Button } from 'antd';
 
 class C03030301 extends React.Component {

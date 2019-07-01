@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import * as ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
 
 /*
  * 如果要更新UI，可以在需要的时候重新调用 ReactDOM.render() 方法，
