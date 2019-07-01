@@ -132,6 +132,7 @@ export default {
   // https://ant.design/docs/react/customize-theme
   theme: {
     'primary-color': primaryColor,
+    'border-radius-base': '3px',
     'ease-base-out': 'none',
     'ease-base-in': 'none',
     'ease-out': 'none',
