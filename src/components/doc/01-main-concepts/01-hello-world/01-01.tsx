@@ -1,5 +1,5 @@
 /*
- * Hello World
+ * https://reactjs.org/docs/hello-world.html
  */
 
 import React from 'react';

@@ -7,11 +7,7 @@ import webpackPlugin from './plugin.config';
 
 const { pwa, primaryColor } = defaultSettings;
 
-// preview.pro.ant.design only do not use in your production ;
-// preview.pro.ant.design 专用环境变量，请不要在你的项目中使用它。
-const { ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION } = process.env;
-
-const isAntDesignProPreview = ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site';
+const isAntDesignProPreview = false;
 
 const plugins: IPlugin[] = [
   [
@@ -97,15 +93,21 @@ export default {
       routes: [
         {
           path: '/',
-          name: 'welcome',
+          name: 'home',
           icon: 'info-circle',
-          component: './welcome',
+          component: './home',
         },
         {
           path: '/doc',
-          name: 'DOC',
+          name: 'doc',
           icon: 'info-circle',
-          component: '../components/doc/01-main-concepts/01-02/01-02-01',
+          routes: [
+            {
+              path: '01',
+              name: 'main-concepts',
+              component: '../components/doc/01-main-concepts/01-hello-world/01-01',
+            },
+          ],
         },
         {
           component: './404',
@@ -116,15 +118,28 @@ export default {
       component: './404',
     },
   ],
-  // Theme for antd: https://ant.design/docs/react/customize-theme-cn
+  // https://ant.design/docs/react/customize-theme
   theme: {
     'primary-color': primaryColor,
-    'border-radius-base': '3px',
+    'ease-base-out': 'none',
+    'ease-base-in': 'none',
+    'ease-out': 'none',
+    'ease-in': 'none',
+    'ease-in-out': 'none',
+    'ease-out-back': 'none',
+    'ease-in-back': 'none',
+    'ease-in-out-back': 'none',
+    'ease-out-circ': 'none',
+    'ease-in-circ': 'none',
+    'ease-in-out-circ': 'none',
+    'ease-out-quint': 'none',
+    'ease-in-quint': 'none',
+    'ease-in-out-quint': 'none',
+    'animation-duration-slow': '0.0s',
+    'animation-duration-base': '0.0s',
+    'animation-duration-fast': '0.0s',
   },
-  define: {
-    ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION:
-      ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION || '', // preview.pro.ant.design only do not use in your production ; preview.pro.ant.design 专用环境变量，请不要在你的项目中使用它。
-  },
+  define: {},
   ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,
