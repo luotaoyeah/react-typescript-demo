@@ -1,5 +1,5 @@
 import React from 'react';
-import { Spin } from 'antd';
+import { Icon, Spin } from 'antd';
 import isEqual from 'lodash/isEqual';
 import { isComponentClass } from './secured';
 // eslint-disable-next-line import/no-cycle
@@ -14,10 +14,7 @@ interface PromiseRenderState {
   component: React.ComponentClass | React.FunctionComponent;
 }
 
-export default class PromiseRender<T, K> extends React.Component<
-  PromiseRenderProps<T, K>,
-  PromiseRenderState
-> {
+export default class PromiseRender<T, K> extends React.Component<PromiseRenderProps<T, K>, PromiseRenderState> {
   state: PromiseRenderState = {
     component: () => null,
   };
@@ -57,9 +54,7 @@ export default class PromiseRender<T, K> extends React.Component<
   // AuthorizedRoute is already instantiated
   // Authorized  render is already instantiated, children is no instantiated
   // Secured is not instantiated
-  checkIsInstantiation = (
-    target: React.ReactNode | React.ComponentClass,
-  ): React.FunctionComponent => {
+  checkIsInstantiation = (target: React.ReactNode | React.ComponentClass): React.FunctionComponent => {
     if (isComponentClass(target)) {
       const Target = target as React.ComponentClass;
       return (props: any) => <Target {...props} />;
@@ -86,7 +81,7 @@ export default class PromiseRender<T, K> extends React.Component<
           textAlign: 'center',
         }}
       >
-        <Spin size="large" />
+        <Spin size="large" indicator={<Icon type="loading" style={{ fontSize: 24 }} spin />} />
       </div>
     );
   }
