@@ -6,6 +6,7 @@ import { C010202 } from './02/01-02-02';
 import { C010203 } from './03/01-02-03';
 import { C010204 } from './04/01-02-04';
 import { C010205 } from './05/01-02-05';
+import { C010206 } from './06/01-02-06';
 
 /**
  * https://reactjs.org/docs/introducing-jsx.html
@@ -31,6 +32,10 @@ export default function C0102(): React.ReactNode {
 
       <Collapse.Panel header="Specifying Children With JSX" key="5">
         {C010205()}
+      </Collapse.Panel>
+
+      <Collapse.Panel header="JSX Prevents Injection Attacks" key="6">
+        {C010206()}
       </Collapse.Panel>
     </Collapse>
   );
