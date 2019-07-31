@@ -31,12 +31,16 @@ function C010204(): React.ReactNode {
       </ul>
 
       <p>
-        跟 <code>HTML</code> 不一样的是, 因为 <code>JSX</code> 实际上是 <code>JavaScript</code>,
-        因此 <code>JSX</code> 中的属性实际上对应的是 <code>DOM</code> 的 <code>property</code>,
-        而不是 <code>HTML</code> 的 <code>attribute</code>
+        跟 <code>HTML</code> 不一样的是, 因为 <code>JSX</code> 实际上是 <code>JavaScript</code>, 因此 <code>JSX</code>{' '}
+        中的属性实际上对应的是 <code>DOM</code> 的 <code>property</code>, 而不是 <code>HTML</code> 的{' '}
+        <code>attribute</code>
       </p>
 
       <Divider dashed></Divider>
+
+      <p>
+        如下, 用于设置 <code>CSS</code> 类名的属性是 <code>className</code> 而不是 <code>class</code>
+      </p>
 
       <Button id={id} className="class-01">
         FOO

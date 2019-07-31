@@ -11,6 +11,7 @@ declare module '*.jpg';
 declare module '*.jpeg';
 declare module '*.gif';
 declare module '*.bmp';
+declare module '*.ico';
 declare module '*.tiff';
 declare module 'omit.js';
 declare module 'react-copy-to-clipboard';

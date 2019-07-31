@@ -1,25 +1,19 @@
 import React from 'react';
 import ico from './01-02-05.ico';
 
-/*
- * Specifying Children with JSX
+/**
+ * https://reactjs.org/docs/introducing-jsx.html#specifying-children-with-jsx
  */
+export function C010205(): React.ReactNode {
+  return (
+    <div>
+      <p>
+        <code>JSX</code> 标签可以包含下级标签
+      </p>
 
-/*
- * JSX 中标签可以嵌套子标签；
- */
-console.log('\n-------------------------------------------------- 01');
+      <p>如果标签没有下级元素, 可以使用自关闭的写法</p>
 
-class C010205 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <h1>picture</h1>
-        {/* 如果标签没有子元素，可以使用自关闭的写法 */}
-        <img src={ico} />
-      </div>
-    );
-  }
+      <img src={ico} alt="" />
+    </div>
+  );
 }
-
-export { C010205 };
