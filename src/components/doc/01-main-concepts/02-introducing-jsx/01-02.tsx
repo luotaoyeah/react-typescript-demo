@@ -11,23 +11,20 @@ import { C010204 } from '@/components/doc/01-main-concepts/02-introducing-jsx/04
  */
 export default function C0102(): React.ReactNode {
   return (
-    <Collapse
-      accordion
-      expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}
-    >
+    <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Why JSX?" key="1">
         {C010201()}
       </Collapse.Panel>
 
-      <Collapse.Panel header="Embedding Expressions in JSX" key="2">
+      <Collapse.Panel header="Embedding Expressions In JSX" key="2">
         <C010202></C010202>
       </Collapse.Panel>
 
-      <Collapse.Panel header="JSX is an Expression Too" key="3">
+      <Collapse.Panel header="JSX Is An Expression Too" key="3">
         <C010203></C010203>
       </Collapse.Panel>
 
-      <Collapse.Panel header="Specifying Attributes with JSX" key="4">
+      <Collapse.Panel header="Specifying Attributes With JSX" key="4">
         {C010204()}
       </Collapse.Panel>
     </Collapse>
