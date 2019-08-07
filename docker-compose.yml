@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  learning-react:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3031:80

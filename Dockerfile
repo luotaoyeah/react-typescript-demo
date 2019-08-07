@@ -1,5 +1,3 @@
-# docker build -t learning-react . && docker run -p 3001:80 learning-react
-
 # stage-build
 FROM node:12 AS stage-build
 
