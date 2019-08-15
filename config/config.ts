@@ -86,37 +86,57 @@ export default {
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
     {
+      path: '/user',
+      component: '../layouts/user-layout/user-layout',
+      routes: [
+        {
+          name: 'login',
+          path: '/user/login',
+          component: './user/login',
+        },
+      ],
+    },
+    {
       path: '/',
-      component: '../layouts/basic-layout',
-      Routes: ['src/pages/authorized'],
-      authority: ['admin', 'user'],
+      component: '../layouts/security-layout',
       routes: [
         {
           path: '/',
-          name: 'home',
-          icon: 'info-circle',
-          component: './home',
-        },
-        {
-          path: '/doc',
-          name: 'doc',
-          icon: 'info-circle',
+          component: '../layouts/basic-layout',
+          Routes: ['src/pages/authorized'],
+          authority: ['admin', 'user'],
           routes: [
             {
-              path: '01',
-              name: '01',
+              path: '/',
+              name: 'home',
+              icon: 'info-circle',
+              component: './home',
+            },
+            {
+              path: '/doc',
+              name: 'doc',
+              icon: 'info-circle',
               routes: [
                 {
                   path: '01',
                   name: '01',
-                  component: '../components/doc/01-main-concepts/01-hello-world/01-01',
-                },
-                {
-                  path: '02',
-                  name: '02',
-                  component: '../components/doc/01-main-concepts/02-introducing-jsx/01-02',
+                  routes: [
+                    {
+                      path: '01',
+                      name: '01',
+                      component: '../components/doc/01-main-concepts/01-hello-world/01-01',
+                    },
+                    {
+                      path: '02',
+                      name: '02',
+                      component: '../components/doc/01-main-concepts/02-introducing-jsx/01-02',
+                    },
+                  ],
                 },
               ],
+            },
+            {
+              component: './404',
             },
           ],
         },

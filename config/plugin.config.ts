@@ -30,7 +30,7 @@ export default (config: any) => {
     config.plugin('webpack-theme-color-replacer').use(ThemeColorReplacer, [
       {
         fileName: 'css/theme-colors-[contenthash:8].css',
-        matchColors: getAntdSerials('#1890ff'), // 主色系列
+        matchColors: getAntdSerials('#1890FF'), // 主色系列
         // 改变样式选择器，解决样式覆盖问题
         changeSelector(selector: string): string {
           switch (selector) {
@@ -61,9 +61,11 @@ export default (config: any) => {
       cacheGroups: {
         vendors: {
           test: (module: { context: string }) => {
-            const packageName = getModulePackageName(module);
+            const packageName = getModulePackageName(module) || '';
             if (packageName) {
-              return ['bizcharts', '@antv_data-set'].indexOf(packageName) >= 0;
+              return ['bizcharts', 'gg-editor', 'g6', '@antv', 'gg-editor-core', 'bizcharts-plugin-slider'].includes(
+                packageName,
+              );
             }
             return false;
           },
