@@ -9,6 +9,7 @@ import { Button, Divider } from 'antd';
 /*
  * JSX 的 props 可以有多种形式；
  */
+// eslint-disable-next-line react/prefer-stateless-function
 class C020903 extends React.Component {
   public render(): React.ReactNode {
     /*
@@ -23,10 +24,14 @@ class C020903 extends React.Component {
       name: 'B',
     };
 
-    const button01 = <button {...someProps}>button</button>;
+    const button01 = (
+      <button type="button" {...someProps}>
+        button
+      </button>
+    );
     /* 等价于 */
     const button02 = (
-      <button id={someProps.id} name={someProps.name}>
+      <button type="button" id={someProps.id} name={someProps.name}>
         button
       </button>
     );
@@ -41,7 +46,7 @@ class C020903 extends React.Component {
         {/*
          * props 可以是任意的字符串；
          */}
-        <Button type={'dashed'} id="btn01">
+        <Button type="dashed" id="btn01">
           button
         </Button>
         <Divider />
@@ -51,7 +56,7 @@ class C020903 extends React.Component {
         {/*
                 <Button ghost>button</Button>
         */}
-        <Button ghost={true}>button</Button>
+        <Button ghost>button</Button>
         <Divider />
         {button01}
         {button02}

@@ -2,26 +2,24 @@
  * Handling Events: Pass Arguments to Event Handlers
  */
 
-import React from 'react';
 import { Button, message } from 'antd';
-import { MouseEvent } from 'react';
-
-interface IProps {}
+import React, { MouseEvent } from 'react';
 
 interface IState {
   name: string;
 }
 
-class C010602 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010602 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       name: 'tom',
     };
   }
 
-  handleClick(age: number, e: MouseEvent) {
-    message.info(`hello ${this.state.name} ${age}`);
+  public handleClick(age: number, e: MouseEvent) {
+    const { name } = this.state;
+    message.info(`hello ${name} ${age}`);
   }
 
   public render(): React.ReactNode {
@@ -31,6 +29,7 @@ class C010602 extends React.Component<IProps, IState> {
          * 如果要往回调函数传递额外的参数，
          * 可以使用下面的方式；
          */}
+        {/* eslint-disable-next-line react/jsx-no-bind */}
         <Button onClick={this.handleClick.bind(this, 18)}>click</Button>
         {/*
                 <Button

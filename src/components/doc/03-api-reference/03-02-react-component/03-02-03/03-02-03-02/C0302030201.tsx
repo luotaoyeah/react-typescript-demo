@@ -7,8 +7,6 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   num: number;
 }
@@ -18,8 +16,8 @@ interface IState {
  *     1. 需要初始化 state 数据；
  *     2. 需要绑定方法的 this；
  */
-class A extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class A extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     /*
      * constructor() 中必须调用 super(props)，否则 this.props 将为 undefined；
      */
@@ -36,25 +34,22 @@ class A extends React.Component<IProps, IState> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => {
-      return { num: prevState.num + 1 };
-    });
+  public handleClick() {
+    this.setState((prevState: Readonly<IState>, props: Readonly<{}>) => ({ num: prevState.num + 1 }));
   }
 
   public render(): React.ReactNode {
-    return <Button onClick={this.handleClick}>{this.state.num}</Button>;
+    const { num } = this.state;
+    return <Button onClick={this.handleClick}>{num}</Button>;
   }
 }
 
-class C0302030201 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-      </div>
-    );
-  }
+function C0302030201(): React.ReactNode {
+  return (
+    <div>
+      <A />
+    </div>
+  );
 }
 
 export { C0302030201 };

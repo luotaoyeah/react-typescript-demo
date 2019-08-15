@@ -1,21 +1,20 @@
 import React from 'react';
 import { ColorContext } from './color-context';
 
-class ColorButton extends React.Component<{ color: string }> {
-  public render(): React.ReactNode {
-    return (
-      <button
-        style={{
-          color: this.props.color,
-          borderRadius: '3px',
-          outline: 'none',
-          cursor: 'pointer',
-        }}
-      >
-        {this.props.color}
-      </button>
-    );
-  }
+function ColorButton({ color }: { color: string }) {
+  return (
+    <button
+      type="button"
+      style={{
+        color,
+        borderRadius: '3px',
+        outline: 'none',
+        cursor: 'pointer',
+      }}
+    >
+      {color}
+    </button>
+  );
 }
 
 /*
@@ -23,7 +22,5 @@ class ColorButton extends React.Component<{ color: string }> {
  * 在组件中就可以像使用普通的 props 一样，使用这些值；
  */
 export default (props: {}): JSX.Element => (
-  <ColorContext.Consumer>
-    {(color: string) => <ColorButton {...props} color={color} />}
-  </ColorContext.Consumer>
+  <ColorContext.Consumer>{(color: string) => <ColorButton {...props} color={color} />}</ColorContext.Consumer>
 );

@@ -9,26 +9,27 @@ import { Button, Divider, message } from 'antd';
 
 /**  */
 class C030104 extends React.Component {
-  buttonRef = React.createRef<Button>();
+  public buttonRef = React.createRef<Button>();
 
-  constructor(props: any, context: any) {
+  public constructor(props: any, context: any) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     const vm = this;
     /*
      * 使用 React.cloneElement() 克隆的元素保留了 ref 属性；
      */
     if (vm.buttonRef.current) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       message.info(vm.buttonRef.current.props!.children![0]);
     }
   }
 
   public render(): React.ReactNode {
     const element01 = (
-      <Button type={'primary'} style={{ color: 'red', fontSize: '18px' }} ref={this.buttonRef}>
+      <Button type="primary" style={{ color: 'red', fontSize: '18px' }} ref={this.buttonRef}>
         button01
       </Button>
     );

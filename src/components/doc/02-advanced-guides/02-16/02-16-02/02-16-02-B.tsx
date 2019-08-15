@@ -18,28 +18,32 @@ interface IAState {
 }
 
 class A extends React.Component<IAProps, IAState> {
-  state: IAState = {
+  public state: IAState = {
     text: 'foo',
   };
 
   public render(): React.ReactNode {
-    if (this.props.children) {
-      return this.props.children(this.state);
+    const { children } = this.props;
+    const { text } = this.state;
+    if (children) {
+      return children(this.state);
     }
 
-    return <i>{this.state.text}</i>;
+    return <i>{text}</i>;
   }
 }
 
 /**  */
 class C021602B extends React.Component {
-  renderA(state: IAState) {
+  // eslint-disable-next-line class-methods-use-this
+  public renderA(state: IAState) {
     return <Button>{state.text}</Button>;
   }
 
   public render(): React.ReactNode {
     return (
       <React.Fragment>
+        {/* eslint-disable-next-line react/no-children-prop */}
         <A children={this.renderA} />
         <Divider />
         {/*

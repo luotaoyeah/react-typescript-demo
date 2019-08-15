@@ -10,9 +10,9 @@ import React from 'react';
  */
 console.log('\n-------------------------------------------------- 01');
 
-function C010301(): React.ReactNode {
+function C010301() {
   const element01: string = 'hello';
-  const element02: React.ReactNode = <i>world</i>;
+  const element02 = <i>world</i>;
 
   return (
     <div>

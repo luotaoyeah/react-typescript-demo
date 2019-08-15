@@ -13,7 +13,7 @@ function C0104003A({ name }: { name: string }): React.ReactElement<{ name: strin
   return <h3>{name}</h3>;
 }
 
-function C010403(): React.ReactNode {
+function C010403() {
   return (
     <div>
       <C0104003A name="foo" />

@@ -12,7 +12,7 @@ import { Button } from 'antd';
  * HOC 应该将组件原来的 props 原封不动的继续传递给组件；
  */
 function HOC<P>(Component: React.ComponentType<P>) {
-  return function Component01(props01: any): React.ReactNode {
+  return function Component01(props01: any) {
     /*
      * 通常的模式是：将组件原来的 props 单独分离出来，然后继续传递给组件，
      * 同时分离出 HOC 中增加的属性；

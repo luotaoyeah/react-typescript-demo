@@ -29,25 +29,18 @@ class C030106 extends React.Component {
     console.log(
       React.Children.map<string, ReactChild>(
         element01.props.children,
-        (child: React.ReactChild) => {
-          // tslint:disable-next-line:no-any
-          return (child as React.ReactElement<any>).props.children;
-        },
+        (child: React.ReactChild) => (child as React.ReactElement<any>).props.children,
       ),
     ); // ["A", "B", "C"]
 
-    console.log(
-      React.Children.map(element02.props.children, (child: React.ReactChild) => {
-        return child;
-      }),
-    ); // undefined
+    console.log(React.Children.map(element02.props.children, (child: React.ReactChild) => child)); // undefined
 
     const element03 = (
       <div>
         <React.Fragment>
-          <span key={'1'}>1</span>
-          <span key={'2'}>2</span>
-          <span key={'3'}>3</span>
+          <span key="1">1</span>
+          <span key="2">2</span>
+          <span key="3">3</span>
         </React.Fragment>
       </div>
     );
@@ -58,9 +51,7 @@ class C030106 extends React.Component {
     console.log(
       React.Children.map<number, React.ReactFragment>(
         element03.props.children,
-        (child: React.ReactFragment) => {
-          return (child as React.ReactElement<any>).props.children.length;
-        },
+        (child: React.ReactFragment) => (child as React.ReactElement<any>).props.children.length,
       ),
     ); // [3]
   }

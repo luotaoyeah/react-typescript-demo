@@ -16,7 +16,11 @@ import { Context } from 'react';
  */
 class Button extends React.Component<{ theme: string }> {
   public render(): React.ReactNode {
-    return <button className={this.props.theme}>button</button>;
+    return (
+      <button type="button" className={this.props.theme}>
+        button
+      </button>
+    );
   }
 }
 
@@ -43,9 +47,7 @@ class Button02 extends React.Component {
      * 使用 React.Context.Consumer 消费 context；
      */
     return (
-      <ThemeContext.Consumer>
-        {(theme: string) => <button className={theme}>button</button>}
-      </ThemeContext.Consumer>
+      <ThemeContext.Consumer>{(theme: string) => <button className={theme}>button</button>}</ThemeContext.Consumer>
     );
   }
 }

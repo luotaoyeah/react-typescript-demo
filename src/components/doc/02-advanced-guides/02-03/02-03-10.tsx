@@ -13,7 +13,7 @@ const ColorContext: React.Context<IColorContext> = React.createContext({
   color: 'red',
 });
 
-function ColorButton(): React.ReactNode {
+function ColorButton() {
   return (
     <ColorContext.Consumer>
       {(colorContext: IColorContext) => (

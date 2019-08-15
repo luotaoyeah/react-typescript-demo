@@ -7,21 +7,19 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   name: string;
 }
 
-class A extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class A extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       name: 'A',
     };
   }
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const vm = this;
     /*
      * 在 componentDidMount() 中调用 setState() 方法，会立即触发 render() 方法再次调用；
@@ -34,19 +32,18 @@ class A extends React.Component<IProps, IState> {
   }
 
   public render(): React.ReactNode {
-    console.log(`render(): ${this.state.name}`);
-    return <Button>{this.state.name}</Button>;
+    const { name } = this.state;
+    console.log(`render(): ${name}`);
+    return <Button>{name}</Button>;
   }
 }
 
-class C0302030302 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-      </div>
-    );
-  }
+function C0302030302(): React.ReactNode {
+  return (
+    <div>
+      <A />
+    </div>
+  );
 }
 
 export { C0302030302 };

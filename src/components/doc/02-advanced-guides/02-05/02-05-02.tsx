@@ -10,7 +10,7 @@ import React from 'react';
 const FancyButton = React.forwardRef(
   (props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => {
     return (
-      <button onClick={props.onClick} ref={ref}>
+      <button type="button" onClick={props.onClick} ref={ref}>
         button
       </button>
     );

@@ -16,15 +16,16 @@ import { Divider } from 'antd';
 
 /**  */
 class C022003 extends React.Component {
-  inputRef = React.createRef<HTMLInputElement>();
+  public inputRef = React.createRef<HTMLInputElement>();
 
-  constructor(props: any, context: any) {
+  public constructor(props: any, context: any) {
     super(props, context);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e: React.FormEvent) {
+  public handleSubmit(e: React.FormEvent) {
     e.preventDefault();
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     console.log(this.inputRef.current!.files);
   }
 
@@ -34,12 +35,13 @@ class C022003 extends React.Component {
     return (
       <div>
         <form onSubmit={vm.handleSubmit}>
+          {/* eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/label-has-for */}
           <label>
             NAME：
             <input type="file" ref={vm.inputRef} />
           </label>
           <Divider />
-          <button type={'submit'}>submit</button>
+          <button type="submit">submit</button>
         </form>
       </div>
     );

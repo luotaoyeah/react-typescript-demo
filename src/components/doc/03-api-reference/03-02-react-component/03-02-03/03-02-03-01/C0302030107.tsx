@@ -7,14 +7,12 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   num: number;
 }
 
-class A extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class A extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       num: 0,
@@ -22,11 +20,7 @@ class A extends React.Component<IProps, IState> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  shouldComponentUpdate(
-    nextProps: Readonly<IProps>,
-    nextState: Readonly<IState>,
-    nextContext: any,
-  ): boolean {
+  public shouldComponentUpdate(nextProps: Readonly<{}>, nextState: Readonly<IState>, nextContext: any): boolean {
     /*
      * 如果 shouldComponentUpdate() 返回 false，则 render() 方法不会执行；
      */
@@ -37,26 +31,23 @@ class A extends React.Component<IProps, IState> {
     return true;
   }
 
-  handleClick() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => {
-      return { num: prevState.num + 1 };
-    });
+  public handleClick() {
+    this.setState((prevState: Readonly<IState>, props: Readonly<{}>) => ({ num: prevState.num + 1 }));
   }
 
   public render(): React.ReactNode {
+    const { num } = this.state;
     console.log('render()');
-    return <Button onClick={this.handleClick}>{this.state.num}</Button>;
+    return <Button onClick={this.handleClick}>{num}</Button>;
   }
 }
 
-class C0302030107 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-      </div>
-    );
-  }
+function C0302030107(): React.ReactNode {
+  return (
+    <div>
+      <A />
+    </div>
+  );
 }
 
 export { C0302030107 };

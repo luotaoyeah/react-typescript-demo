@@ -25,22 +25,20 @@ interface IState {
 }
 
 class C03040101 extends React.Component<{}, IState> {
-  constructor(props: Readonly<{ isCheck: boolean }>) {
+  public constructor(props: Readonly<{ isCheck: boolean }>) {
     super(props);
     this.state = { isCheck: true };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleClick() {
-    this.setState((prevState: Readonly<IState>) => {
-      return {
-        isCheck: !prevState.isCheck,
-      };
-    });
+  public handleClick() {
+    this.setState((prevState: Readonly<IState>) => ({
+      isCheck: !prevState.isCheck,
+    }));
   }
 
-  handleChange(e: ChangeEvent<HTMLInputElement>) {
+  public handleChange(e: ChangeEvent<HTMLInputElement>) {
     this.setState({
       isCheck: e.target.checked,
     });
@@ -51,9 +49,9 @@ class C03040101 extends React.Component<{}, IState> {
 
     return (
       <div>
-        <input type="checkbox" defaultChecked={true} />
+        <input type="checkbox" defaultChecked />
         <Divider />
-        <input type="radio" defaultChecked={true} />
+        <input type="radio" defaultChecked />
         <Divider />
         <div>
           <input type="checkbox" checked={vm.state.isCheck} onChange={vm.handleChange} />

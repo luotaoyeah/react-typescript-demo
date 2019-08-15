@@ -37,14 +37,14 @@ import { Button } from 'antd';
  */
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       hasError: false,
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     this.setState({
       hasError: true,
     });
@@ -53,31 +53,33 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
   }
 
   public render(): React.ReactNode {
-    if (this.state.hasError) {
+    const { hasError } = this.state;
+    const { children } = this.props;
+    if (hasError) {
       return <span style={{ color: 'red' }}>ERROR</span>;
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
+// eslint-disable-next-line react/prefer-stateless-function
 class ButtonError extends React.Component {
   public render(): React.ReactNode {
     throw new Error('some error from within render()');
+    // eslint-disable-next-line no-unreachable
     return <Button>button</Button>;
   }
 }
 
-class C020401 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <ErrorBoundary>
-          <ButtonError />
-        </ErrorBoundary>
-      </div>
-    );
-  }
+function C020401(): React.ReactNode {
+  return (
+    <div>
+      <ErrorBoundary>
+        <ButtonError />
+      </ErrorBoundary>
+    </div>
+  );
 }
 
 export { C020401 };

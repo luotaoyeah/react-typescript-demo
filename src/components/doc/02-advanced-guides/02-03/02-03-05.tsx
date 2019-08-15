@@ -11,8 +11,8 @@ interface IColorContext {
 }
 
 const COLORS = {
-  red: '#ff0000',
-  green: '#00ff00',
+  red: '#FF0000',
+  green: '#00FF00',
 };
 
 /*
@@ -25,29 +25,28 @@ const ColorContext: React.Context<IColorContext> = React.createContext({
   toggleColor() {},
 });
 
-class ThemeButton extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <ColorContext.Consumer>
-        {(colorContext: IColorContext) => (
-          <button
-            {...this.props}
-            style={{
-              color: colorContext.color,
-              borderRadius: '3px',
-              outline: 'none',
-              cursor: 'pointer',
-            }}
-            onClick={colorContext.toggleColor}
-          />
-        )}
-      </ColorContext.Consumer>
-    );
-  }
+function ThemeButton(props: any) {
+  return (
+    <ColorContext.Consumer>
+      {(colorContext: IColorContext) => (
+        <button
+          type="button"
+          {...props}
+          style={{
+            color: colorContext.color,
+            borderRadius: '3px',
+            outline: 'none',
+            cursor: 'pointer',
+          }}
+          onClick={colorContext.toggleColor}
+        />
+      )}
+    </ColorContext.Consumer>
+  );
 }
 
 class ThemeToolbar extends React.Component<{}, { colorContext: IColorContext }> {
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.state = {
       colorContext: {
@@ -58,34 +57,31 @@ class ThemeToolbar extends React.Component<{}, { colorContext: IColorContext }> 
     this.handleToggleColor = this.handleToggleColor.bind(this);
   }
 
-  handleToggleColor() {
+  public handleToggleColor() {
     const vm = this;
-    vm.setState((prevState: { colorContext: IColorContext }) => {
-      return {
-        colorContext: _.merge(prevState.colorContext, {
-          color: prevState.colorContext.color === COLORS.green ? COLORS.red : COLORS.green,
-        }),
-      };
-    });
+    vm.setState((prevState: { colorContext: IColorContext }) => ({
+      colorContext: _.merge(prevState.colorContext, {
+        color: prevState.colorContext.color === COLORS.green ? COLORS.red : COLORS.green,
+      }),
+    }));
   }
 
   public render(): React.ReactNode {
+    const { colorContext } = this.state;
     return (
-      <ColorContext.Provider value={this.state.colorContext}>
+      <ColorContext.Provider value={colorContext}>
         <ThemeButton>toggle color</ThemeButton>
       </ColorContext.Provider>
     );
   }
 }
 
-class C020305 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <ThemeToolbar />
-      </div>
-    );
-  }
+function C020305(): React.ReactNode {
+  return (
+    <div>
+      <ThemeToolbar />
+    </div>
+  );
 }
 
 export { C020305 };

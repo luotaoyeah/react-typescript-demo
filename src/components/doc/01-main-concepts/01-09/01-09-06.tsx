@@ -2,17 +2,14 @@
  * Forms: Controlled Input Null Value
  */
 
-import React from 'react';
-import { SyntheticEvent } from 'react';
-
-interface IProps {}
+import React, { SyntheticEvent } from 'react';
 
 interface IState {
   name: string;
 }
 
-class C010906 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010906 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -22,9 +19,10 @@ class C010906 extends React.Component<IProps, IState> {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e: SyntheticEvent) {}
+  // eslint-disable-next-line class-methods-use-this
+  public handleChange(e: SyntheticEvent) {}
 
-  handleSubmit(e: SyntheticEvent) {
+  public handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
     console.log(this.state);
   }

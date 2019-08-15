@@ -24,7 +24,7 @@ interface IState {
  * 简单来讲，组件遵循的是单向数据流，或者叫自上而下的数据流；
  */
 
-function C010506A({ username }: { username: string }): React.ReactNode {
+function C010506A({ username }: { username: string }) {
   return <i>{username}</i>;
 }
 

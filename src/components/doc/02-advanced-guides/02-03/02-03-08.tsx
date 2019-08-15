@@ -17,65 +17,56 @@ const ColorContext: React.Context<string> = React.createContext('red');
  * 则可以将这个 Context 包装到一个 HOC 中，
  * 传入任何组件，返回一个消费该 Context 的组件；
  */
-function withColor<P, S>(Component: typeof React.Component) {
+function withColor<P, S>(Component: any) {
   return function ColorComponent(props: P) {
-    return (
-      <ColorContext.Consumer>
-        {(color: string) => <Component {...props} color={color} />}
-      </ColorContext.Consumer>
-    );
+    return <ColorContext.Consumer>{(color: string) => <Component {...props} color={color} />}</ColorContext.Consumer>;
   };
 }
 
-class Button extends React.Component<{ color: string }> {
-  public render(): React.ReactNode {
-    return (
-      <button
-        style={{
-          color: this.props.color,
-          borderRadius: '3px',
-          outline: 'none',
-          cursor: 'pointer',
-        }}
-      >
-        {this.props.color}
-      </button>
-    );
-  }
+function Button({ color }: { color: string }) {
+  return (
+    <button
+      type="button"
+      style={{
+        color,
+        borderRadius: '3px',
+        outline: 'none',
+        cursor: 'pointer',
+      }}
+    >
+      {color}
+    </button>
+  );
 }
 
-class Input extends React.Component<{ color: string }> {
-  public render() {
-    return (
-      <input
-        type={'text'}
-        style={{
-          color: this.props.color,
-          borderRadius: '3px',
-          outline: 'none',
-          cursor: 'pointer',
-        }}
-      />
-    );
-  }
+function Input({ color }: { color: string }) {
+  return (
+    <input
+      type="text"
+      style={{
+        color,
+        borderRadius: '3px',
+        outline: 'none',
+        cursor: 'pointer',
+      }}
+    />
+  );
 }
 
 const ColorButton = withColor(Button);
 const ColorInput = withColor(Input);
 
-class C020308 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <p>
-          <ColorButton />
-        </p>
-        <p>
-          <ColorInput />
-        </p>
-      </div>
-    );
-  }
+function C020308(): React.ReactNode {
+  return (
+    <div>
+      <p>
+        <ColorButton />
+      </p>
+      <p>
+        <ColorInput />
+      </p>
+    </div>
+  );
 }
 
 export { C020308 };

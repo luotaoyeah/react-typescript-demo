@@ -11,17 +11,19 @@ export interface IMouseState {
 
 /**  */
 class Mouse extends React.Component<IMouseProps, IMouseState> {
-  state: IMouseState = {
+  public state: IMouseState = {
+    // eslint-disable-next-line react/no-unused-state
     x: 0,
+    // eslint-disable-next-line react/no-unused-state
     y: 0,
   };
 
-  constructor(props: IMouseProps) {
+  public constructor(props: IMouseProps) {
     super(props);
     this.handleMouseMove = this.handleMouseMove.bind(this);
   }
 
-  handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
+  public handleMouseMove(e: React.MouseEvent<HTMLDivElement>) {
     const vm = this;
 
     vm.setState({

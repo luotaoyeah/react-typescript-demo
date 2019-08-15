@@ -15,23 +15,19 @@ class A extends React.Component {
    *     解除事件绑定
    *     中止请求
    */
-  componentWillUnmount(): void {
-    debugger;
-  }
+  public componentWillUnmount(): void {}
 
   public render(): React.ReactNode {
     return <Button>A</Button>;
   }
 }
 
-interface IProps {}
-
 interface IState {
   visible: boolean;
 }
 
-class C0302030501 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: any) {
+class C0302030501 extends React.Component<{}, IState> {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       visible: true,
@@ -39,16 +35,17 @@ class C0302030501 extends React.Component<IProps, IState> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     this.setState({
       visible: false,
     });
   }
 
   public render(): React.ReactNode {
+    const { visible } = this.state;
     return (
       <div>
-        {this.state.visible && <A />}
+        {visible && <A />}
         <Divider />
         <Button onClick={this.handleClick}>unmount A</Button>
       </div>

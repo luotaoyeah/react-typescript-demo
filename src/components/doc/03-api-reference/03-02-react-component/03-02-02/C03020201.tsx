@@ -7,8 +7,6 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   num: number;
   msg: string;
@@ -23,8 +21,8 @@ interface IState {
  *     提交阶段（Commit Phase）：
  *         componentDidMount()
  */
-class C03020201 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: any) {
+class C03020201 extends React.Component<{}, IState> {
+  public constructor(props: {}, context: any) {
     console.log('constructor()');
     super(props, context);
     this.state = { num: 0, msg: 'hello' };
@@ -35,21 +33,22 @@ class C03020201 extends React.Component<IProps, IState> {
    * @param nextProps 新的 props
    * @param prevState 旧的 state
    */
-  static getDerivedStateFromProps(nextProps: Readonly<IProps>, prevState: IState) {
+  public static getDerivedStateFromProps(nextProps: Readonly<{}>, prevState: IState) {
     console.log('getDerivedStateFromProps()');
     return { num: prevState.num + 1 };
   }
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     console.log('componentDidMount()');
   }
 
   public render(): React.ReactNode {
+    const { msg, num } = this.state;
     console.log('render()');
     return (
       <div>
-        <Button>{this.state.msg}</Button>
-        <Button>{this.state.num}</Button>
+        <Button>{msg}</Button>
+        <Button>{num}</Button>
       </div>
     );
   }

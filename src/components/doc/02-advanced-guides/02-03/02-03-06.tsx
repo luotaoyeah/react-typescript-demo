@@ -16,7 +16,7 @@ const NameContext: React.Context<string> = React.createContext('luotao');
  * 多个 Context 一起使用时，需要相互嵌套，
  * 这是为了让 Context 的重新渲染更快；
  */
-function ThemeButton(): React.ReactNode {
+function ThemeButton() {
   return (
     <NameContext.Consumer>
       {(name: string) => (

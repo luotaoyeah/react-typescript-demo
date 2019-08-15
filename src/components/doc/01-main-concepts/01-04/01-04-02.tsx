@@ -16,7 +16,7 @@ function C010402A({ name }: { name: string }): React.ReactElement<{ name: string
   return <h3>{name}</h3>;
 }
 
-function C010402(): React.ReactNode {
+function C010402() {
   return (
     <p>
       <C010402A name="luotao" />

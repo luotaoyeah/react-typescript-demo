@@ -1,9 +1,11 @@
 import React from 'react';
 import check, { IAuthorityType } from './check-permissions';
 
+// eslint-disable-next-line import/no-cycle
 import AuthorizedRoute from './authorized-route';
 import Secured from './secured';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface AuthorizedProps {
   authority: IAuthorityType;
   noMatch?: React.ReactNode;
@@ -16,11 +18,14 @@ type IAuthorizedType = React.FunctionComponent<AuthorizedProps> & {
 };
 
 const Authorized: React.FunctionComponent<AuthorizedProps> = ({
+  // eslint-disable-next-line react/prop-types
   children,
+  // eslint-disable-next-line react/prop-types
   authority,
+  // eslint-disable-next-line react/prop-types
   noMatch = null,
 }) => {
-  const childrenRender: React.ReactNode = typeof children === 'undefined' ? null : children;
+  const childrenRender = typeof children === 'undefined' ? null : children;
   const dom = check(authority, childrenRender, noMatch);
   return <>{dom}</>;
 };

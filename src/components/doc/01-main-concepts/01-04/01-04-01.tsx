@@ -16,28 +16,24 @@ import React from 'react';
  * @param props
  * @constructor
  */
-function C010401A(props: { name: string }) {
-  return <h3>{props.name}</h3>;
+function C010401A({ name }: { name: string }) {
+  return <h3>{name}</h3>;
 }
 
 /**
  * 也可以使用 class 来定义一个组件；
  */
-class C010401B extends React.Component<{ name: string }> {
-  public render(): React.ReactNode {
-    return <h3>{this.props.name}</h3>;
-  }
+function C010401B({ name }: { name: string }) {
+  return <h3>{name}</h3>;
 }
 
-class C010401 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <p>
-        <C010401A name={'luotao'} />
-        <C010401B name={'luotao'} />
-      </p>
-    );
-  }
+function C010401() {
+  return (
+    <p>
+      <C010401A name="luotao" />
+      <C010401B name="luotao" />
+    </p>
+  );
 }
 
 export { C010401 };
