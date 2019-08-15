@@ -14,18 +14,16 @@ import $ from 'jquery';
  * 它不需要对该元素进行任何的更新，而是完全由 jquery 来进行操作；
  */
 
-interface IState {}
+class C020801 extends React.Component<{}, {}> {
+  public $el!: JQuery<HTMLDivElement>;
 
-class C020801 extends React.Component<{}, IState> {
-  $el!: JQuery<HTMLDivElement>;
-
-  componentDidMount(): void {
+  public componentDidMount(): void {
     /*
      * 通常在这里进行插件的初始化；
      */
   }
 
-  componentWillUnmount(): void {
+  public componentWillUnmount(): void {
     /*
      * 通常在这里进行插件的资源回收，避免内存泄露；
      * 如：事件回调的解绑；

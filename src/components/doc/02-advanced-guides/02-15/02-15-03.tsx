@@ -7,15 +7,15 @@ import React from 'react';
 import { Button, Divider, Input } from 'antd';
 
 class C021503 extends React.Component {
-  inputRef: React.RefObject<Input>;
+  private inputRef: React.RefObject<Input>;
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.inputRef = React.createRef<Input>();
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     const vm = this;
     /*
      * 如果 ref 设置在一个自定义组件上，

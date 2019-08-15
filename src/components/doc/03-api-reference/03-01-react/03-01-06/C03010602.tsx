@@ -10,7 +10,7 @@ import React from 'react';
  *
  */
 class C030107 extends React.Component {
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const element01 = (
       <div>
         <span>A</span>

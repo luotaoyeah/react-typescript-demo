@@ -8,12 +8,13 @@ import React from 'react';
 import { Button } from 'antd';
 
 class C03050102 extends React.Component<{}, {}> {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e: React.MouseEvent) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick(e: React.MouseEvent) {
     /*
      * 可以通过 React.BaseSyntheticEvent.nativeEvent 属性，
      * 获取到浏览器原生的事件对象

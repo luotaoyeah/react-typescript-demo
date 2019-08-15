@@ -25,9 +25,7 @@ function F01(): React.ReactElement<{}> {
     <div>
       <Button
         onClick={() => {
-          setCount((prevCount: number) => {
-            return prevCount + 1;
-          });
+          setCount((prevCount: number) => prevCount + 1);
         }}
       >
         {count}
@@ -36,14 +34,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-class C04020201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04020201(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04020201 };

@@ -10,7 +10,7 @@ import React from 'react';
  *
  */
 class C030108 extends React.Component {
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const element01 = (
       <div>
         <span>A</span>
@@ -21,6 +21,7 @@ class C030108 extends React.Component {
 
     let count = 0;
     React.Children.forEach(element01.props.children, () => {
+      // eslint-disable-next-line no-plusplus
       count++;
     });
     console.log(count); // 3

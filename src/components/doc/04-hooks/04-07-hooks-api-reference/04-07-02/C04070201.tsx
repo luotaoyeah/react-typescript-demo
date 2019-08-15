@@ -31,18 +31,14 @@ function F01(): React.ReactElement<{}> {
     <div>
       <Button
         onClick={() => {
-          setCount((prevCount: number) => {
-            return prevCount + 1;
-          });
+          setCount((prevCount: number) => prevCount + 1);
         }}
       >
         {count}
       </Button>{' '}
       <Button
         onClick={() => {
-          setOnline((prevOnline: boolean) => {
-            return !prevOnline;
-          });
+          setOnline((prevOnline: boolean) => !prevOnline);
         }}
       >
         {String(online).toUpperCase()}
@@ -51,15 +47,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-// tslint:disable-next-line:max-classes-per-file
-class C04070201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04070201(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04070201 };

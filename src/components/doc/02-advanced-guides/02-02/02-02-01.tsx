@@ -11,14 +11,9 @@ import React from 'react';
  *
  * 实现 code-splitting 的最简单的方法是使用 import() 动态加载；
  */
-interface IProps {}
 
-interface IState {}
-
-class C020201 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C020201(): React.ReactNode {
+  return <div />;
 }
 
 export { C020201 };

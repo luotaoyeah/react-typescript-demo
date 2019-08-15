@@ -22,7 +22,7 @@ import { Button } from 'antd';
 
 function withNothing<P>(Component: React.ComponentType<any>) {
   return class extends React.Component {
-    componentDidMount(): void {
+    public componentDidMount(): void {
       console.log('componentDidMount()');
     }
 
@@ -34,14 +34,14 @@ function withNothing<P>(Component: React.ComponentType<any>) {
 
 /**  */
 class C020705 extends React.Component<{}, { date: Date }> {
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.state = {
       date: new Date(),
     };
   }
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     setInterval(() => {
       this.setState({
         date: new Date(),
@@ -50,6 +50,7 @@ class C020705 extends React.Component<{}, { date: Date }> {
   }
 
   public render(): React.ReactNode {
+    const { state } = this;
     /*
      *   不能在 render() 方法中调用 HOC 函数；
      *
@@ -66,7 +67,7 @@ class C020705 extends React.Component<{}, { date: Date }> {
 
     return (
       <div>
-        <p>{this.state.date.toISOString()}</p>
+        <p>{state.date.toISOString()}</p>
         <ButtonWithNothing>button</ButtonWithNothing>
       </div>
     );

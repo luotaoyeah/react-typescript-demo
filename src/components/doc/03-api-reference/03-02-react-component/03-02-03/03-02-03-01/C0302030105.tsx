@@ -16,18 +16,12 @@ class A extends React.Component {
   }
 }
 
-interface IProps {}
-
-interface IState {}
-
-class C0302030105 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-      </div>
-    );
-  }
+function C0302030105(): React.ReactNode {
+  return (
+    <div>
+      <A />
+    </div>
+  );
 }
 
 export { C0302030105 };

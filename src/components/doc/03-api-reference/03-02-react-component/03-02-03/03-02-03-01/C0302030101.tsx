@@ -7,6 +7,7 @@
 import React from 'react';
 import { Button } from 'antd';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IProps {}
 
 interface IState {
@@ -14,16 +15,14 @@ interface IState {
 }
 
 class C0302030101 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: any) {
+  public constructor(props: IProps, context: any) {
     super(props, context);
     this.state = { num: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => {
-      return { num: prevState.num + 1 };
-    });
+  public handleClick() {
+    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => ({ num: prevState.num + 1 }));
   }
 
   /*
@@ -31,10 +30,11 @@ class C0302030101 extends React.Component<IProps, IState> {
    * 重新渲染组件，更新 DOM；
    */
   public render(): React.ReactNode {
+    const { num } = this.state;
     console.log('render()');
     return (
       <div>
-        <Button onClick={this.handleClick}>{this.state.num}</Button>
+        <Button onClick={this.handleClick}>{num}</Button>
       </div>
     );
   }

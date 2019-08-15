@@ -18,14 +18,12 @@ function F01(): React.ReactElement<{}> {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-class C04070203 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04070203(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04070203 };

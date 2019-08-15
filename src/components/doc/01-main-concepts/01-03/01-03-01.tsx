@@ -10,18 +10,16 @@ import React from 'react';
  */
 console.log('\n-------------------------------------------------- 01');
 
-class C010301 extends React.Component {
-  public render(): React.ReactNode {
-    const element01: string = 'hello';
-    const element02: React.ReactNode = <i>world</i>;
+function C010301(): React.ReactNode {
+  const element01: string = 'hello';
+  const element02: React.ReactNode = <i>world</i>;
 
-    return (
-      <div>
-        {element01}
-        {element02}
-      </div>
-    );
-  }
+  return (
+    <div>
+      {element01}
+      {element02}
+    </div>
+  );
 }
 
 export { C010301 };

@@ -45,14 +45,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-class C04040403 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04040403(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04040403 };

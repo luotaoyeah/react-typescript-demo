@@ -12,25 +12,21 @@ import React from 'react';
  * 必须通过 React.forwardRef() 方法进行传递；∏
  */
 
-const FancyButton = React.forwardRef(
-  (props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => {
-    return (
-      <button ref={ref} onClick={props.onClick}>
-        button
-      </button>
-    );
-  },
-);
+const FancyButton = React.forwardRef((props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => (
+  <button type="button" ref={ref} onClick={props.onClick}>
+    button
+  </button>
+));
 
 class C020501 extends React.Component {
-  constructor(props: {}, context: any) {
+  public ref = React.createRef<HTMLButtonElement>();
+
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.onClick = this.onClick.bind(this);
   }
 
-  ref = React.createRef<HTMLButtonElement>();
-
-  onClick() {
+  public onClick() {
     const vm = this;
     if (vm.ref.current) {
       vm.ref.current.style.borderRadius = '3px';

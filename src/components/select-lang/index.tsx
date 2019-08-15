@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import HeaderDropdown from '../header-dropdown';
 import styles from './index.less';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface SelectLangProps {
   className?: string;
 }

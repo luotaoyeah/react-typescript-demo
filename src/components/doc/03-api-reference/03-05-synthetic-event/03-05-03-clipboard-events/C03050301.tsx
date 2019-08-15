@@ -9,14 +9,12 @@ import { Button } from 'antd';
 /*
  * TODO
  */
-class C03050301 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <Button>FOO</Button>
-      </div>
-    );
-  }
+function C03050301(): React.ReactNode {
+  return (
+    <div>
+      <Button>FOO</Button>
+    </div>
+  );
 }
 
 export { C03050301 };

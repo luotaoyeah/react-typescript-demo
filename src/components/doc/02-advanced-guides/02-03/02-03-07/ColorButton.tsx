@@ -1,5 +1,5 @@
 import React from 'react';
-import { ColorContext } from './ColorContext';
+import { ColorContext } from './color-context';
 
 class ColorButton extends React.Component<{ color: string }> {
   public render(): React.ReactNode {

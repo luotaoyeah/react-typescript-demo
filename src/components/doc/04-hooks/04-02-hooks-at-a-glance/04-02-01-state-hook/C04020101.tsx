@@ -27,9 +27,7 @@ function F01() {
       <Divider />
       <Button
         onClick={() => {
-          setCount((prev: number) => {
-            return prev + 2;
-          });
+          setCount((prev: number) => prev + 2);
         }}
       >
         {count}
@@ -38,14 +36,12 @@ function F01() {
   );
 }
 
-class C04020101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04020101(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04020101 };

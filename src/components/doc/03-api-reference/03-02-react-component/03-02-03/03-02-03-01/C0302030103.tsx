@@ -7,10 +7,6 @@
 import React from 'react';
 import { Button, Divider } from 'antd';
 
-interface IProps {}
-
-interface IState {}
-
 class A extends React.Component {
   public render(): React.ReactNode {
     /*
@@ -20,32 +16,28 @@ class A extends React.Component {
   }
 }
 
-class B extends React.Component {
-  public render(): React.ReactNode {
-    /*
-     * render() 可以返回一个 React.Fragment，
-     * 注意 React.Fragment 和 react elements 数组的区别；
-     */
-    return (
-      <React.Fragment>
-        <Button>B</Button>
-        <Divider />
-        <Button>B</Button>
-      </React.Fragment>
-    );
-  }
+function B() {
+  /*
+   * render() 可以返回一个 React.Fragment，
+   * 注意 React.Fragment 和 react elements 数组的区别；
+   */
+  return (
+    <React.Fragment>
+      <Button>B</Button>
+      <Divider />
+      <Button>B</Button>
+    </React.Fragment>
+  );
 }
 
-class C0302030103 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-        <hr />
-        <B />
-      </div>
-    );
-  }
+function C0302030103(): React.ReactNode {
+  return (
+    <div>
+      <A />
+      <hr />
+      <B />
+    </div>
+  );
 }
 
 export { C0302030103 };

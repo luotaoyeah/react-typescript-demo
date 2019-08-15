@@ -44,21 +44,20 @@ function F01(): React.ReactElement<{}> {
 }
 
 class C04040302 extends React.Component<{}, { visible: boolean }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = { visible: true };
   }
 
   public render(): React.ReactNode {
+    const { visible } = this.state;
     return (
       <div>
-        {this.state.visible && <F01 />}
+        {visible && <F01 />}
         <Divider />
         <Button
           onClick={() => {
-            this.setState((prevState: Readonly<{ visible: boolean }>) => {
-              return { visible: !prevState.visible };
-            });
+            this.setState((prevState: Readonly<{ visible: boolean }>) => ({ visible: !prevState.visible }));
           }}
         >
           TOGGLE

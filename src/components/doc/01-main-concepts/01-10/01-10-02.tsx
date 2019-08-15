@@ -10,14 +10,9 @@ import React from 'react';
  *     2. 如果数据需要跟其他组件共享，则将数据提升到父组件中，
  *        并通过 props 传入；
  */
-interface IProps {}
 
-interface IState {}
-
-class C011002 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C011002(): React.ReactNode {
+  return <div />;
 }
 
 export { C011002 };

@@ -13,14 +13,12 @@ function F01(): React.ReactElement<{}> {
   return <Button>{}</Button>;
 }
 
-class C04070401 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04070401(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04070401 };

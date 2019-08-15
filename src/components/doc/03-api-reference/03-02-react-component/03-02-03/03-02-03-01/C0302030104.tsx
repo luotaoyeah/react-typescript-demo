@@ -13,22 +13,17 @@ class A extends React.Component {
    * render() 方法可以返回一个 React.ReactPortal；
    */
   public render(): React.ReactPortal {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return ReactDOM.createPortal(<Button>portal</Button>, document.getElementById('root02')!);
   }
 }
 
-interface IProps {}
-
-interface IState {}
-
-class C0302030104 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A />
-      </div>
-    );
-  }
+function C0302030104(): React.ReactNode {
+  return (
+    <div>
+      <A />
+    </div>
+  );
 }
 
 export { C0302030104 };

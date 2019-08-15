@@ -4,15 +4,15 @@
  */
 
 import React from 'react';
-import { Chosen } from './Chosen';
 import { Button, Divider, message } from 'antd';
+import { Chosen } from './Chosen';
 
 interface IState {
   items: Array<{ name: string; value: string }>;
 }
 
 class C020802 extends React.Component<{}, IState> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       items: [
@@ -34,11 +34,12 @@ class C020802 extends React.Component<{}, IState> {
     this.handleOptionAdd = this.handleOptionAdd.bind(this);
   }
 
-  handleChange(value: string) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleChange(value: string) {
     message.success(value);
   }
 
-  handleOptionAdd() {
+  public handleOptionAdd() {
     this.setState((prevState: Readonly<IState>) => ({
       items: prevState.items.concat([{ name: 'D', value: 'd' }]),
     }));

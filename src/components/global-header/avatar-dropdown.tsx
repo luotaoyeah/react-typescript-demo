@@ -1,3 +1,4 @@
+// eslint-disable-next-line object-curly-newline
 import { Avatar, Icon, Menu, Spin } from 'antd';
 import { ClickParam } from 'antd/es/menu';
 import { FormattedMessage } from 'umi-plugin-react/locale';
@@ -10,12 +11,14 @@ import { CurrentUser } from '@/models/user';
 import HeaderDropdown from '../header-dropdown';
 import styles from './index.less';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface GlobalHeaderRightProps extends ConnectProps {
   currentUser?: CurrentUser;
   menu?: boolean;
 }
 
 class AvatarDropdown extends React.Component<GlobalHeaderRightProps> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   onMenuClick = (event: ClickParam) => {
     const { key } = event;
 
@@ -32,6 +35,7 @@ class AvatarDropdown extends React.Component<GlobalHeaderRightProps> {
     router.push(`/account/${key}`);
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render(): React.ReactNode {
     const { currentUser = { avatar: '', name: '' }, menu } = this.props;
 

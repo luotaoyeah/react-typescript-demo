@@ -15,7 +15,7 @@ export default {
   'user-login.register.sign-in': 'Already have an account?',
   'user-login.register-result.msg': 'Account：registered at {email}',
   'user-login.register-result.activation-email':
-    'The activation email has been sent to your email address and is valid for 24 hours. Please log in to the email in time and click on the link in the email to activate the account.',
+    'The activation email has been sent to your email address and is valid for 24 hours. Please log in to the email in time and click on the link in the email to activate the account.', // eslint-disable-line max-len
   'user-login.register-result.back-home': 'Back to home',
   'user-login.register-result.view-mailbox': 'View mailbox',
   'user-login.email.required': 'Please enter your email!',

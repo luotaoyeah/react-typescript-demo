@@ -2,8 +2,7 @@
  * Higher-Order Components
  */
 
-import React from 'react';
-import { HTMLAttributes } from 'react';
+import React, { HTMLAttributes } from 'react';
 import { Button, Input } from 'antd';
 
 /*
@@ -17,6 +16,7 @@ interface IWIthRadiusProps {
 }
 /* TODO 修复类型错误 React.ComponentType<P> */
 function withRadius<P extends HTMLAttributes<Element>>(Component: React.ComponentType<any>) {
+  // eslint-disable-next-line react/prefer-stateless-function
   class HOC extends React.Component<P & IWIthRadiusProps> {
     public render(): React.ReactNode {
       const { radius, ...rest } = this.props as IWIthRadiusProps;
@@ -30,15 +30,13 @@ function withRadius<P extends HTMLAttributes<Element>>(Component: React.Componen
 const RadiusButton = withRadius<any>(Button);
 const RadiusInput = withRadius<any>(Input);
 
-class C020701 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <RadiusButton radius={'50%'}>button</RadiusButton>
-        <RadiusInput radius={15} />
-      </div>
-    );
-  }
+function C020701(): React.ReactNode {
+  return (
+    <div>
+      <RadiusButton radius="50%">button</RadiusButton>
+      <RadiusInput radius={15} />
+    </div>
+  );
 }
 
 export { C020701 };

@@ -7,10 +7,12 @@ import styles from './index.less';
 
 const FormItem = Form.Item;
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginSubmitProps extends ButtonProps {
   className?: string;
 }
 
+// eslint-disable-next-line react/prop-types
 const LoginSubmit: React.FC<LoginSubmitProps> = ({ className, ...rest }) => {
   const clsString = classNames(styles.submit, className);
   return (

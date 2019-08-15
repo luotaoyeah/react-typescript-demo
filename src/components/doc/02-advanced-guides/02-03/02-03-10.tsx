@@ -13,20 +13,18 @@ const ColorContext: React.Context<IColorContext> = React.createContext({
   color: 'red',
 });
 
-class ColorButton extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <ColorContext.Consumer>
-        {(colorContext: IColorContext) => (
-          <Button style={{ color: colorContext.color }}>{new Date().toISOString()}</Button>
-        )}
-      </ColorContext.Consumer>
-    );
-  }
+function ColorButton(): React.ReactNode {
+  return (
+    <ColorContext.Consumer>
+      {(colorContext: IColorContext) => (
+        <Button style={{ color: colorContext.color }}>{new Date().toISOString()}</Button>
+      )}
+    </ColorContext.Consumer>
+  );
 }
 
 class C020310 extends React.Component<{}, { date: Date; colorContext: IColorContext }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       date: new Date(),
@@ -38,13 +36,14 @@ class C020310 extends React.Component<{}, { date: Date; colorContext: IColorCont
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     this.setState({
       date: new Date(),
     });
   }
 
   public render(): React.ReactNode {
+    const { date, colorContext } = this.state;
     return (
       <div>
         {/*
@@ -60,11 +59,11 @@ class C020310 extends React.Component<{}, { date: Date; colorContext: IColorCont
             <ColorButton />
           </ColorContext.Provider>
         */}
-        <ColorContext.Provider value={this.state.colorContext}>
+        <ColorContext.Provider value={colorContext}>
           <ColorButton />
         </ColorContext.Provider>
         <p>
-          <Button onClick={this.handleClick}>{this.state.date.toISOString()}</Button>
+          <Button onClick={this.handleClick}>{date.toISOString()}</Button>
         </p>
       </div>
     );

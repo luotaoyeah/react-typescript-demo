@@ -3,6 +3,7 @@ import { message } from 'antd';
 import defaultSettings, { DefaultSettings } from '../../config/defaultSettings';
 import themeColorClient from '../components/setting-drawer/theme-color-client';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface SettingModelType {
   namespace: 'settings';
   state: DefaultSettings;

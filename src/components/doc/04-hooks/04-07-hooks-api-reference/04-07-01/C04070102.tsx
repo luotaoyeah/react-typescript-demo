@@ -12,9 +12,7 @@ function F01(): React.ReactElement<{}> {
    * useState() 函数的参数，即 state 的初始值，可以是一个函数，
    * 该函数只会在首次渲染的时候执行
    */
-  const [count, setCount] = useState<number>(() => {
-    return 0;
-  });
+  const [count, setCount] = useState<number>(() => 0);
 
   return (
     <div>
@@ -29,15 +27,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-// tslint:disable-next-line:max-classes-per-file
-class C04070102 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04070102(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04070102 };

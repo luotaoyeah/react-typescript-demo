@@ -11,7 +11,7 @@ import { Button } from 'antd';
  * React.isValidElement() 判断一个对象是否是合法的 react 元素；
  */
 class C030105 extends React.Component {
-  componentDidMount(): void {
+  public componentDidMount(): void {
     console.log(React.isValidElement(null)); // false
     console.log(React.isValidElement(undefined)); // false
     console.log(React.isValidElement(false)); // false

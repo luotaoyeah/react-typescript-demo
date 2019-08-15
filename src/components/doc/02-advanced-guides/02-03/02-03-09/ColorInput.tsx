@@ -2,18 +2,20 @@ import React from 'react';
 import { ColorContext } from './ColorContext';
 
 class ColorInput extends React.Component<{ color: string }> {
-  inputRef = React.createRef<HTMLInputElement>();
+  private inputRef = React.createRef<HTMLInputElement>();
 
-  focus() {
+  public focus() {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     this.inputRef.current!.focus();
   }
 
   public render() {
+    const { color } = this.props;
     return (
       <input
         ref={this.inputRef}
         style={{
-          color: this.props.color,
+          color,
           borderRadius: '3px',
           outline: 'none',
           cursor: 'pointer',
@@ -29,7 +31,5 @@ class ColorInput extends React.Component<{ color: string }> {
  * 将 ref 传递到内层中的组件上去；
  */
 export default React.forwardRef((props: {}, ref?: any) => (
-  <ColorContext.Consumer>
-    {(color: string) => <ColorInput {...props} color={color} ref={ref} />}
-  </ColorContext.Consumer>
+  <ColorContext.Consumer>{(color: string) => <ColorInput {...props} color={color} ref={ref} />}</ColorContext.Consumer>
 ));

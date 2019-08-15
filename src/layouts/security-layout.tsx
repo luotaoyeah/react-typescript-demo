@@ -6,20 +6,24 @@ import { ConnectState, ConnectProps } from '@/models/connect';
 import { CurrentUser } from '@/models/user';
 import PageLoading from '@/components/page-loading';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface SecurityLayoutProps extends ConnectProps {
   loading: boolean;
   currentUser: CurrentUser;
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface SecurityLayoutState {
   isReady: boolean;
 }
 
 class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayoutState> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   state: SecurityLayoutState = {
     isReady: false,
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   componentDidMount() {
     this.setState({
       isReady: true,
@@ -32,6 +36,7 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { isReady } = this.state;
     const { children, loading, currentUser } = this.props;

@@ -4,23 +4,21 @@
 
 import React from 'react';
 import ColorButton from './ColorButton';
-import { ColorContext } from './ColorContext';
+import { ColorContext } from './color-context';
 
 const COLORS = {
-  red: '#ff0000',
-  green: '#00ff00',
+  red: '#FF0000',
+  green: '#00FF00',
 };
 
-class C020307 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <ColorContext.Provider value={COLORS.green}>
-          <ColorButton />
-        </ColorContext.Provider>
-      </div>
-    );
-  }
+function C020307(): React.ReactNode {
+  return (
+    <div>
+      <ColorContext.Provider value={COLORS.green}>
+        <ColorButton />
+      </ColorContext.Provider>
+    </div>
+  );
 }
 
 export { C020307 };

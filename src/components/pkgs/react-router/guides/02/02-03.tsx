@@ -6,10 +6,8 @@
 import React from 'react';
 
 /**  */
-class C0203 extends React.Component {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C0203(): React.ReactNode {
+  return <div />;
 }
 
 export { C0203 };

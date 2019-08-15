@@ -13,13 +13,8 @@ import React from 'react';
 /*
  * 最佳实践：通过组合（composition）的方式实现代码复用，而不是通过继承（inheritance）来实现；
  */
-class C03020101 extends React.Component {
-  /*
-   * render() 方法是 class 组件中必须实现的一个方法；
-   */
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C03020101(): React.ReactNode {
+  return <div />;
 }
 
 export { C03020101 };

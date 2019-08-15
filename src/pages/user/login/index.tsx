@@ -8,7 +8,7 @@ import { FormComponentProps } from 'antd/es/form';
 import Link from 'umi/link';
 import { connect } from 'dva';
 import { StateType } from '@/models/login';
-import LoginComponents from './components/Login';
+import LoginComponents from './components/login';
 import styles from './style.less';
 import { LoginParamsType } from '@/services/login';
 import { ConnectState } from '@/models/connect';

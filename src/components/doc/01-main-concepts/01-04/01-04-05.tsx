@@ -13,10 +13,8 @@ import React from 'react';
  * 绝对不要修改 props 的值；
  */
 
-class C010405 extends React.Component {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C010405(): React.ReactNode {
+  return <div />;
 }
 
 export { C010405 };

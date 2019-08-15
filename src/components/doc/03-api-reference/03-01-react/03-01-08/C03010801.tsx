@@ -13,13 +13,9 @@ class C03010801 extends React.Component {
   /*
    * 使用 React.createRef() 创建一个 ref 对象，绑定到组件的 ref 属性；
    */
-  inputRef = React.createRef<HTMLInputElement>();
+  public inputRef = React.createRef<HTMLInputElement>();
 
-  constructor(props: any) {
-    super(props);
-  }
-
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const vm = this;
 
     if (vm.inputRef.current) {

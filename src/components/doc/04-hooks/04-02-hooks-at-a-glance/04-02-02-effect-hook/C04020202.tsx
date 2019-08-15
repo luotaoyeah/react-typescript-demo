@@ -28,9 +28,7 @@ function F01(): React.ReactElement<{}> {
   return (
     <Button
       onClick={() => {
-        setCount((prevCount: number) => {
-          return prevCount + 1;
-        });
+        setCount((prevCount: number) => prevCount + 1);
       }}
     >
       {count}
@@ -39,25 +37,24 @@ function F01(): React.ReactElement<{}> {
 }
 
 class C04020202 extends React.Component<{}, { visible: boolean }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = { visible: true };
   }
 
   public render(): React.ReactNode {
+    const { state } = this;
     return (
       <div>
         <Button
           onClick={() => {
-            this.setState((prevState: Readonly<{ visible: boolean }>) => {
-              return { visible: !prevState.visible };
-            });
+            this.setState((prevState: Readonly<{ visible: boolean }>) => ({ visible: !prevState.visible }));
           }}
         >
           TOGGLE
         </Button>
         <Divider />
-        {this.state.visible && <F01 />}
+        {state.visible && <F01 />}
       </div>
     );
   }

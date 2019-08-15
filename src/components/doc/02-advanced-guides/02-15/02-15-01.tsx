@@ -22,9 +22,9 @@ import React from 'react';
  */
 
 class C021501 extends React.Component {
-  inputRef: React.RefObject<HTMLInputElement>;
+  private readonly inputRef: React.RefObject<HTMLInputElement>;
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     /*
      * 使用 React.createRef() 方法创建一个 ref 对象，

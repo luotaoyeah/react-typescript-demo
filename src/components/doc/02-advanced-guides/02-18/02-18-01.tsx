@@ -17,7 +17,7 @@ import React from 'react';
  */
 
 class A extends React.Component {
-  componentWillMount(): void {
+  public componentWillMount(): void {
     console.log('A.componentWillMount()');
   }
 
@@ -27,7 +27,7 @@ class A extends React.Component {
 }
 
 class B extends React.Component {
-  componentWillMount(): void {
+  public componentWillMount(): void {
     console.log('B.componentWillMount()');
   }
 
@@ -37,22 +37,20 @@ class B extends React.Component {
 }
 
 /**  */
-class C021801 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <React.Fragment>
-        {/*
-         * A 和 B 都是用了 UNSAFE 的生命周期函数 componentWillMount，
-         * 但是因为只有 A 位于 <React.StrictMode> 中间，
-         * 因此 React 只会检查 A；
-         */}
-        <React.StrictMode>
-          <A />
-        </React.StrictMode>
-        <B />
-      </React.Fragment>
-    );
-  }
+function C021801(): React.ReactNode {
+  return (
+    <React.Fragment>
+      {/*
+       * A 和 B 都是用了 UNSAFE 的生命周期函数 componentWillMount，
+       * 但是因为只有 A 位于 <React.StrictMode> 中间，
+       * 因此 React 只会检查 A；
+       */}
+      <React.StrictMode>
+        <A />
+      </React.StrictMode>
+      <B />
+    </React.Fragment>
+  );
 }
 
 export { C021801 };

@@ -12,12 +12,13 @@ import { Button } from 'antd';
  * 同时，synthetic event 的 API 跟 native event 的 API 是保持一致的
  */
 class C03050101 extends React.Component<{}, {}> {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e: React.MouseEvent) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick(e: React.MouseEvent) {
     const prototypeOf = Reflect.getPrototypeOf(Reflect.getPrototypeOf(Reflect.getPrototypeOf(e)));
     console.log(prototypeOf.constructor.name); // SyntheticEvent
   }

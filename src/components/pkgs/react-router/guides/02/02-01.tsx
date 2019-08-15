@@ -21,10 +21,8 @@ import React from 'react';
  */
 
 /**  */
-class C0201 extends React.Component {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C0201(): React.ReactNode {
+  return <div />;
 }
 
 export { C0201 };

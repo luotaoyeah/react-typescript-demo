@@ -22,7 +22,7 @@ interface IState {
 
 /**  */
 class C01 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: {}) {
+  public constructor(props: IProps, context: {}) {
     super(props, context);
     this.state = {
       size: {
@@ -52,23 +52,20 @@ class C01 extends React.Component<IProps, IState> {
 
   // tslint:disable-next-line:member-ordering
   public render(): React.ReactNode {
+    // eslint-disable-next-line react/destructuring-assignment
     return this.props.render(this.state);
   }
 }
 
 // tslint:disable-next-line:max-classes-per-file
-class C04060101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <C01
-          render={(state: IState) => <Button>{`${state.size.width}, ${state.size.height}`}</Button>}
-        />
-        <Divider />
-        <C01 render={(state: IState) => <Tag>{`${state.size.width}, ${state.size.height}`}</Tag>} />
-      </div>
-    );
-  }
+function C04060101(): React.ReactNode {
+  return (
+    <div>
+      <C01 render={(state: IState) => <Button>{`${state.size.width}, ${state.size.height}`}</Button>} />
+      <Divider />
+      <C01 render={(state: IState) => <Tag>{`${state.size.width}, ${state.size.height}`}</Tag>} />
+    </div>
+  );
 }
 
 export { C04060101 };

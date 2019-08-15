@@ -6,10 +6,8 @@
 import React from 'react';
 
 /**  */
-class C0401 extends React.Component {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C0401(): React.ReactNode {
+  return <div />;
 }
 
 export { C0401 };

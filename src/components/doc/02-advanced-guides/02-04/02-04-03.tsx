@@ -14,19 +14,17 @@ import React from 'react';
  * ErrorBoundary 在组件中的作用，
  * 类似于 try/catch 在 JS 代码中的作用；
  */
-class C020403 extends React.Component {
-  public render(): React.ReactNode {
-    /*
-     * 在开发环境中，组件中的错误会打印到浏览器控制台：
-     *
-     * The above error occurred in the <C020403> component:
-     *     in C020403 (created by App)
-     *     in div (created by App)
-     *     in App
-     */
-    throw new Error('some error');
-    return <div />;
-  }
+function C020403(): React.ReactNode {
+  /*
+   * 在开发环境中，组件中的错误会打印到浏览器控制台：
+   *
+   * The above error occurred in the <C020403> component:
+   *     in C020403 (created by App)
+   *     in div (created by App)
+   *     in App
+   */
+  // throw new Error('some error');
+  return <div />;
 }
 
 export { C020403 };

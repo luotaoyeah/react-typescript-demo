@@ -5,7 +5,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { IMouseState, Mouse } from './Mouse';
-import { withMouse } from './withMouse';
+import { withMouse } from './with-mouse';
 
 /*
  * render props 指的是一种特殊的 props，

@@ -10,12 +10,13 @@ import React, { ChangeEvent } from 'react';
  * onChange 事件，当表单元素的数据发生改变时，实时触发
  */
 class C03040105 extends React.Component<{}, {}> {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e: ChangeEvent<HTMLInputElement>) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleChange(e: ChangeEvent<HTMLInputElement>) {
     console.log(e.target.value);
   }
 

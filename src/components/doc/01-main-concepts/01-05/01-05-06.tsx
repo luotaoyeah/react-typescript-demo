@@ -4,6 +4,7 @@
 
 import React from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IProps {}
 
 interface IState {
@@ -23,22 +24,21 @@ interface IState {
  * 简单来讲，组件遵循的是单向数据流，或者叫自上而下的数据流；
  */
 
-class C010506A extends React.Component<{ username: string }> {
-  public render(): React.ReactNode {
-    return <i>{this.props.username}</i>;
-  }
+function C010506A({ username }: { username: string }): React.ReactNode {
+  return <i>{username}</i>;
 }
 
 class C010506 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+  public constructor(props: IProps) {
     super(props);
     this.state = { name: 'foo' };
   }
 
   public render(): React.ReactNode {
+    const { name } = this.state;
     return (
       <div>
-        <C010506A username={this.state.name} />
+        <C010506A username={name} />
       </div>
     );
   }

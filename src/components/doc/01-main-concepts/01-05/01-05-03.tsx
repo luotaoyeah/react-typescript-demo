@@ -4,6 +4,7 @@
 
 import React from 'react';
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IClockProps {}
 
 interface IClockState {
@@ -15,7 +16,7 @@ class Clock extends React.Component<IClockProps, IClockState> {
    * 在 constructor 中需要始终调用父类的 constructor：super(props)，
    * 同时，在 constructor 中初始化 state 的数据；
    */
-  constructor(props: IClockProps) {
+  public constructor(props: IClockProps) {
     super(props);
     this.state = {
       date: new Date(),
@@ -23,18 +24,17 @@ class Clock extends React.Component<IClockProps, IClockState> {
   }
 
   public render(): React.ReactNode {
-    return <p>{this.state.date.toISOString()}</p>;
+    const { date } = this.state;
+    return <p>{date.toISOString()}</p>;
   }
 }
 
-class C010503 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <Clock />
-      </div>
-    );
-  }
+function C010503(): React.ReactNode {
+  return (
+    <div>
+      <Clock />
+    </div>
+  );
 }
 
 export { C010503 };

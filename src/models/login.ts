@@ -7,12 +7,14 @@ import { fakeAccountLogin, getFakeCaptcha } from '@/services/login';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface StateType {
   status?: 'ok' | 'error';
   type?: string;
   currentAuthority?: 'user' | 'guest' | 'admin';
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface LoginModelType {
   namespace: string;
   state: StateType;
@@ -34,6 +36,7 @@ const Model: LoginModelType = {
   },
 
   effects: {
+    // eslint-disable-next-line generator-star-spacing
     *login({ payload }, { call, put }) {
       const response = yield call(fakeAccountLogin, payload);
       yield put({
@@ -61,9 +64,11 @@ const Model: LoginModelType = {
       }
     },
 
+    // eslint-disable-next-line generator-star-spacing
     *getCaptcha({ payload }, { call }) {
       yield call(getFakeCaptcha, payload);
     },
+    // eslint-disable-next-line generator-star-spacing
     *logout(_, { put }) {
       const { redirect } = getPageQuery();
       // redirect

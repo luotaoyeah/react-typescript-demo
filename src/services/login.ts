@@ -1,5 +1,6 @@
 import request from '@/utils/request';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface LoginParamsType {
   userName: string;
   password: string;

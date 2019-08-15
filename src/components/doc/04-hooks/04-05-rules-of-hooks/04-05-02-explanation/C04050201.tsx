@@ -32,10 +32,7 @@ const useStateProxy = new Proxy(useState, {
   apply(
     target:
       | (<S>(initialState: (() => S) | S) => [S, React.Dispatch<React.SetStateAction<S>>])
-      | (<S = undefined>() => [
-          (S | undefined),
-          React.Dispatch<React.SetStateAction<S | undefined>>,
-        ]),
+      | (<S = undefined>() => [(S | undefined), React.Dispatch<React.SetStateAction<S | undefined>>]),
     thisArg: any,
     argArray?: any,
   ): any {
@@ -64,14 +61,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-class C04050201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04050201(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04050201 };

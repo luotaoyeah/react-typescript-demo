@@ -4,6 +4,7 @@ import client from 'webpack-theme-color-replacer/client';
 import generate from '@ant-design/colors/lib/generate';
 
 export default {
+  // eslint-disable-next-line @typescript-eslint/array-type
   getAntdSerials(color: string): string[] {
     const lightCount = 9;
     const divide = 10;

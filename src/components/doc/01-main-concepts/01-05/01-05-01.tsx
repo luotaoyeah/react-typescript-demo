@@ -18,8 +18,8 @@ function Clock() {
  * @param props
  * @constructor
  */
-function Clock02(props: { date: Date }) {
-  return <p>{props.date.toISOString()}</p>;
+function Clock02({ date }: { date: Date }) {
+  return <p>{date.toISOString()}</p>;
 }
 
 /*
@@ -39,10 +39,8 @@ setInterval(() => {
   );
 }, 1000);
 
-class C010501 extends React.Component {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C010501(): React.ReactNode {
+  return <div />;
 }
 
 export { C010501 };

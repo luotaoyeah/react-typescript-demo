@@ -16,33 +16,33 @@ import React from 'react';
  */
 
 class A extends React.Component {
-  componentWillMount(): void {
+  public componentWillMount(): void {
     /*  */
   }
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     /*
      * 字符串形式的 ref 已经被弃用，不建议再使用；
      */
+    // eslint-disable-next-line react/no-string-refs
     (this.refs.inputRef as HTMLInputElement).focus();
   }
 
   public render(): React.ReactNode {
+    // eslint-disable-next-line spaced-comment
     return <div>{/*<input type="text" ref={"inputRef"} />*/}</div>;
   }
 }
 
 /**  */
-class C021802 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <React.Fragment>
-        <React.StrictMode>
-          <A />
-        </React.StrictMode>
-      </React.Fragment>
-    );
-  }
+function C021802(): React.ReactNode {
+  return (
+    <React.Fragment>
+      <React.StrictMode>
+        <A />
+      </React.StrictMode>
+    </React.Fragment>
+  );
 }
 
 export { C021802 };

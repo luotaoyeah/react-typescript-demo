@@ -38,14 +38,12 @@ const F01 = (): React.ReactElement<{}> => {
   );
 };
 
-class C04030401 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04030401(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04030401 };

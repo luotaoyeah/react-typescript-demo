@@ -6,8 +6,10 @@ import PromiseRender from './promise-render';
 export type IAuthorityType =
   | undefined
   | string
+  // eslint-disable-next-line @typescript-eslint/array-type
   | string[]
   | Promise<boolean>
+  // eslint-disable-next-line @typescript-eslint/array-type
   | ((currentAuthority: string | string[]) => IAuthorityType);
 
 /**
@@ -20,6 +22,7 @@ export type IAuthorityType =
  */
 const checkPermissions = <T, K>(
   authority: IAuthorityType,
+  // eslint-disable-next-line @typescript-eslint/array-type
   currentAuthority: string | string[],
   target: T,
   Exception: K,

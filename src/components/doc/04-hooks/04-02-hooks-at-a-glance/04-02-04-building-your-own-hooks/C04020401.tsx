@@ -19,9 +19,7 @@ import { Button, Divider } from 'antd';
  *
  * @param init
  */
-function useStatus(
-  init: boolean = false,
-): [boolean, (status: boolean | ((prevState: boolean) => boolean)) => void] {
+function useStatus(init: boolean = false): [boolean, (status: boolean | ((prevState: boolean) => boolean)) => void] {
   const [status, setStatus] = useState<boolean>(init);
 
   useEffect(() => {
@@ -39,9 +37,7 @@ function F01(): React.ReactElement<{}> {
     <div>
       <Button
         onClick={() => {
-          setStatus01((prevStatus: boolean) => {
-            return !prevStatus;
-          });
+          setStatus01((prevStatus: boolean) => !prevStatus);
         }}
       >
         {String(status01).toUpperCase()}
@@ -49,9 +45,7 @@ function F01(): React.ReactElement<{}> {
       <Divider />
       <Button
         onClick={() => {
-          setStatus02((prevStatus: boolean) => {
-            return !prevStatus;
-          });
+          setStatus02((prevStatus: boolean) => !prevStatus);
         }}
       >
         {String(status02).toUpperCase()}
@@ -60,14 +54,12 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-class C04020401 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C04020401(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C04020401 };

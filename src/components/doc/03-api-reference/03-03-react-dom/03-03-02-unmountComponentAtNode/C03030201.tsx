@@ -9,17 +9,19 @@ import ReactDOM from 'react-dom';
 import { Button, Divider } from 'antd';
 
 class C03030201 extends React.Component {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.handleClick01 = this.handleClick01.bind(this);
     this.handleClick02 = this.handleClick02.bind(this);
   }
 
-  handleClick01() {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick01() {
     ReactDOM.render(<Button>A</Button>, document.getElementById('div01'));
   }
 
-  handleClick02() {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick02() {
     const element = document.getElementById('div01');
     if (element) {
       /*

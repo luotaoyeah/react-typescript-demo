@@ -7,15 +7,15 @@ import React from 'react';
 import { Button, Divider } from 'antd';
 
 class C021502 extends React.Component {
-  inputRef: React.RefObject<HTMLInputElement>;
+  private inputRef: React.RefObject<HTMLInputElement>;
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.inputRef = React.createRef<HTMLInputElement>();
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     const vm = this;
     /*
      * 如果 ref 设置在一个 HTML 标签上，

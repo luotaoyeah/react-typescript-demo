@@ -12,18 +12,16 @@ import React from 'react';
  * 组件标签上的所有属性，会作为组件的 props 对象的属性，传递给组件；
  */
 
-function C010402A(props: { name: string }): React.ReactElement<{ name: string }> {
-  return <h3>{props.name}</h3>;
+function C010402A({ name }: { name: string }): React.ReactElement<{ name: string }> {
+  return <h3>{name}</h3>;
 }
 
-class C010402 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <p>
-        <C010402A name={'luotao'} />
-      </p>
-    );
-  }
+function C010402(): React.ReactNode {
+  return (
+    <p>
+      <C010402A name="luotao" />
+    </p>
+  );
 }
 
 export { C010402 };

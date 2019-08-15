@@ -7,6 +7,7 @@ import { isAntDesignPro } from '@/utils/utils';
 import styles from './index.less';
 
 const firstUpperCase = (pathString: string): string =>
+  // eslint-disable-next-line implicit-arrow-linebreak
   pathString
     .replace('.', '')
     .split(/\/|-/)
@@ -32,6 +33,7 @@ const onBlockCopy = (label: string) => {
 
 const BlockCodeView: React.SFC<{
   url: string;
+  // eslint-disable-next-line react/prop-types
 }> = ({ url }) => {
   const blockUrl = `npx umi block add ${firstUpperCase(url)} --path=${url}`;
   return (
@@ -53,6 +55,7 @@ const BlockCodeView: React.SFC<{
   );
 };
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface RoutingType {
   location: {
     pathname: string;

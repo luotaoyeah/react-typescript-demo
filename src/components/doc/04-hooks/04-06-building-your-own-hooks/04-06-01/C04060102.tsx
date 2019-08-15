@@ -48,16 +48,14 @@ function F02(): React.ReactElement<{}> {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-class C04060102 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-        <Divider />
-        <F02 />
-      </div>
-    );
-  }
+function C04060102(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+      <Divider />
+      <F02 />
+    </div>
+  );
 }
 
 export { C04060102 };

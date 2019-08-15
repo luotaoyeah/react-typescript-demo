@@ -12,12 +12,13 @@ import { Button } from 'antd';
  * 用完之后就会将该 synthetic event 对象的属性清空，然后再次释放到 pool 中去，供下次使用
  */
 class C03050201 extends React.Component<{}, {}> {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick(e: React.MouseEvent) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick(e: React.MouseEvent) {
     console.log(e.type); // click
     setTimeout(() => {
       /*

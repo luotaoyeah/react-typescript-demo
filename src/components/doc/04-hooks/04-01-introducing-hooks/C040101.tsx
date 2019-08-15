@@ -18,14 +18,12 @@ function F01() {
   return <Button onClick={() => setCount(count + 1)}>{count}</Button>;
 }
 
-class C040101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-      </div>
-    );
-  }
+function C040101(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+    </div>
+  );
 }
 
 export { C040101 };

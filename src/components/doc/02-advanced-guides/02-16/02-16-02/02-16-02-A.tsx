@@ -15,12 +15,14 @@ interface IAProps {
   render02?(state: IAState): React.ReactNode;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IAState {}
 
 class A extends React.Component<IAProps, IAState> {
   public render(): React.ReactNode {
-    if (this.props.render02) {
-      return this.props.render02(this.state);
+    const { render02 } = this.props;
+    if (render02) {
+      return render02(this.state);
     }
     return <i>A</i>;
   }
@@ -28,7 +30,8 @@ class A extends React.Component<IAProps, IAState> {
 
 /**  */
 class C021602A extends React.Component {
-  renderA(state: IAState) {
+  // eslint-disable-next-line class-methods-use-this
+  public renderA(state: IAState) {
     return <Button>A</Button>;
   }
 

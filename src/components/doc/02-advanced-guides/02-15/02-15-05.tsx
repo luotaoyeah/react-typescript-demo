@@ -6,19 +6,19 @@
 import React from 'react';
 import { Button, Divider } from 'antd';
 
-const MyInput = React.forwardRef((props: {}, ref?: React.Ref<HTMLInputElement>) => {
-  return <input type="text" ref={ref} style={{ borderRadius: '3px' }} />;
-});
+const MyInput = React.forwardRef((props: {}, ref?: React.Ref<HTMLInputElement>) => (
+  <input type="text" ref={ref} style={{ borderRadius: '3px' }} />
+));
 
 class C021505 extends React.Component {
-  inputRef!: HTMLInputElement;
+  private inputRef!: HTMLInputElement;
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     const vm = this;
     if (vm.inputRef) {
       vm.inputRef.focus();

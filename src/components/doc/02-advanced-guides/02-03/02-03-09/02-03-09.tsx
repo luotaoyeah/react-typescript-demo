@@ -3,18 +3,19 @@
  */
 
 import React from 'react';
-import ColorInput from './ColorInput';
 import { Button } from 'antd';
+import ColorInput from './ColorInput';
 
 class C020309 extends React.Component {
-  inputRef = React.createRef<any>();
+  private inputRef = React.createRef<any>();
 
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     this.inputRef.current!.focus();
   }
 

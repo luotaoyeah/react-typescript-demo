@@ -14,18 +14,22 @@ const generateId = (() => {
   };
 })();
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginTabProps extends TabPaneProps {
   tabUtil: LoginContextProps['tabUtil'];
 }
 
 class LoginTab extends Component<LoginTabProps> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   uniqueId: string = '';
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   constructor(props: LoginTabProps) {
     super(props);
     this.uniqueId = generateId('login-tab-');
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   componentDidMount() {
     const { tabUtil } = this.props;
     if (tabUtil) {
@@ -33,6 +37,7 @@ class LoginTab extends Component<LoginTabProps> {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { children } = this.props;
     return <TabPane {...this.props}>{children}</TabPane>;

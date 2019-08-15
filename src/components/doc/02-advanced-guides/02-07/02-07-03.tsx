@@ -12,16 +12,14 @@ import { Button } from 'antd';
  * HOC 应该将组件原来的 props 原封不动的继续传递给组件；
  */
 function HOC<P>(Component: React.ComponentType<P>) {
-  return class extends React.Component {
-    public render(): React.ReactNode {
-      /*
-       * 通常的模式是：将组件原来的 props 单独分离出来，然后继续传递给组件，
-       * 同时分离出 HOC 中增加的属性；
-       */
-      const { someProp, ...props } = this.props as any;
-      console.log(someProp);
-      return <Component {...props} />;
-    }
+  return function Component01(props01: any): React.ReactNode {
+    /*
+     * 通常的模式是：将组件原来的 props 单独分离出来，然后继续传递给组件，
+     * 同时分离出 HOC 中增加的属性；
+     */
+    const { someProp, ...props } = props01 as any;
+    console.log(someProp);
+    return <Component {...props} />;
   };
 }
 
@@ -29,14 +27,12 @@ function HOC<P>(Component: React.ComponentType<P>) {
 const HocButton = HOC<any>(Button);
 
 /**  */
-class C020703 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <HocButton>button</HocButton>
-      </div>
-    );
-  }
+function C020703(): React.ReactNode {
+  return (
+    <div>
+      <HocButton>button</HocButton>
+    </div>
+  );
 }
 
 export { C020703 };

@@ -14,18 +14,18 @@ import { Divider } from 'antd';
 
 /**  */
 class C022002 extends React.Component {
-  inputRef = React.createRef<HTMLInputElement>();
+  private inputRef = React.createRef<HTMLInputElement>();
 
-  checkboxRef = React.createRef<HTMLInputElement>();
+  public checkboxRef = React.createRef<HTMLInputElement>();
 
-  radioRef = React.createRef<HTMLInputElement>();
+  public radioRef = React.createRef<HTMLInputElement>();
 
-  constructor(props: any, context: any) {
+  public constructor(props: any, context: any) {
     super(props, context);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e: React.FormEvent) {
+  public handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     console.log(this.inputRef.current!.value);

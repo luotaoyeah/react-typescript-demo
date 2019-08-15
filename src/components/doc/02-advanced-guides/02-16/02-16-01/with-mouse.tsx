@@ -7,7 +7,7 @@ import { IMouseState, Mouse } from './Mouse';
  */
 export function withMouse<P extends { mouse: IMouseState }>(Component: React.ComponentType<any>) {
   return class extends React.Component {
-    renderFn(state: IMouseState) {
+    protected renderFn(state: IMouseState) {
       return <Component {...this.props} mouse={state} />;
     }
 

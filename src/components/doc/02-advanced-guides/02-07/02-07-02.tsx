@@ -13,6 +13,7 @@ function HOC<P>(Component: React.ComponentType<P>) {
   /*
    * 修改了参数组件的原型对象；
    */
+  // eslint-disable-next-line no-param-reassign
   Component.prototype.componentDidMount = () => {
     console.log('LOG');
   };
@@ -24,14 +25,12 @@ function HOC<P>(Component: React.ComponentType<P>) {
 const HocButton = HOC<any>(Button);
 
 /**  */
-class C020702 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <HocButton>button</HocButton>
-      </div>
-    );
-  }
+function C020702(): React.ReactNode {
+  return (
+    <div>
+      <HocButton>button</HocButton>
+    </div>
+  );
 }
 
 export { C020702 };

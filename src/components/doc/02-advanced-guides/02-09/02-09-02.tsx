@@ -24,12 +24,8 @@ import { Divider } from 'antd';
  * JSX 标签名中可以包含点运算符（A.B）；
  */
 const A = {
-  B: () => {
-    return <i>B</i>;
-  },
-  C: () => {
-    return <i>C</i>;
-  },
+  B: () => <i>B</i>,
+  C: () => <i>C</i>,
 };
 
 /*
@@ -49,33 +45,31 @@ function hello() {
   return <i>hello</i>;
 }
 
-class C020902 extends React.Component {
-  public render(): React.ReactNode {
-    const Hello = hello;
+function C020902(): React.ReactNode {
+  const Hello = hello;
 
-    /*
-     * JSX 标签名不能是一个表达式，
-     * 需要现将表达式赋值给一个变量，
-     * 然后在 JSX 中使用这个变量；
-     */
-    const components = {
-      b: A.B,
-      c: A.C,
-    };
-    const B = components.b;
+  /*
+   * JSX 标签名不能是一个表达式，
+   * 需要现将表达式赋值给一个变量，
+   * 然后在 JSX 中使用这个变量；
+   */
+  const components = {
+    b: A.B,
+    c: A.C,
+  };
+  const B = components.b;
 
-    return (
-      <div>
-        <A.B />
-        <Divider />
-        <A.C />
-        <Divider />
-        <Hello />
-        <Divider />
-        <B />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <A.B />
+      <Divider />
+      <A.C />
+      <Divider />
+      <Hello />
+      <Divider />
+      <B />
+    </div>
+  );
 }
 
 export { C020902 };

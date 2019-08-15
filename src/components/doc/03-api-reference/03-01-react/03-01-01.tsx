@@ -28,14 +28,8 @@ import React from 'react';
  *     React.forwardRef()
  */
 
-interface IProps {}
-
-interface IState {}
-
-class C030101 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return <div />;
-  }
+function C030101(): React.ReactNode {
+  return <div />;
 }
 
 export { C030101 };
