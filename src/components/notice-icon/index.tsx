@@ -1,3 +1,5 @@
+// eslint-disable-next-line max-len
+/* eslint-disable object-curly-newline,import/no-cycle,@typescript-eslint/interface-name-prefix,@typescript-eslint/array-type,@typescript-eslint/explicit-member-accessibility */
 import { Badge, Icon, Spin, Tabs } from 'antd';
 import React, { Component } from 'react';
 import classNames from 'classnames';
@@ -170,3 +172,5 @@ export default class NoticeIcon extends Component<NoticeIconProps> {
     );
   }
 }
+// eslint-disable-next-line max-len
+/* eslint-enable object-curly-newline,import/no-cycle,@typescript-eslint/interface-name-prefix,@typescript-eslint/array-type,@typescript-eslint/explicit-member-accessibility */

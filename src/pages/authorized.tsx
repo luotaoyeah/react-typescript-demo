@@ -3,13 +3,17 @@ import Redirect from 'umi/redirect';
 import { connect } from 'dva';
 import pathToRegexp from 'path-to-regexp';
 import Authorized from '@/utils/authorized';
+// eslint-disable-next-line object-curly-newline
 import { ConnectProps, ConnectState, Route, UserModelState } from '@/models/connect';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface AuthComponentProps extends ConnectProps {
   user: UserModelState;
 }
 
+// eslint-disable-next-line @typescript-eslint/array-type
 const getRouteAuthority = (path: string, routeData: Route[]) => {
+  // eslint-disable-next-line @typescript-eslint/array-type
   let authorities: string[] | string | undefined;
   routeData.forEach(route => {
     // match prefix
@@ -28,13 +32,17 @@ const getRouteAuthority = (path: string, routeData: Route[]) => {
 };
 
 const AuthComponent: React.FC<AuthComponentProps> = ({
+  // eslint-disable-next-line react/prop-types
   children,
+  // eslint-disable-next-line react/prop-types
   route = {
     routes: [],
   },
+  // eslint-disable-next-line react/prop-types
   location = {
     pathname: '',
   },
+  // eslint-disable-next-line react/prop-types
   user,
 }) => {
   const { currentUser } = user;

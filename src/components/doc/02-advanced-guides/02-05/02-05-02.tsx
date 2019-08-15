@@ -7,15 +7,11 @@ import React from 'react';
 /**
  *
  */
-const FancyButton = React.forwardRef(
-  (props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => {
-    return (
-      <button type="button" onClick={props.onClick} ref={ref}>
-        button
-      </button>
-    );
-  },
-);
+const FancyButton = React.forwardRef((props: { onClick: () => void }, ref?: React.Ref<HTMLButtonElement>) => (
+  <button type="button" onClick={props.onClick} ref={ref}>
+    button
+  </button>
+));
 
 /**
  * HOC
@@ -23,9 +19,7 @@ const FancyButton = React.forwardRef(
  * @param Component
  * @constructor
  */
-function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
-  Component: React.ComponentType<any>,
-) {
+function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(Component: React.ComponentType<any>) {
   /*
    * 通过一个普通的 props 属性 forwardRef 将 ref 传递进来，
    * 然后继续传递给下级组件；
@@ -33,7 +27,7 @@ function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
   class LoggerComponent extends React.Component<{
     forwardRef: React.RefObject<HTMLButtonElement>;
   }> {
-    componentDidMount() {
+    public componentDidMount() {
       console.log('LOGGER');
     }
 
@@ -44,9 +38,9 @@ function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(
     }
   }
 
-  return React.forwardRef((props: any, ref?: React.Ref<HTMLButtonElement>) => {
-    return <LoggerComponent {...props} forwardRef={ref} />;
-  });
+  return React.forwardRef((props: any, ref?: React.Ref<HTMLButtonElement>) => (
+    <LoggerComponent {...props} forwardRef={ref} />
+  ));
 }
 
 /**
@@ -58,14 +52,14 @@ const LoggerFancyButton = LoggerHOC(FancyButton);
  *
  */
 class C020502 extends React.Component {
-  constructor(props: {}, context: any) {
+  public ref = React.createRef<HTMLButtonElement>();
+
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  ref = React.createRef<HTMLButtonElement>();
-
-  handleClick() {
+  public handleClick() {
     const vm = this;
     if (vm.ref.current) {
       vm.ref.current.style.color = 'red';

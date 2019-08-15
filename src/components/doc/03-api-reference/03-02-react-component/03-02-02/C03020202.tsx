@@ -7,8 +7,6 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   num: number;
 }
@@ -30,8 +28,8 @@ interface IState {
  *
  * 当调用 forceUpdate() 方法时，shouldComponentUpdate() 函数不会执行；
  */
-class C03020202 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: any) {
+class C03020202 extends React.Component<{}, IState> {
+  public constructor(props: {}, context: any) {
     console.log('constructor');
     super(props, context);
     this.state = { num: 0 };
@@ -39,48 +37,41 @@ class C03020202 extends React.Component<IProps, IState> {
     this.handleClick02 = this.handleClick02.bind(this);
   }
 
-  static getDerivedStateFromProps(nextProps: Readonly<IProps>, prevState: IState) {
+  public static getDerivedStateFromProps(nextProps: Readonly<{}>, prevState: IState) {
     console.log('getDerivedStateFromProps()');
     return null;
   }
 
-  shouldComponentUpdate(
-    nextProps: Readonly<IProps>,
-    nextState: Readonly<IState>,
-    nextContext: any,
-  ): boolean {
+  public shouldComponentUpdate(nextProps: Readonly<{}>, nextState: Readonly<IState>, nextContext: any): boolean {
     console.log('shouldComponentUpdate()');
     return true;
   }
 
-  getSnapshotBeforeUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>): any | null {
+  public componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<IState>, snapshot?: any): void {
+    console.log('componentDidUpdate()');
+  }
+
+  public getSnapshotBeforeUpdate(prevProps: Readonly<{}>, prevState: Readonly<IState>): any | null {
     console.log('getSnapshotBeforeUpdate()');
     return null;
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<IProps>,
-    prevState: Readonly<IState>,
-    snapshot?: any,
-  ): void {
-    console.log('componentDidUpdate()');
-  }
-
-  handleClick() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => ({
+  public handleClick() {
+    this.setState((prevState: Readonly<IState>, props: Readonly<{}>) => ({
       num: prevState.num + 1,
     }));
   }
 
-  handleClick02() {
+  public handleClick02() {
     this.forceUpdate();
   }
 
   public render(): React.ReactNode {
     console.log('render()');
+    const { num } = this.state;
     return (
       <div>
-        <Button onClick={this.handleClick}>{this.state.num}</Button>
+        <Button onClick={this.handleClick}>{num}</Button>
         <Button onClick={this.handleClick02}>forceUpdate()</Button>
       </div>
     );

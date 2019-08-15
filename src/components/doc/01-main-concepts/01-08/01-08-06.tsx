@@ -7,22 +7,23 @@ import React from 'react';
 /*
  * 在 JSX 中，{} 中间可以包含任意的 JS 表达式；
  */
-interface IProps {}
 
-interface IState {}
-
-class C010806 extends React.Component<IProps, IState> {
-  hello() {
+class C010806 extends React.Component<{}, {}> {
+  // eslint-disable-next-line class-methods-use-this
+  public hello() {
     return 'hello world';
   }
 
   public render(): React.ReactNode {
     return (
       <div>
+        {/* eslint-disable-next-line no-useless-concat */}
         <p>{'hello ' + 'world'}</p>
+        {/* eslint-disable-next-line react/jsx-curly-brace-presence */}
         <p>{'hello world'}</p>
         <p>{this.hello()}</p>
         <p>
+          {/* eslint-disable-next-line wrap-iife,space-before-function-paren */}
           {(function() {
             return 'hello world';
           })()}

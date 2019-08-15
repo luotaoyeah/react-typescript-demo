@@ -1,3 +1,4 @@
+// eslint-disable-next-line object-curly-newline
 import { Button, Col, Form, Input, Row } from 'antd';
 import React, { Component } from 'react';
 import { FormComponentProps } from 'antd/es/form';
@@ -12,6 +13,7 @@ type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export type WrappedLoginItemProps = Omit<LoginItemProps, 'form' | 'type' | 'updateActive'>;
 export type LoginItemKeyType = keyof typeof ItemMap;
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface LoginItemType {
   UserName: React.FC<WrappedLoginItemProps>;
   Password: React.FC<WrappedLoginItemProps>;
@@ -19,6 +21,7 @@ export interface LoginItemType {
   Captcha: React.FC<WrappedLoginItemProps>;
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface LoginItemProps extends GetFieldDecoratorOptions {
   name?: string;
   style?: React.CSSProperties;
@@ -38,6 +41,7 @@ export interface LoginItemProps extends GetFieldDecoratorOptions {
   tabUtil?: LoginContextProps['tabUtil'];
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginItemState {
   count: number;
 }
@@ -45,31 +49,35 @@ interface LoginItemState {
 const FormItem = Form.Item;
 
 class WrapFormItem extends Component<LoginItemProps, LoginItemState> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   static defaultProps = {
     getCaptchaButtonText: 'captcha',
     getCaptchaSecondText: 'second',
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   interval: number | undefined = undefined;
 
-  constructor(props: LoginItemProps) {
+  public constructor(props: LoginItemProps) {
     super(props);
     this.state = {
       count: 0,
     };
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     const { updateActive, name = '' } = this.props;
     if (updateActive) {
       updateActive(name);
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   componentWillUnmount() {
     clearInterval(this.interval);
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   onGetCaptcha = () => {
     const { onGetCaptcha } = this.props;
     const result = onGetCaptcha ? onGetCaptcha() : null;
@@ -83,6 +91,7 @@ class WrapFormItem extends Component<LoginItemProps, LoginItemState> {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility,object-curly-newline
   getFormItemOptions = ({ onChange, defaultValue, customProps = {}, rules }: LoginItemProps) => {
     const options: {
       rules?: LoginItemProps['rules'];
@@ -100,6 +109,7 @@ class WrapFormItem extends Component<LoginItemProps, LoginItemState> {
     return options;
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   runGetCaptchaCountDown = () => {
     const { countDown } = this.props;
     let count = countDown || 59;
@@ -113,6 +123,7 @@ class WrapFormItem extends Component<LoginItemProps, LoginItemState> {
     }, 1000);
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { count } = this.state;
 

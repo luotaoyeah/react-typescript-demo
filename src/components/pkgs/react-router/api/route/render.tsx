@@ -17,17 +17,14 @@ interface IUserProps extends RouteComponentProps<IUserParam> {
   age?: number;
 }
 
-interface IUserState {}
-
 /**  */
-class User extends React.Component<IUserProps, IUserState> {
-  public render(): React.ReactNode {
-    return (
-      <Button type={'primary'}>
-        {this.props.match.params.name}，{this.props.age}
-      </Button>
-    );
-  }
+function User(props: IUserProps) {
+  const { match, age } = props;
+  return (
+    <Button type="primary">
+      {match.params.name}，{age}
+    </Button>
+  );
 }
 
 /**
@@ -39,13 +36,11 @@ class User extends React.Component<IUserProps, IUserState> {
 const MyRoute = (routeProps: RouteProps) => {
   const { component, ...rest } = routeProps;
   const C = component as React.ComponentClass<any>;
-  const renderFn = (props: RouteComponentProps) => {
-    return (
-      <Card>
-        <C {...props} age={19} />
-      </Card>
-    );
-  };
+  const renderFn = (props: RouteComponentProps) => (
+    <Card>
+      <C {...props} age={19} />
+    </Card>
+  );
   return <Route {...rest} render={renderFn} />;
 };
 
@@ -55,7 +50,8 @@ class ApiRouteRender extends React.Component {
    *
    * @param props
    */
-  renderUser(props: RouteComponentProps<IUserParam>) {
+  // eslint-disable-next-line class-methods-use-this
+  public renderUser(props: RouteComponentProps<IUserParam>) {
     return <User {...props} age={18} />;
   }
 
@@ -64,10 +60,10 @@ class ApiRouteRender extends React.Component {
       <div>
         <ul>
           <li>
-            <Link to={'/users/foo'}>foo</Link>
+            <Link to="/users/foo">foo</Link>
           </li>
           <li>
-            <Link to={'/users/bar'}>bar</Link>
+            <Link to="/users/bar">bar</Link>
           </li>
         </ul>
         <Divider />
@@ -75,8 +71,8 @@ class ApiRouteRender extends React.Component {
          * 使用 render 属性，可以自定义组件的渲染方式；
          * 此处用到了 React 的 render props 特性；
          */}
-        <Route path={'/users/:name'} render={this.renderUser} />
-        <MyRoute path={'/users/:name'} component={User} />
+        <Route path="/users/:name" render={this.renderUser} />
+        <MyRoute path="/users/:name" component={User} />
       </div>
     );
   }

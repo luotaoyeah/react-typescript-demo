@@ -27,45 +27,48 @@ interface IAState {
 
 /**  */
 class A extends React.Component<IAProps, IAState> {
-  state: IAState = {
+  public state: IAState = {
     text: 'A',
   };
 
   public render(): React.ReactNode {
-    if (this.props.render) {
-      return this.props.render(this.state);
+    const { render: render1 } = this.props;
+    if (render1) {
+      return render1(this.state);
     }
 
-    return <i>{this.state.text}</i>;
+    const { text } = this.state;
+    return <i>{text}</i>;
   }
 }
 
-class CatButton extends React.Component<{ mouse: IMouseState }, {}> {
-  public render(): React.ReactNode {
-    return (
-      <Button
-        style={{
-          position: 'absolute',
-          left: `${this.props.mouse.x - 42 + window.scrollX}px`,
-          top: `${this.props.mouse.y - 32 + window.scrollY}px`,
-          transition: 'none',
-        }}
-      >
-        B
-      </Button>
-    );
-  }
+function CatButton(props: { mouse: IMouseState }) {
+  const { mouse } = props;
+  return (
+    <Button
+      style={{
+        position: 'absolute',
+        left: `${mouse.x - 42 + window.scrollX}px`,
+        top: `${mouse.y - 32 + window.scrollY}px`,
+        transition: 'none',
+      }}
+    >
+      B
+    </Button>
+  );
 }
 
 const CatButtonWithMouse = withMouse(CatButton);
 
 /**  */
 class C021601 extends React.Component {
-  renderA(state: IAState) {
+  // eslint-disable-next-line class-methods-use-this
+  public renderA(state: IAState) {
     return <Button>{state.text}</Button>;
   }
 
-  renderMouse(state: any) {
+  // eslint-disable-next-line class-methods-use-this
+  public renderMouse(state: any) {
     return (
       <Button
         style={{

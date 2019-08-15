@@ -15,7 +15,7 @@ import Divider from 'antd/es/divider';
  */
 
 class C01 extends React.Component<{}, { count: number; size: { width: number; height: number } }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       count: 0,
@@ -27,7 +27,30 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
-  private handleWindowResize() {
+  public componentDidMount(): void {
+    const { count } = this.state;
+    document.title = String(count);
+
+    window.addEventListener('resize', this.handleWindowResize);
+  }
+
+  public componentDidUpdate(
+    prevProps: Readonly<{}>,
+    prevState: Readonly<{
+      count: number;
+      size: { width: number; height: number };
+    }>,
+    snapshot?: any,
+  ): void {
+    const { count } = this.state;
+    document.title = String(count);
+  }
+
+  public componentWillUnmount(): void {
+    window.removeEventListener('resize', this.handleWindowResize);
+  }
+
+  public handleWindowResize() {
     this.setState({
       size: {
         width: window.innerWidth,
@@ -36,61 +59,32 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
     });
   }
 
-  componentDidMount(): void {
-    document.title = String(this.state.count);
-
-    window.addEventListener('resize', this.handleWindowResize);
-  }
-
-  componentDidUpdate(
-    prevProps: Readonly<{}>,
-    prevState: Readonly<{
-      count: number;
-      size: { width: number; height: number };
-    }>,
-    snapshot?: any,
-  ): void {
-    document.title = String(this.state.count);
-  }
-
-  componentWillUnmount(): void {
-    window.removeEventListener('resize', this.handleWindowResize);
-  }
-
   public render(): React.ReactNode {
+    const { count, size } = this.state;
     return (
       <div>
         <Button
           onClick={() => {
-            this.setState(
-              (
-                prevState: Readonly<{
-                  count: number;
-                  size: { width: number; height: number };
-                }>,
-              ) => {
-                return { count: prevState.count + 1 };
-              },
-            );
+            this.setState((prevState: Readonly<{ count: number; size: { width: number; height: number } }>) => ({
+              count: prevState.count + 1,
+            }));
           }}
         >
-          {this.state.count}
+          {count}
         </Button>
         <Divider />
-        <Button>{`${this.state.size.width}, ${this.state.size.height}`}</Button>
+        <Button>{`${size.width}, ${size.height}`}</Button>
       </div>
     );
   }
 }
 
-class C04040401 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <C01 />
-      </div>
-    );
-  }
+function C04040401(): React.ReactNode {
+  return (
+    <div>
+      <C01 />
+    </div>
+  );
 }
 
 export { C04040401 };

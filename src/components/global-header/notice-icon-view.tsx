@@ -11,7 +11,9 @@ import { CurrentUser } from '@/models/user';
 import { ConnectProps, ConnectState } from '@/models/connect';
 import styles from './index.less';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface GlobalHeaderRightProps extends ConnectProps {
+  // eslint-disable-next-line @typescript-eslint/array-type
   notices?: NoticeItem[];
   currentUser?: CurrentUser;
   fetchingNotices?: boolean;
@@ -20,7 +22,7 @@ export interface GlobalHeaderRightProps extends ConnectProps {
 }
 
 class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
-  componentDidMount() {
+  public componentDidMount() {
     const { dispatch } = this.props;
     if (dispatch) {
       dispatch({
@@ -29,6 +31,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   changeReadState = (clickedItem: NoticeItem): void => {
     const { id } = clickedItem;
     const { dispatch } = this.props;
@@ -40,6 +43,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   handleNoticeClear = (title: string, key: string) => {
     const { dispatch } = this.props;
     message.success(`${formatMessage({ id: 'component.noticeIcon.cleared' })} ${title}`);
@@ -51,6 +55,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility,@typescript-eslint/array-type
   getNoticeData = (): { [key: string]: NoticeItem[] } => {
     const { notices = [] } = this.props;
     if (notices.length === 0) {
@@ -82,6 +87,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     return groupBy(newNotices, 'type');
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility,@typescript-eslint/array-type
   getUnreadData = (noticeData: { [key: string]: NoticeItem[] }) => {
     const unreadMsg: { [key: string]: number } = {};
     Object.keys(noticeData).forEach(key => {
@@ -96,6 +102,7 @@ class GlobalHeaderRight extends Component<GlobalHeaderRightProps> {
     return unreadMsg;
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { currentUser, fetchingNotices, onNoticeVisibleChange } = this.props;
     const noticeData = this.getNoticeData();

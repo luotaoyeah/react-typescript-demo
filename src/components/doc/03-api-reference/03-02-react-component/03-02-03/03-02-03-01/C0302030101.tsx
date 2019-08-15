@@ -8,21 +8,20 @@ import React from 'react';
 import { Button } from 'antd';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IProps {}
 
 interface IState {
   num: number;
 }
 
-class C0302030101 extends React.Component<IProps, IState> {
-  public constructor(props: IProps, context: any) {
+class C0302030101 extends React.Component<{}, IState> {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = { num: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
 
   public handleClick() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => ({ num: prevState.num + 1 }));
+    this.setState((prevState: Readonly<IState>, props: Readonly<{}>) => ({ num: prevState.num + 1 }));
   }
 
   /*

@@ -10,6 +10,7 @@ import LoginTab from './login-tab';
 import styles from './index.less';
 import { LoginParamsType } from '@/services/login';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface LoginProps {
   defaultActiveKey?: string;
   onTabChange?: (key: string) => void;
@@ -18,12 +19,16 @@ export interface LoginProps {
   className?: string;
   form: FormComponentProps['form'];
   onCreate?: (form?: FormComponentProps['form']) => void;
+  // eslint-disable-next-line @typescript-eslint/array-type
   children: React.ReactElement<LoginTab>[];
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginState {
+  // eslint-disable-next-line @typescript-eslint/array-type
   tabs?: string[];
   type?: string;
+  // eslint-disable-next-line @typescript-eslint/array-type
   active?: { [key: string]: unknown[] };
 }
 
@@ -40,6 +45,7 @@ class Login extends Component<LoginProps, LoginState> {
 
   public static Captcha: React.FunctionComponent<LoginItemProps>;
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   static defaultProps = {
     className: '',
     defaultActiveKey: '',
@@ -47,7 +53,7 @@ class Login extends Component<LoginProps, LoginState> {
     onSubmit: () => {},
   };
 
-  constructor(props: LoginProps) {
+  public constructor(props: LoginProps) {
     super(props);
     this.state = {
       type: props.defaultActiveKey,
@@ -56,13 +62,14 @@ class Login extends Component<LoginProps, LoginState> {
     };
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     const { form, onCreate } = this.props;
     if (onCreate) {
       onCreate(form);
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   onSwitch = (type: string) => {
     this.setState(
       {
@@ -77,6 +84,7 @@ class Login extends Component<LoginProps, LoginState> {
     );
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   getContext: () => LoginContextProps = () => {
     const { form } = this.props;
     const { tabs = [] } = this.state;
@@ -108,12 +116,14 @@ class Login extends Component<LoginProps, LoginState> {
     };
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const { active = {}, type = '' } = this.state;
     const { form, onSubmit } = this.props;
     const activeFields = active[type] || [];
     if (form) {
+      // eslint-disable-next-line @typescript-eslint/array-type
       form.validateFields(activeFields as string[], { force: true }, (err, values) => {
         if (onSubmit) {
           onSubmit(err, values);
@@ -122,10 +132,13 @@ class Login extends Component<LoginProps, LoginState> {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { className, children } = this.props;
     const { type, tabs = [] } = this.state;
+    // eslint-disable-next-line @typescript-eslint/array-type
     const TabChildren: React.ReactComponentElement<LoginTab>[] = [];
+    // eslint-disable-next-line @typescript-eslint/array-type
     const otherChildren: React.ReactElement<unknown>[] = [];
     React.Children.forEach(children, (child: React.ReactComponentElement<LoginTab> | React.ReactElement<unknown>) => {
       if (!child) {
@@ -158,6 +171,7 @@ class Login extends Component<LoginProps, LoginState> {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/array-type
 (Object.keys(LoginItem) as (keyof LoginItemType)[]).forEach(item => {
   Login[item] = LoginItem[item];
 });

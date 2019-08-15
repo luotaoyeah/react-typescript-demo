@@ -15,12 +15,12 @@ function MyLi({ value }: { value: string }) {
 function C010804(): React.ReactNode {
   return (
     <div>
-      {['a', 'b', 'c'].map((n: string) => {
-        /*
-         * key 属性设置在 <MyLi> 标签上，而不是它里面的 <li> 标签上；
-         */
-        return <MyLi value={n} key={n} />;
-      })}
+      {/*
+       * key 属性设置在 <MyLi> 标签上，而不是它里面的 <li> 标签上；
+       */}
+      {['a', 'b', 'c'].map((n: string) => (
+        <MyLi value={n} key={n} />
+      ))}
     </div>
   );
 }

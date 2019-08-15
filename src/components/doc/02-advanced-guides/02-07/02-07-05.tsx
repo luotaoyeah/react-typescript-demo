@@ -23,7 +23,7 @@ import { Button } from 'antd';
 function withNothing<P>(Component: React.ComponentType<any>) {
   return class extends React.Component {
     public componentDidMount(): void {
-      console.log('componentDidMount()');
+      console.log('public componentDidMount()');
     }
 
     public render(): React.ReactNode {

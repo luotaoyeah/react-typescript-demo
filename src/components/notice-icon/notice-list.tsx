@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 import { Avatar, List } from 'antd';
 
 import React from 'react';
 import classNames from 'classnames';
+// eslint-disable-next-line import/no-cycle
 import { NoticeIconData } from './index';
 import styles from './notice-list.less';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface NoticeIconTabProps {
   count?: number;
   name?: string;
@@ -13,12 +16,14 @@ export interface NoticeIconTabProps {
   style?: React.CSSProperties;
   title: string;
   tabKey: string;
+  // eslint-disable-next-line @typescript-eslint/array-type
   data?: NoticeIconData[];
   onClick?: (item: NoticeIconData) => void;
   onClear?: () => void;
   emptyText?: string;
   clearText?: string;
   viewMoreText?: string;
+  // eslint-disable-next-line @typescript-eslint/array-type
   list: NoticeIconData[];
   onViewMore?: (e: any) => void;
 }
@@ -37,10 +42,7 @@ const NoticeList: React.SFC<NoticeIconTabProps> = ({
   if (data.length === 0) {
     return (
       <div className={styles.notFound}>
-        <img
-          src="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg"
-          alt="not found"
-        />
+        <img src="https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg" alt="not found" />
         <div>{emptyText}</div>
       </div>
     );
@@ -64,11 +66,7 @@ const NoticeList: React.SFC<NoticeIconTabProps> = ({
           ) : null;
 
           return (
-            <List.Item
-              className={itemCls}
-              key={item.key || i}
-              onClick={() => onClick && onClick(item)}
-            >
+            <List.Item className={itemCls} key={item.key || i} onClick={() => onClick && onClick(item)}>
               <List.Item.Meta
                 className={styles.meta}
                 avatar={leftIcon}
@@ -91,11 +89,13 @@ const NoticeList: React.SFC<NoticeIconTabProps> = ({
       />
       <div className={styles.bottomBar}>
         {showClear ? (
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
           <div onClick={onClear}>
             {clearText} {title}
           </div>
         ) : null}
         {showViewMore ? (
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
           <div
             onClick={e => {
               if (onViewMore) {
@@ -112,3 +112,4 @@ const NoticeList: React.SFC<NoticeIconTabProps> = ({
 };
 
 export default NoticeList;
+/* eslint-enable react/prop-types */

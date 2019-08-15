@@ -11,29 +11,28 @@ import { Button } from 'antd';
  * 比如在 Button 的基础上，可以有 PrimaryButton，DangerButton 等；
  */
 
+// eslint-disable-next-line react/prefer-stateless-function
 class PrimaryButton extends React.Component {
   public render(): React.ReactNode {
-    return <Button type={'primary'}>PRIMARY</Button>;
+    return <Button type="primary">PRIMARY</Button>;
   }
 }
 
+// eslint-disable-next-line react/prefer-stateless-function
 class DangerButton extends React.Component {
   public render(): React.ReactNode {
-    return <Button type={'danger'}>DANGER</Button>;
+    return <Button type="danger">DANGER</Button>;
   }
 }
 
-interface IProps {}
-
-interface IState {}
-
-class C011102 extends React.Component<IProps, IState> {
-  constructor(props: IProps, context: any) {
+class C011102 extends React.Component<{}, {}> {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  // eslint-disable-next-line class-methods-use-this
+  public handleClick() {
     console.log('click');
   }
 

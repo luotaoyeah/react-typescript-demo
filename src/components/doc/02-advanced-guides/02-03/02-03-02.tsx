@@ -13,74 +13,69 @@ import { Input } from 'antd';
 /*
  * 使用 props 层层传递的方式
  */
-class A extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
-    return <B name={this.props.name} age={this.props.age} />;
-  }
+function A(props: { name: string; age: number }) {
+  const { age, name } = props;
+  return <B name={name} age={age} />;
 }
 
-class B extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
-    return <C name={this.props.name} age={this.props.age} />;
-  }
+function B(props: { name: string; age: number }) {
+  const { age, name } = props;
+  return <C name={name} age={age} />;
 }
 
-class C extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <p>
-          <Input addonBefore="name：" defaultValue={this.props.name} />
-        </p>
-        <p>
-          <Input addonBefore="age：" defaultValue={this.props.age.toString()} />
-        </p>
-      </div>
-    );
-  }
+function C(props: { name: string; age: number }) {
+  const { age, name } = props;
+  return (
+    <div>
+      <p>
+        <Input addonBefore="name：" defaultValue={name} />
+      </p>
+      <p>
+        <Input addonBefore="age：" defaultValue={age.toString()} />
+      </p>
+    </div>
+  );
 }
 
 /*
  * 传递整个组件
  */
-class A2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
-    return <B2 form={this.props.form} />;
-  }
+function A2(props: { form: React.ReactNode }) {
+  const { form } = props;
+  return <B2 form={form} />;
 }
 
-class B2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
-    return <C2 form={this.props.form} />;
-  }
+function B2(props: { form: React.ReactNode }) {
+  const { form } = props;
+  return <C2 form={form} />;
 }
+
 class C2 extends React.Component<{ form: React.ReactNode }> {
   public render(): React.ReactNode {
-    return this.props.form;
+    const { form } = this.props;
+    return form;
   }
 }
 
-class C020302 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <A name={'tom'} age={18} />
-        <hr />
-        <A2
-          form={
-            <div>
-              <p>
-                <Input addonBefore="name：" defaultValue={'tom'} />
-              </p>
-              <p>
-                <Input addonBefore="age：" defaultValue={'18'} />
-              </p>
-            </div>
-          }
-        />
-      </div>
-    );
-  }
+function C020302(): React.ReactNode {
+  return (
+    <div>
+      <A name="tom" age={18} />
+      <hr />
+      <A2
+        form={
+          <div>
+            <p>
+              <Input addonBefore="name：" defaultValue="tom" />
+            </p>
+            <p>
+              <Input addonBefore="age：" defaultValue="18" />
+            </p>
+          </div>
+        }
+      />
+    </div>
+  );
 }
 
 export { C020302 };

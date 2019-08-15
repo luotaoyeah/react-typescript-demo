@@ -23,7 +23,7 @@ interface IState {
  */
 class C03020201 extends React.Component<{}, IState> {
   public constructor(props: {}, context: any) {
-    console.log('constructor()');
+    console.log('public constructor()');
     super(props, context);
     this.state = { num: 0, msg: 'hello' };
   }
@@ -39,7 +39,7 @@ class C03020201 extends React.Component<{}, IState> {
   }
 
   public componentDidMount(): void {
-    console.log('componentDidMount()');
+    console.log('public componentDidMount()');
   }
 
   public render(): React.ReactNode {

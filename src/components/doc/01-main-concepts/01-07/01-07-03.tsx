@@ -5,14 +5,12 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   isLoggedIn: boolean;
 }
 
-class C010703 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010703 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       isLoggedIn: false,
@@ -22,31 +20,32 @@ class C010703 extends React.Component<IProps, IState> {
     this.handleLogout = this.handleLogout.bind(this);
   }
 
-  handleLogin() {
+  public handleLogin() {
     this.setState({
       isLoggedIn: true,
     });
   }
 
-  handleLogout() {
+  public handleLogout() {
     this.setState({
       isLoggedIn: false,
     });
   }
 
   public render(): React.ReactNode {
+    const { isLoggedIn } = this.state;
     return (
       <div>
         {/*
          * 可以使用逻辑与操作符 && 实现组件的条件渲染
          */}
-        {this.state.isLoggedIn && (
-          <Button type={'danger'} onClick={this.handleLogout}>
+        {isLoggedIn && (
+          <Button type="danger" onClick={this.handleLogout}>
             退出
           </Button>
         )}
-        {!this.state.isLoggedIn && (
-          <Button type={'primary'} onClick={this.handleLogin}>
+        {!isLoggedIn && (
+          <Button type="primary" onClick={this.handleLogin}>
             登录
           </Button>
         )}

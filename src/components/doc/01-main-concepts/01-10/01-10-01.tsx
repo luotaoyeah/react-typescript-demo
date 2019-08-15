@@ -2,8 +2,7 @@
  * Lifting State Up
  */
 
-import React from 'react';
-import { SyntheticEvent } from 'react';
+import React, { SyntheticEvent } from 'react';
 import { Tag } from 'antd';
 
 /*
@@ -18,14 +17,13 @@ function toF(c: number): number {
   return Math.round(((c * 9) / 5 + 32) * 1000) / 1000;
 }
 
-class BoilingVerdict extends React.Component<{ celsius: number }> {
-  public render(): React.ReactNode {
-    if (this.props.celsius >= 100) {
-      return <Tag color="green">BOIL</Tag>;
-    }
-
-    return <Tag color="red">NOT BOIL</Tag>;
+function BoilingVerdict(props: { celsius: number }) {
+  const { celsius } = props;
+  if (celsius >= 100) {
+    return <Tag color="green">BOIL</Tag>;
   }
+
+  return <Tag color="red">NOT BOIL</Tag>;
 }
 
 class TemperatureInput extends React.Component<{
@@ -33,20 +31,22 @@ class TemperatureInput extends React.Component<{
   value: number;
   onChange: (temperature: number) => void;
 }> {
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(e: SyntheticEvent) {
-    this.props.onChange(Number((e.target as HTMLInputElement).value));
+  public handleChange(e: SyntheticEvent) {
+    const { onChange } = this.props;
+    onChange(Number((e.target as HTMLInputElement).value));
   }
 
   public render(): React.ReactNode {
+    const { value, scale } = this.props;
     return (
       <fieldset>
-        <legend>temperature in {this.props.scale}</legend>
-        <input type="number" value={this.props.value} onChange={this.handleChange} />
+        <legend>temperature in {scale}</legend>
+        <input type="number" value={value} onChange={this.handleChange} />
       </fieldset>
     );
   }
@@ -59,7 +59,7 @@ class Calculator extends React.Component<
     temperature: number;
   }
 > {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       scale: 'C',
@@ -69,39 +69,34 @@ class Calculator extends React.Component<
     this.handleFChange = this.handleFChange.bind(this);
   }
 
-  handleCChange(temperature: number) {
+  public handleCChange(temperature: number) {
     this.setState({ scale: 'C', temperature });
   }
 
-  handleFChange(temperature: number) {
+  public handleFChange(temperature: number) {
     this.setState({ scale: 'F', temperature });
   }
 
   public render(): React.ReactNode {
-    const c = this.state.scale === 'F' ? toC(this.state.temperature) : this.state.temperature;
-    const f = this.state.scale === 'C' ? toF(this.state.temperature) : this.state.temperature;
+    const { temperature, scale } = this.state;
+    const c = scale === 'F' ? toC(temperature) : temperature;
+    const f = scale === 'C' ? toF(temperature) : temperature;
     return (
       <div>
-        <TemperatureInput value={c} scale={'C'} onChange={this.handleCChange} />
-        <TemperatureInput value={f} scale={'F'} onChange={this.handleFChange} />
+        <TemperatureInput value={c} scale="C" onChange={this.handleCChange} />
+        <TemperatureInput value={f} scale="F" onChange={this.handleFChange} />
         <BoilingVerdict celsius={c} />
       </div>
     );
   }
 }
 
-interface IProps {}
-
-interface IState {}
-
-class C011001 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <Calculator />
-      </div>
-    );
-  }
+function C011001(): React.ReactNode {
+  return (
+    <div>
+      <Calculator />
+    </div>
+  );
 }
 
 export { C011001 };

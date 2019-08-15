@@ -9,12 +9,14 @@ import { Alert, Button, Divider } from 'antd';
 
 class PortalComponent extends React.Component {
   public render(): React.ReactNode {
-    return ReactDOM.createPortal(this.props.children, document.body);
+    // eslint-disable-next-line react/prop-types
+    const { children } = this.props;
+    return ReactDOM.createPortal(children, document.body);
   }
 }
 
 class C021102 extends React.Component<{}, { num: number }> {
-  constructor(props: any) {
+  public constructor(props: any) {
     super(props);
     this.state = {
       num: 0,
@@ -22,10 +24,8 @@ class C021102 extends React.Component<{}, { num: number }> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState((prevState: Readonly<{ num: number }>) => {
-      return { num: prevState.num + 1 };
-    });
+  public handleClick() {
+    this.setState((prevState: Readonly<{ num: number }>) => ({ num: prevState.num + 1 }));
   }
 
   /*
@@ -34,9 +34,11 @@ class C021102 extends React.Component<{}, { num: number }> {
    * 因此跟其他的组件一样，portal 组件上未被捕获的事件会冒泡到上级组件上去；
    */
   public render(): React.ReactNode {
+    const { num } = this.state;
     return (
+      // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
       <div onClick={this.handleClick}>
-        <Alert message={this.state.num} />
+        <Alert message={num} />
         <Divider />
         <PortalComponent>
           <Button>button</Button>

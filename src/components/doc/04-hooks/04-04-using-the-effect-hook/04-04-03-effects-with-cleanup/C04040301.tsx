@@ -15,7 +15,7 @@ import { Button, Divider } from 'antd';
  */
 
 class C01 extends React.Component<{}, { width: number; height: number }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       width: window.innerWidth,
@@ -24,16 +24,16 @@ class C01 extends React.Component<{}, { width: number; height: number }> {
     this.handleWindowResize = this.handleWindowResize.bind(this);
   }
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     window.addEventListener('resize', this.handleWindowResize);
   }
 
-  componentWillUnmount(): void {
+  public componentWillUnmount(): void {
     console.log('removeEventListener');
     window.removeEventListener('resize', this.handleWindowResize);
   }
 
-  handleWindowResize(e: UIEvent) {
+  public handleWindowResize(e: UIEvent) {
     this.setState({
       width: window.innerWidth,
       height: window.innerHeight,
@@ -41,26 +41,26 @@ class C01 extends React.Component<{}, { width: number; height: number }> {
   }
 
   public render(): React.ReactNode {
-    return <Button>{`${this.state.width}, ${this.state.height}`}</Button>;
+    const { height, width } = this.state;
+    return <Button>{`${width}, ${height}`}</Button>;
   }
 }
 
 class C04040301 extends React.Component<{}, { visible: boolean }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = { visible: true };
   }
 
   public render(): React.ReactNode {
+    const { visible } = this.state;
     return (
       <div>
-        {this.state.visible && <C01 />}
+        {visible && <C01 />}
         <Divider />
         <Button
           onClick={() => {
-            this.setState((prevState: Readonly<{ visible: boolean }>) => {
-              return { visible: !prevState.visible };
-            });
+            this.setState((prevState: Readonly<{ visible: boolean }>) => ({ visible: !prevState.visible }));
           }}
         >
           TOGGLE

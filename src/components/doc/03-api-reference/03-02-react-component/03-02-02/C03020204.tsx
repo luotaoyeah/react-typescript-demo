@@ -7,22 +7,24 @@
 import React from 'react';
 
 class A extends React.Component {
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.log('A:', error.message);
   }
 
   public render(): React.ReactNode {
     throw new Error('A.render()');
+    // eslint-disable-next-line no-unreachable
+    return <div></div>;
   }
 }
 
 class B extends React.Component {
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
-    console.log('B:', error.message);
+  public componentDidMount(): void {
+    throw new Error('B.componentDidMouont()');
   }
 
-  componentDidMount(): void {
-    throw new Error('B.componentDidMouont()');
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+    console.log('B:', error.message);
   }
 
   public render(): React.ReactNode {
@@ -31,19 +33,15 @@ class B extends React.Component {
 }
 
 class C extends React.Component {
-  constructor(props: any, context: any) {
+  public constructor(props: any, context: any) {
     super(props, context);
-    throw new Error('C.constructor()');
+    throw new Error('C.public constructor()');
   }
 
   public render(): React.ReactNode {
     return 'C';
   }
 }
-
-interface IProps {}
-
-interface IState {}
 
 /*
  * 如果组件实现了 componentDidCatch() 生命周期函数，则该组件是一个 ErrorBoundary，
@@ -52,8 +50,8 @@ interface IState {}
  *     2. 组件生命周期函数中的错误，
  *     3. 子组件的构造函数中的错误；
  */
-class C03020204 extends React.Component<IProps, IState> {
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+class C03020204 extends React.Component<{}, {}> {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.log('C03020204:', error.message);
   }
 

@@ -7,40 +7,37 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   count: number;
 }
 
-class A extends React.Component<IProps, IState> {
-  constructor(props: Readonly<IProps>) {
+class A extends React.Component<{}, IState> {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.state = { count: 0 };
     this.handlelClick = this.handlelClick.bind(this);
   }
 
-  handlelClick() {
-    this.setState((prevState: Readonly<IState>) => {
-      return { count: prevState.count + 1 };
-    });
+  public handlelClick() {
+    this.setState((prevState: Readonly<IState>) => ({ count: prevState.count + 1 }));
   }
 
   public render(): React.ReactNode {
-    if (this.state.count > 5) {
+    const { count } = this.state;
+    if (count > 5) {
       throw new Error('GREATOR THAN FIVE');
     }
-    return <Button onClick={this.handlelClick}>{this.state.count}</Button>;
+    return <Button onClick={this.handlelClick}>{count}</Button>;
   }
 }
 
 class C0302030901 extends React.Component<{}, { hasError: boolean }> {
-  constructor(props: Readonly<{}>) {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: any): Partial<{ hasError: boolean }> | null {
+  public static getDerivedStateFromError(error: any): Partial<{ hasError: boolean }> | null {
     return { hasError: true };
   }
 
@@ -49,12 +46,13 @@ class C0302030901 extends React.Component<{}, { hasError: boolean }> {
    * 主要用来记录错误日志信息；
    * 参数 errorInfo 中记录了发生错误的组件的堆栈信息；
    */
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     console.log(errorInfo);
   }
 
   public render(): React.ReactNode {
-    if (this.state.hasError) {
+    const { hasError } = this.state;
+    if (hasError) {
       return <Button type="danger">ERROR</Button>;
     }
 

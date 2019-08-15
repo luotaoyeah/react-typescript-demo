@@ -24,7 +24,7 @@ class SecurityLayout extends React.Component<SecurityLayoutProps, SecurityLayout
   };
 
   // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
-  componentDidMount() {
+  public componentDidMount() {
     this.setState({
       isReady: true,
     });

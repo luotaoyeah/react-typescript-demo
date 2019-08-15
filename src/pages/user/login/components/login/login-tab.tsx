@@ -24,13 +24,13 @@ class LoginTab extends Component<LoginTabProps> {
   uniqueId: string = '';
 
   // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
-  constructor(props: LoginTabProps) {
+  public constructor(props: LoginTabProps) {
     super(props);
     this.uniqueId = generateId('login-tab-');
   }
 
   // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
-  componentDidMount() {
+  public componentDidMount() {
     const { tabUtil } = this.props;
     if (tabUtil) {
       tabUtil.addTab(this.uniqueId);

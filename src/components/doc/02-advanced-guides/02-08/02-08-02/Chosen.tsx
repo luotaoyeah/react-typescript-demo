@@ -10,14 +10,13 @@ interface IProps {
   onChange?: (value: string) => void;
 }
 
-interface IState {}
+class Chosen extends React.Component<IProps, {}> {
+  public $el!: JQuery<HTMLSelectElement>;
 
-class Chosen extends React.Component<IProps, IState> {
-  $el!: JQuery<HTMLSelectElement>;
-
-  componentDidMount(): void {
+  public componentDidMount(): void {
     const vm = this;
     if (vm.$el) {
+      // @ts-ignore
       vm.$el.chosen();
 
       vm.handleChange = vm.handleChange.bind(this);
@@ -25,26 +24,23 @@ class Chosen extends React.Component<IProps, IState> {
     }
   }
 
-  componentWillUnmount(): void {
-    const vm = this;
-    if (vm.$el) {
-      vm.$el.off('change');
-      vm.$el.chosen('destroy');
-    }
-  }
-
-  componentDidUpdate(
-    prevProps: Readonly<IProps>,
-    prevState: Readonly<IState>,
-    snapshot?: any,
-  ): void {
+  public componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
     const vm = this;
     if ((prevProps as any).children !== vm.props.children) {
       vm.$el.trigger('chosen:updated');
     }
   }
 
-  handleChange(e: JQueryEventObject) {
+  public componentWillUnmount(): void {
+    const vm = this;
+    if (vm.$el) {
+      vm.$el.off('change');
+      // @ts-ignore
+      vm.$el.chosen('destroy');
+    }
+  }
+
+  public handleChange(e: JQueryEventObject) {
     const vm = this;
     if (vm.props.onChange) {
       vm.props.onChange((e.target as HTMLSelectElement).value);
@@ -57,11 +53,13 @@ class Chosen extends React.Component<IProps, IState> {
      * 通过将所有的 DOM 元素包裹在一个 div 里面，
      * 保证 react 不会对该 div 进行任何的操作；
      */
+    const { children } = this.props;
     return (
       <div>
         <select
           ref={(el: HTMLSelectElement) => {
             if (el) {
+              // eslint-disable-next-line no-undef
               this.$el = $(el);
             }
           }}
@@ -69,7 +67,7 @@ class Chosen extends React.Component<IProps, IState> {
             minWidth: '100px',
           }}
         >
-          {this.props.children}
+          {children}
         </select>
       </div>
     );

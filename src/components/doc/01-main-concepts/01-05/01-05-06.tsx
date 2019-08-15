@@ -5,7 +5,6 @@
 import React from 'react';
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IProps {}
 
 interface IState {
   name: string;
@@ -28,8 +27,8 @@ function C010506A({ username }: { username: string }) {
   return <i>{username}</i>;
 }
 
-class C010506 extends React.Component<IProps, IState> {
-  public constructor(props: IProps) {
+class C010506 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = { name: 'foo' };
   }

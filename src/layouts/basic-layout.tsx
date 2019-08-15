@@ -16,6 +16,7 @@ import { ConnectState } from '@/models/connect';
 import { isAntDesignPro } from '@/utils/utils';
 import logo from '../assets/logo.svg';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface BasicLayoutProps extends ProLayoutProps {
   breadcrumbNameMap: {
     [path: string]: MenuDataItem;
@@ -33,7 +34,9 @@ export type BasicLayoutContext = { [K in 'location']: BasicLayoutProps[K] } & {
 /**
  * use Authorized check all menu item
  */
+// eslint-disable-next-line @typescript-eslint/array-type
 const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
+  // eslint-disable-next-line implicit-arrow-linebreak
   menuList.map(item => {
     const localItem = {
       ...item,
@@ -64,6 +67,7 @@ const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
 };
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
+  // eslint-disable-next-line react/prop-types
   const { dispatch, children, settings } = props;
   /**
    * constructor

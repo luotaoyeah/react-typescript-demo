@@ -2,18 +2,13 @@
  * Accessibility
  */
 
-import React from 'react';
-import { RefObject } from 'react';
+import React, { RefObject } from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
+class C020101 extends React.Component<{}, {}> {
+  public inputRef: RefObject<HTMLInputElement>;
 
-interface IState {}
-
-class C020101 extends React.Component<IProps, IState> {
-  inputRef: RefObject<HTMLInputElement>;
-
-  constructor(props: IProps, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
 
     /*
@@ -25,7 +20,7 @@ class C020101 extends React.Component<IProps, IState> {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
+  public handleClick() {
     if (this.inputRef.current) {
       this.inputRef.current.focus();
     }
@@ -39,11 +34,12 @@ class C020101 extends React.Component<IProps, IState> {
          * 定义了一系列的 HTML 属性，以 aria- 开头，
          * 在 JSX 中，这些属性依然使用 kebab-case 的形式，如：aria-required="true"；
          */}
-        <input id={'name'} type="text" aria-required={true} />
+        <input id="name" type="text" aria-required />
         {/*
          * 同时，表单元素应该关联 label，
          * 在 JSX 中 htmlFor 对应 HTML 中的 for 属性；
          */}
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/label-has-for */}
         <label htmlFor="name" />
         <input type="text" ref={this.inputRef} />
         <Button onClick={this.handleClick}>focus</Button>

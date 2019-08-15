@@ -34,50 +34,45 @@ function F01(): React.ReactElement<{}> {
  *
  */
 class C01 extends React.Component<{}, { count: number }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = { count: 0 };
   }
 
-  componentDidMount(): void {
-    document.title = String(this.state.count);
+  public componentDidMount(): void {
+    const { count } = this.state;
+    document.title = String(count);
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<{}>,
-    prevState: Readonly<{ count: number }>,
-    snapshot?: any,
-  ): void {
-    document.title = String(this.state.count);
+  public componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{ count: number }>, snapshot?: any): void {
+    const { count } = this.state;
+    document.title = String(count);
   }
 
   public render(): React.ReactNode {
+    const { count } = this.state;
     return (
       <Button
         onClick={() => {
-          this.setState((prevState: Readonly<{ count: number }>) => {
-            return {
-              count: prevState.count + 1,
-            };
-          });
+          this.setState((prevState: Readonly<{ count: number }>) => ({
+            count: prevState.count + 1,
+          }));
         }}
       >
-        {this.state.count}
+        {count}
       </Button>
     );
   }
 }
 
-class C04040101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <F01 />
-        <Divider />
-        <C01 />
-      </div>
-    );
-  }
+function C04040101(): React.ReactNode {
+  return (
+    <div>
+      <F01 />
+      <Divider />
+      <C01 />
+    </div>
+  );
 }
 
 export { C04040101 };

@@ -2,18 +2,15 @@
  * Handling Events
  */
 
-import React from 'react';
-import { MouseEvent } from 'react';
+import React, { MouseEvent } from 'react';
 import { Button, message } from 'antd';
-
-interface IProps {}
 
 interface IState {
   name: string;
 }
 
-class C010601 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010601 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
     this.state = {
       name: 'tom',
@@ -28,7 +25,16 @@ class C010601 extends React.Component<IProps, IState> {
     this.handleClick01 = this.handleClick01.bind(this);
   }
 
-  handleClick01(e: MouseEvent) {
+  /*
+   * 如果将回调函数定义为 class 的字段，
+   * 并且字段值是一个箭头函数，那么可以不用绑定 this；
+   */
+  public handleClick03 = () => {
+    const { name } = this.state;
+    message.info(`hello ${name}`);
+  };
+
+  public handleClick01(e: MouseEvent) {
     /*
      * 事件对象 e 是一个 SyntheticEvent 对象，
      * 是 react 对原生的事件对象进行包装之后的一个对象；
@@ -38,24 +44,18 @@ class C010601 extends React.Component<IProps, IState> {
      * 如果要阻止事件的默认行为，需要手动调用 e.preventDefault() 方法；
      */
     e.preventDefault();
-    message.info(`hello ${this.state.name}`);
+    const { name } = this.state;
+    message.info(`hello ${name}`);
   }
 
-  handleClick02(e: MouseEvent) {
+  public handleClick02(e: MouseEvent) {
     /*
      * 没有在 constructor 中绑定 this，
      * 此处的 this 为 undefined；
      */
-    message.info(`hello ${this.state.name}`);
+    const { name } = this.state;
+    message.info(`hello ${name}`);
   }
-
-  /*
-   * 如果将回调函数定义为 class 的字段，
-   * 并且字段值是一个箭头函数，那么可以不用绑定 this；
-   */
-  handleClick03 = () => {
-    message.info(`hello ${this.state.name}`);
-  };
 
   public render(): React.ReactNode {
     return (

@@ -13,13 +13,16 @@ import styles from './style.less';
 import { LoginParamsType } from '@/services/login';
 import { ConnectState } from '@/models/connect';
 
+// eslint-disable-next-line object-curly-newline
 const { Tab, UserName, Password, Mobile, Captcha, Submit } = LoginComponents;
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginProps {
   dispatch: Dispatch<AnyAction>;
   userLogin: StateType;
   submitting: boolean;
 }
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface LoginState {
   type: string;
   autoLogin: boolean;
@@ -30,19 +33,23 @@ interface LoginState {
   submitting: loading.effects['login/login'],
 }))
 class Login extends Component<LoginProps, LoginState> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   loginForm: FormComponentProps['form'] | undefined | null = undefined;
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   state: LoginState = {
     type: 'account',
     autoLogin: true,
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   changeAutoLogin = (e: CheckboxChangeEvent) => {
     this.setState({
       autoLogin: e.target.checked,
     });
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   handleSubmit = (err: unknown, values: LoginParamsType) => {
     const { type } = this.state;
     if (!err) {
@@ -57,11 +64,14 @@ class Login extends Component<LoginProps, LoginState> {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   onTabChange = (type: string) => {
     this.setState({ type });
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   onGetCaptcha = () =>
+    // eslint-disable-next-line implicit-arrow-linebreak
     new Promise<boolean>((resolve, reject) => {
       if (!this.loginForm) {
         return;
@@ -84,9 +94,10 @@ class Login extends Component<LoginProps, LoginState> {
       });
     });
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   renderMessage = (content: string) => <Alert style={{ marginBottom: 24 }} message={content} type="error" showIcon />;
 
-  render() {
+  public render() {
     const { userLogin, submitting } = this.props;
     const { status, type: loginType } = userLogin;
     const { type, autoLogin } = this.state;
@@ -101,8 +112,11 @@ class Login extends Component<LoginProps, LoginState> {
           }}
         >
           <Tab key="account" tab={formatMessage({ id: 'user-login.login.tab-login-credentials' })}>
+            {/* eslint-disable-next-line operator-linebreak */}
             {status === 'error' &&
+              // eslint-disable-next-line operator-linebreak
               loginType === 'account' &&
+              // eslint-disable-next-line operator-linebreak
               !submitting &&
               this.renderMessage(formatMessage({ id: 'user-login.login.message-invalid-credentials' }))}
             <UserName
@@ -133,8 +147,11 @@ class Login extends Component<LoginProps, LoginState> {
             />
           </Tab>
           <Tab key="mobile" tab={formatMessage({ id: 'user-login.login.tab-login-mobile' })}>
+            {/* eslint-disable-next-line operator-linebreak */}
             {status === 'error' &&
+              // eslint-disable-next-line operator-linebreak
               loginType === 'mobile' &&
+              // eslint-disable-next-line operator-linebreak
               !submitting &&
               this.renderMessage(formatMessage({ id: 'user-login.login.message-invalid-verification-code' }))}
             <Mobile
@@ -170,6 +187,7 @@ class Login extends Component<LoginProps, LoginState> {
             <Checkbox checked={autoLogin} onChange={this.changeAutoLogin}>
               <FormattedMessage id="user-login.login.remember-me" />
             </Checkbox>
+            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a style={{ float: 'right' }} href="">
               <FormattedMessage id="user-login.login.forgot-password" />
             </a>

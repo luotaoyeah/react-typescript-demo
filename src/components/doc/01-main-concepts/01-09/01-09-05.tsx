@@ -2,18 +2,15 @@
  * Forms: Handling Multiple Inputs
  */
 
-import React from 'react';
-import { SyntheticEvent } from 'react';
-
-interface IProps {}
+import React, { SyntheticEvent } from 'react';
 
 interface IState {
   loading: boolean;
   age: number;
 }
 
-class C010905 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010905 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -31,7 +28,7 @@ class C010905 extends React.Component<IProps, IState> {
    *
    * @param e
    */
-  handleChange(e: SyntheticEvent) {
+  public handleChange(e: SyntheticEvent) {
     const inputEl: HTMLInputElement = e.target as HTMLInputElement;
     if (inputEl.type === 'checkbox') {
       this.setState({
@@ -44,19 +41,21 @@ class C010905 extends React.Component<IProps, IState> {
     }
   }
 
-  handleSubmit(e: SyntheticEvent) {
+  // eslint-disable-next-line class-methods-use-this
+  public handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
   }
 
   public render(): React.ReactNode {
+    const { loading, age } = this.state;
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <input type="checkbox" checked={this.state.loading} onChange={this.handleChange} />
+            <input type="checkbox" checked={loading} onChange={this.handleChange} />
           </div>
           <div>
-            <input type="number" value={this.state.age} onChange={this.handleChange} />
+            <input type="number" value={age} onChange={this.handleChange} />
           </div>
           <input type="submit" value="submit" />
         </form>

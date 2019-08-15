@@ -2,8 +2,7 @@
  * Forms: The <textarea> Tag
  */
 
-import React from 'react';
-import { SyntheticEvent } from 'react';
+import React, { SyntheticEvent } from 'react';
 
 /*
  * 在 HTML 中，<textarea> 标签的内容是定义在标签之间的，
@@ -13,14 +12,12 @@ import { SyntheticEvent } from 'react';
  * 通过 value 属性，定义它的内容；
  */
 
-interface IProps {}
-
 interface IState {
   note: string;
 }
 
-class C010903 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010903 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -31,20 +28,23 @@ class C010903 extends React.Component<IProps, IState> {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e: SyntheticEvent) {
+  public handleChange(e: SyntheticEvent) {
     this.setState({
       note: (e.target as HTMLTextAreaElement).value,
     });
   }
 
-  handleSubmit(e: SyntheticEvent) {
+  public handleSubmit(e: SyntheticEvent) {
     e.preventDefault();
-    console.log(this.state.note);
+    const { note } = this.state;
+    console.log(note);
   }
 
   public render(): React.ReactNode {
+    const { note } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/label-has-for */}
         <label>
           NOTE：
           <textarea
@@ -56,7 +56,7 @@ class C010903 extends React.Component<IProps, IState> {
               outline: 'none',
               borderRadius: '3px',
             }}
-            value={this.state.note}
+            value={note}
             onChange={this.handleChange}
           />
         </label>

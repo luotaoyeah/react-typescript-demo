@@ -1,28 +1,33 @@
 import React from 'react';
 import { Icon, Spin } from 'antd';
 import isEqual from 'lodash/isEqual';
+// eslint-disable-next-line import/no-cycle
 import { isComponentClass } from './secured';
 // eslint-disable-next-line import/no-cycle
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface PromiseRenderProps<T, K> {
   ok: T;
   error: K;
   promise: Promise<boolean>;
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 interface PromiseRenderState {
   component: React.ComponentClass | React.FunctionComponent;
 }
 
 export default class PromiseRender<T, K> extends React.Component<PromiseRenderProps<T, K>, PromiseRenderState> {
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   state: PromiseRenderState = {
     component: () => null,
   };
 
-  componentDidMount() {
+  public componentDidMount() {
     this.setRenderComponent(this.props);
   }
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   shouldComponentUpdate = (nextProps: PromiseRenderProps<T, K>, nextState: PromiseRenderState) => {
     const { component } = this.state;
     if (!isEqual(nextProps, this.props)) {
@@ -33,6 +38,7 @@ export default class PromiseRender<T, K> extends React.Component<PromiseRenderPr
   };
 
   // set render Component : ok or error
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   setRenderComponent(props: PromiseRenderProps<T, K>) {
     const ok = this.checkIsInstantiation(props.ok);
     const error = this.checkIsInstantiation(props.error);
@@ -54,6 +60,7 @@ export default class PromiseRender<T, K> extends React.Component<PromiseRenderPr
   // AuthorizedRoute is already instantiated
   // Authorized  render is already instantiated, children is no instantiated
   // Secured is not instantiated
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   checkIsInstantiation = (target: React.ReactNode | React.ComponentClass): React.FunctionComponent => {
     if (isComponentClass(target)) {
       const Target = target as React.ComponentClass;
@@ -65,8 +72,10 @@ export default class PromiseRender<T, K> extends React.Component<PromiseRenderPr
     return () => target as (React.ReactNode & null);
   };
 
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
   render() {
     const { component: Component } = this.state;
+    // eslint-disable-next-line object-curly-newline
     const { ok, error, promise, ...rest } = this.props;
 
     return Component ? (

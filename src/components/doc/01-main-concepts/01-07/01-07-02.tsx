@@ -5,37 +5,33 @@
 import React from 'react';
 import { Button } from 'antd';
 
-class LoginButton extends React.Component<{ onClick: () => void }> {
-  public render() {
-    /*
-     * 通过 props 传入事件回调函数
-     */
-    return (
-      <Button type={'primary'} onClick={this.props.onClick}>
-        登录
-      </Button>
-    );
-  }
+function LoginButton(props: { onClick: () => void }) {
+  /*
+   * 通过 props 传入事件回调函数
+   */
+  const { onClick } = props;
+  return (
+    <Button type="primary" onClick={onClick}>
+      登录
+    </Button>
+  );
 }
 
-class LogoutButton extends React.Component<{ onClick: () => void }> {
-  public render() {
-    return (
-      <Button type={'danger'} onClick={this.props.onClick}>
-        退出
-      </Button>
-    );
-  }
+function LogoutButton(props: { onClick: () => void }) {
+  const { onClick } = props;
+  return (
+    <Button type="danger" onClick={onClick}>
+      退出
+    </Button>
+  );
 }
-
-interface IProps {}
 
 interface IState {
   isLoggedIn: boolean;
 }
 
-class C010702 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010702 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
 
     this.state = {
@@ -46,11 +42,11 @@ class C010702 extends React.Component<IProps, IState> {
     this.handleLogout = this.handleLogout.bind(this);
   }
 
-  handleLogin() {
+  public handleLogin() {
     this.setState({ isLoggedIn: true });
   }
 
-  handleLogout() {
+  public handleLogout() {
     this.setState({ isLoggedIn: false });
   }
 
@@ -59,7 +55,8 @@ class C010702 extends React.Component<IProps, IState> {
      * 将 react 元素存储到变量中，根据不同的状态，
      * 渲染不同的组件；
      */
-    const button = !this.state.isLoggedIn ? (
+    const { isLoggedIn } = this.state;
+    const button = !isLoggedIn ? (
       <LoginButton onClick={this.handleLogin} />
     ) : (
       <LogoutButton onClick={this.handleLogout} />

@@ -7,28 +7,22 @@
 import React from 'react';
 import { Button } from 'antd';
 
-interface IProps {}
-
 interface IState {
   count: number;
 }
 
-class A extends React.Component<IProps, IState> {
-  constructor(props: Readonly<IProps>) {
+class A extends React.Component<{}, IState> {
+  public constructor(props: Readonly<{}>) {
     super(props);
     this.state = { count: 0 };
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentDidUpdate(
-    prevProps: Readonly<IProps>,
-    prevState: Readonly<IState>,
-    snapshot?: any,
-  ): void {
+  public componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<IState>, snapshot?: any): void {
     console.log('componentDidUpdate()', prevState.count);
   }
 
-  handleClick() {
+  public handleClick() {
     /*
      * setState() 方法，用于更新组件的 state 对象，并触发组件的重新渲染；
      * setState() 方法的第一个参数，可以接受一个对象，
@@ -46,7 +40,8 @@ class A extends React.Component<IProps, IState> {
      *     也可以使用 componentDidUpdate()（推荐）；
      */
     this.setState({ count: 4 }, () => {
-      console.log('setState()', this.state.count); // 4
+      const { count } = this.state;
+      console.log('setState()', count); // 4
     });
 
     /*
@@ -65,15 +60,14 @@ class A extends React.Component<IProps, IState> {
   }
 
   public render(): React.ReactNode {
-    console.log('render()', this.state.count);
-    return <Button onClick={this.handleClick}>{this.state.count}</Button>;
+    const { count } = this.state;
+    console.log('render()', count);
+    return <Button onClick={this.handleClick}>{count}</Button>;
   }
 }
 
-class C0302031001 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
-    return <A />;
-  }
+function C0302031001(): React.ReactNode {
+  return <A />;
 }
 
 export { C0302031001 };

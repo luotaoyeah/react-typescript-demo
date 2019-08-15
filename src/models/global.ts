@@ -3,19 +3,24 @@ import { Subscription, Effect } from 'dva';
 
 import { NoticeIconData } from '@/components/notice-icon';
 import { queryNotices } from '@/services/user';
+// eslint-disable-next-line import/no-cycle
 import { ConnectState } from './connect.d';
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface NoticeItem extends NoticeIconData {
   id: string;
   type: string;
   status: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface GlobalModelState {
   collapsed: boolean;
+  // eslint-disable-next-line @typescript-eslint/array-type
   notices: NoticeItem[];
 }
 
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface GlobalModelType {
   namespace: 'global';
   state: GlobalModelState;
@@ -41,6 +46,7 @@ const GlobalModel: GlobalModelType = {
   },
 
   effects: {
+    // eslint-disable-next-line generator-star-spacing
     *fetchNotices(_, { call, put, select }) {
       const data = yield call(queryNotices);
       yield put({
@@ -58,6 +64,7 @@ const GlobalModel: GlobalModelType = {
         },
       });
     },
+    // eslint-disable-next-line generator-star-spacing
     *clearNotices({ payload }, { put, select }) {
       yield put({
         type: 'saveClearedNotices',
@@ -75,15 +82,20 @@ const GlobalModel: GlobalModelType = {
         },
       });
     },
+    // eslint-disable-next-line generator-star-spacing
     *changeNoticeReadState({ payload }, { put, select }) {
-      const notices: NoticeItem[] = yield select((state: ConnectState) =>
-        state.global.notices.map(item => {
-          const notice = { ...item };
-          if (notice.id === payload) {
-            notice.read = true;
-          }
-          return notice;
-        }),
+      // eslint-disable-next-line @typescript-eslint/array-type
+      const notices: NoticeItem[] = yield select(
+        (state: ConnectState) =>
+          // eslint-disable-next-line implicit-arrow-linebreak
+          state.global.notices.map(item => {
+            const notice = { ...item };
+            if (notice.id === payload) {
+              notice.read = true;
+            }
+            return notice;
+          }),
+        // eslint-disable-next-line function-paren-newline
       );
 
       yield put({
@@ -128,7 +140,9 @@ const GlobalModel: GlobalModelType = {
     setup({ history }): void {
       // Subscribe history(url) change, trigger `load` action if pathname is `/`
       history.listen(({ pathname, search }): void => {
+        // @ts-ignore
         if (typeof window.ga !== 'undefined') {
+          // @ts-ignore
           window.ga('send', 'pageview', pathname + search);
         }
       });

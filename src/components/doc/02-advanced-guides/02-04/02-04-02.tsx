@@ -6,7 +6,7 @@ import React from 'react';
 import { Button } from 'antd';
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessage: string }> {
-  constructor(props: {}, context: any) {
+  public constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       hasError: false,
@@ -14,7 +14,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {
     this.setState({
       hasError: true,
       errorMessage: error.message,
@@ -28,31 +28,32 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
   }
 
   public render(): React.ReactNode {
-    if (this.state.hasError) {
-      return <Button type={'danger'}>{this.state.errorMessage}</Button>;
+    const { hasError, errorMessage } = this.state;
+    const { children } = this.props;
+    if (hasError) {
+      return <Button type="danger">{errorMessage}</Button>;
     }
 
-    return this.props.children;
+    return children;
   }
 }
 
 class ErrorButton extends React.Component {
   public render(): React.ReactNode {
     throw new Error('some error');
+    // eslint-disable-next-line no-unreachable
     return '';
   }
 }
 
-class C020402 extends React.Component {
-  public render(): React.ReactNode {
-    return (
-      <div>
-        <ErrorBoundary>
-          <ErrorButton />
-        </ErrorBoundary>
-      </div>
-    );
-  }
+function C020402(): React.ReactNode {
+  return (
+    <div>
+      <ErrorBoundary>
+        <ErrorButton />
+      </ErrorBoundary>
+    </div>
+  );
 }
 
 export { C020402 };

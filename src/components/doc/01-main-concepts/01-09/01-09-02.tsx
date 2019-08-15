@@ -2,8 +2,7 @@
  * Forms: Controlled Components
  */
 
-import React from 'react';
-import { SyntheticEvent } from 'react';
+import React, { SyntheticEvent } from 'react';
 
 /*
  * 表单元素 <input> <select> <texxtarea>，会维护自己的状态，
@@ -15,14 +14,13 @@ import { SyntheticEvent } from 'react';
  * 把这两点结合起来，由 state 来控制表单元素的状态数据，
  * 这时候这些表单元素称之为 controlled component；
  */
-interface IProps {}
 
 interface IState {
   name: string;
 }
 
-class C010902 extends React.Component<IProps, IState> {
-  constructor(props: IProps) {
+class C010902 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
 
     this.state = { name: '' };
@@ -30,7 +28,7 @@ class C010902 extends React.Component<IProps, IState> {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(e: SyntheticEvent) {
+  public handleChange(e: SyntheticEvent) {
     /*
      * 监听表单元素的事件，从而更新对应的状态数据；
      */
@@ -39,7 +37,7 @@ class C010902 extends React.Component<IProps, IState> {
     });
   }
 
-  handleSubmit(e: SyntheticEvent) {
+  public handleSubmit(e: SyntheticEvent) {
     /*
      * 阻止表单提交的默认操作，即刷新页面；
      */
@@ -48,15 +46,18 @@ class C010902 extends React.Component<IProps, IState> {
     /*
      * 获取表单数据
      */
-    alert('name: ' + this.state.name);
+    const { name } = this.state;
+    alert(`name: ${name}`);
   }
 
   public render(): React.ReactNode {
+    const { name } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/label-has-for */}
         <label>
           NAME：
-          <input type="text" value={this.state.name} onChange={this.handleChange} />
+          <input type="text" value={name} onChange={this.handleChange} />
           <input type="submit" value="submit" />
         </label>
       </form>

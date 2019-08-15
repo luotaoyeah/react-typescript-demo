@@ -19,28 +19,31 @@ import { Divider } from 'antd';
  * 如果一个组件定义为 PureComponent，那么它的下级组件也必须都是 PureComponent；
  */
 
+// eslint-disable-next-line react/prefer-stateless-function
 class A extends React.Component<{ name: string }> {
   public render(): React.ReactNode {
+    const { name } = this.props;
     console.log('A.render()');
-    return <div>{this.props.name}</div>;
+    return <div>{name}</div>;
   }
 }
 
 class B extends React.PureComponent<{ name: string }> {
   public render(): React.ReactNode {
+    const { name } = this.props;
     console.log('B.render()');
-    return <div>{this.props.name}</div>;
+    return <div>{name}</div>;
   }
 }
 
 /**  */
 class C030102 extends React.Component<{}, { name: string; time: Date }> {
-  state: { name: string; time: Date } = {
+  public state: { name: string; time: Date } = {
     name: 'foo',
     time: new Date(),
   };
 
-  componentDidMount(): void {
+  public componentDidMount(): void {
     setInterval(() => {
       this.setState({
         time: new Date(),
@@ -49,13 +52,15 @@ class C030102 extends React.Component<{}, { name: string; time: Date }> {
   }
 
   public render(): React.ReactNode {
+    const { name, time } = this.state;
+
     return (
       <div>
-        {this.state.time.toISOString()}
+        {time.toISOString()}
         <Divider />
-        <A name={this.state.name} />
+        <A name={name} />
         <Divider />
-        <B name={this.state.name} />
+        <B name={name} />
       </div>
     );
   }

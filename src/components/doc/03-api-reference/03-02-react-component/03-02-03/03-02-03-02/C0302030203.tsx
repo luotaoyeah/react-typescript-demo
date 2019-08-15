@@ -11,11 +11,8 @@ interface IProps {
   color?: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IState {}
-
 // eslint-disable-next-line react/prefer-stateless-function
-class A extends React.Component<IProps, IState> {
+class A extends React.Component<IProps, {}> {
   // eslint-disable-next-line no-useless-constructor
   public constructor(props: IProps) {
     super(props);
