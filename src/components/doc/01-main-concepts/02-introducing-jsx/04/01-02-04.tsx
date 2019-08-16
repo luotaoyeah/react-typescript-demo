@@ -5,7 +5,6 @@ import { Button, Divider } from 'antd';
  * https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx
  */
 function C010204(): React.ReactNode {
-  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
   const id: string = 'id_01_02_04';
 
   return (

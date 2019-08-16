@@ -35,7 +35,7 @@ export default function C0102(): React.ReactNode {
       </Collapse.Panel>
 
       <Collapse.Panel header="JSX Prevents Injection Attacks" key="6">
-        {C010206()}
+        <C010206></C010206>
       </Collapse.Panel>
     </Collapse>
   );

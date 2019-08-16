@@ -1,22 +1,44 @@
-import React from 'react';
-import { Button } from 'antd';
-
-/**
+/*
  * https://reactjs.org/docs/introducing-jsx.html#jsx-prevents-injection-attacks
  */
-export function C010206(): React.ReactNode {
-  const message: string = "<script>{ alert('hello') }</script>";
 
-  return (
-    <div>
-      <p>
-        默认情况下, <code>JSX</code> 中嵌入的任何表达式, 都会被 <code>ReactDOM</code> 转义之后再进行渲染, 避免发生{' '}
-        <code>XSS</code> 攻击
-      </p>
+import React, { ChangeEvent, Component, ReactNode } from 'react';
+import { Button, Input } from 'antd';
 
-      <Button>
-        <code>{message}</code>
-      </Button>
-    </div>
-  );
+interface IState {
+  message: string;
+}
+
+export class C010206 extends Component<{}, IState> {
+  public constructor(props: {}, context: {}) {
+    super(props, context);
+    this.state = {
+      message: "<script>{ alert('hello') }</script>",
+    };
+  }
+
+  public render(): ReactNode {
+    const { message } = this.state;
+
+    return (
+      <div>
+        {/*
+           默认情况下, JSX 中嵌入的表达式, 都会被 ReactDOM 转义之后再进行渲染, 避免发生 XSS 攻击
+         */}
+
+        <p>
+          <Input
+            value={message}
+            onChange={(value: ChangeEvent<HTMLInputElement>): void => {
+              this.setState({
+                message: value.target.value,
+              });
+            }}
+          />
+        </p>
+
+        <Button>{message}</Button>
+      </div>
+    );
+  }
 }
