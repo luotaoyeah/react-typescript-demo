@@ -11,7 +11,7 @@ import { C010203 } from './03/01-02-03';
 import { C010204 } from './04/01-02-04';
 import { C010205 } from './05/01-02-05';
 import { C010206 } from './06/01-02-06';
-import { C010207 } from '@/components/doc/01-main-concepts/02-introducing-jsx/07/01-02-07';
+import { C010207 } from '@/components/doc/01-main-concepts/02/07/01-02-07';
 
 export default function C0102(): React.ReactNode {
   return (

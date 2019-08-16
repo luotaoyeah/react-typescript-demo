@@ -18,9 +18,8 @@ class C010203 extends React.Component {
     return (
       <>
         <p>
-          <code>JSX</code> 经过编译之后, 会变成一个方法的调用, 它的返回值是一个 JS 对象, 也就是说,{' '}
-          <code>JSX</code> 本质上也是一个 <code>expression</code>, 可以被当成普通的{' '}
-          <code>expression</code> 来使用
+          <code>JSX</code> 经过编译之后, 会变成一个方法的调用, 它的返回值是一个 JS 对象, 也就是说, <code>JSX</code>{' '}
+          本质上也是一个 <code>expression</code>, 可以被当成普通的 <code>expression</code> 来使用
         </p>
 
         <Divider dashed></Divider>

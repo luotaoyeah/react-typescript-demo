@@ -124,12 +124,17 @@ export default {
                     {
                       path: '01',
                       name: '01',
-                      component: '../components/doc/01-main-concepts/01-hello-world/01-01',
+                      component: '../components/doc/01-main-concepts/01/01-01',
                     },
                     {
                       path: '02',
                       name: '02',
-                      component: '../components/doc/01-main-concepts/02-introducing-jsx/01-02',
+                      component: '../components/doc/01-main-concepts/02/01-02',
+                    },
+                    {
+                      path: '03',
+                      name: '03',
+                      component: '../components/doc/01-main-concepts/03/01-03',
                     },
                   ],
                 },
