@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import './01-03.less';
 import { C010301 } from '@/components/doc/01-main-concepts/03/01-03-01';
 import { C010302 } from '@/components/doc/01-main-concepts/03/01-03-02';
+import { C010303 } from '@/components/doc/01-main-concepts/03/01-03-03';
 
 export default function C0103(): React.ReactNode {
   return (
@@ -17,6 +18,10 @@ export default function C0103(): React.ReactNode {
 
       <Collapse.Panel header="Rendering an Element into the DOM" key="2">
         <C010302></C010302>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Updating the Rendered Element" key="3">
+        <C010303></C010303>
       </Collapse.Panel>
     </Collapse>
   );

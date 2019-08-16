@@ -18,7 +18,7 @@ export class C010302 extends React.Component {
     /*
      * 使用 ReactDOM.render() 方法, 将一个 react element 渲染到某个 DOM 节点上去
      */
-    ReactDOM.render(<span>foo</span>, document.querySelector('#p01'));
+    ReactDOM.render(<span>foo</span>, document.querySelector('#p010302'));
   }
 
   public render() {
@@ -29,7 +29,7 @@ export class C010302 extends React.Component {
         </p>
 
         <p
-          id="p01"
+          id="p010302"
           style={{
             border: '1px solid red',
             borderRadius: '3px',

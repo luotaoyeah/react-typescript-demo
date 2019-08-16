@@ -1,23 +1,35 @@
+/*
+ * https://reactjs.org/docs/rendering-elements.html#updating-the-rendered-element
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 /*
- * Updating the Rendered Element
+ * react element 是 immutable 的, 如果我们要更新对应的 DOM,
+ * 可以创建一个新的 element, 然后再次调用 ReactDOM.render() 方法
  */
 
-/*
- * React 的 element 是 immutable 的，即一个 element 创建之后，
- * 无法再修改它的 attributes 和 children；
- *
- * 要更新某个 element 的渲染结果，我们可以创建一个新的 element，
- * 然后再次调用 ReactDOM.render() 方法，重新渲染该 element；
- */
+// eslint-disable-next-line react/prefer-stateless-function
+export class C010303 extends React.Component {
+  public componentDidMount(): void {
+    ReactDOM.render(<span>{new Date().toISOString()}</span>, document.querySelector('#p010303'));
 
-/*
- * 在实际情况下，一个应用通常只会调用 ReactDOM.render() 一次；
- */
-console.log('\n-------------------------------------------------- 01');
+    setInterval(() => {
+      ReactDOM.render(<span>{new Date().toISOString()}</span>, document.querySelector('#p010303'));
+    }, 1000);
+  }
 
-setInterval(() => {
-  ReactDOM.render(<h1>{new Date().toISOString()}</h1>, document.getElementById('root02'));
-}, 1000);
+  public render() {
+    return (
+      <p
+        id="p010303"
+        style={{
+          border: '1px solid red',
+          borderRadius: '3px',
+          padding: '10px',
+        }}
+      ></p>
+    );
+  }
+}
