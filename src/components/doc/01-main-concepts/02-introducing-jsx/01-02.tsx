@@ -1,3 +1,7 @@
+/*
+ * https://reactjs.org/docs/introducing-jsx.html
+ */
+
 import React from 'react';
 import { Collapse, Icon } from 'antd';
 import './01-02.less';
@@ -7,10 +11,8 @@ import { C010203 } from './03/01-02-03';
 import { C010204 } from './04/01-02-04';
 import { C010205 } from './05/01-02-05';
 import { C010206 } from './06/01-02-06';
+import { C010207 } from '@/components/doc/01-main-concepts/02-introducing-jsx/07/01-02-07';
 
-/**
- * https://reactjs.org/docs/introducing-jsx.html
- */
 export default function C0102(): React.ReactNode {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
@@ -36,6 +38,10 @@ export default function C0102(): React.ReactNode {
 
       <Collapse.Panel header="JSX Prevents Injection Attacks" key="6">
         <C010206></C010206>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="JSX Represents Objects" key="7">
+        <C010207></C010207>
       </Collapse.Panel>
     </Collapse>
   );
