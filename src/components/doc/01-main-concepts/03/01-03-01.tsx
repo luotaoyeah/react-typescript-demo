@@ -11,13 +11,13 @@ import React, { Component } from 'react';
 // eslint-disable-next-line react/prefer-stateless-function
 class C010301 extends Component {
   public render() {
-    const element01: string = 'foo';
-    const element02: JSX.Element = <span>bar</span>;
+    const el01: string = 'foo';
+    const el02: JSX.Element = <span>bar</span>;
 
     return (
       <>
-        <p>{element01}</p>
-        <p>{element02}</p>
+        <p>{el01}</p>
+        <p>{el02}</p>
       </>
     );
   }

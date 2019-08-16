@@ -13,8 +13,6 @@ import ReactDOM from 'react-dom';
 // eslint-disable-next-line react/prefer-stateless-function
 export class C010303 extends React.Component {
   public componentDidMount(): void {
-    ReactDOM.render(<span>{new Date().toISOString()}</span>, document.querySelector('#p010303'));
-
     setInterval(() => {
       ReactDOM.render(<span>{new Date().toISOString()}</span>, document.querySelector('#p010303'));
     }, 1000);
