@@ -1,26 +1,30 @@
 /*
- * Components and Props: Rendering a Component
+ * https://reactjs.org/docs/components-and-props.html#rendering-a-component
  */
 
 import React from 'react';
 
 /*
- * react 中的元素有两种，一种是普通的 HTML 元素，
- * 一种是自定义的组件；在使用他们的时候，HTML 元素使用小写开头，
- * 组件使用大写开头；
- *
- * 组件标签上的所有属性，会作为组件的 props 对象的属性，传递给组件；
+ * react element 有两种:
+ *   1. 普通的 DOM 对象, 首字母小写, 如: <div />
+ *   2. 组件, 首字母大写, 如: <SomeComponent />
  */
 
-function C010402A({ name }: { name: string }): React.ReactElement<{ name: string }> {
-  return <h3>{name}</h3>;
+interface IProps {
+  name: string;
+}
+
+function C010402A({ name }: IProps) {
+  return <div>{name}</div>;
 }
 
 function C010402() {
   return (
-    <p>
-      <C010402A name="luotao" />
-    </p>
+    <>
+      <div>HTML TAG</div>
+
+      <C010402A name="CUSTOM COMPONENT" />
+    </>
   );
 }
 
