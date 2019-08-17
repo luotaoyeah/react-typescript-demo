@@ -7,14 +7,14 @@ import ReactDOM from 'react-dom';
 
 /*
  * 虽然每次创建了一个全新的 element, 但是 ReactDOM 在更新 DOM 之前，会比较本次的 element 和上次的 element,
- * 然后只会更新需要更新的那部分 DOM
+ * 然后只会更新需要更新的那部分 DOM 对象
  *
  * 这里面涉及到的理念是:
  *     我们只需要考虑当前的 UI 应该怎样呈现, 而不需要考虑 UI 应该如何随着时间变更
  */
 
 // eslint-disable-next-line react/prefer-stateless-function
-export class C010304 extends React.Component {
+class C010304 extends React.Component {
   public componentDidMount(): void {
     setInterval(() => {
       const el = (
@@ -42,3 +42,5 @@ export class C010304 extends React.Component {
     );
   }
 }
+
+export { C010304 };

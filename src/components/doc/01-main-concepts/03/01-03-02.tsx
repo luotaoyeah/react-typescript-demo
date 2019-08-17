@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import { Button } from 'antd';
 
 // eslint-disable-next-line react/prefer-stateless-function
-export class C010302 extends React.Component {
+class C010302 extends React.Component {
   public constructor(props: {}) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
@@ -40,3 +40,5 @@ export class C010302 extends React.Component {
     );
   }
 }
+
+export { C010302 };

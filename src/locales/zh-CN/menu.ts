@@ -52,4 +52,5 @@ export default {
   'menu.doc.01.01': 'Hello World',
   'menu.doc.01.02': 'Introducing JSX',
   'menu.doc.01.03': 'Rendering Elements',
+  'menu.doc.01.04': 'Components and Props',
 };
