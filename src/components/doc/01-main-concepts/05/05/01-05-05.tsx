@@ -1,8 +1,9 @@
 /*
- * State and Lifecycle: Using State Correctly
+ * https://reactjs.org/docs/state-and-lifecycle.html#using-state-correctly
  */
 
 import React from 'react';
+import { C01050501 } from '@/components/doc/01-main-concepts/05/05/01-05-05.01';
 
 interface IState {
   name: string;
@@ -15,14 +16,6 @@ class C010505 extends React.Component<{}, IState> {
     // eslint-disable-next-line react/no-unused-state
     this.state = { name: 'foo', age: 0 };
   }
-
-  /*
-   * 除了在 constructor 中初始化 state 对象之外，
-   * 在其他地方，不应该直接对 state 对象的属性进行赋值，
-   * 如：this.state.name = "bar";
-   *
-   * 如果要重新渲染组件，必须使用 setState() 方法；
-   */
 
   public componentDidMount() {
     /*
@@ -51,7 +44,11 @@ class C010505 extends React.Component<{}, IState> {
   }
 
   public render() {
-    return <div />;
+    return (
+      <>
+        <C01050501></C01050501>
+      </>
+    );
   }
 }
 
