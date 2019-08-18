@@ -1,19 +1,14 @@
 /*
- * Components and Props: Props are Read-Only
+ * https://reactjs.org/docs/components-and-props.html#props-are-read-only
  */
 
 import React from 'react';
 
 /*
- * pure function：
- *     不会修改输入，
- *     对于相同的输入，始终返回相同的结果；
- *
- * 所有的 react 组件都应该表现地像 pure function 一样，
- * 绝对不要修改 props 的值；
+ * 所有的 component 都应该表现为一个 pure function, 不能修改 props
  */
 
-function C010405(): React.ReactNode {
+function C010405() {
   return <div />;
 }
 

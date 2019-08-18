@@ -9,6 +9,7 @@ import { C010401 } from '@/components/doc/01-main-concepts/04/01-04-01';
 import { C010402 } from '@/components/doc/01-main-concepts/04/01-04-02';
 import { C010403 } from '@/components/doc/01-main-concepts/04/01-04-03';
 import { C010404 } from '@/components/doc/01-main-concepts/04/01-04-04';
+import { C010405 } from '@/components/doc/01-main-concepts/04/01-04-05';
 
 export default function C0103(): React.ReactNode {
   return (
@@ -27,6 +28,10 @@ export default function C0103(): React.ReactNode {
 
       <Collapse.Panel header="Extracting Components" key="4">
         <C010404></C010404>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Props are Read-Only" key="5">
+        <C010405></C010405>
       </Collapse.Panel>
     </Collapse>
   );
