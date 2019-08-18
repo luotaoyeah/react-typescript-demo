@@ -2,7 +2,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable eslint-comments/no-unlimited-disable */
 const { spawn } = require('child_process');
-// eslint-disable-next-line import/no-extraneous-dependencies
 const { kill } = require('cross-port-killer');
 
 const env = Object.create(process.env);
@@ -29,6 +28,7 @@ startServer.stdout.on('data', data => {
   console.log(data.toString());
   // hack code , wait umi
   if (
+    // eslint-disable-next-line operator-linebreak
     (!once && data.toString().indexOf('Compiled successfully') >= 0) ||
     data.toString().indexOf('Theme generated successfully') >= 0
   ) {

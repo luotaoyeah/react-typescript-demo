@@ -1,10 +1,6 @@
 const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
 
 describe('Homepage', () => {
-  beforeAll(async () => {
-    jest.setTimeout(1000000);
-  });
-
   // FIXME 暂时禁用 e2e 测试
   /*
     it('topmenu should have footer', async () => {
