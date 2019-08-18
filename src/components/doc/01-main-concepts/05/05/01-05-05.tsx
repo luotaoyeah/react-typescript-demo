@@ -3,7 +3,9 @@
  */
 
 import React from 'react';
+import { Divider } from 'antd';
 import { C01050501 } from '@/components/doc/01-main-concepts/05/05/01-05-05.01';
+import { C01050502 } from '@/components/doc/01-main-concepts/05/05/01-05-05.02';
 
 interface IState {
   name: string;
@@ -47,6 +49,10 @@ class C010505 extends React.Component<{}, IState> {
     return (
       <>
         <C01050501></C01050501>
+
+        <Divider></Divider>
+
+        <C01050502></C01050502>
       </>
     );
   }

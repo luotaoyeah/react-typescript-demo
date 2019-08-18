@@ -31,7 +31,11 @@ class C01050501 extends React.Component<{}, IState> {
 
   public render() {
     const { date } = this.state;
-    return <Button onClick={this.handleClick}>{date}</Button>;
+    return (
+      <div>
+        <Button onClick={this.handleClick}>{date}</Button>
+      </div>
+    );
   }
 }
 
