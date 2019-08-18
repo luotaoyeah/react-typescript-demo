@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import './01-05.less';
 import { C010501 } from '@/components/doc/01-main-concepts/05/01-05-01';
 import { C010502 } from '@/components/doc/01-main-concepts/05/01-05-02';
+import { C010503 } from '@/components/doc/01-main-concepts/05/01-05-03';
 
 export default function C0103(): React.ReactNode {
   return (
@@ -17,6 +18,10 @@ export default function C0103(): React.ReactNode {
 
       <Collapse.Panel header="Converting a Function to a Class" key="2">
         <C010502></C010502>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Adding Local State to a Class" key="3">
+        <C010503></C010503>
       </Collapse.Panel>
     </Collapse>
   );

@@ -1,23 +1,20 @@
 /*
- * State and Lifecycle: Adding Local State to a Class
+ * https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class
  */
 
 import React from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface IClockProps {}
-
-interface IClockState {
+interface IState {
   date: Date;
 }
 
-class Clock extends React.Component<IClockProps, IClockState> {
-  /*
-   * 在 constructor 中需要始终调用父类的 constructor：super(props)，
-   * 同时，在 constructor 中初始化 state 的数据；
-   */
-  public constructor(props: IClockProps) {
+class C010503A extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
+
+    /*
+     * 在 constructor 中设置 state 的初始值
+     */
     this.state = {
       date: new Date(),
     };
@@ -25,16 +22,12 @@ class Clock extends React.Component<IClockProps, IClockState> {
 
   public render() {
     const { date } = this.state;
-    return <p>{date.toISOString()}</p>;
+    return <div>{date.toISOString()}</div>;
   }
 }
 
-function C010503(): React.ReactNode {
-  return (
-    <div>
-      <Clock />
-    </div>
-  );
+function C010503() {
+  return <C010503A />;
 }
 
 export { C010503 };
