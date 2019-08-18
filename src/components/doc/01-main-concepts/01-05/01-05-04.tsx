@@ -46,7 +46,7 @@ class Clock extends React.Component<{}, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { date } = this.state;
     return <div>{date.toISOString()}</div>;
   }

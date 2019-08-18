@@ -31,7 +31,7 @@ class C01 extends React.Component<{}, { count: number }> {
     document.title = String(count);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     return (
       <Button

@@ -45,7 +45,7 @@ class C03010901 extends React.Component {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
 
     return (

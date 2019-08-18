@@ -41,7 +41,7 @@ class A extends React.Component<{}, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count, color } = this.state;
     return (
       <Button onClick={this.handleClick} style={{ color }}>

@@ -15,7 +15,7 @@ import React, { Context } from 'react';
  */
 // eslint-disable-next-line react/prefer-stateless-function
 class Button extends React.Component<{ theme: string }> {
-  public render(): React.ReactNode {
+  public render() {
     const { theme } = this.props;
     return (
       <button type="button" className={theme}>
@@ -27,7 +27,7 @@ class Button extends React.Component<{ theme: string }> {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ThemeButton extends React.Component<{ theme: string }> {
-  public render(): React.ReactNode {
+  public render() {
     const { theme } = this.props;
     return <Button theme={theme} />;
   }
@@ -45,7 +45,7 @@ const ThemeContext: Context<string> = React.createContext<string>('red');
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Button02 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 使用 React.Context.Consumer 消费 context；
      */
@@ -63,14 +63,14 @@ class Button02 extends React.Component {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ThemeButton02 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return <Button02 />;
   }
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Toolbar02 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return <ThemeButton02 />;
   }
 }

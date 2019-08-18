@@ -34,7 +34,7 @@ class C01 extends React.Component<{}, { count: number }> {
     };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { state } = this;
     return (
       <Button

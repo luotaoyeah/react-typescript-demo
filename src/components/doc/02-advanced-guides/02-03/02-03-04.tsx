@@ -13,7 +13,7 @@ const ColorContext: React.Context<string> = React.createContext(COLORS.red);
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ThemeButton extends React.Component<{ onClick: () => void }> {
-  public render(): React.ReactNode {
+  public render() {
     const { onClick } = this.props;
     return (
       <ColorContext.Consumer>
@@ -51,7 +51,7 @@ class ThemeToolbar extends React.Component<{}, { color: string }> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { color } = this.state;
     return (
       <ColorContext.Provider value={color}>

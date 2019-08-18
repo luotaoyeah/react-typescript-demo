@@ -60,7 +60,7 @@ class C010904 extends React.Component<{}, IState> {
     console.log(option, options);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { option, options } = this.state;
     return (
       <div>

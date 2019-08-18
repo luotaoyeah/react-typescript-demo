@@ -11,7 +11,7 @@ interface IState {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Info extends React.Component<{ visible: boolean }> {
-  public render(): React.ReactNode {
+  public render() {
     const { visible } = this.props;
     /*
      * 如果 render() 方法返回 null，则组件不会渲染内容，
@@ -41,7 +41,7 @@ class C010705 extends React.Component<{}, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { visible } = this.state;
     return (
       <div>

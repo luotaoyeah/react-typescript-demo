@@ -41,7 +41,7 @@ class C03020203 extends React.Component<{}, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { show } = this.state;
     return (
       <div>

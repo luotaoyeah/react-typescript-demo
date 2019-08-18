@@ -82,7 +82,7 @@ class A extends React.Component<{}, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { avatar } = this.state;
     const { url, name } = this.state;
     return (

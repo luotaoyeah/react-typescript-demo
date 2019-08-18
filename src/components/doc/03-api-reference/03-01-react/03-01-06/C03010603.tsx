@@ -33,7 +33,7 @@ class C030108 extends React.Component {
     console.log(React.Children.count(element01.props.children)); // 3
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

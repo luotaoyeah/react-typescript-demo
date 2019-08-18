@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { hasError } = this.state;
     const { children } = this.props;
     if (hasError) {
@@ -53,7 +53,7 @@ class ErrorButton extends React.Component {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
         throw new Error("error in render()");
     */

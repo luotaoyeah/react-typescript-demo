@@ -13,14 +13,14 @@ import { Button } from 'antd';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class PrimaryButton extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return <Button type="primary">PRIMARY</Button>;
   }
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
 class DangerButton extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return <Button type="danger">DANGER</Button>;
   }
 }
@@ -36,7 +36,7 @@ class C011102 extends React.Component<{}, {}> {
     console.log('click');
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>

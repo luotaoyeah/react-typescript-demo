@@ -46,7 +46,7 @@ class C03030101 extends React.Component {
     ReactDOM.render(<Tag>BAZ</Tag>, document.getElementById('div01'));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
 
     return (

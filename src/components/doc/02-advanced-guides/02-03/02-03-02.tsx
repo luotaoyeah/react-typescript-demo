@@ -51,7 +51,7 @@ function B2(props: { form: React.ReactNode }) {
 }
 
 class C2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
+  public render() {
     const { form } = this.props;
     return form;
   }

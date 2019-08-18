@@ -29,7 +29,7 @@ class A extends React.Component<{}, { age: number }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { age } = this.state;
 
     /*
@@ -54,7 +54,7 @@ class A extends React.Component<{}, { age: number }> {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class B extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * Provider 可以嵌套，内层的值会覆盖上层的值；
      */

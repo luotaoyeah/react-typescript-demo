@@ -12,7 +12,7 @@ class C010202 extends React.Component {
     return 'BAR';
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
      * JSX 可以跨越多行, 此时应该用 () 将整个包裹起来, 以避免 automatic semicolon insertioin
      */

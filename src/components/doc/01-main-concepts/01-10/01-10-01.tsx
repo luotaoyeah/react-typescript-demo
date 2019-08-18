@@ -41,7 +41,7 @@ class TemperatureInput extends React.Component<{
     onChange(Number((e.target as HTMLInputElement).value));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { value, scale } = this.props;
     return (
       <fieldset>
@@ -77,7 +77,7 @@ class Calculator extends React.Component<
     this.setState({ scale: 'F', temperature });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { temperature, scale } = this.state;
     const c = scale === 'F' ? toC(temperature) : temperature;
     const f = scale === 'C' ? toF(temperature) : temperature;

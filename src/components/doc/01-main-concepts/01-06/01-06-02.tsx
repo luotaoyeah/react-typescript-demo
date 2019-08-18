@@ -22,7 +22,7 @@ class C010602 extends React.Component<{}, IState> {
     message.info(`hello ${name} ${age}`);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {/*

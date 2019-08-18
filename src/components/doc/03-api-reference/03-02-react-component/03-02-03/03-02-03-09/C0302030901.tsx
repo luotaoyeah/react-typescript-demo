@@ -22,7 +22,7 @@ class A extends React.Component<{}, IState> {
     this.setState((prevState: Readonly<IState>) => ({ count: prevState.count + 1 }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     if (count > 5) {
       throw new Error('GREATOR THAN FIVE');
@@ -50,7 +50,7 @@ class C0302030901 extends React.Component<{}, { hasError: boolean }> {
     console.log(errorInfo);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { hasError } = this.state;
     if (hasError) {
       return <Button type="danger">ERROR</Button>;

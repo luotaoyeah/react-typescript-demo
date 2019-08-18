@@ -26,7 +26,7 @@ class C03050202 extends React.Component<{}, {}> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Button onClick={this.handleClick}>FOO</Button>

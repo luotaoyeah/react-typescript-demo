@@ -50,7 +50,7 @@ class C010902 extends React.Component<{}, IState> {
     alert(`name: ${name}`);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { name } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>

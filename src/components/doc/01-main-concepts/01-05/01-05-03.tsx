@@ -23,7 +23,7 @@ class Clock extends React.Component<IClockProps, IClockState> {
     };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { date } = this.state;
     return <p>{date.toISOString()}</p>;
   }

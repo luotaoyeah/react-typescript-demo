@@ -11,7 +11,7 @@ import { Button, Divider } from 'antd';
  */
 // eslint-disable-next-line react/prefer-stateless-function
 class C020903 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 可以使用'对象解构'的方式，
      * 将一个 props 对象的所有属性一次性全部应用到组件上；

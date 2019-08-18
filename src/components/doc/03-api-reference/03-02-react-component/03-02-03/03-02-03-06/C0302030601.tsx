@@ -19,7 +19,7 @@ class B extends React.Component<{}, { count: number }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     return <Button>{count}</Button>;
   }
@@ -52,7 +52,7 @@ class A extends React.Component<{}, IState> {
     this.setState((prevState: Readonly<IState>) => ({ count: prevState.count + 1 }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     return (
       <div>

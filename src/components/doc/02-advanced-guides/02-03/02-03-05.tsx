@@ -66,7 +66,7 @@ class ThemeToolbar extends React.Component<{}, { colorContext: IColorContext }> 
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { colorContext } = this.state;
     return (
       <ColorContext.Provider value={colorContext}>

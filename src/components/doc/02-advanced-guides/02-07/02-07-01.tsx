@@ -18,7 +18,7 @@ interface IWIthRadiusProps {
 function withRadius<P extends HTMLAttributes<Element>>(Component: React.ComponentType<any>) {
   // eslint-disable-next-line react/prefer-stateless-function
   class HOC extends React.Component<P & IWIthRadiusProps> {
-    public render(): React.ReactNode {
+    public render() {
       const { radius, ...rest } = this.props as IWIthRadiusProps;
       return <Component {...rest} style={{ borderRadius: radius }} />;
     }

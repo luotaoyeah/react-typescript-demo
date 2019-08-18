@@ -26,7 +26,7 @@ const codeMessage = {
 /**
  * 异常处理程序
  */
-const errorHandler = (error: { response: Response }): void => {
+const errorHandler = (error: { response: Response }): Response => {
   const { response } = error;
   if (response && response.status) {
     const errorText = codeMessage[response.status] || response.statusText;
@@ -42,6 +42,7 @@ const errorHandler = (error: { response: Response }): void => {
       message: '网络异常',
     });
   }
+  return response;
 };
 
 /**

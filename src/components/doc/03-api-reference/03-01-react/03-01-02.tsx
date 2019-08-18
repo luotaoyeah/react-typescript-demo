@@ -21,7 +21,7 @@ import { Divider } from 'antd';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class A extends React.Component<{ name: string }> {
-  public render(): React.ReactNode {
+  public render() {
     const { name } = this.props;
     console.log('A.render()');
     return <div>{name}</div>;
@@ -29,7 +29,7 @@ class A extends React.Component<{ name: string }> {
 }
 
 class B extends React.PureComponent<{ name: string }> {
-  public render(): React.ReactNode {
+  public render() {
     const { name } = this.props;
     console.log('B.render()');
     return <div>{name}</div>;
@@ -51,7 +51,7 @@ class C030102 extends React.Component<{}, { name: string; time: Date }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { name, time } = this.state;
 
     return (

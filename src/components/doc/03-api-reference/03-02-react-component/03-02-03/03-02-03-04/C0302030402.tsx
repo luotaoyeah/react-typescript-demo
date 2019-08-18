@@ -39,7 +39,7 @@ class A extends React.Component<{}, IState> {
     this.setState((prevState: Readonly<IState>, props: Readonly<{}>) => ({ count: prevState.count + 1 }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     return <Button onClick={this.handleClick}>{count}</Button>;
   }

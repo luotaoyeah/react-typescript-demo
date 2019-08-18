@@ -31,7 +31,7 @@ class A extends React.Component<IAProps, IAState> {
     text: 'A',
   };
 
-  public render(): React.ReactNode {
+  public render() {
     const { render: render1 } = this.props;
     if (render1) {
       return render1(this.state);
@@ -83,7 +83,7 @@ class C021601 extends React.Component {
     );
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <React.Fragment>
         <A render={this.renderA} />

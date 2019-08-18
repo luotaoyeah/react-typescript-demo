@@ -31,7 +31,7 @@ class A extends React.Component<{}, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { name } = this.state;
     console.log(`render(): ${name}`);
     return <Button>{name}</Button>;

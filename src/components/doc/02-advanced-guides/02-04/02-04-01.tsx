@@ -52,7 +52,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
     console.log(error.message);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { hasError } = this.state;
     const { children } = this.props;
     if (hasError) {
@@ -65,7 +65,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
 
 // eslint-disable-next-line react/prefer-stateless-function
 class ButtonError extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     throw new Error('some error from within render()');
     // eslint-disable-next-line no-unreachable
     return <Button>button</Button>;

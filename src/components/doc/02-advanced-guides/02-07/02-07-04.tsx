@@ -16,7 +16,7 @@ function withNothing<P>(Component: React.ComponentType<any>) {
      */
     public static displayName: string = `WithNothing(${Component.displayName || Component.name || 'Component'})`;
 
-    public render(): React.ReactNode {
+    public render() {
       return <Component {...this.props} />;
     }
   };

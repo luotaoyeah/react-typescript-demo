@@ -32,7 +32,7 @@ class C010703 extends React.Component<{}, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { isLoggedIn } = this.state;
     return (
       <div>

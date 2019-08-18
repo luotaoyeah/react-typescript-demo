@@ -42,7 +42,7 @@ class C020310 extends React.Component<{}, { date: Date; colorContext: IColorCont
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { date, colorContext } = this.state;
     return (
       <div>

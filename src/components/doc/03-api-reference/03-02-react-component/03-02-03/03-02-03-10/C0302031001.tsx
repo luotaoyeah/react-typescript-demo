@@ -59,7 +59,7 @@ class A extends React.Component<{}, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count } = this.state;
     console.log('render()', count);
     return <Button onClick={this.handleClick}>{count}</Button>;

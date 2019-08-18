@@ -31,7 +31,7 @@ class A extends React.Component<{}, IState> {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button>A</Button>;
   }
 }

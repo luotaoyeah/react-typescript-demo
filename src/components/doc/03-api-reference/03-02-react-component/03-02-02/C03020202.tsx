@@ -66,7 +66,7 @@ class C03020202 extends React.Component<{}, IState> {
     this.forceUpdate();
   }
 
-  public render(): React.ReactNode {
+  public render() {
     console.log('render()');
     const { num } = this.state;
     return (

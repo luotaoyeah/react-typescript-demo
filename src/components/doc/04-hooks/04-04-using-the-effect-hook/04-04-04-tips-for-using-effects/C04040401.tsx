@@ -59,7 +59,7 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { count, size } = this.state;
     return (
       <div>

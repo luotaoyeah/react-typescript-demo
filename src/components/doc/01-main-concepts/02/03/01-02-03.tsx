@@ -14,7 +14,7 @@ class C010203 extends React.Component {
     return <Button>{multi.toString()}</Button>;
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <>
         <p>

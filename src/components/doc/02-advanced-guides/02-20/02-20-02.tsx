@@ -35,7 +35,7 @@ class C022002 extends React.Component {
     console.log(this.radioRef.current!.checked);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
 
     return (

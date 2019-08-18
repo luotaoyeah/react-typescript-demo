@@ -28,7 +28,7 @@ class C021504 extends React.Component {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <MyInput ref={this.inputRef} />

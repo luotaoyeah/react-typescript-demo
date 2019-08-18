@@ -40,7 +40,7 @@ class C010903 extends React.Component<{}, IState> {
     console.log(note);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { note } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>

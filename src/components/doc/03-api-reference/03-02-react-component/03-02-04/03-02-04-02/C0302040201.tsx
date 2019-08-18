@@ -16,7 +16,7 @@ class A extends React.Component<{}, {}> {
    */
   public static displayName = 'A-A-A';
 
-  public render(): React.ReactNode {
+  public render() {
     const MyButton = (C =>
       // eslint-disable-next-line react/prefer-stateless-function,implicit-arrow-linebreak
       class extends React.Component {
@@ -25,7 +25,7 @@ class A extends React.Component<{}, {}> {
          */
         public static displayName = `MyButton(${C.name})`;
 
-        public render(): React.ReactNode {
+        public render() {
           return <C {...this.props} style={{ color: 'red' }} />;
         }
       })(Button);

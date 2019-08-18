@@ -8,7 +8,7 @@ import React from 'react';
 import { Button, Divider } from 'antd';
 
 class A extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * render() 可以返回多个 react elements 组成的数组；
      */

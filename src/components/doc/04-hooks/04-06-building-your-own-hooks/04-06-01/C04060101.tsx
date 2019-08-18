@@ -51,7 +51,7 @@ class C01 extends React.Component<IProps, IState> {
   }
 
   // tslint:disable-next-line:member-ordering
-  public render(): React.ReactNode {
+  public render() {
     // eslint-disable-next-line react/destructuring-assignment
     return this.props.render(this.state);
   }

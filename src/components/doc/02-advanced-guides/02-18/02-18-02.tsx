@@ -28,7 +28,7 @@ class A extends React.Component {
     (this.refs.inputRef as HTMLInputElement).focus();
   }
 
-  public render(): React.ReactNode {
+  public render() {
     // eslint-disable-next-line spaced-comment
     return <div>{/*<input type="text" ref={"inputRef"} />*/}</div>;
   }

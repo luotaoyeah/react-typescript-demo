@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
     console.log(errorInfo.componentStack);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { hasError, errorMessage } = this.state;
     const { children } = this.props;
     if (hasError) {
@@ -39,7 +39,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
 }
 
 class ErrorButton extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     throw new Error('some error');
     // eslint-disable-next-line no-unreachable
     return '';

@@ -27,7 +27,7 @@ class C030104 extends React.Component {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const element01 = (
       <Button type="primary" style={{ color: 'red', fontSize: '18px' }} ref={this.buttonRef}>
         button01

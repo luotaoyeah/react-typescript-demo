@@ -10,7 +10,7 @@ import React, { Component } from 'react';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class C010207 extends Component {
-  public render(): React.ReactNode {
+  public render() {
     const element01 = (
       <p>
         <span className="foo">foo</span>

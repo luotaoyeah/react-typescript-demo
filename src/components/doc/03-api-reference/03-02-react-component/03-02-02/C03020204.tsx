@@ -11,7 +11,7 @@ class A extends React.Component {
     console.log('A:', error.message);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     throw new Error('A.render()');
     // eslint-disable-next-line no-unreachable
     return <div></div>;
@@ -27,7 +27,7 @@ class B extends React.Component {
     console.log('B:', error.message);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return 'B';
   }
 }
@@ -38,7 +38,7 @@ class C extends React.Component {
     throw new Error('C.public constructor()');
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return 'C';
   }
 }
@@ -55,7 +55,7 @@ class C03020204 extends React.Component<{}, {}> {
     console.log('C03020204:', error.message);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

@@ -46,7 +46,7 @@ class C010905 extends React.Component<{}, IState> {
     e.preventDefault();
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { loading, age } = this.state;
     return (
       <div>

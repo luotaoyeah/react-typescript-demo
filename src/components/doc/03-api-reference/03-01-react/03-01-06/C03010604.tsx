@@ -47,7 +47,7 @@ class C030109 extends React.Component {
     console.log(React.Children.only(element03.props.children));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

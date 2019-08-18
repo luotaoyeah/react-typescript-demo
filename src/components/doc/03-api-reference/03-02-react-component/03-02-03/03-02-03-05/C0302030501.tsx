@@ -17,7 +17,7 @@ class A extends React.Component {
    */
   public componentWillUnmount(): void {}
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button>A</Button>;
   }
 }
@@ -41,7 +41,7 @@ class C0302030501 extends React.Component<{}, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { visible } = this.state;
     return (
       <div>

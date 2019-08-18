@@ -26,7 +26,7 @@ class C020101 extends React.Component<{}, {}> {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {/*

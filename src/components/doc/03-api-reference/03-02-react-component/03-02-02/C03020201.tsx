@@ -42,7 +42,7 @@ class C03020201 extends React.Component<{}, IState> {
     console.log('public componentDidMount()');
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { msg, num } = this.state;
     console.log('render()');
     return (

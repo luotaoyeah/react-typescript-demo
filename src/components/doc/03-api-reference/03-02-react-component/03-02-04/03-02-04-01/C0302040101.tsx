@@ -21,7 +21,7 @@ class A extends React.Component<IProps, {}> {
    */
   public static defaultProps = { color: 'blue' };
 
-  public render(): React.ReactNode {
+  public render() {
     const { color } = this.props;
     return <Button style={{ color }}>{color}</Button>;
   }

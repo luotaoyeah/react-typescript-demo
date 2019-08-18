@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom';
  * 而使用 ReactDOM.createPortal() 可以将组件渲染到任意的节点下面；
  */
 class PortalComponent extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     const { children } = this.props;
     return ReactDOM.createPortal(children, document.body);
   }

@@ -14,7 +14,7 @@ class C010806 extends React.Component<{}, {}> {
     return 'hello world';
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {/* eslint-disable-next-line no-useless-concat */}

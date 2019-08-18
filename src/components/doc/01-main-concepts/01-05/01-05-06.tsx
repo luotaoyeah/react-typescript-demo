@@ -33,7 +33,7 @@ class C010506 extends React.Component<{}, IState> {
     this.state = { name: 'foo' };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const { name } = this.state;
     return (
       <div>
