@@ -10,6 +10,7 @@ import { C010502 } from '@/components/doc/01-main-concepts/05/01-05-02';
 import { C010503 } from '@/components/doc/01-main-concepts/05/01-05-03';
 import { C010504 } from '@/components/doc/01-main-concepts/05/01-05-04';
 import { C010505 } from '@/components/doc/01-main-concepts/05/05/01-05-05';
+import { C010506 } from '@/components/doc/01-main-concepts/05/01-05-06';
 
 export default function C0103() {
   return (
@@ -32,6 +33,10 @@ export default function C0103() {
 
       <Collapse.Panel header="Using State Correctly" key="5">
         <C010505></C010505>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="The Data Flows Down" key="6">
+        <C010506></C010506>
       </Collapse.Panel>
     </Collapse>
   );

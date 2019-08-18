@@ -1,45 +1,33 @@
 /*
- * State and Lifecycle: The Data Flows Down
+ * https://reactjs.org/docs/state-and-lifecycle.html#the-data-flows-down
  */
 
 import React from 'react';
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
+/*
+ * 组件遵循单向数据流, 上级组件通过 props 给下级组件传递数据,
+ * state 是属于组件内部的状态, 对外界是不可知的,
+ * 上级组件和下级组件之间不会在乎对方是 stateful 组件还是 stateless 组件
+ */
 
 interface IState {
   name: string;
 }
 
-/*
- * class 组件拥有 state，functional 组件没有 state，
- * state 只能被组件自身访问，外界不关心组件是有状态的（class 组件），
- * 还是无状态的（functional 组件）；
- *
- * 在 class 组件中可以使用 functional 组件，
- * 在 functional 组件中也可以使用 class 组件；
- *
- * 组件的 state 可以传递给子组件的 props；
- *
- * 简单来讲，组件遵循的是单向数据流，或者叫自上而下的数据流；
- */
-
 function C010506A({ username }: { username: string }) {
-  return <i>{username}</i>;
+  return <div>{username}</div>;
 }
 
 class C010506 extends React.Component<{}, IState> {
   public constructor(props: {}) {
     super(props);
+
     this.state = { name: 'foo' };
   }
 
   public render() {
     const { name } = this.state;
-    return (
-      <div>
-        <C010506A username={name} />
-      </div>
-    );
+    return <C010506A username={name} />;
   }
 }
 
