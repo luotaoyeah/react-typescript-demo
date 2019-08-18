@@ -1,38 +1,28 @@
 /*
- * State and Lifecycle: Converting a Function to a Class
+ * https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class
  */
 
 import React from 'react';
 
-function Clock01({ date }: { date: Date }) {
-  return <p>{date.toISOString()}</p>;
+/*
+ * 在 class component 中, 可以使用 state 特性,
+ * props 是外部传入组件的属性, state 是在组件内部定义的状态属性
+ */
+
+interface IProps {
+  date: Date;
 }
 
 // eslint-disable-next-line react/prefer-stateless-function
-class Clock02 extends React.Component<{ date: Date }> {
-  /*
-   * 只要组件渲染到的 DOM 节点保持不变，
-   * 则组件的实例也不会变，
-   * 每次在需要更新组件的时候，就会调用 render() 方法；
-   */
+class C010502A extends React.Component<IProps> {
   public render() {
     const { date } = this.props;
-    return <p>{date.toISOString()}</p>;
+    return <div>{date.toISOString()}</div>;
   }
 }
 
-// eslint-disable-next-line react/prefer-stateless-function
-class C010502 extends React.Component {
-  public render() {
-    const date = new Date();
-
-    return (
-      <div>
-        <Clock01 date={date} />
-        <Clock02 date={date} />
-      </div>
-    );
-  }
+function C010502() {
+  return <C010502A date={new Date()} />;
 }
 
 export { C010502 };
