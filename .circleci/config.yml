@@ -1,9 +1,10 @@
 version: 2.1
+
 jobs:
   build-learning-react:
     working_directory: ~/learning-react
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     steps:
       - checkout
       - restore_cache:
@@ -14,7 +15,7 @@ jobs:
       - save_cache:
           key: learning-react-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - "node_modules"
+            - 'node_modules'
       - run:
           name: build
           command: npm run build
@@ -22,7 +23,7 @@ jobs:
   test-learning-react:
     working_directory: ~/learning-react
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
     steps:
       - checkout
       - restore_cache:
@@ -33,7 +34,7 @@ jobs:
       - save_cache:
           key: learning-react-{{ .Branch }}-{{ checksum "package-lock.json" }}
           paths:
-            - "node_modules"
+            - 'node_modules'
       - run:
           name: unit test
           command: npm run test
