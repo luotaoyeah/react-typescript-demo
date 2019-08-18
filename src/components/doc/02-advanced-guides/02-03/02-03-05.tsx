@@ -76,7 +76,7 @@ class ThemeToolbar extends React.Component<{}, { colorContext: IColorContext }> 
   }
 }
 
-function C020305(): React.ReactNode {
+function C020305() {
   return (
     <div>
       <ThemeToolbar />

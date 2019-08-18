@@ -58,7 +58,7 @@ class C01 extends React.Component<IProps, IState> {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-function C04060101(): React.ReactNode {
+function C04060101() {
   return (
     <div>
       <C01 render={(state: IState) => <Button>{`${state.size.width}, ${state.size.height}`}</Button>} />

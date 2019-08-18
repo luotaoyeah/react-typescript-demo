@@ -13,7 +13,7 @@ import { C010205 } from './05/01-02-05';
 import { C010206 } from './06/01-02-06';
 import { C010207 } from '@/components/doc/01-main-concepts/02/07/01-02-07';
 
-export default function C0102(): React.ReactNode {
+export default function C0102() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Why JSX?" key="1">

@@ -27,7 +27,7 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-function C04070102(): React.ReactNode {
+function C04070102() {
   return (
     <div>
       <F01 />

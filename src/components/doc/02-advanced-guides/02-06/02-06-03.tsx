@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-function C020603(): React.ReactNode {
+function C020603() {
   /*
    * React.Fragment 可以设置一个属性 key，
    * 但是其简写形式 <></> 不支持设置任何属性；

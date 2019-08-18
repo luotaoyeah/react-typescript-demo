@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-function C010901(): React.ReactNode {
+function C010901() {
   return (
     <div>
       {/*

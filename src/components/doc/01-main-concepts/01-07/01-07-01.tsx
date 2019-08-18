@@ -18,7 +18,7 @@ function ButtonOrInput(props: { type: string }) {
   return <Input placeholder="input" />;
 }
 
-function C010701(): React.ReactNode {
+function C010701() {
   return (
     <div>
       <ButtonOrInput type="button" />

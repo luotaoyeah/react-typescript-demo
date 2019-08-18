@@ -20,7 +20,7 @@ function Items({ items }: { items: Array<string | number> }) {
   );
 }
 
-function C010802(): React.ReactNode {
+function C010802() {
   return (
     <div>
       <div>

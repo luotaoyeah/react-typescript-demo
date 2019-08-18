@@ -65,7 +65,7 @@ class C01 extends React.Component<{}, { count: number }> {
   }
 }
 
-function C04040101(): React.ReactNode {
+function C04040101() {
   return (
     <div>
       <F01 />

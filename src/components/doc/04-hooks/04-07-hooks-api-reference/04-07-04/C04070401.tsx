@@ -13,7 +13,7 @@ function F01(): React.ReactElement<{}> {
   return <Button>{}</Button>;
 }
 
-function C04070401(): React.ReactNode {
+function C04070401() {
   return (
     <div>
       <F01 />

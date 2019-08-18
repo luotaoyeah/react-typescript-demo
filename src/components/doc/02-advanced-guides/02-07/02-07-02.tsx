@@ -25,7 +25,7 @@ function HOC<P>(Component: React.ComponentType<P>) {
 const HocButton = HOC<any>(Button);
 
 /**  */
-function C020702(): React.ReactNode {
+function C020702() {
   return (
     <div>
       <HocButton>button</HocButton>

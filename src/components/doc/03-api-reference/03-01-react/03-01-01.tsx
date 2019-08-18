@@ -28,7 +28,7 @@ import React from 'react';
  *     React.forwardRef()
  */
 
-function C030101(): React.ReactNode {
+function C030101() {
   return <div />;
 }
 

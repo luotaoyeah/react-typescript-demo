@@ -26,7 +26,7 @@ function withNothing<P>(Component: React.ComponentType<any>) {
 const ButtonWithNothing = withNothing<any>(Button);
 
 /**  */
-function C020704(): React.ReactNode {
+function C020704() {
   return (
     <div>
       <ButtonWithNothing>button</ButtonWithNothing>

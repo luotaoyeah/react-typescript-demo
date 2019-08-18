@@ -18,7 +18,7 @@ function F01() {
   return <Button onClick={() => setCount(count + 1)}>{count}</Button>;
 }
 
-function C040101(): React.ReactNode {
+function C040101() {
   return (
     <div>
       <F01 />

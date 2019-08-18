@@ -10,7 +10,7 @@ import React from 'react';
  * 2. 没有从 react 中移除 class 组件的计划；
  * 3. 之前的 concept 依然保留，如 props，state，context，refs，lifecycle 等；
  */
-function C040102(): React.ReactNode {
+function C040102() {
   return <div />;
 }
 

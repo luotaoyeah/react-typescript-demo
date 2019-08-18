@@ -8,8 +8,9 @@ import './01-05.less';
 import { C010501 } from '@/components/doc/01-main-concepts/05/01-05-01';
 import { C010502 } from '@/components/doc/01-main-concepts/05/01-05-02';
 import { C010503 } from '@/components/doc/01-main-concepts/05/01-05-03';
+import { C010504 } from '@/components/doc/01-main-concepts/05/01-05-04';
 
-export default function C0103(): React.ReactNode {
+export default function C0103() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="State and Lifecycle" key="1">
@@ -22,6 +23,10 @@ export default function C0103(): React.ReactNode {
 
       <Collapse.Panel header="Adding Local State to a Class" key="3">
         <C010503></C010503>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Adding Lifecycle Methods to a Class" key="4">
+        <C010504></C010504>
       </Collapse.Panel>
     </Collapse>
   );

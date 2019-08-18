@@ -12,7 +12,7 @@ import React from 'react';
  * 实现 code-splitting 的最简单的方法是使用 import() 动态加载；
  */
 
-function C020201(): React.ReactNode {
+function C020201() {
   return <div />;
 }
 

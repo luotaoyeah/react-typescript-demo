@@ -11,7 +11,7 @@ import React from 'react';
  *        并通过 props 传入；
  */
 
-function C011002(): React.ReactNode {
+function C011002() {
   return <div />;
 }
 

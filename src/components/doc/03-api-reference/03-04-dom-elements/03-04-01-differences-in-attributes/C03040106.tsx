@@ -7,7 +7,7 @@
 import React from 'react';
 import { Divider } from 'antd';
 
-function C03040106(): React.ReactNode {
+function C03040106() {
   return (
     <div>
       {/*

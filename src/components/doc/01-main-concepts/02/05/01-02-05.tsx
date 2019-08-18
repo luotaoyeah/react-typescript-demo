@@ -4,7 +4,7 @@ import ico from './01-02-05.ico';
 /**
  * https://reactjs.org/docs/introducing-jsx.html#specifying-children-with-jsx
  */
-export function C010205(): React.ReactNode {
+export function C010205() {
   return (
     <div>
       <p>

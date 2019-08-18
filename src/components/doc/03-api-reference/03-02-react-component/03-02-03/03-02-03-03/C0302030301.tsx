@@ -97,7 +97,7 @@ class A extends React.Component<{}, IState> {
   }
 }
 
-function C0302030301(): React.ReactNode {
+function C0302030301() {
   return (
     <div>
       <A />

@@ -9,7 +9,7 @@ import React from 'react';
 /*
  *
  */
-function C030110(): React.ReactNode {
+function C030110() {
   const element01 = (
     <div>
       <span>A</span>

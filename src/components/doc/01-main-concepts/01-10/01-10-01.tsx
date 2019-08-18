@@ -91,7 +91,7 @@ class Calculator extends React.Component<
   }
 }
 
-function C011001(): React.ReactNode {
+function C011001() {
   return (
     <div>
       <Calculator />

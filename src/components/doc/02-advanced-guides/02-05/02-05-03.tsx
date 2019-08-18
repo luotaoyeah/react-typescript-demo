@@ -46,7 +46,7 @@ const FancyButton03 = React.forwardRef(MyForwardRef03);
 /**
  *
  */
-function C020503(): React.ReactNode {
+function C020503() {
   return (
     <div>
       <FancyButton01 />

@@ -12,7 +12,7 @@ function MyLi({ value }: { value: string }) {
  * 一般在使用 Array.map() 方法展开一个列表数据时，需要设置 key 属性；
  * key 属性需要设置在循环项的最顶层标签上；
  */
-function C010804(): React.ReactNode {
+function C010804() {
   return (
     <div>
       {/*

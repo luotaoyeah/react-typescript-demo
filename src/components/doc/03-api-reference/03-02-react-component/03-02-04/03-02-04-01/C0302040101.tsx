@@ -27,7 +27,7 @@ class A extends React.Component<IProps, {}> {
   }
 }
 
-function C0302040101(): React.ReactNode {
+function C0302040101() {
   return <A />;
 }
 

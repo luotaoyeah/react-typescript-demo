@@ -12,7 +12,7 @@ function A({ children }: { children: any }) {
   return <div>{(children as any)(9)}</div>;
 }
 
-function C020906(): React.ReactNode {
+function C020906() {
   const button = <Button>button</Button>;
 
   /*

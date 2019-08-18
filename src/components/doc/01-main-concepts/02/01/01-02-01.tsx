@@ -3,7 +3,7 @@ import React from 'react';
 /**
  * https://reactjs.org/docs/introducing-jsx.html#why-jsx
  */
-export function C010201(): React.ReactNode {
+export function C010201() {
   return (
     <>
       <p>

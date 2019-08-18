@@ -12,7 +12,7 @@ import React from 'react';
  * 4. class 组件不会被移除，而是会跟 hooks 同时存在，
  *    计划是让 hooks 实现 class 组件的所有功能；
  */
-function C040102(): React.ReactNode {
+function C040102() {
   return <div />;
 }
 

@@ -11,7 +11,7 @@ const COLORS = {
   green: '#00FF00',
 };
 
-function C020307(): React.ReactNode {
+function C020307() {
   return (
     <div>
       <ColorContext.Provider value={COLORS.green}>

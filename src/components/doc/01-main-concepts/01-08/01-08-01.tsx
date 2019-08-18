@@ -12,7 +12,7 @@ const array: Array<number> = [1, 2, 3];
 /* [2, 4, 6] */
 console.log(array.map(i => i * 2));
 
-function C010801(): React.ReactNode {
+function C010801() {
   return (
     <div>
       {/*

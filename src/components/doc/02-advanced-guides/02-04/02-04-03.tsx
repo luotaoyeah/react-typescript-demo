@@ -14,7 +14,7 @@ import React from 'react';
  * ErrorBoundary 在组件中的作用，
  * 类似于 try/catch 在 JS 代码中的作用；
  */
-function C020403(): React.ReactNode {
+function C020403() {
   /*
    * 在开发环境中，组件中的错误会打印到浏览器控制台：
    *

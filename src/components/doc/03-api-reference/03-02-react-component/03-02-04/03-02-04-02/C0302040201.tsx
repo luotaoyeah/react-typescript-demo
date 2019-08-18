@@ -34,7 +34,7 @@ class A extends React.Component<{}, {}> {
   }
 }
 
-function C0302040201(): React.ReactNode {
+function C0302040201() {
   return <A />;
 }
 

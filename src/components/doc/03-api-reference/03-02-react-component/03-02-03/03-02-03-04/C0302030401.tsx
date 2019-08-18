@@ -44,7 +44,7 @@ class A extends React.Component<{}, IState> {
   }
 }
 
-function C0302030401(): React.ReactNode {
+function C0302030401() {
   return (
     <div>
       <A />

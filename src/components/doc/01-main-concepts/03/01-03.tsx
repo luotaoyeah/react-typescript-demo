@@ -10,7 +10,7 @@ import { C010302 } from '@/components/doc/01-main-concepts/03/01-03-02';
 import { C010303 } from '@/components/doc/01-main-concepts/03/01-03-03';
 import { C010304 } from '@/components/doc/01-main-concepts/03/01-03-04';
 
-export default function C0103(): React.ReactNode {
+export default function C0103() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Rendering Elements" key="1">

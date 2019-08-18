@@ -13,7 +13,7 @@ import React from 'react';
 /*
  * 最佳实践：通过组合（composition）的方式实现代码复用，而不是通过继承（inheritance）来实现；
  */
-function C03020101(): React.ReactNode {
+function C03020101() {
   return <div />;
 }
 

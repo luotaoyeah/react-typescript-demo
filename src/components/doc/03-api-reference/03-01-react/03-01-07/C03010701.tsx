@@ -9,7 +9,7 @@ import React from 'react';
 /*
  *
  */
-function C03010701(): React.ReactNode {
+function C03010701() {
   /*
    * React.Fragment 是一种特殊的组件，
    * 用于将多个组件包裹成一个整体，并且不会引入额外的 DOM 标签；

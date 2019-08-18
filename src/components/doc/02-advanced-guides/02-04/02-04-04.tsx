@@ -61,7 +61,7 @@ class ErrorButton extends React.Component {
   }
 }
 
-function C020404(): React.ReactNode {
+function C020404() {
   return (
     <div>
       <ErrorBoundary>

@@ -9,7 +9,7 @@ import { Button } from 'antd';
 /*
  * TODO
  */
-function C03050301(): React.ReactNode {
+function C03050301() {
   return (
     <div>
       <Button>FOO</Button>

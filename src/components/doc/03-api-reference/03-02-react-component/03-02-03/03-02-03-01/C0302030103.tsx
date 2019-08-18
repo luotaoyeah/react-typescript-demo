@@ -30,7 +30,7 @@ function B() {
   );
 }
 
-function C0302030103(): React.ReactNode {
+function C0302030103() {
   return (
     <div>
       <A />

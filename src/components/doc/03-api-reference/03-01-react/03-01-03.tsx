@@ -8,7 +8,7 @@ import React from 'react';
 import { Divider, Tag } from 'antd';
 
 /**  */
-function C030103(): React.ReactNode {
+function C030103() {
   /*
    * 第一个参数可以是字符串，表示一个 HTML 标签的名称；
    */

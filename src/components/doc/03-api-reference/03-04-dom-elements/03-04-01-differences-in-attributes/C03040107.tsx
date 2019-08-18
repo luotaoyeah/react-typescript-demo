@@ -6,7 +6,7 @@
 
 import React from 'react';
 
-function C03040107(): React.ReactNode {
+function C03040107() {
   return (
     <div>
       {/*

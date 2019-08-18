@@ -54,7 +54,7 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-function C04020401(): React.ReactNode {
+function C04020401() {
   return (
     <div>
       <F01 />

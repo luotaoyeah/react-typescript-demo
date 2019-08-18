@@ -4,7 +4,7 @@ import { Button, Divider } from 'antd';
 /**
  * https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx
  */
-function C010204(): React.ReactNode {
+function C010204() {
   const id: string = 'id_01_02_04';
 
   return (

@@ -30,7 +30,7 @@ function withRadius<P extends HTMLAttributes<Element>>(Component: React.Componen
 const RadiusButton = withRadius<any>(Button);
 const RadiusInput = withRadius<any>(Input);
 
-function C020701(): React.ReactNode {
+function C020701() {
   return (
     <div>
       <RadiusButton radius="50%">button</RadiusButton>

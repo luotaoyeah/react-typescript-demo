@@ -79,7 +79,7 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
   }
 }
 
-function C04040401(): React.ReactNode {
+function C04040401() {
   return (
     <div>
       <C01 />

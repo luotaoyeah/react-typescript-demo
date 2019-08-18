@@ -11,7 +11,7 @@ import { Button, Divider } from 'antd';
  * 会被作为 props.children 属性的值；
  */
 
-function C020904(): React.ReactNode {
+function C020904() {
   return (
     <div>
       {/*

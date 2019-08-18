@@ -57,7 +57,7 @@ class C2 extends React.Component<{ form: React.ReactNode }> {
   }
 }
 
-function C020302(): React.ReactNode {
+function C020302() {
   return (
     <div>
       <A name="tom" age={18} />

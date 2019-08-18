@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-function C010803(): React.ReactNode {
+function C010803() {
   const strObj: Array<{ id: number; name: string }> = [
     {
       id: 1,

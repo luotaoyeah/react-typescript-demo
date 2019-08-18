@@ -35,7 +35,7 @@ class A extends React.Component {
 }
 
 /**  */
-function C021802(): React.ReactNode {
+function C021802() {
   return (
     <React.Fragment>
       <React.StrictMode>

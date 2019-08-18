@@ -26,7 +26,7 @@ const F01 = (): React.ReactElement<{}> => {
   );
 };
 
-function C04030201(): React.ReactNode {
+function C04030201() {
   return (
     <div>
       <F01 />

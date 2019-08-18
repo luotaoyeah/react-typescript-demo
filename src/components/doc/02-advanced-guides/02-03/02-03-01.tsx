@@ -75,7 +75,7 @@ class Toolbar02 extends React.Component {
   }
 }
 
-function C020301(): React.ReactNode {
+function C020301() {
   return (
     <div>
       <Toolbar theme="red" />

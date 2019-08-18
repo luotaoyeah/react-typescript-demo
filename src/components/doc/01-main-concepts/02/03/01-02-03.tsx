@@ -6,7 +6,7 @@ import { Button, Divider } from 'antd';
  */
 class C010203 extends React.Component {
   // eslint-disable-next-line class-methods-use-this
-  private getSomething(multi: boolean): React.ReactNode {
+  private getSomething(multi: boolean) {
     if (multi) {
       return [1, 2, 3].map(item => <Button key={item}>{item}</Button>);
     }

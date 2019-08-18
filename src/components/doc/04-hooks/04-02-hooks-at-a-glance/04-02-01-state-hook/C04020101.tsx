@@ -36,7 +36,7 @@ function F01() {
   );
 }
 
-function C04020101(): React.ReactNode {
+function C04020101() {
   return (
     <div>
       <F01 />

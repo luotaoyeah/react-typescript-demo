@@ -56,7 +56,7 @@ function Input({ color }: { color: string }) {
 const ColorButton = withColor(Button);
 const ColorInput = withColor(Input);
 
-function C020308(): React.ReactNode {
+function C020308() {
   return (
     <div>
       <p>

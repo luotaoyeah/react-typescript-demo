@@ -30,7 +30,7 @@ function F01(): React.ReactElement<{}> {
   );
 }
 
-function C04050101(): React.ReactNode {
+function C04050101() {
   return (
     <div>
       <F01 />

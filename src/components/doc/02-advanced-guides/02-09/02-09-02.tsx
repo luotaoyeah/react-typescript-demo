@@ -45,7 +45,7 @@ function hello() {
   return <i>hello</i>;
 }
 
-function C020902(): React.ReactNode {
+function C020902() {
   const Hello = hello;
 
   /*

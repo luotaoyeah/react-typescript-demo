@@ -17,7 +17,7 @@ import { Button } from 'antd';
  *     在 react 组件的角度上，它们还是父子关系，
  *     但是在 DOM 结构的角度上，它们没有直接的父子关系
  */
-function C03030301(): React.ReactNode {
+function C03030301() {
   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return <div>{ReactDOM.createPortal(<Button>PORTAL</Button>, document.getElementById('root02')!)}</div>;
 }

@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-function C020602(): React.ReactNode {
+function C020602() {
   /*
    * 因为 render() 方法返回的必须是单个节点，
    * 所以如果要返回多个节点，必须用一个节点将所有的节点包裹起来，

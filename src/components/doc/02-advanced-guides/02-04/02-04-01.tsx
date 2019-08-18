@@ -72,7 +72,7 @@ class ButtonError extends React.Component {
   }
 }
 
-function C020401(): React.ReactNode {
+function C020401() {
   return (
     <div>
       <ErrorBoundary>

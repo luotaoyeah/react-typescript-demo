@@ -17,7 +17,7 @@ class PortalComponent extends React.Component<{}, {}> {
   }
 }
 
-function C021101(): React.ReactNode {
+function C021101() {
   return (
     <div>
       <PortalComponent>

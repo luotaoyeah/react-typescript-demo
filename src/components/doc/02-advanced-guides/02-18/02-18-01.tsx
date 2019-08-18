@@ -37,7 +37,7 @@ class B extends React.Component {
 }
 
 /**  */
-function C021801(): React.ReactNode {
+function C021801() {
   return (
     <React.Fragment>
       {/*

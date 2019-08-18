@@ -30,7 +30,7 @@ const F01 = (): React.ReactElement<{}> => {
   );
 };
 
-function C04030301(): React.ReactNode {
+function C04030301() {
   return (
     <div>
       <F01 />

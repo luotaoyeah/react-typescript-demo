@@ -40,7 +40,7 @@ function ThemeButton() {
   );
 }
 
-function C020306(): React.ReactNode {
+function C020306() {
   return (
     <div>
       <ColorContext.Provider value={COLORS.green}>

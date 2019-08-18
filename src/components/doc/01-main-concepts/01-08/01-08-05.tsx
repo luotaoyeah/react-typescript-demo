@@ -29,7 +29,7 @@ function Item({ id, key, name }: { id: string; key: string; name: string }) {
   );
 }
 
-function C010805(): React.ReactNode {
+function C010805() {
   return (
     <div>
       {[

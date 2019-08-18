@@ -42,7 +42,7 @@ function F01(): React.ReactElement<{}> {
 }
 
 // tslint:disable-next-line:max-classes-per-file
-function C04070204(): React.ReactNode {
+function C04070204() {
   return (
     <div>
       <F01 />

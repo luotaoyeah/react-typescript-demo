@@ -83,7 +83,7 @@ function C() {
   return <AgeContext.Consumer>{(age: number) => <i>{age}</i>}</AgeContext.Consumer>;
 }
 
-function C020303(): React.ReactNode {
+function C020303() {
   return (
     <div>
       <A />
