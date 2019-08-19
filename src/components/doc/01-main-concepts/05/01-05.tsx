@@ -12,7 +12,7 @@ import { C010504 } from '@/components/doc/01-main-concepts/05/01-05-04';
 import { C010505 } from '@/components/doc/01-main-concepts/05/05/01-05-05';
 import { C010506 } from '@/components/doc/01-main-concepts/05/01-05-06';
 
-export default function C0103() {
+export default function C0105() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="State and Lifecycle" key="1">

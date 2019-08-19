@@ -8,7 +8,7 @@ import './01-06.less';
 import { C010601 } from '@/components/doc/01-main-concepts/06/01/01-06-01';
 import { C010602 } from '@/components/doc/01-main-concepts/06/01-06-02';
 
-export default function C0103() {
+export default function C0106() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Handling Events" key="1">
