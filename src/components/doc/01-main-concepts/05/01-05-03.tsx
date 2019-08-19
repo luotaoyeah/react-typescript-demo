@@ -13,7 +13,7 @@ class C010503A extends React.Component<{}, IState> {
     super(props);
 
     /*
-     * 在 constructor 中设置 state 的初始值
+     * 在 constructor 中通过直接赋值的方式, 设置 state 的初始值
      */
     this.state = {
       date: new Date(),

@@ -6,7 +6,8 @@ import React from 'react';
 
 /*
  * 在 class component 中, 可以使用 state 特性,
- * props 是外部传入组件的属性, state 是在组件内部定义的状态属性
+ *   props 是外部传入组件的属性
+ *   state 是在组件内部定义的状态属性
  */
 
 interface IProps {

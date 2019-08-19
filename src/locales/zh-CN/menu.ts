@@ -54,4 +54,5 @@ export default {
   'menu.doc.01.03': 'Rendering Elements',
   'menu.doc.01.04': 'Components and Props',
   'menu.doc.01.05': 'State and Lifecycle',
+  'menu.doc.01.06': 'Handling Events',
 };
