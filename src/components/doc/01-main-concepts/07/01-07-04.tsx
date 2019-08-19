@@ -1,19 +1,20 @@
 /*
- * Conditional Rendering: Inline If-Else with Conditional Operator
+ * https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator
  */
 
 import React from 'react';
 import { Button } from 'antd';
 
 interface IState {
-  isLoggedIn: boolean;
+  isAuthenticated: boolean;
 }
 
 class C010704 extends React.Component<{}, IState> {
   public constructor(props: {}) {
     super(props);
+
     this.state = {
-      isLoggedIn: false,
+      isAuthenticated: false,
     };
 
     this.handleLogin = this.handleLogin.bind(this);
@@ -22,24 +23,25 @@ class C010704 extends React.Component<{}, IState> {
 
   public handleLogin() {
     this.setState({
-      isLoggedIn: true,
+      isAuthenticated: true,
     });
   }
 
   public handleLogout() {
     this.setState({
-      isLoggedIn: false,
+      isAuthenticated: false,
     });
   }
 
+  /*
+   * 可以在 JSX 中使用条件表达式, 实现条件渲染
+   */
   public render() {
-    const { isLoggedIn } = this.state;
+    const { isAuthenticated } = this.state;
+
     return (
       <div>
-        {/*
-         * 在 JSX 中，可以使用（?:）条件操作符，实现 if-else 的效果；
-         */}
-        {isLoggedIn ? (
+        {isAuthenticated ? (
           <Button type="danger" onClick={this.handleLogout}>
             退出
           </Button>

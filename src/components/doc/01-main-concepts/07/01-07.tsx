@@ -8,6 +8,7 @@ import './01-07.less';
 import { C010701 } from '@/components/doc/01-main-concepts/07/01-07-01';
 import { C010702 } from '@/components/doc/01-main-concepts/07/01-07-02';
 import { C010703 } from '@/components/doc/01-main-concepts/07/01-07-03';
+import { C010704 } from '@/components/doc/01-main-concepts/07/01-07-04';
 
 export default function C0107() {
   return (
@@ -22,6 +23,10 @@ export default function C0107() {
 
       <Collapse.Panel header="Inline If with Logical && Operator" key="3">
         <C010703></C010703>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Inline If-Else with Conditional Operator" key="4">
+        <C010704></C010704>
       </Collapse.Panel>
     </Collapse>
   );
