@@ -10,6 +10,7 @@ import { C010802 } from '@/components/doc/01-main-concepts/08/01-08-02';
 import { C010803 } from '@/components/doc/01-main-concepts/08/01-08-03';
 import { C010804 } from '@/components/doc/01-main-concepts/08/01-08-04';
 import { C010805 } from '@/components/doc/01-main-concepts/08/01-08-05';
+import { C010806 } from '@/components/doc/01-main-concepts/08/01-08-06';
 
 export default function C0108() {
   return (
@@ -32,6 +33,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Keys Must Only Be Unique Among Siblings" key="5">
         <C010805></C010805>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Embedding map() in JSX" key="6">
+        <C010806></C010806>
       </Collapse.Panel>
     </Collapse>
   );
