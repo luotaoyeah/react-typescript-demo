@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import './01-08.less';
 import { C010801 } from '@/components/doc/01-main-concepts/08/01-08-01';
 import { C010802 } from '@/components/doc/01-main-concepts/08/01-08-02';
+import { C010803 } from '@/components/doc/01-main-concepts/08/01-08-03';
 
 export default function C0108() {
   return (
@@ -17,6 +18,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Basic List Component" key="2">
         <C010802></C010802>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Keys" key="3">
+        <C010803></C010803>
       </Collapse.Panel>
     </Collapse>
   );
