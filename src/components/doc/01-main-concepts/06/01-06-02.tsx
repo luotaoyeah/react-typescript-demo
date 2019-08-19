@@ -1,45 +1,34 @@
 /*
- * Handling Events: Pass Arguments to Event Handlers
+ * https://reactjs.org/docs/handling-events.html#passing-arguments-to-event-handlers
  */
 
 import { Button, message } from 'antd';
-import React, { MouseEvent } from 'react';
+import React from 'react';
 
-interface IState {
-  name: string;
-}
-
-class C010602 extends React.Component<{}, IState> {
-  public constructor(props: {}) {
-    super(props);
-    this.state = {
-      name: 'tom',
-    };
+class C010602 extends React.Component {
+  // eslint-disable-next-line class-methods-use-this,@typescript-eslint/no-unused-vars
+  public handleClick(foo: string, e: React.MouseEvent) {
+    message.info(foo);
   }
 
-  public handleClick(age: number, e: MouseEvent) {
-    const { name } = this.state;
-    message.info(`hello ${name} ${age}`);
-  }
-
+  /*
+   * 如果需要给回调函数传递额外的参数, 有两种方式:
+   *   1. 在 JSX 中调用 bind() 方法, 传入额外的参数
+   *   2. 使用一个 anonymous function 作为回调函数, 并在函数里面调用真正的回调函数, 同时传入额外的参数
+   */
   public render() {
     return (
       <div>
-        {/*
-         * 如果要往回调函数传递额外的参数，
-         * 可以使用下面的方式；
-         */}
         {/* eslint-disable-next-line react/jsx-no-bind */}
-        <Button onClick={this.handleClick.bind(this, 18)}>click</Button>
-        {/*
-                <Button
-                  onClick={(e: MouseEvent) => {
-                    this.handleClick(18, e);
-                  }}
-                >
-                  click
-                </Button>
-        */}
+        <Button onClick={this.handleClick.bind(this, 'FOO')}>CLICK</Button>
+
+        <Button
+          onClick={e => {
+            this.handleClick('FOO', e);
+          }}
+        >
+          CLICK
+        </Button>
       </div>
     );
   }
