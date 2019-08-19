@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import './01-07.less';
 import { C010701 } from '@/components/doc/01-main-concepts/07/01-07-01';
 import { C010702 } from '@/components/doc/01-main-concepts/07/01-07-02';
+import { C010703 } from '@/components/doc/01-main-concepts/07/01-07-03';
 
 export default function C0107() {
   return (
@@ -17,6 +18,10 @@ export default function C0107() {
 
       <Collapse.Panel header="Element Variables" key="2">
         <C010702></C010702>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Inline If with Logical && Operator" key="3">
+        <C010703></C010703>
       </Collapse.Panel>
     </Collapse>
   );

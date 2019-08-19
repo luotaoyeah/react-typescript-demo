@@ -1,19 +1,20 @@
 /*
- * Conditional Rendering: Inline If with Logical && Operator
+ * https://reactjs.org/docs/conditional-rendering.html#inline-if-with-logical--operator
  */
 
 import React from 'react';
 import { Button } from 'antd';
 
 interface IState {
-  isLoggedIn: boolean;
+  isAuthenticated: boolean;
 }
 
 class C010703 extends React.Component<{}, IState> {
   public constructor(props: {}) {
     super(props);
+
     this.state = {
-      isLoggedIn: false,
+      isAuthenticated: false,
     };
 
     this.handleLogin = this.handleLogin.bind(this);
@@ -22,29 +23,33 @@ class C010703 extends React.Component<{}, IState> {
 
   public handleLogin() {
     this.setState({
-      isLoggedIn: true,
+      isAuthenticated: true,
     });
   }
 
   public handleLogout() {
     this.setState({
-      isLoggedIn: false,
+      isAuthenticated: false,
     });
   }
 
+  /*
+   * 因为 true 和 false 在 JSX 中不会被渲染, 因此可以使用逻辑与操作符 && 实现组件的条件渲染,
+   *   true && expression  的结果为 expression
+   *   false && expression 的结果为 false
+   */
   public render() {
-    const { isLoggedIn } = this.state;
+    const { isAuthenticated } = this.state;
+
     return (
       <div>
-        {/*
-         * 可以使用逻辑与操作符 && 实现组件的条件渲染
-         */}
-        {isLoggedIn && (
+        {isAuthenticated && (
           <Button type="danger" onClick={this.handleLogout}>
             退出
           </Button>
         )}
-        {!isLoggedIn && (
+
+        {!isAuthenticated && (
           <Button type="primary" onClick={this.handleLogin}>
             登录
           </Button>

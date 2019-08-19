@@ -22,7 +22,7 @@ function C010702B({ onClick }: { onClick: () => void }) {
 }
 
 interface IState {
-  logged: boolean;
+  isAuthenticated: boolean;
 }
 
 class C010702 extends React.Component<{}, IState> {
@@ -30,7 +30,7 @@ class C010702 extends React.Component<{}, IState> {
     super(props);
 
     this.state = {
-      logged: false,
+      isAuthenticated: false,
     };
 
     this.handleLogin = this.handleLogin.bind(this);
@@ -38,19 +38,23 @@ class C010702 extends React.Component<{}, IState> {
   }
 
   public handleLogin() {
-    this.setState({ logged: true });
+    this.setState({ isAuthenticated: true });
   }
 
   public handleLogout() {
-    this.setState({ logged: false });
+    this.setState({ isAuthenticated: false });
   }
 
   /*
-   * 可以将一个 react element 存储到一个 variable 中, 然后在 JSX 中渲染该 variable,
+   * 因为 react element 本质上是一个 expression, 可以将 react element 存储到一个 variable 中, 然后在 JSX 中渲染该 variable
    */
   public render() {
-    const { logged } = this.state;
-    const button = !logged ? <C010702A onClick={this.handleLogin} /> : <C010702B onClick={this.handleLogout} />;
+    const { isAuthenticated } = this.state;
+    const button = !isAuthenticated ? (
+      <C010702A onClick={this.handleLogin} />
+    ) : (
+      <C010702B onClick={this.handleLogout} />
+    );
 
     return <div>{button}</div>;
   }
