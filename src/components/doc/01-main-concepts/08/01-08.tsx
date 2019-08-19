@@ -8,6 +8,7 @@ import './01-08.less';
 import { C010801 } from '@/components/doc/01-main-concepts/08/01-08-01';
 import { C010802 } from '@/components/doc/01-main-concepts/08/01-08-02';
 import { C010803 } from '@/components/doc/01-main-concepts/08/01-08-03';
+import { C010804 } from '@/components/doc/01-main-concepts/08/01-08-04';
 
 export default function C0108() {
   return (
@@ -22,6 +23,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Keys" key="3">
         <C010803></C010803>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Extracting Components with Keys" key="4">
+        <C010804></C010804>
       </Collapse.Panel>
     </Collapse>
   );

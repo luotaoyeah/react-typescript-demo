@@ -1,27 +1,21 @@
 /*
- * Lists and Keys: Extracting Components with Keys
+ * https://reactjs.org/docs/lists-and-keys.html#extracting-components-with-keys
  */
 
 import React from 'react';
 
-function MyLi({ value }: { value: string }) {
+function C010804A({ value }: { value: string }) {
   return <li>{value}</li>;
 }
 
-/*
- * 一般在使用 Array.map() 方法展开一个列表数据时，需要设置 key 属性；
- * key 属性需要设置在循环项的最顶层标签上；
- */
 function C010804() {
   return (
-    <div>
-      {/*
-       * key 属性设置在 <MyLi> 标签上，而不是它里面的 <li> 标签上；
-       */}
-      {['a', 'b', 'c'].map((n: string) => (
-        <MyLi value={n} key={n} />
+    <ul>
+      {/* key 属性应该设置在 <C010804A> 组件上，而不是它里面的 <li> 标签上 */}
+      {['a', 'b', 'c'].map(n => (
+        <C010804A value={n} key={n} />
       ))}
-    </div>
+    </ul>
   );
 }
 
