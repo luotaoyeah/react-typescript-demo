@@ -56,4 +56,5 @@ export default {
   'menu.doc.01.05': 'State and Lifecycle',
   'menu.doc.01.06': 'Handling Events',
   'menu.doc.01.07': 'Conditional Rendering',
+  'menu.doc.01.08': 'Lists and Keys',
 };
