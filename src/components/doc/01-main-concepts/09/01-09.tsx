@@ -9,6 +9,7 @@ import { C010901 } from '@/components/doc/01-main-concepts/09/01-09-01';
 import { C010902 } from '@/components/doc/01-main-concepts/09/01-09-02';
 import { C010903 } from '@/components/doc/01-main-concepts/09/01-09-03';
 import { C010904 } from '@/components/doc/01-main-concepts/09/04/01-09-04';
+import { C010905 } from '@/components/doc/01-main-concepts/09/01-09-05';
 
 export default function C0108() {
   return (
@@ -27,6 +28,10 @@ export default function C0108() {
 
       <Collapse.Panel header="The select Tag" key="4">
         <C010904></C010904>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Handling Multiple Inputs" key="5">
+        <C010905></C010905>
       </Collapse.Panel>
     </Collapse>
   );
