@@ -161,6 +161,11 @@ export default {
                       name: '08',
                       component: '../components/doc/01-main-concepts/08/01-08',
                     },
+                    {
+                      path: '09',
+                      name: '09',
+                      component: '../components/doc/01-main-concepts/09/01-09',
+                    },
                   ],
                 },
               ],
