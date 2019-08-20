@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import './01-09.less';
 import { C010901 } from '@/components/doc/01-main-concepts/09/01-09-01';
 import { C010902 } from '@/components/doc/01-main-concepts/09/01-09-02';
+import { C010903 } from '@/components/doc/01-main-concepts/09/01-09-03';
 
 export default function C0108() {
   return (
@@ -17,6 +18,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Controlled Components" key="2">
         <C010902></C010902>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="The textarea Tag" key="3">
+        <C010903></C010903>
       </Collapse.Panel>
     </Collapse>
   );

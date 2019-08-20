@@ -2,7 +2,7 @@
  * https://reactjs.org/docs/forms.html#controlled-components
  */
 
-import React, { SyntheticEvent } from 'react';
+import React from 'react';
 import { Button, Input, message } from 'antd';
 
 /*
@@ -28,20 +28,20 @@ class C010902 extends React.Component<{}, IState> {
   /*
    * 监听表单元素的变更事件, 从而更新它的状态数据
    */
-  public handleChange(e: SyntheticEvent) {
+  public handleChange(e: React.SyntheticEvent) {
     this.setState({
       name: (e.target as HTMLInputElement).value,
     });
   }
 
-  public handleSubmit(e: SyntheticEvent) {
+  public handleSubmit(e: React.SyntheticEvent) {
     /*
      * 阻止表单提交的默认操作(刷新页面)
      */
     e.preventDefault();
 
     const { name } = this.state;
-    message.info(name, 9999);
+    message.info(name);
   }
 
   public render() {
