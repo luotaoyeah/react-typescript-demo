@@ -1,18 +1,14 @@
 /*
- * Forms: Controlled Components
+ * https://reactjs.org/docs/forms.html#controlled-components
  */
 
 import React, { SyntheticEvent } from 'react';
+import { Button, Input, message } from 'antd';
 
 /*
- * 表单元素 <input> <select> <texxtarea>，会维护自己的状态，
- * 并且会根据用户的输入，不断更新它们的状态数据；
- *
- * 在 react 中，所有的状态数据都是存放在 state 对象中的，
- * 并且只能通过 setState() 方法来更新状态数据；
- *
- * 把这两点结合起来，由 state 来控制表单元素的状态数据，
- * 这时候这些表单元素称之为 controlled component；
+ * 默认情况下, 表单元素都会维护自己的内部状态,
+ * 如果我们不使用它的内部状态, 而是让 react 来控制它的状态, 这时候, 这个表单元素就称之为 controlled component,
+ * 使用 controlled component 时, 需要手动绑定 value 属性, 并且监听 onChange 事件(或者其他状态变更事件)
  */
 
 interface IState {
@@ -24,42 +20,36 @@ class C010902 extends React.Component<{}, IState> {
     super(props);
 
     this.state = { name: '' };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  /*
+   * 监听表单元素的变更事件, 从而更新它的状态数据
+   */
   public handleChange(e: SyntheticEvent) {
-    /*
-     * 监听表单元素的事件，从而更新对应的状态数据；
-     */
     this.setState({
-      name: (e.target as HTMLInputElement).value.toUpperCase(),
+      name: (e.target as HTMLInputElement).value,
     });
   }
 
   public handleSubmit(e: SyntheticEvent) {
     /*
-     * 阻止表单提交的默认操作，即刷新页面；
+     * 阻止表单提交的默认操作(刷新页面)
      */
     e.preventDefault();
 
-    /*
-     * 获取表单数据
-     */
     const { name } = this.state;
-    alert(`name: ${name}`);
+    message.info(name, 9999);
   }
 
   public render() {
     const { name } = this.state;
     return (
       <form onSubmit={this.handleSubmit}>
-        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control,jsx-a11y/label-has-for */}
-        <label>
-          NAME：
-          <input type="text" value={name} onChange={this.handleChange} />
-          <input type="submit" value="submit" />
-        </label>
+        <Input value={name} onChange={this.handleChange}></Input>
+        <Button htmlType="submit">SUBMIT</Button>
       </form>
     );
   }
