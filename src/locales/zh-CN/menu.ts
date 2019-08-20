@@ -58,4 +58,5 @@ export default {
   'menu.doc.01.07': 'Conditional Rendering',
   'menu.doc.01.08': 'Lists and Keys',
   'menu.doc.01.09': 'Forms',
+  'menu.doc.01.10': 'Lifting State Up',
 };
