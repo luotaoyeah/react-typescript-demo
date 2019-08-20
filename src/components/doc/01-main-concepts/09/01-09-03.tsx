@@ -50,6 +50,7 @@ class C010903 extends React.Component<{}, IState> {
             rows={3}
             style={{
               width: '100%',
+              border: '1px solid #d9d9d9',
               borderRadius: '3px',
               outline: 'none',
             }}
