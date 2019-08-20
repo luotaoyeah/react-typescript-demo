@@ -1,50 +1,48 @@
 /*
- * Composition vs Inheritance: Specialization
+ * https://reactjs.org/docs/composition-vs-inheritance.html#specialization
  */
 
 import React from 'react';
-import { Button } from 'antd';
+import { Button, message } from 'antd';
 
 /*
- * 有时候，需要在一个组件的基础上，个性化一些东西，
- * 形成一个新的组件，这个新的组件称之为原组件的特例（special case）；
- * 比如在 Button 的基础上，可以有 PrimaryButton，DangerButton 等；
+ * 可以对基础组件进一步封装, 形成一个新的组件, 这种方式也属于组合,
+ * 比如对 Button 组件进一步封装, 创造出 PrimaryButton, DangerButton 等新的组件
  */
 
-// eslint-disable-next-line react/prefer-stateless-function
-class PrimaryButton extends React.Component {
-  public render() {
-    return <Button type="primary">PRIMARY</Button>;
-  }
+function PrimaryButton({ children, onClick }: { children?: React.ReactNode; onClick?: () => void }) {
+  return (
+    <Button type="primary" onClick={onClick} style={{ marginRight: '10px' }}>
+      {children}
+    </Button>
+  );
 }
 
-// eslint-disable-next-line react/prefer-stateless-function
-class DangerButton extends React.Component {
-  public render() {
-    return <Button type="danger">DANGER</Button>;
-  }
+function DangerButton({ children, onClick }: { children?: React.ReactNode; onClick?: () => void }) {
+  return (
+    <Button type="danger" onClick={onClick}>
+      {children}
+    </Button>
+  );
 }
 
-class C011102 extends React.Component<{}, {}> {
-  public constructor(props: {}, context: any) {
-    super(props, context);
+class C011102 extends React.Component {
+  public constructor(props: {}) {
+    super(props);
+
     this.handleClick = this.handleClick.bind(this);
   }
 
   // eslint-disable-next-line class-methods-use-this
   public handleClick() {
-    console.log('click');
+    message.info('CLICK');
   }
 
   public render() {
     return (
       <div>
-        <p>
-          <PrimaryButton />
-        </p>
-        <p>
-          <DangerButton />
-        </p>
+        <PrimaryButton onClick={this.handleClick}>FOO</PrimaryButton>
+        <DangerButton onClick={this.handleClick}>BAR</DangerButton>
       </div>
     );
   }
