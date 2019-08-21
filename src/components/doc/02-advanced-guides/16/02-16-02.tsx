@@ -42,7 +42,7 @@ class C021602 extends React.Component {
 
         <Divider />
 
-        <Button onClick={this.handleClick}>focus</Button>
+        <Button onClick={this.handleClick}>FOCUS</Button>
       </div>
     );
   }
