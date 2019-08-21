@@ -36,7 +36,7 @@ class C021602 extends React.Component {
           style={{
             outline: 'none',
             borderRadius: '3px',
-            padding: '2px',
+            padding: '2px 8px',
           }}
         />
 

@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import { C021601 } from '@/components/doc/02-advanced-guides/16/02-16-01';
 import { C021602 } from '@/components/doc/02-advanced-guides/16/02-16-02';
 import { C021603 } from '@/components/doc/02-advanced-guides/16/02-16-03';
+import { C021604 } from '@/components/doc/02-advanced-guides/16/02-16-04';
 
 export default function C0108() {
   return (
@@ -21,6 +22,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Adding a Ref to a Class Component" key="3">
         <C021603></C021603>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Exposing DOM Refs to Parent Components" key="4">
+        <C021604></C021604>
       </Collapse.Panel>
     </Collapse>
   );
