@@ -187,6 +187,11 @@ export default {
                       name: '01',
                       component: '../components/doc/02-advanced-guides/01/02-01',
                     },
+                    {
+                      path: '16',
+                      name: '16',
+                      component: '../components/doc/02-advanced-guides/16/02-16',
+                    },
                   ],
                 },
               ],

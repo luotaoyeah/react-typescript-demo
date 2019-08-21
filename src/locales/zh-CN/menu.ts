@@ -62,4 +62,5 @@ export default {
   'menu.doc.01.11': 'Composition vs Inheritance',
   'menu.doc.02': 'ADVANCED GUIDES',
   'menu.doc.02.01': 'Accessibility',
+  'menu.doc.02.16': 'Refs and the DOM',
 };
