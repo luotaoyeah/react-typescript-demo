@@ -4,7 +4,6 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import './01-02.less';
 import { C010201 } from './01/01-02-01';
 import { C010202 } from './02/01-02-02';
 import { C010203 } from './03/01-02-03';
