@@ -8,6 +8,7 @@ import { C021601 } from '@/components/doc/02-advanced-guides/16/02-16-01';
 import { C021602 } from '@/components/doc/02-advanced-guides/16/02-16-02';
 import { C021603 } from '@/components/doc/02-advanced-guides/16/02-16-03';
 import { C021604 } from '@/components/doc/02-advanced-guides/16/02-16-04';
+import { C021605 } from '@/components/doc/02-advanced-guides/16/05/02-16-05';
 
 export default function C0108() {
   return (
@@ -26,6 +27,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Exposing DOM Refs to Parent Components" key="4">
         <C021604></C021604>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Callback Refs" key="5">
+        <C021605></C021605>
       </Collapse.Panel>
     </Collapse>
   );
