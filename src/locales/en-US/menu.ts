@@ -60,4 +60,6 @@ export default {
   'menu.doc.01.09': 'Forms',
   'menu.doc.01.10': 'Lifting State Up',
   'menu.doc.01.11': 'Composition vs Inheritance',
+  'menu.doc.02': 'ADVANCED GUIDES',
+  'menu.doc.02.01': 'Accessibility',
 };

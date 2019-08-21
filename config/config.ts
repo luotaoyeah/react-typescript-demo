@@ -178,6 +178,17 @@ export default {
                     },
                   ],
                 },
+                {
+                  path: '02',
+                  name: '02',
+                  routes: [
+                    {
+                      path: '01',
+                      name: '01',
+                      component: '../components/doc/02-advanced-guides/01/02-01',
+                    },
+                  ],
+                },
               ],
             },
             {
