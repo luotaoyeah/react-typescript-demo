@@ -64,5 +64,6 @@ export default {
   'menu.doc.02.01': 'Accessibility',
   'menu.doc.02.05': 'Forwarding Refs',
   'menu.doc.02.06': 'Fragments',
+  'menu.doc.02.07': 'Higher-Order Components',
   'menu.doc.02.16': 'Refs and the DOM',
 };
