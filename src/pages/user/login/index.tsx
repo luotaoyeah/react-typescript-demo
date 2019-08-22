@@ -188,7 +188,7 @@ class Login extends Component<LoginProps, LoginState> {
               <FormattedMessage id="user-login.login.remember-me" />
             </Checkbox>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a style={{ float: 'right' }} href="">
+            <a style={{ float: 'right' }} href="/">
               <FormattedMessage id="user-login.login.forgot-password" />
             </a>
           </div>
@@ -200,7 +200,7 @@ class Login extends Component<LoginProps, LoginState> {
             <Icon type="alipay-circle" className={styles.icon} theme="outlined" />
             <Icon type="taobao-circle" className={styles.icon} theme="outlined" />
             <Icon type="weibo-circle" className={styles.icon} theme="outlined" />
-            <Link className={styles.register} to="/user/register">
+            <Link className={styles.register} to="/">
               <FormattedMessage id="user-login.login.signup" />
             </Link>
           </div>
