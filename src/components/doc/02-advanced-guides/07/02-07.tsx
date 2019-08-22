@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import { C020701 } from '@/components/doc/02-advanced-guides/07/02-07-01';
 import { C020702 } from '@/components/doc/02-advanced-guides/07/02-07-02';
 import { C020703 } from '@/components/doc/02-advanced-guides/07/02-07-03';
+import { C020704 } from '@/components/doc/02-advanced-guides/07/04/02-07-04';
 
 export default function C0108() {
   return (
@@ -21,6 +22,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Convention: Pass Unrelated Props Through to the Wrapped Component" key="3">
         <C020703></C020703>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Convention: Maximizing Composability" key="4">
+        <C020704></C020704>
       </Collapse.Panel>
     </Collapse>
   );
