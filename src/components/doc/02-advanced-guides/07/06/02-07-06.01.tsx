@@ -6,6 +6,7 @@ import React from 'react';
 import { Button, message } from 'antd';
 import { ButtonProps } from 'antd/es/button';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function withNothing<P>(C01: any, name: string) {
   return class extends React.Component<P> {
     public componentDidMount(): void {
