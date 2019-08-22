@@ -1,26 +1,21 @@
 /*
- * Fragments: Usage
+ * https://reactjs.org/docs/fragments.html#usage
  */
 
 import React from 'react';
 
 function C020603() {
   /*
-   * React.Fragment 可以设置一个属性 key，
-   * 但是其简写形式 <></> 不支持设置任何属性；
+   * React.Fragment 可以设置一个 key 属性, 简写形式 <></> 不能设置任何属性
    */
-  const tds = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }].map(i => (
+  const dds = [{ id: 1, name: 'A' }, { id: 2, name: 'B' }].map(i => (
     <React.Fragment key={i.id}>
       <dt>{i.id}</dt>
       <dd>{i.name}</dd>
     </React.Fragment>
   ));
 
-  return (
-    <div>
-      <dl>{tds}</dl>
-    </div>
-  );
+  return <dl>{dds}</dl>;
 }
 
 export { C020603 };
