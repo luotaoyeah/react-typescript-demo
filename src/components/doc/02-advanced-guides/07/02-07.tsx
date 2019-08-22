@@ -9,6 +9,7 @@ import { C020702 } from '@/components/doc/02-advanced-guides/07/02-07-02';
 import { C020703 } from '@/components/doc/02-advanced-guides/07/02-07-03';
 import { C020704 } from '@/components/doc/02-advanced-guides/07/04/02-07-04';
 import { C020705 } from '@/components/doc/02-advanced-guides/07/02-07-05';
+import { C020706 } from '@/components/doc/02-advanced-guides/07/06/02-07-06';
 
 export default function C0108() {
   return (
@@ -31,6 +32,10 @@ export default function C0108() {
 
       <Collapse.Panel header="Convention: Wrap the Display Name for Easy Debugging" key="5">
         <C020705></C020705>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Caveats" key="6">
+        <C020706></C020706>
       </Collapse.Panel>
     </Collapse>
   );
