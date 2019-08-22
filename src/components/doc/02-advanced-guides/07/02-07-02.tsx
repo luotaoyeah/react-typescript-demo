@@ -1,36 +1,29 @@
 /*
- * Higher-Order Components: Don’t Mutate the Original Component. Use Composition
+ * https://reactjs.org/docs/higher-order-components.html#dont-mutate-the-original-component-use-composition
  */
 
 import React from 'react';
 import { Button } from 'antd';
+import { ButtonProps } from 'antd/es/button';
 
 /*
- * 在 HOC 中，不要对参数组件做任何修改，
- * 而是应该通过组合（composition）的方式来增强组件；
+ * HOC 是一个 pure function, 因此不要对它的参数组件做任何修改, 而是返回一个新的组件,
+ * 如下, 修改了参数组件的原型对象, 是**错误**的写法
  */
-function HOC<P>(Component: React.ComponentType<P>) {
-  /*
-   * 修改了参数组件的原型对象；
-   */
+function withSomething<P>(C01: typeof Button) {
   // eslint-disable-next-line no-param-reassign
-  Component.prototype.componentDidMount = () => {
+  C01.prototype.componentDidMount = () => {
+    // eslint-disable-next-line no-console
     console.log('LOG');
   };
 
-  return Component;
+  return C01;
 }
 
-/**  */
-const HocButton = HOC<any>(Button);
+const C020702A = withSomething<ButtonProps>(Button);
 
-/**  */
 function C020702() {
-  return (
-    <div>
-      <HocButton>button</HocButton>
-    </div>
-  );
+  return <C020702A>BUTTON</C020702A>;
 }
 
 export { C020702 };
