@@ -63,5 +63,6 @@ export default {
   'menu.doc.02': 'ADVANCED GUIDES',
   'menu.doc.02.01': 'Accessibility',
   'menu.doc.02.05': 'Forwarding Refs',
+  'menu.doc.02.06': 'Fragments',
   'menu.doc.02.16': 'Refs and the DOM',
 };
