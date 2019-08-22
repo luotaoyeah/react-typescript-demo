@@ -9,6 +9,7 @@ module.exports = {
     '@typescript-eslint/no-inferrable-types': 0,
     'import/prefer-default-export': 0,
     'linebreak-style': 0,
+    'operator-linebreak': 0,
     'import/no-unresolved': 0,
     'max-len': ['error', { code: 120 }],
   },
