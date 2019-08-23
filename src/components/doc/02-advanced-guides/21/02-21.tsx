@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C022101 } from './02-21-01';
 import { C022102 } from '@/components/doc/02-advanced-guides/21/02-21-02';
+import { C022103 } from '@/components/doc/02-advanced-guides/21/02-21-03';
 
 export default function C0221() {
   return (
@@ -16,6 +17,10 @@ export default function C0221() {
 
       <Collapse.Panel header="Default Values" key="2">
         <C022102></C022102>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="The file input Tag" key="3">
+        <C022103></C022103>
       </Collapse.Panel>
     </Collapse>
   );
