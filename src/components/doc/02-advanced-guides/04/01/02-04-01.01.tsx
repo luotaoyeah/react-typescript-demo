@@ -67,7 +67,7 @@ class ErrorBoundary extends React.Component<{}, IState> {
   }
 }
 
-class C020401A extends Component<{}, { num: number }> {
+class C02040101A extends Component<{}, { num: number }> {
   public constructor(props: Readonly<{}>) {
     super(props);
 
@@ -100,7 +100,7 @@ function C02040101() {
   return (
     <>
       <ErrorBoundary>
-        <C020401A />
+        <C02040101A />
       </ErrorBoundary>
 
       <Divider />
