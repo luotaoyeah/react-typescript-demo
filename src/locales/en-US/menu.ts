@@ -73,4 +73,5 @@ export default {
   'menu.doc.02.18': 'Static Type Checking',
   'menu.doc.02.20': 'Typechecking With PropTypes',
   'menu.doc.02.21': 'Uncontrolled Components',
+  'menu.doc.02.22': 'Web Components',
 };

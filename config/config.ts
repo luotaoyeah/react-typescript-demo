@@ -233,14 +233,19 @@ export default {
                       component: '../components/doc/02-advanced-guides/18/02-18',
                     },
                     {
+                      path: '20',
+                      name: '20',
+                      component: '../components/doc/02-advanced-guides/20/02-20',
+                    },
+                    {
                       path: '21',
                       name: '21',
                       component: '../components/doc/02-advanced-guides/21/02-21',
                     },
                     {
-                      path: '20',
-                      name: '20',
-                      component: '../components/doc/02-advanced-guides/20/02-20',
+                      path: '22',
+                      name: '22',
+                      component: '../components/doc/02-advanced-guides/22/02-22',
                     },
                   ],
                 },
