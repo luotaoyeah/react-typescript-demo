@@ -41,18 +41,7 @@ class ErrorBoundary extends React.Component<{}, IState> {
     const { children } = this.props;
 
     if (hasError) {
-      return (
-        <span
-          style={{
-            color: 'red',
-            border: '1px solid red',
-            borderRadius: '3px',
-            padding: '10px',
-          }}
-        >
-          {errorMessage}
-        </span>
-      );
+      return <Button type="danger">{errorMessage}</Button>;
     }
 
     return children;

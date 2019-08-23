@@ -1,30 +1,55 @@
 /*
- * Error Boundaries: Component Stack Traces
+ * https://reactjs.org/docs/error-boundaries.html#how-about-event-handlers
  */
 
 import React from 'react';
+import { Button } from 'antd';
 
-/*
- * ErrorBoundary 使得应用中的某一部分崩溃之后，不会影响到其他的部分；
- */
+interface IState {
+  hasError: boolean;
+  errorMessage: string;
+}
 
-/*
- * JS 中的 try/catch 语句用于命令式（imperative）的代码，
- * 而 JSX 是声明式（declarative）的代码，
- * ErrorBoundary 在组件中的作用，
- * 类似于 try/catch 在 JS 代码中的作用；
- */
-function C020403() {
+class C020403A extends React.Component<{}, IState> {
+  public constructor(props: {}) {
+    super(props);
+
+    this.state = {
+      hasError: false,
+      errorMessage: '',
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
   /*
-   * 在开发环境中，组件中的错误会打印到浏览器控制台：
-   *
-   * The above error occurred in the <C020403> component:
-   *     in C020403 (created by App)
-   *     in div (created by App)
-   *     in App
+   * error boundary 不会捕获 event handler 中的错误, 因为 event handler 中的错误不会影响渲染,
+   * 在 event handler 中可以直接使用 try/catch 来捕获并处理错误
    */
-  // throw new Error('some error');
-  return <div />;
+  private handleClick() {
+    try {
+      throw new Error('ERROR IN EVENT HANDLER');
+    } catch (e) {
+      this.setState({
+        hasError: true,
+        errorMessage: e.message,
+      });
+    }
+  }
+
+  public render() {
+    const { hasError, errorMessage } = this.state;
+
+    if (hasError) {
+      return <Button type="danger">{errorMessage}</Button>;
+    }
+
+    return <Button onClick={this.handleClick}>BUTTON</Button>;
+  }
+}
+
+function C020403() {
+  return <C020403A />;
 }
 
 export { C020403 };
