@@ -68,4 +68,5 @@ export default {
   'menu.doc.02.07': 'Higher-Order Components',
   'menu.doc.02.11': 'Portals',
   'menu.doc.02.16': 'Refs and the DOM',
+  'menu.doc.02.21': 'Uncontrolled Components',
 };
