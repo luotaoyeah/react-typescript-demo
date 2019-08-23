@@ -8,7 +8,7 @@ import { C020501 } from '@/components/doc/02-advanced-guides/05/02-05-01';
 import { C020502 } from '@/components/doc/02-advanced-guides/05/02-05-02';
 import { C020503 } from '@/components/doc/02-advanced-guides/05/02-05-03';
 
-export default function C0108() {
+export default function C0205() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Forwarding refs to DOM components" key="1">

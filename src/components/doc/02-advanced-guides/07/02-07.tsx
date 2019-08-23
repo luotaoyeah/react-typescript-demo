@@ -11,7 +11,7 @@ import { C020704 } from '@/components/doc/02-advanced-guides/07/04/02-07-04';
 import { C020705 } from '@/components/doc/02-advanced-guides/07/02-07-05';
 import { C020706 } from '@/components/doc/02-advanced-guides/07/06/02-07-06';
 
-export default function C0108() {
+export default function C0207() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Use HOCs For Cross-Cutting Concerns" key="1">

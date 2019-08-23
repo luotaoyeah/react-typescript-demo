@@ -8,7 +8,7 @@ import { C020401 } from '@/components/doc/02-advanced-guides/04/01/02-04-01';
 import { C020402 } from '@/components/doc/02-advanced-guides/04/02-04-02';
 import { C020403 } from '@/components/doc/02-advanced-guides/04/02-04-03';
 
-export default function C0108() {
+export default function C0204() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Introducing Error Boundaries" key="1">

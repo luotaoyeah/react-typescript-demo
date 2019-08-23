@@ -8,7 +8,7 @@ import { C020601 } from '@/components/doc/02-advanced-guides/06/02-06-01';
 import { C020602 } from '@/components/doc/02-advanced-guides/06/02-06-02';
 import { C020603 } from '@/components/doc/02-advanced-guides/06/02-06-03';
 
-export default function C0108() {
+export default function C0206() {
   return (
     <Collapse accordion expandIcon={({ isActive }) => <Icon type="caret-right" rotate={isActive ? 90 : 0} />}>
       <Collapse.Panel header="Fragments" key="1">
