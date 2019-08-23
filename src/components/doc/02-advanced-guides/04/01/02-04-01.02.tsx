@@ -18,6 +18,9 @@ class ErrorBoundary extends React.Component<{}, IState> {
     };
   }
 
+  /*
+   * getDerivedStateFromError() 方法, 返回一个新的 state 数据, 使得组件重新渲染, 从而可以渲染一个错误提示信息
+   */
   public static getDerivedStateFromError(): Partial<IState> {
     return {
       hasError: true,
