@@ -10,6 +10,7 @@ module.exports = {
     'import/prefer-default-export': 0,
     'linebreak-style': 0,
     'no-console': 0,
+    'object-curly-newline': 0,
     'operator-linebreak': 0,
     'import/no-unresolved': 0,
     'max-len': ['error', { code: 120 }],

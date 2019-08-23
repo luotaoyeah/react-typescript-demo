@@ -188,6 +188,11 @@ export default {
                       component: '../components/doc/02-advanced-guides/01/02-01',
                     },
                     {
+                      path: '04',
+                      name: '04',
+                      component: '../components/doc/02-advanced-guides/04/02-04',
+                    },
+                    {
                       path: '05',
                       name: '05',
                       component: '../components/doc/02-advanced-guides/05/02-05',

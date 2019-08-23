@@ -62,6 +62,7 @@ export default {
   'menu.doc.01.11': 'Composition vs Inheritance',
   'menu.doc.02': 'ADVANCED GUIDES',
   'menu.doc.02.01': 'Accessibility',
+  'menu.doc.02.04': 'Error Boundaries',
   'menu.doc.02.05': 'Forwarding Refs',
   'menu.doc.02.06': 'Fragments',
   'menu.doc.02.07': 'Higher-Order Components',

@@ -7,7 +7,7 @@ import { Button, Input } from 'antd';
 import { InputProps } from 'antd/es/input';
 
 /*
- * 如果想用 ref 访问原组件, 需要在 HOC 中使用 React.forwardRef() 方法进行转发
+ * 如果想用 ref 访问原组件的实例, 需要在 HOC 中使用 React.forwardRef() 方法进行转发
  */
 
 function withRef(C01: typeof Input) {
