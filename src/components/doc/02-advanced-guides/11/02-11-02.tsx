@@ -1,48 +1,60 @@
 /*
- * Portals
- *     Event Bubbling Through Portals
+ * https://reactjs.org/docs/portals.html#event-bubbling-through-portals
  */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Alert, Button, Divider } from 'antd';
+import { Button } from 'antd';
 
-class PortalComponent extends React.Component {
+/*
+ * 除了可以将组件实例挂载到任意的 DOM 节点之外,
+ * React.ReactPortal 和普通的 React.ReactElement 没有区别
+ */
+class C021102A extends React.Component<{}> {
   public render() {
-    // eslint-disable-next-line react/prop-types
     const { children } = this.props;
+
     return ReactDOM.createPortal(children, document.body);
   }
 }
 
-class C021102 extends React.Component<{}, { num: number }> {
-  public constructor(props: any) {
+interface IState {
+  num: number;
+}
+
+class C021102 extends React.Component<{}, IState> {
+  public constructor(props: {}) {
     super(props);
+
     this.state = {
       num: 0,
     };
+
     this.handleClick = this.handleClick.bind(this);
   }
 
   public handleClick() {
-    this.setState((prevState: Readonly<{ num: number }>) => ({ num: prevState.num + 1 }));
+    this.setState(prevState => ({ num: prevState.num + 1 }));
   }
 
-  /*
-   * 虽然在 DOM 树上，portal 组件被挂在了其他的节点上，
-   * 但是在 VDOM 树上，portal 组件依然位于上级组件的下面，
-   * 因此跟其他的组件一样，portal 组件上未被捕获的事件会冒泡到上级组件上去；
-   */
   public render() {
     const { num } = this.state;
+
     return (
       // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
       <div onClick={this.handleClick}>
-        <Alert message={num} />
-        <Divider />
-        <PortalComponent>
-          <Button>button</Button>
-        </PortalComponent>
+        <C021102A>
+          <Button
+            type="primary"
+            style={{
+              position: 'absolute',
+              right: '10px',
+              bottom: '10px',
+            }}
+          >
+            {num}
+          </Button>
+        </C021102A>
       </div>
     );
   }
