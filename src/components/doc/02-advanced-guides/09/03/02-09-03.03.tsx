@@ -10,7 +10,7 @@ interface IProps {
   baz?: boolean;
 }
 
-function C02090301A({ foo, bar, baz }: IProps) {
+function C02090303A({ foo, bar, baz }: IProps) {
   return (
     <>
       <Button type="primary">{String(foo)}</Button> <Button type="danger">{String(bar)}</Button>{' '}
@@ -24,7 +24,7 @@ function C02090301A({ foo, bar, baz }: IProps) {
  * 这个特性是为了跟 HTML 中类似的特性保持一致
  */
 function C02090303() {
-  return <C02090301A foo={false} bar={true} baz></C02090301A>;
+  return <C02090303A foo={false} bar={true} baz></C02090303A>;
 }
 
 export { C02090303 };
