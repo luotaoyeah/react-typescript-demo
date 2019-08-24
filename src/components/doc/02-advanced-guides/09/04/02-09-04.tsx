@@ -8,6 +8,7 @@ import { C02090401 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.01
 import { C02090402 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.02';
 import { C02090403 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.03';
 import { C02090404 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.04';
+import { C02090405 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.05';
 
 function C020904() {
   return (
@@ -26,6 +27,10 @@ function C020904() {
 
       <Collapse.Panel header="Functions as Children" key="4">
         <C02090404></C02090404>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Booleans, Null, and Undefined Are Ignored" key="5">
+        <C02090405></C02090405>
       </Collapse.Panel>
     </Collapse>
   );
