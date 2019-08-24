@@ -67,6 +67,7 @@ export default {
   'menu.doc.02.06': 'Fragments',
   'menu.doc.02.07': 'Higher-Order Components',
   'menu.doc.02.11': 'Portals',
+  'menu.doc.02.12': 'Profiler API',
   'menu.doc.02.13': 'React Without ES6',
   'menu.doc.02.14': 'React Without JSX',
   'menu.doc.02.16': 'Refs and the DOM',
