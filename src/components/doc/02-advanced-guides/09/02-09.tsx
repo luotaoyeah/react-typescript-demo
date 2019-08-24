@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C020901 } from '@/components/doc/02-advanced-guides/09/02-09-01';
 import { C020902 } from '@/components/doc/02-advanced-guides/09/02/02-09-02';
+import { C020903 } from '@/components/doc/02-advanced-guides/09/03/02-09-03';
 
 export default function C0209() {
   return (
@@ -16,6 +17,10 @@ export default function C0209() {
 
       <Collapse.Panel header="Specifying The React Element Type" key="2">
         <C020902></C020902>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Props in JSX" key="3">
+        <C020903></C020903>
       </Collapse.Panel>
     </Collapse>
   );
