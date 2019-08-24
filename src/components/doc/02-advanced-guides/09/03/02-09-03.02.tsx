@@ -9,7 +9,7 @@ interface IProps {
   bar?: string;
 }
 
-function C02090301A({ foo, bar }: IProps) {
+function C02090302A({ foo, bar }: IProps) {
   return (
     <>
       <Button type="primary">{foo}</Button> <Button type="danger">{bar}</Button>
@@ -27,7 +27,7 @@ function C02090301A({ foo, bar }: IProps) {
 
 function C02090302() {
   // eslint-disable-next-line react/jsx-curly-brace-presence
-  return <C02090301A foo="<div&gt;" bar={'<div&gt;'}></C02090301A>;
+  return <C02090302A foo="<div&gt;" bar={'<div&gt;'}></C02090302A>;
 }
 
 export { C02090302 };

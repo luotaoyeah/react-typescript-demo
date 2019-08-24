@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C02090301 } from '@/components/doc/02-advanced-guides/09/03/02-09-03.01';
 import { C02090302 } from '@/components/doc/02-advanced-guides/09/03/02-09-03.02';
+import { C02090303 } from '@/components/doc/02-advanced-guides/09/03/02-09-03.03';
 
 function C020903() {
   return (
@@ -16,6 +17,10 @@ function C020903() {
 
       <Collapse.Panel header="String Literals" key="2">
         <C02090302></C02090302>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Props Default to 'True'" key="3">
+        <C02090303></C02090303>
       </Collapse.Panel>
     </Collapse>
   );

@@ -7,6 +7,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/interface-name-prefix': [2, 'always'],
     '@typescript-eslint/no-inferrable-types': 0,
+    'react/jsx-boolean-value': 0,
     'import/prefer-default-export': 0,
     'linebreak-style': 0,
     'no-console': 0,
