@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import { C02090401 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.01';
 import { C02090402 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.02';
 import { C02090403 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.03';
+import { C02090404 } from '@/components/doc/02-advanced-guides/09/04/02-09-04.04';
 
 function C020904() {
   return (
@@ -21,6 +22,10 @@ function C020904() {
 
       <Collapse.Panel header="JavaScript Expressions as Children" key="3">
         <C02090403></C02090403>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Functions as Children" key="4">
+        <C02090404></C02090404>
       </Collapse.Panel>
     </Collapse>
   );
