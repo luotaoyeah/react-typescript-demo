@@ -7,6 +7,7 @@ import { Collapse, Icon } from 'antd';
 import { C02090201 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.01';
 import { C02090202 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.02';
 import { C02090203 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.03';
+import { C02090204 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.04';
 
 function C020902() {
   return (
@@ -21,6 +22,10 @@ function C020902() {
 
       <Collapse.Panel header="User-Defined Components Must Be Capitalized" key="3">
         <C02090203></C02090203>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Choosing the Type at Runtime" key="4">
+        <C02090204></C02090204>
       </Collapse.Panel>
     </Collapse>
   );
