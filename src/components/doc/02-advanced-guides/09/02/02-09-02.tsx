@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C02090201 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.01';
 import { C02090202 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.02';
+import { C02090203 } from '@/components/doc/02-advanced-guides/09/02/02-09-02.03';
 
 function C020902() {
   return (
@@ -16,6 +17,10 @@ function C020902() {
 
       <Collapse.Panel header="Using Dot Notation for JSX Type" key="2">
         <C02090202></C02090202>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="User-Defined Components Must Be Capitalized" key="3">
+        <C02090203></C02090203>
       </Collapse.Panel>
     </Collapse>
   );

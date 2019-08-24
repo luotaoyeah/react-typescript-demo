@@ -12,7 +12,7 @@ import { Button } from 'antd';
 
 const C02090202A = {
   A: ({ children }: JSX.ElementChildrenAttribute) => <Button type="primary">{children}</Button>,
-  B: {
+  b: {
     C: ({ children }: JSX.ElementChildrenAttribute) => <Button type="danger">{children}</Button>,
   },
 };
@@ -20,7 +20,7 @@ const C02090202A = {
 function C02090202() {
   return (
     <React.Fragment>
-      <C02090202A.A>A</C02090202A.A> <C02090202A.B.C>B</C02090202A.B.C>
+      <C02090202A.A>A</C02090202A.A> <C02090202A.b.C>B</C02090202A.b.C>
     </React.Fragment>
   );
 }
