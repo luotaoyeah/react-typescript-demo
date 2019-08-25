@@ -6,6 +6,7 @@ import React from 'react';
 import { Divider } from 'antd';
 import { C02030301 } from '@/components/doc/02-advanced-guides/03/03/02-03-03.01';
 import { C02030302 } from '@/components/doc/02-advanced-guides/03/03/02-03-03.02';
+import { C02030303 } from '@/components/doc/02-advanced-guides/03/03/02-03-03.03';
 
 function C020303() {
   return (
@@ -15,6 +16,10 @@ function C020303() {
       <Divider />
 
       <C02030302 />
+
+      <Divider />
+
+      <C02030303 />
     </>
   );
 }
