@@ -73,6 +73,7 @@ export default {
   'menu.doc.02.13': 'React Without ES6',
   'menu.doc.02.14': 'React Without JSX',
   'menu.doc.02.16': 'Refs and the DOM',
+  'menu.doc.02.17': 'Render Props',
   'menu.doc.02.18': 'Static Type Checking',
   'menu.doc.02.19': 'Strict Mode',
   'menu.doc.02.20': 'PropTypes',

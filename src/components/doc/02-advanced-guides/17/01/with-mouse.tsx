@@ -1,5 +1,5 @@
 import React from 'react';
-import { IMouseState, Mouse } from './Mouse';
+import { IMouseState, Mouse } from './mouse';
 
 /**
  * 使用 render props 实现 HOC
