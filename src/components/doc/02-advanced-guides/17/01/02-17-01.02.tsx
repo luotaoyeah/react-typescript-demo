@@ -37,8 +37,7 @@ class C02170102A extends React.Component<IProps, IState> {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function withSomething(C01: any) {
+function withSomething(C01: React.ComponentClass) {
   return function C02(props: ButtonProps) {
     return <C02170102A render={(state: IState) => <C01 {...props}>{state.text}</C01>}></C02170102A>;
   };
