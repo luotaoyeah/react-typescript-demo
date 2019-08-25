@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C021701 } from '@/components/doc/02-advanced-guides/17/01/02-17-01';
 import { C021702 } from '@/components/doc/02-advanced-guides/17/02/02-17-02';
+import { C021703 } from '@/components/doc/02-advanced-guides/17/03/02-17-03';
 
 export default function C0217() {
   return (
@@ -16,6 +17,10 @@ export default function C0217() {
 
       <Collapse.Panel header="Using Props Other Than render" key="2">
         <C021702></C021702>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Caveats" key="3">
+        <C021703></C021703>
       </Collapse.Panel>
     </Collapse>
   );
