@@ -66,6 +66,7 @@ export default {
   'menu.doc.02.05': 'Forwarding Refs',
   'menu.doc.02.06': 'Fragments',
   'menu.doc.02.07': 'Higher-Order Components',
+  'menu.doc.02.08': 'Integrating with Other Libraries',
   'menu.doc.02.09': 'JSX In Depth',
   'menu.doc.02.11': 'Portals',
   'menu.doc.02.12': 'Profiler API',

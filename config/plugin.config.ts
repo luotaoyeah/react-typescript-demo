@@ -4,6 +4,7 @@
 import ThemeColorReplacer from 'webpack-theme-color-replacer';
 import generate from '@ant-design/colors/lib/generate';
 import path from 'path';
+import webpack from 'webpack';
 
 function getModulePackageName(module: { context: string }) {
   if (!module.context) return null;
@@ -48,6 +49,13 @@ export default (config: any) => {
       },
     ]);
   }
+
+  config.plugin('webpack.provide-plugin').use(webpack.ProvidePlugin, [
+    {
+      $: 'jquery',
+      jQuery: 'jquery',
+    },
+  ]);
 
   // optimize chunks
   config.optimization
