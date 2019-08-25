@@ -1,7 +1,5 @@
 /*
- * Strict Mode
- *     Warning about legacy string ref API usage
- *     Detecting unexpected side effects
+ * https://reactjs.org/docs/strict-mode.html#warning-about-legacy-string-ref-api-usage
  */
 
 import React from 'react';
@@ -35,7 +33,7 @@ class A extends React.Component {
 }
 
 /**  */
-function C021802() {
+function C021902() {
   return (
     <React.Fragment>
       <React.StrictMode>
@@ -45,4 +43,4 @@ function C021802() {
   );
 }
 
-export { C021802 };
+export { C021902 };

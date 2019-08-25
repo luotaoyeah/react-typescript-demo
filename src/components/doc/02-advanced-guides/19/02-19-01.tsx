@@ -1,6 +1,5 @@
 /*
- * Strict Mode
- *     Identifying unsafe lifecycles
+ * https://reactjs.org/docs/strict-mode.html#identifying-unsafe-lifecycles
  */
 
 import React from 'react';
@@ -37,7 +36,7 @@ class B extends React.Component {
 }
 
 /**  */
-function C021801() {
+function C021901() {
   return (
     <React.Fragment>
       {/*
@@ -53,4 +52,4 @@ function C021801() {
   );
 }
 
-export { C021801 };
+export { C021901 };

@@ -74,6 +74,7 @@ export default {
   'menu.doc.02.14': 'React Without JSX',
   'menu.doc.02.16': 'Refs and the DOM',
   'menu.doc.02.18': 'Static Type Checking',
+  'menu.doc.02.19': 'Strict Mode',
   'menu.doc.02.20': 'PropTypes',
   'menu.doc.02.21': 'Uncontrolled Components',
   'menu.doc.02.22': 'Web Components',
