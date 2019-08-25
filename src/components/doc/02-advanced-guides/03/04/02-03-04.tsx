@@ -6,6 +6,7 @@ import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C02030401 } from '@/components/doc/02-advanced-guides/03/04/02-03-04.01';
 import { C02030402 } from '@/components/doc/02-advanced-guides/03/04/02-03-04.02';
+import { C02030403 } from '@/components/doc/02-advanced-guides/03/04/02-03-04.03';
 
 function C020304() {
   return (
@@ -16,6 +17,10 @@ function C020304() {
 
       <Collapse.Panel header="Updating Context from a Nested Component" key="2">
         <C02030402></C02030402>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="Consuming Multiple Contexts" key="3">
+        <C02030403></C02030403>
       </Collapse.Panel>
     </Collapse>
   );
