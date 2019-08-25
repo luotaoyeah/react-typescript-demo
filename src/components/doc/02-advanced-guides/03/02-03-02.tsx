@@ -7,7 +7,7 @@ import { Input } from 'antd';
 import { Divider } from 'antd/es';
 
 /*
- * 适合使用 context 的场景是: 多个不同层次的组件需要共用数据,
+ * 适合使用 context 的场景是: 多个位于不同层次的组件需要共用数据,
  * 如果仅仅是为了避免层层传递数据, 可能 component composition 是更好的方式
  */
 
