@@ -11,7 +11,7 @@ import { Divider } from 'antd/es';
  */
 const AgeContext: React.Context<number> = React.createContext<number>(18);
 
-class C020303A extends React.Component<{}, { age: number }> {
+class C02030301A extends React.Component<{}, { age: number }> {
   public constructor(props: {}) {
     super(props);
 
@@ -46,7 +46,7 @@ class C020303A extends React.Component<{}, { age: number }> {
               </p>
 
               <AgeContext.Provider value={age}>
-                <C020303B />
+                <C02030301B />
               </AgeContext.Provider>
             </>
           )}
@@ -62,7 +62,7 @@ class C020303A extends React.Component<{}, { age: number }> {
   }
 }
 
-function C020303B() {
+function C02030301B() {
   /*
    * Provider 可以嵌套, 内层的值会覆盖上层的值
    */
@@ -77,13 +77,13 @@ function C020303B() {
       </AgeContext.Consumer>
 
       <AgeContext.Provider value={20}>
-        <C020303C />
+        <C02030301C />
       </AgeContext.Provider>
     </>
   );
 }
 
-function C020303C() {
+function C02030301C() {
   /*
    * 上面有两个 AgeContext.Provider, 选择最近的进行匹配, 所以拿到的值为 20
    */
@@ -99,11 +99,7 @@ function C020303C() {
 }
 
 function C02030301() {
-  return (
-    <div>
-      <C020303A />
-    </div>
-  );
+  return <C02030301A />;
 }
 
 export { C02030301 };
