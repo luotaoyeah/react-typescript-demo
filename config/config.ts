@@ -228,6 +228,11 @@ export default {
                       component: '../components/doc/02-advanced-guides/09/02-09',
                     },
                     {
+                      path: '10',
+                      name: '10',
+                      component: '../components/doc/02-advanced-guides/10/02-10',
+                    },
+                    {
                       path: '11',
                       name: '11',
                       component: '../components/doc/02-advanced-guides/11/02-11',
