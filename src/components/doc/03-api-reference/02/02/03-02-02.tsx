@@ -10,6 +10,7 @@ import { C03020203 } from '@/components/doc/03-api-reference/02/02/03-02-02.03';
 import { C03020204 } from '@/components/doc/03-api-reference/02/02/03-02-02.04';
 import { C03020205 } from '@/components/doc/03-api-reference/02/02/03-02-02.05';
 import { C03020206 } from '@/components/doc/03-api-reference/02/02/03-02-02.06';
+import { C03020207 } from '@/components/doc/03-api-reference/02/02/03-02-02.07';
 
 function C030202() {
   return (
@@ -35,6 +36,10 @@ function C030202() {
       <Divider />
 
       <C03020206></C03020206>
+
+      <Divider />
+
+      <C03020207></C03020207>
     </>
   );
 }
