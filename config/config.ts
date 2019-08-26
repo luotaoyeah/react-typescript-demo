@@ -289,6 +289,17 @@ export default {
                     },
                   ],
                 },
+                {
+                  path: '03',
+                  name: '03',
+                  routes: [
+                    {
+                      path: '02',
+                      name: '02',
+                      component: '../components/doc/03-api-reference/02/03-02',
+                    },
+                  ],
+                },
               ],
             },
             {

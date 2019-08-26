@@ -82,4 +82,6 @@ export default {
   'menu.doc.02.20': 'PropTypes',
   'menu.doc.02.21': 'Uncontrolled Components',
   'menu.doc.02.22': 'Web Components',
+  'menu.doc.03': 'API REFERENCE',
+  'menu.doc.03.02': 'React.Component',
 };
