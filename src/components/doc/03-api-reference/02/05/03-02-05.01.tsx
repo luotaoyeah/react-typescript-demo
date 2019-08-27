@@ -19,9 +19,10 @@ class C03020501A extends React.Component<{}, IState> {
   }
 
   /*
-   * 组件完成更新之后会调用 componentDidUpdate() 方法,
-   * 此时, DOM 已经完成更新, 浏览器界面上已经发生变更
+   * 组件完成更新之后会调用 componentDidUpdate() 方法, 此时, DOM 已经完成更新, 浏览器界面上已经发生变更
    */
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars,@typescript-eslint/no-explicit-any
   public componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<IState>, snapshot?: any): void {
     console.log(`${C03020501A.name}.${this.componentDidUpdate.name}()`);
   }

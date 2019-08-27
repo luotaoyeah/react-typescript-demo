@@ -25,7 +25,7 @@ class C030208A extends React.Component<IProps, IState> {
   }
 
   /*
-   * getDerivedStateFromProps() 静态方法, 会在每次 render() 方法执行之前执行, 包括首次加载,
+   * getDerivedStateFromProps() 静态方法, 会在每次 render() 方法执行之前调用, 包括首次加载,
    * 如果返回的对象不为 null, 则会使用返回的对象去更新 state 数据,
    * 由于 render() 方法执行的原因有两个:
    *   1. props 变更

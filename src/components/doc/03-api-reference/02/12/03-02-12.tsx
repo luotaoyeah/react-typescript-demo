@@ -31,11 +31,13 @@ class C030212A extends React.Component<{}, IState> {
     /*
      * setState() 方法, 用来更新 state 数据, 从而触发 render() 方法的调用, 从而更新组件界面,
      * 调用 setState() 方法之后, 并不一定会立即更新 state 数据, react 可能会将多次对 setState() 的调用合并为一次更新,
-     * 如下, 连续调用三次 setState() 方法, 实际上只会更新 state 一次, 相当于只调用了一次: this.setState({ count: 3 })
+     * 如下, 连续调用三次 setState() 方法, 实际上只会更新 state 一次, 相当于只调用了一次: this.setState({ count: this.state.count + 1 })
      */
-    this.setState({ count: 1 });
-    this.setState({ count: 2 });
-    this.setState({ count: 3 });
+
+    const { count } = this.state;
+    this.setState({ count: count + 1 });
+    this.setState({ count: count + 1 });
+    this.setState({ count: count + 1 });
   }
 
   public handleClick02() {

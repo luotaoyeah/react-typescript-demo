@@ -9,9 +9,9 @@ class C030206A extends React.Component {
   /*
    * componentWillUnmount() 在组件即将从 DOM 卸载(unmount)之前执行,
    * 在该方法中, 主要进行资源清理, 比如:
-   *     1. 清除计时器
+   *     1. 取消计时器任务
    *     2. 取消订阅
-   *     3. 中止请求
+   *     3. 中止接口请求
    */
   public componentWillUnmount(): void {
     console.log(`${C030206A.name}.${this.componentWillUnmount.name}()`);

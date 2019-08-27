@@ -11,19 +11,19 @@ import { Button } from 'antd';
  */
 
 /*
- * 当 props 发生变更时, render() 方法就会被调用, 无论该 props 是否被用于渲染
+ * 当 props 发生变更时, render() 方法就会被调用, 无论该 props 是否会被用于渲染界面
  */
 
 // eslint-disable-next-line react/prefer-stateless-function
 class C03020201A extends React.Component<{ n: number }> {
   public render() {
-    console.log(`%c${C03020201A.name}.render()`, 'color:red');
+    console.log(`%c${C03020201A.name}.${this.render.name}()`, 'color:red');
     return <Button>FOO</Button>;
   }
 }
 
 /*
- * 当 state 发生变更时, render() 方法就会被调用, 无论该 state 是否被用于渲染
+ * 当 state 发生变更时, render() 方法就会被调用, 无论该 state 是否会被用于渲染界面
  */
 class C03020201B extends React.Component<{}, { n: number }> {
   public timer: number | null = null;

@@ -50,7 +50,7 @@ class C030211 extends React.Component<{}, { hasError: boolean }> {
 
   /*
    * componentDidCatch() 方法, 在下级组件发生错误时调用,
-   * 主要用来记录错误日志, 不要在该方法中修改 state 数据,
+   * 主要用来记录错误日志, **不要**在该方法中修改 state 数据,
    * 参数 errorInfo 中记录了发生错误的组件的堆栈信息
    */
   public componentDidCatch(error: Error, errorInfo: React.ErrorInfo): void {

@@ -31,8 +31,8 @@ class C030209A extends React.Component<{}, IState> {
    *   3. 更新 DOM
    *   4. componentDidUpdate()
    *
-   * 因此, 在 getSnapshotBeforeUpdate() 方法中可以获取到更新之前的 DOM 信息, 并将方法的返回值作为 componentDidUpdate() 的第三个参数,
-   * 这样就可以实现: 在更新 DOM 之后可以恢复之前的某些 DOM 状态, 如滚动条的位置
+   * 因此, 在 getSnapshotBeforeUpdate() 方法中可以获取更新之前的 DOM 信息, 并将该方法的返回值作为 componentDidUpdate() 方法的第三个参数,
+   * 这样就可以实现: 在更新 DOM 之后可以恢复之前的某些 DOM 状态, 比如滚动条的位置
    */
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import { C030201 } from '@/components/doc/03-api-reference/02/03-02-01';
+import { C030201 } from '@/components/doc/03-api-reference/02/01/03-02-01';
 import { C030202 } from '@/components/doc/03-api-reference/02/02/03-02-02';
 import { C030203 } from '@/components/doc/03-api-reference/02/03/03-02-03';
 import { C030204 } from '@/components/doc/03-api-reference/02/04/03-02-04';
@@ -18,6 +18,7 @@ import { C030211 } from '@/components/doc/03-api-reference/02/11/03-02-11';
 import { C030212 } from '@/components/doc/03-api-reference/02/12/03-02-12';
 import { C030213 } from '@/components/doc/03-api-reference/02/13/03-02-13';
 import { C030214 } from '@/components/doc/03-api-reference/02/14/03-02-14';
+import { C030215 } from '@/components/doc/03-api-reference/02/15/03-02-15';
 
 export default function C0302() {
   return (
@@ -76,6 +77,10 @@ export default function C0302() {
 
       <Collapse.Panel header="defaultProps" key="14">
         <C030214></C030214>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="displayName" key="15">
+        <C030215></C030215>
       </Collapse.Panel>
     </Collapse>
   );
