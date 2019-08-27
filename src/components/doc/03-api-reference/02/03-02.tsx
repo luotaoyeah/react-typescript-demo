@@ -12,6 +12,7 @@ import { C030205 } from '@/components/doc/03-api-reference/02/05/03-02-05';
 import { C030206 } from '@/components/doc/03-api-reference/02/06/03-02-06';
 import { C030207 } from '@/components/doc/03-api-reference/02/07/03-02-07';
 import { C030208 } from '@/components/doc/03-api-reference/02/08/03-02-08';
+import { C030209 } from '@/components/doc/03-api-reference/02/09/03-02-09';
 
 export default function C0302() {
   return (
@@ -46,6 +47,10 @@ export default function C0302() {
 
       <Collapse.Panel header="getDerivedStateFromProps()" key="8">
         <C030208></C030208>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="getSnapshotBeforeUpdate()" key="9">
+        <C030209></C030209>
       </Collapse.Panel>
     </Collapse>
   );
