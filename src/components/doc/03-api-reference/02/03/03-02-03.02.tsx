@@ -18,7 +18,7 @@ class C03020302A extends React.Component<IProps, IState> {
     super(props);
 
     /*
-     * 在初始化 state 数据的时候, 可以使用 props 作为初始值
+     * 在初始化 state 数据的时候, 可以使用 props 属性的值作为初始值
      */
     this.state = {
       x: props.initialX || 0,

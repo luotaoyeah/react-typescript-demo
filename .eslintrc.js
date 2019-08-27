@@ -9,11 +9,12 @@ module.exports = {
     '@typescript-eslint/no-inferrable-types': 0,
     'react/jsx-boolean-value': 0,
     'import/prefer-default-export': 0,
+    'import/no-unresolved': 0,
+    'jsx-a11y/alt-text': 0,
     'linebreak-style': 0,
     'no-console': 0,
     'object-curly-newline': 0,
     'operator-linebreak': 0,
-    'import/no-unresolved': 0,
     'max-len': ['error', { code: 120 }],
   },
   globals: {

@@ -1,7 +1,5 @@
 /*
- * React.Component
- *     Reference
- *         componentDidMount()
+ * https://reactjs.org/docs/react-component.html#componentdidmount
  */
 
 import React from 'react';
