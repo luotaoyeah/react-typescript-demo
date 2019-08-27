@@ -16,6 +16,7 @@ import { C030209 } from '@/components/doc/03-api-reference/02/09/03-02-09';
 import { C030210 } from '@/components/doc/03-api-reference/02/10/03-02-10';
 import { C030211 } from '@/components/doc/03-api-reference/02/11/03-02-11';
 import { C030212 } from '@/components/doc/03-api-reference/02/12/03-02-12';
+import { C030213 } from '@/components/doc/03-api-reference/02/13/03-02-13';
 
 export default function C0302() {
   return (
@@ -66,6 +67,10 @@ export default function C0302() {
 
       <Collapse.Panel header="setState()" key="12">
         <C030212></C030212>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="forceUpdate()" key="13">
+        <C030213></C030213>
       </Collapse.Panel>
     </Collapse>
   );

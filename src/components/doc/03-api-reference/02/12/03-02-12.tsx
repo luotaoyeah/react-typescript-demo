@@ -41,7 +41,7 @@ class C030212A extends React.Component<{}, IState> {
   public handleClick02() {
     /*
      * 由于 setState() 调用之后不会立即更新 state 数据, 因此如果本次的调用需要保证上次的调用已经完成了对 state 数据的更新,
-     * 需要使用函数参数的形式来调用 setState() 方法, 保证本次拿到的 prevState 一定是前面所有的调用已经更新了 state 之后的数据,
+     * 则需要使用函数参数的形式来调用 setState() 方法, 保证本次拿到的 prevState 一定是前面所有的调用已经更新了 state 之后的数据,
      * 如下, 相当于只调用了一次: this.setState(prevState => ({ count: prevState.count + 3 }));
      */
     this.setState(prevState => ({ count: prevState.count + 1 }));
