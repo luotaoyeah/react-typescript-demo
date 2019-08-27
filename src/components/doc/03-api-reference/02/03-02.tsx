@@ -9,6 +9,7 @@ import { C030202 } from '@/components/doc/03-api-reference/02/02/03-02-02';
 import { C030203 } from '@/components/doc/03-api-reference/02/03/03-02-03';
 import { C030204 } from '@/components/doc/03-api-reference/02/04/03-02-04';
 import { C030205 } from '@/components/doc/03-api-reference/02/05/03-02-05';
+import { C030206 } from '@/components/doc/03-api-reference/02/03-02-06/03-02-06';
 
 export default function C0302() {
   return (
@@ -31,6 +32,10 @@ export default function C0302() {
 
       <Collapse.Panel header="componentDidUpdate()" key="5">
         <C030205></C030205>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="componentWillUnmount()" key="6">
+        <C030206></C030206>
       </Collapse.Panel>
     </Collapse>
   );
