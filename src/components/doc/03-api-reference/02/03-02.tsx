@@ -14,6 +14,7 @@ import { C030207 } from '@/components/doc/03-api-reference/02/07/03-02-07';
 import { C030208 } from '@/components/doc/03-api-reference/02/08/03-02-08';
 import { C030209 } from '@/components/doc/03-api-reference/02/09/03-02-09';
 import { C030210 } from '@/components/doc/03-api-reference/02/10/03-02-10';
+import { C030211 } from '@/components/doc/03-api-reference/02/11/03-02-11';
 
 export default function C0302() {
   return (
@@ -56,6 +57,10 @@ export default function C0302() {
 
       <Collapse.Panel header="getDerivedStateFromError()" key="10">
         <C030210></C030210>
+      </Collapse.Panel>
+
+      <Collapse.Panel header="componentDidCatch()" key="11">
+        <C030211></C030211>
       </Collapse.Panel>
     </Collapse>
   );
