@@ -38,17 +38,25 @@ class B extends React.PureComponent<{ name: string }> {
 
 /**  */
 class C030102 extends React.Component<{}, { name: string; time: Date }> {
+  public timer: number | null = null;
+
   public state: { name: string; time: Date } = {
     name: 'foo',
     time: new Date(),
   };
 
   public componentDidMount(): void {
-    setInterval(() => {
+    this.timer = window.setInterval(() => {
       this.setState({
         time: new Date(),
       });
     }, 1000);
+  }
+
+  public componentWillUnmount(): void {
+    if (this.timer) {
+      window.clearInterval(this.timer);
+    }
   }
 
   public render() {

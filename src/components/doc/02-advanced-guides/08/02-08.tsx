@@ -4,8 +4,8 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import { C020801 } from '@/components/doc/02-advanced-guides/08/02-08-01';
-import { C020802 } from '@/components/doc/02-advanced-guides/08/02-08-02/02-08-02';
+import { C020801 } from '@/components/doc/02-advanced-guides/08/01/02-08-01';
+import { C020802 } from '@/components/doc/02-advanced-guides/08/02/02-08-02';
 
 export default function C0202() {
   return (

@@ -4,11 +4,11 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import { C020701 } from '@/components/doc/02-advanced-guides/07/02-07-01';
-import { C020702 } from '@/components/doc/02-advanced-guides/07/02-07-02';
-import { C020703 } from '@/components/doc/02-advanced-guides/07/02-07-03';
+import { C020701 } from '@/components/doc/02-advanced-guides/07/01/02-07-01';
+import { C020702 } from '@/components/doc/02-advanced-guides/07/02/02-07-02';
+import { C020703 } from '@/components/doc/02-advanced-guides/07/03/02-07-03';
 import { C020704 } from '@/components/doc/02-advanced-guides/07/04/02-07-04';
-import { C020705 } from '@/components/doc/02-advanced-guides/07/02-07-05';
+import { C020705 } from '@/components/doc/02-advanced-guides/07/05/02-07-05';
 import { C020706 } from '@/components/doc/02-advanced-guides/07/06/02-07-06';
 
 export default function C0207() {

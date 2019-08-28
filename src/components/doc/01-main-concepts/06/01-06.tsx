@@ -5,7 +5,7 @@
 import React from 'react';
 import { Collapse, Icon } from 'antd';
 import { C010601 } from '@/components/doc/01-main-concepts/06/01/01-06-01';
-import { C010602 } from '@/components/doc/01-main-concepts/06/01-06-02';
+import { C010602 } from '@/components/doc/01-main-concepts/06/02/01-06-02';
 
 export default function C0106() {
   return (

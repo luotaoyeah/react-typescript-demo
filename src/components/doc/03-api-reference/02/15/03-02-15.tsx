@@ -16,7 +16,7 @@ class C030215A extends React.Component {
 
   public render() {
     /*
-     * 在 HOC 中通常需要指定 displayName 属性
+     * 在 HOC 中通常需要指定 displayName 属性, 因为返回的可能是一个匿名的 class component / function component
      */
     const C030215B = (C01 =>
       // eslint-disable-next-line react/prefer-stateless-function,implicit-arrow-linebreak

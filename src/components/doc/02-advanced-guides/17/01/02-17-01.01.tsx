@@ -7,7 +7,7 @@ import { Button } from 'antd';
 
 /*
  * render props 实际上是一种特殊的 props 属性, 通常被命名为 'render',
- * 这个属性的值是一个 function, 该 function 接收的参数是组件的 state, 返回的是一个 react element,
+ * 这个属性的值是一个 function, 该 function 接收的参数是该组件的 state, 返回的是一个 react element,
  * 组件调用这个由外界传入的 function, 并传入组件的 state, 最后使用它返回的 react element 来渲染组件
  */
 

@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import { C020101 } from '@/components/doc/02-advanced-guides/01/02-01-01';
+import { C020101 } from '@/components/doc/02-advanced-guides/01/01/02-01-01';
 
 export default function C0201() {
   return (

@@ -6,7 +6,7 @@ import React from 'react';
 import { Button } from 'antd';
 
 /*
- * 作为 render props 的属性的名称不一定要叫 'render', 可以是任意合法的属性名称
+ * 作为 render props 的属性的名称不一定要叫 'render', 也可以是其他任意合法的名称
  */
 
 interface IProps {

@@ -4,10 +4,10 @@
 
 import React from 'react';
 import { Collapse, Icon } from 'antd';
-import { C021601 } from '@/components/doc/02-advanced-guides/16/02-16-01';
-import { C021602 } from '@/components/doc/02-advanced-guides/16/02-16-02';
-import { C021603 } from '@/components/doc/02-advanced-guides/16/02-16-03';
-import { C021604 } from '@/components/doc/02-advanced-guides/16/02-16-04';
+import { C021601 } from '@/components/doc/02-advanced-guides/16/01/02-16-01';
+import { C021602 } from '@/components/doc/02-advanced-guides/16/02/02-16-02';
+import { C021603 } from '@/components/doc/02-advanced-guides/16/03/02-16-03';
+import { C021604 } from '@/components/doc/02-advanced-guides/16/04/02-16-04';
 import { C021605 } from '@/components/doc/02-advanced-guides/16/05/02-16-05';
 
 export default function C0108() {

@@ -11,11 +11,11 @@ interface IState {
 class C010504A extends React.Component<{}, IState> {
   /*
    * props 表示从组件外部传入的属性参数,
-   * state 表示在组件内部定义的状态属性, 通常用于界面显示
+   * state 表示在组件内部定义的状态属性,
    *
-   * 除此之外, 可以在 class component 中定义其他的字段, 用于组件的业务逻辑
+   * 除此之外, 还可以在 class component 中定义其他的字段, 用于组件的业务逻辑
    */
-  public timerID: number | null = null;
+  public timer: number | null = null;
 
   public constructor(props: {}) {
     super(props);
@@ -27,7 +27,7 @@ class C010504A extends React.Component<{}, IState> {
    * 组件在挂载到 DOM 节点之后, 会触发 componentDidMount() 函数
    */
   public componentDidMount(): void {
-    this.timerID = window.setInterval(() => {
+    this.timer = window.setInterval(() => {
       /*
        * 通过 setState() 方法, 更新 state 中的某些属性, 使得组件调用 render() 方法重新渲染界面
        */
@@ -41,13 +41,14 @@ class C010504A extends React.Component<{}, IState> {
    * 组件在从 DOM 节点卸载之前, 会触发 componentWillUnmount() 函数
    */
   public componentWillUnmount(): void {
-    if (this.timerID) {
-      window.clearInterval(this.timerID);
+    if (this.timer) {
+      window.clearInterval(this.timer);
     }
   }
 
   public render() {
     const { date } = this.state;
+
     return <div>{date.toISOString()}</div>;
   }
 }

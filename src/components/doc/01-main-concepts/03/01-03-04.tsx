@@ -15,8 +15,10 @@ import ReactDOM from 'react-dom';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class C010304 extends React.Component {
+  public timer: number | null = null;
+
   public componentDidMount(): void {
-    setInterval(() => {
+    this.timer = window.setInterval(() => {
       const el = (
         <span>
           <span>[</span>
@@ -27,6 +29,12 @@ class C010304 extends React.Component {
 
       ReactDOM.render(el, document.querySelector('#p010304'));
     }, 1000);
+  }
+
+  public componentWillUnmount(): void {
+    if (this.timer) {
+      window.clearInterval(this.timer);
+    }
   }
 
   public render() {
