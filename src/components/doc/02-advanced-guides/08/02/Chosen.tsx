@@ -4,7 +4,13 @@
 
 import React from 'react';
 import 'chosen-js';
-import 'chosen-js/chosen.css';
+
+/*
+ * FIXME 在 docker 中部署时, 会出现下面的错误, 因此暂时不引入样式
+ *   ModuleNotFoundError: Module not found: Error: Can't resolve 'chosen-sprite.png' in '/app/node_modules/chosen-js'
+ */
+
+// import 'chosen-js/chosen.css';
 
 interface IProps {
   onChange?: (value: string) => void;
