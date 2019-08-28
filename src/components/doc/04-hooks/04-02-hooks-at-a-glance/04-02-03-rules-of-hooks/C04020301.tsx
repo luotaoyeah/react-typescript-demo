@@ -19,6 +19,7 @@ function F01(): React.ReactElement<{}> {
    * 如下，在循环中使用 useEffect() 是错误的用法
    */
   [1, 2, 3].forEach((i: number) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
       console.log(i, count);
     });

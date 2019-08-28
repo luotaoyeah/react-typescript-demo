@@ -1,7 +1,7 @@
 const { strictEslint } = require('@umijs/fabric');
 
 module.exports = {
-  ...strictEslint,
+  extends: [require.resolve('@umijs/fabric/dist/eslint')],
   rules: {
     '@typescript-eslint/array-type': [2, 'generic'],
     '@typescript-eslint/explicit-function-return-type': 0,

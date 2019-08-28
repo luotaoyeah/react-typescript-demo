@@ -1,7 +1,7 @@
 import React from 'react';
+import { Result } from 'antd';
 import check, { IAuthorityType } from './check-permissions';
 
-// eslint-disable-next-line import/no-cycle
 import AuthorizedRoute from './authorized-route';
 import Secured from './secured';
 
@@ -18,14 +18,11 @@ type IAuthorizedType = React.FunctionComponent<AuthorizedProps> & {
 };
 
 const Authorized: React.FunctionComponent<AuthorizedProps> = ({
-  // eslint-disable-next-line react/prop-types
   children,
-  // eslint-disable-next-line react/prop-types
   authority,
-  // eslint-disable-next-line react/prop-types
-  noMatch = null,
+  noMatch = <Result status="403" title="403" subTitle="Sorry, you are not authorized to access this page." />,
 }) => {
-  const childrenRender = typeof children === 'undefined' ? null : children;
+  const childrenRender: React.ReactNode = typeof children === 'undefined' ? null : children;
   const dom = check(authority, childrenRender, noMatch);
   return <>{dom}</>;
 };

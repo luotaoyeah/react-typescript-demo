@@ -1,4 +1,4 @@
-import { AnyAction, Dispatch } from 'redux';
+import { AnyAction } from 'redux';
 import { MenuDataItem } from '@ant-design/pro-layout';
 import { RouterTypes } from 'umi';
 // eslint-disable-next-line import/no-cycle
@@ -42,5 +42,5 @@ export interface Route extends MenuDataItem {
  */
 // eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface ConnectProps<T = {}> extends Partial<RouterTypes<Route, T>> {
-  dispatch?: Dispatch<AnyAction>;
+  dispatch?<K = any>(action: AnyAction): K;
 }

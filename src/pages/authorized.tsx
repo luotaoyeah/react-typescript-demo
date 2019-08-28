@@ -16,6 +16,9 @@ const getRouteAuthority = (path: string, routeData: Route[]) => {
   // eslint-disable-next-line @typescript-eslint/array-type
   let authorities: string[] | string | undefined;
   routeData.forEach(route => {
+    if (route.authority) {
+      authorities = route.authority;
+    }
     // match prefix
     if (pathToRegexp(`${route.path}(.*)`).test(path)) {
       // exact match

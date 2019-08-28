@@ -13,7 +13,6 @@ export interface GlobalHeaderRightProps extends ConnectProps {
 }
 
 const GlobalHeaderRight: React.SFC<GlobalHeaderRightProps> = props => {
-  // eslint-disable-next-line react/prop-types
   const { theme, layout } = props;
   let className = styles.right;
 

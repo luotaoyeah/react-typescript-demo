@@ -24,7 +24,7 @@ class Chosen extends React.Component<IProps, {}> {
     }
   }
 
-  public componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<{}>, snapshot?: any): void {
+  public componentDidUpdate(prevProps: Readonly<IProps>): void {
     const vm = this;
     if ((prevProps as any).children !== vm.props.children) {
       vm.$el.trigger('chosen:updated');

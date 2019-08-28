@@ -9,22 +9,38 @@ import React, { useEffect } from 'react';
 import Link from 'umi/link';
 import { Dispatch } from 'redux';
 import { connect } from 'dva';
+import { Button, Result } from 'antd';
 import { formatMessage } from 'umi-plugin-react/locale';
 import Authorized from '@/utils/authorized';
 import RightContent from '@/components/global-header/right-content';
 import { ConnectState } from '@/models/connect';
-import { isAntDesignPro } from '@/utils/utils';
+import { getAuthorityFromRouter, isAntDesignPro } from '@/utils/utils';
 import logo from '../assets/logo.svg';
+
+const noMatch = (
+  <Result
+    status="403"
+    title="403"
+    subTitle="Sorry, you are not authorized to access this page."
+    extra={
+      <Button type="primary">
+        <Link to="/user/login">Go Login</Link>
+      </Button>
+    }
+  />
+);
 
 // eslint-disable-next-line @typescript-eslint/interface-name-prefix
 export interface BasicLayoutProps extends ProLayoutProps {
   breadcrumbNameMap: {
     [path: string]: MenuDataItem;
   };
+  route: ProLayoutProps['route'] & {
+    authority: Array<string>;
+  };
   settings: Settings;
   dispatch: Dispatch;
 }
-
 export type BasicLayoutContext = { [K in 'location']: BasicLayoutProps[K] } & {
   breadcrumbNameMap: {
     [path: string]: MenuDataItem;
@@ -34,9 +50,7 @@ export type BasicLayoutContext = { [K in 'location']: BasicLayoutProps[K] } & {
 /**
  * use Authorized check all menu item
  */
-// eslint-disable-next-line @typescript-eslint/array-type
-const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
-  // eslint-disable-next-line implicit-arrow-linebreak
+const menuDataRender = (menuList: Array<MenuDataItem>): Array<MenuDataItem> =>
   menuList.map(item => {
     const localItem = {
       ...item,
@@ -45,13 +59,15 @@ const menuDataRender = (menuList: MenuDataItem[]): MenuDataItem[] =>
     return Authorized.check(item.authority, localItem, null) as MenuDataItem;
   });
 
-const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
+const defaultFooterDom = <div></div>;
+
+const footerRender: BasicLayoutProps['footerRender'] = () => {
   if (!isAntDesignPro()) {
-    return null;
+    return defaultFooterDom;
   }
   return (
     <>
-      {defaultDom}
+      {defaultFooterDom}
       <div
         style={{
           padding: '0px 24px 24px',
@@ -67,8 +83,7 @@ const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
 };
 
 const BasicLayout: React.FC<BasicLayoutProps> = props => {
-  // eslint-disable-next-line react/prop-types
-  const { dispatch, children, settings } = props;
+  const { dispatch, children, settings, location = { pathname: '/' } } = props;
   /**
    * constructor
    */
@@ -83,7 +98,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       });
     }
   }, []);
-
   /**
    * init variables
    */
@@ -94,6 +108,10 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
         payload,
       });
     }
+  };
+  // get children authority
+  const authorized = getAuthorityFromRouter(props.route.routes, location.pathname || '/') || {
+    authority: undefined,
   };
 
   return (
@@ -127,7 +145,10 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       {...props}
       {...settings}
     >
-      {children}
+      {/* eslint-disable-next-line @typescript-eslint/no-non-null-assertion */}
+      <Authorized authority={authorized!.authority} noMatch={noMatch}>
+        {children}
+      </Authorized>
     </ProLayout>
   );
 };

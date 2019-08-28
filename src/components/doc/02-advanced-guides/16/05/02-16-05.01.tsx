@@ -3,7 +3,7 @@
  */
 
 import React from 'react';
-import { Button, Divider, Input } from 'antd';
+import { Button, Input } from 'antd';
 
 /*
  * 除了可以直接将一个 React.RefObject 绑定到 ref 属性之外,

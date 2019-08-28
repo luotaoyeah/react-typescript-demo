@@ -8,10 +8,12 @@ import { Button, Divider } from 'antd';
 import { Route } from 'react-router';
 import { Link } from 'react-router-dom';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function A(props: any) {
   return <Button>A</Button>;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function B(props: any) {
   return <Button>B</Button>;
 }

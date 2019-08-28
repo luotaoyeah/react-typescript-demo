@@ -1,8 +1,7 @@
-const RouterConfig = require('../../config/config').default.routes;
-// eslint-disable-next-line @typescript-eslint/no-var-requires,import/order
 const { uniq } = require('lodash');
+const RouterConfig = require('../../config/config').default.routes;
 
-const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
+// const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
 
 function formatter(routes, parentPath = '') {
   const fixedParentPath = parentPath.replace(/\/{1,}/g, '/');
@@ -19,16 +18,19 @@ function formatter(routes, parentPath = '') {
 }
 
 describe('learning-react e2e', () => {
-  const testPage = path => async () => {
-    await page.goto(`${BASE_URL}${path}`);
-    await page.waitForSelector('footer', {
-      timeout: 2000,
-    });
-    const haveFooter = await page.evaluate(() => document.getElementsByTagName('footer').length > 0);
-    expect(haveFooter).toBeTruthy();
-  };
+  /*
+    const testPage = path => async () => {
+      await page.goto(`${BASE_URL}${path}`);
+      await page.waitForSelector('footer', {
+        timeout: 2000,
+      });
+      const haveFooter = await page.evaluate(() => document.getElementsByTagName('footer').length > 0);
+      expect(haveFooter).toBeTruthy();
+    };
+  */
 
   const routers = formatter(RouterConfig);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   routers.forEach(route => {
     // FIXME 暂时禁用 e2e 测试
     // it(`test pages ${route}`, testPage(route));

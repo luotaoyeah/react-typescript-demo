@@ -34,14 +34,7 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
     window.addEventListener('resize', this.handleWindowResize);
   }
 
-  public componentDidUpdate(
-    prevProps: Readonly<{}>,
-    prevState: Readonly<{
-      count: number;
-      size: { width: number; height: number };
-    }>,
-    snapshot?: any,
-  ): void {
+  public componentDidUpdate(): void {
     const { count } = this.state;
     document.title = String(count);
   }

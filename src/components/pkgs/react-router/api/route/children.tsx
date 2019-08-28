@@ -33,7 +33,7 @@ class ApiRouteChildren extends React.Component {
     return <Button>{props.match ? 'MATCH' : 'NOT MATCH'}</Button>;
   }
 
-  // eslint-disable-next-line class-methods-use-this
+  // eslint-disable-next-line class-methods-use-this,@typescript-eslint/no-unused-vars
   public render02(props: RouteComponentProps) {
     return <Button>RENDER</Button>;
   }

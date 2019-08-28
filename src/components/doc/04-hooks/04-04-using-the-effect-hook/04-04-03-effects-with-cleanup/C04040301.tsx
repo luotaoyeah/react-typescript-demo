@@ -33,6 +33,7 @@ class C01 extends React.Component<{}, { width: number; height: number }> {
     window.removeEventListener('resize', this.handleWindowResize);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public handleWindowResize(e: UIEvent) {
     this.setState({
       width: window.innerWidth,

@@ -1,4 +1,4 @@
-const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
+// const BASE_URL = `http://localhost:${process.env.PORT || 8000}`;
 
 describe('Homepage', () => {
   // FIXME 暂时禁用 e2e 测试

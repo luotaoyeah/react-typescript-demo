@@ -44,7 +44,7 @@ class C01 extends React.Component<{}, { count: number }> {
     document.title = String(count);
   }
 
-  public componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{ count: number }>, snapshot?: any): void {
+  public componentDidUpdate(): void {
     const { count } = this.state;
     document.title = String(count);
   }
