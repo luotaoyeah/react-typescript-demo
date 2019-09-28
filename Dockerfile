@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:1.17.2 AS stage-nginx
 
 WORKDIR /app
-COPY --from=stage-build /app/dist .
+COPY --from=stage-build /app/build .
 
 WORKDIR /app
 COPY /config/nginx/nginx.conf /etc/nginx/nginx.conf
