@@ -4,10 +4,10 @@ module.exports = override(
   fixBabelImports("import", {
     libraryName: "antd",
     libraryDirectory: "es",
-    style: true
+    style: true,
   }),
   addLessLoader({
     javascriptEnabled: true,
-    modifyVars: { "@border-radius-base": "3px" }
-  })
+    modifyVars: { "@border-radius-base": "3px" },
+  }),
 );
