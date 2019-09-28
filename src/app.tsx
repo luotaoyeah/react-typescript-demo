@@ -1,11 +1,24 @@
 import * as React from "react";
-import { C04070501 as COMP } from "./doc/04-hooks/04-07-hooks-api-reference/04-07-05/C04070501";
+import { Button, Dropdown, Menu } from "antd";
 
 class App extends React.Component {
   public render() {
+    const menu = (
+      <Menu>
+        <Menu.SubMenu title="DOC">
+          <Menu.Item>3rd menu item</Menu.Item>
+          <Menu.Item>4th menu item</Menu.Item>
+        </Menu.SubMenu>
+      </Menu>
+    );
+
     return (
       <div className="App">
-        <COMP />
+        <Dropdown overlay={menu}>
+          <Button onClick={e => e.preventDefault()} style={{ margin: "10px" }}>
+            目录
+          </Button>
+        </Dropdown>
       </div>
     );
   }

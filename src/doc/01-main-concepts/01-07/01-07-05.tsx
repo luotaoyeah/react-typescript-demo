@@ -29,15 +29,15 @@ class C010705 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      visible: false
+      visible: false,
     };
 
     this.handleToggle = this.handleToggle.bind(this);
   }
 
   handleToggle() {
-    this.setState((prevState: Readonly<IState>, props: Readonly<IProps>) => ({
-      visible: !prevState.visible
+    this.setState((prevState: Readonly<IState>) => ({
+      visible: !prevState.visible,
     }));
   }
 
@@ -45,9 +45,7 @@ class C010705 extends React.Component<IProps, IState> {
     return (
       <div>
         <p>
-          <Button size={"default"} onClick={this.handleToggle}>
-            {this.state.visible ? "隐藏" : "显示"}
-          </Button>
+          <Button onClick={this.handleToggle}>{this.state.visible ? "隐藏" : "显示"}</Button>
         </p>
         <Info visible={this.state.visible} />
       </div>

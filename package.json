@@ -9,7 +9,7 @@
     "test": "react-app-rewired test --env=jsdom --watchAll=false"
   },
   "dependencies": {
-    "antd": "^3.26.13",
+    "antd": "^4.0.1",
     "chosen-js": "^1.8.7",
     "jquery": "^3.4.1",
     "lodash": "^4.17.11",
