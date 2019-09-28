@@ -9,11 +9,8 @@ const commitRegExp = /^(revert: )?(feat|fix|polish|docs|style|refactor|perf|test
 if (!commitRegExp.test(message)) {
   console.log("\n--------------------------------------------------");
 
-  console.error(
-    `  ${chalk.bgRed.white("ERROR")} ${chalk.red(
-      `INVALID COMMIT MESSAGE FORMAT`
-    )}`
-  );
+  console.error(`  ${chalk.bgRed.white("ERROR")} ${chalk.red(`INVALID COMMIT MESSAGE FORMAT`)}`);
+
   console.log("--------------------------------------------------\n");
 
   process.exit(1);
