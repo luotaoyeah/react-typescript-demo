@@ -9,6 +9,12 @@ class App extends React.Component {
           <Menu.Item>3rd menu item</Menu.Item>
           <Menu.Item>4th menu item</Menu.Item>
         </Menu.SubMenu>
+
+        <Menu.SubMenu title="PACKAGES">
+          <Menu.SubMenu title="react-router">
+            <Menu.Item>TODO</Menu.Item>
+          </Menu.SubMenu>
+        </Menu.SubMenu>
       </Menu>
     );
 
