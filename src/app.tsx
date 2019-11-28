@@ -3,7 +3,7 @@ import * as React from "react";
 import { Button, Menu, Popover } from "antd";
 import { Route } from "react-router";
 import { Link } from "react-router-dom";
-import { EmbeddingExpressionsInJsxComponent } from "./views/doc/main-concepts/introducing-jsx/embedding-expressions-in-jsx.component";
+import { IntroducingJsxComponent } from "./views/doc/main-concepts/introducing-jsx/introducing-jsx.component";
 
 class App extends React.Component {
   public render() {
@@ -40,7 +40,7 @@ class App extends React.Component {
         </Popover>
 
         <div style={{ height: "calc(100% - 52px)", padding: "10px" }}>
-          <Route path={"/docs/introducing-jsx"} component={EmbeddingExpressionsInJsxComponent}></Route>
+          <Route path={"/docs/introducing-jsx"} component={IntroducingJsxComponent}></Route>
         </div>
       </div>
     );

@@ -1,4 +1,4 @@
-// https://reactjs.org/docs/introducing-jsx.html
+// https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
 
 import * as React from "react";
 
@@ -16,6 +16,9 @@ class EmbeddingExpressionsInJsxComponent extends React.Component {
     return "BAZ";
   }
 
+  /**
+   * 使用 `()` 包括多行 JSX, 避免 ASI (Automatic Semicolon Insertion)
+   */
   render() {
     return (
       <div>
