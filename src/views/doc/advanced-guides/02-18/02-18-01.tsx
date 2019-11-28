@@ -21,7 +21,7 @@ class A extends React.Component {
     console.log("A.componentWillMount()");
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return "A";
   }
 }
@@ -31,14 +31,14 @@ class B extends React.Component {
     console.log("B.componentWillMount()");
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return "B";
   }
 }
 
 /**  */
 class C021801 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <React.Fragment>
         {/*

@@ -32,7 +32,7 @@ class C020801 extends React.Component<{}, IState> {
      */
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 通过 ref 属性拿到对 DOM 元素的引用；
      */

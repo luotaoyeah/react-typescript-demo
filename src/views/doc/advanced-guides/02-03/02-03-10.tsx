@@ -14,7 +14,7 @@ const ColorContext: React.Context<IColorContext> = React.createContext({
 });
 
 class ColorButton extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <ColorContext.Consumer>
         {(colorContext: IColorContext) => (
@@ -44,7 +44,7 @@ class C020310 extends React.Component<{}, { date: Date; colorContext: IColorCont
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {/*

@@ -11,7 +11,7 @@ import * as React from "react";
 console.log("\n-------------------------------------------------- 01");
 
 class C010301 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     const element01: string = "hello";
     const element02: React.ReactNode = <i>world</i>;
 

@@ -9,7 +9,7 @@ import { Divider } from "antd";
 class JsxIsAnExpressionTooComponent extends React.Component {
   private getContent(multi: boolean): React.ReactNode {
     if (multi) {
-      return [1, 2, 3].map((item) => <p key={item}>{item}</p>);
+      return [1, 2, 3].map((i) => <p key={i}>{i}</p>);
     } else {
       return <div>{multi.toString()}</div>;
     }

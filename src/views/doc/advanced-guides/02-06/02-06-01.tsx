@@ -5,7 +5,7 @@
 import * as React from "react";
 
 class C020601 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * React.Fragment 是一种特殊的组件，
      * 用于将多个组件包裹为一个整体，并且不会引入额外的 DOM 标签；

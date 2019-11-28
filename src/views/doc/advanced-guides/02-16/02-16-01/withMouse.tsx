@@ -11,7 +11,7 @@ export function withMouse<P extends { mouse: IMouseState }>(Component: React.Com
       return <Component {...this.props} mouse={state} />;
     }
 
-    public render(): React.ReactNode {
+    public render() {
       return <Mouse render={this.renderFn} />;
     }
   };

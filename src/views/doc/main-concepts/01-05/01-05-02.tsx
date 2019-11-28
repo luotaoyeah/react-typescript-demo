@@ -14,13 +14,13 @@ class Clock02 extends React.Component<{ date: Date }> {
    * 则组件的实例也不会变，
    * 每次在需要更新组件的时候，就会调用 render() 方法；
    */
-  public render(): React.ReactNode {
+  public render() {
     return <p>{this.props.date.toISOString()}</p>;
   }
 }
 
 class C010502 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     const date = new Date();
 
     return (

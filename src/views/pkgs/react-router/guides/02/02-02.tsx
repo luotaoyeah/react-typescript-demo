@@ -26,7 +26,7 @@ const NotFound = () => {
 
 /**  */
 class C0202 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>

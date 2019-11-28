@@ -9,7 +9,7 @@ interface IProps {}
 interface IState {}
 
 class C010803 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     const strObj: Array<{ id: number; name: string }> = [
       {
         id: 1,

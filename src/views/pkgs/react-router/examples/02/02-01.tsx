@@ -16,7 +16,7 @@ const D = ({ match }: RouteComponentProps<{ id: string }>) => {
 
 /**  */
 class C0201 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ul>

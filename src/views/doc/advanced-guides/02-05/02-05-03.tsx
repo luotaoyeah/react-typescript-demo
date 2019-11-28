@@ -37,7 +37,7 @@ const FancyButton03 = React.forwardRef(MyForwardRef03);
  *
  */
 class C020503 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <FancyButton01 />

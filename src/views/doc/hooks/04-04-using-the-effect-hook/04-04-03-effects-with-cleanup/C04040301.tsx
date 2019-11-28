@@ -40,7 +40,7 @@ class C01 extends React.Component<{}, { width: number; height: number }> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button>{`${this.state.width}, ${this.state.height}`}</Button>;
   }
 }
@@ -51,7 +51,7 @@ class C04040301 extends React.Component<{}, { visible: boolean }> {
     this.state = { visible: true };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {this.state.visible && <C01 />}

@@ -14,7 +14,7 @@ import * as React from "react";
  */
 
 class C010405 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

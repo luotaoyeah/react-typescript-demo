@@ -19,14 +19,14 @@ interface IUserState {}
 
 /**  */
 class User extends React.Component<IUserProps, IUserState> {
-  public render(): React.ReactNode {
+  public render() {
     return <Button>{this.props.match.params.name}</Button>;
   }
 }
 
 /**  */
 class ApiRouteComponent extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ul>

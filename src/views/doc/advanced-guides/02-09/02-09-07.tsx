@@ -8,7 +8,7 @@ import * as React from "react";
 import { Divider } from "antd";
 
 class C020907 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <div>

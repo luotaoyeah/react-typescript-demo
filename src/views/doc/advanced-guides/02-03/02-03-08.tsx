@@ -24,7 +24,7 @@ function withColor<P, S>(Component: typeof React.Component) {
 }
 
 class Button extends React.Component<{ color: string }> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <button
         style={{
@@ -60,7 +60,7 @@ const ColorButton = withColor(Button);
 const ColorInput = withColor(Input);
 
 class C020308 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>

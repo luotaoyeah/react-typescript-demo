@@ -17,7 +17,7 @@ class C03020101 extends React.Component {
   /*
    * render() 方法是 class 组件中必须实现的一个方法；
    */
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

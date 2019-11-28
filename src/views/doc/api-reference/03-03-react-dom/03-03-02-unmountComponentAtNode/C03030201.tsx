@@ -32,7 +32,7 @@ class C03030201 extends React.Component {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
 
     return (

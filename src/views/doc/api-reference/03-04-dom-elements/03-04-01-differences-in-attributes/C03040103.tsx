@@ -11,7 +11,7 @@ import React from "react";
  * 在 react 中对应的属性为 dangerouslySetInnerHTML
  */
 class C03040103 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div
         dangerouslySetInnerHTML={{

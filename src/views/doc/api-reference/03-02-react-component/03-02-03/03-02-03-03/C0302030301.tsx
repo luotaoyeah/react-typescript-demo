@@ -80,7 +80,7 @@ class A extends React.Component<IProps, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <>
         <Card style={{ width: 240 }} cover={<img alt="example" src={this.state.avatar} />}>
@@ -94,7 +94,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302030301 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

@@ -51,14 +51,14 @@ class C01 extends React.Component<IProps, IState> {
   }
 
   // tslint:disable-next-line:member-ordering
-  public render(): React.ReactNode {
+  public render() {
     return this.props.render(this.state);
   }
 }
 
 // tslint:disable-next-line:max-classes-per-file
 class C04060101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <C01 render={(state: IState) => <Button>{`${state.size.width}, ${state.size.height}`}</Button>} />

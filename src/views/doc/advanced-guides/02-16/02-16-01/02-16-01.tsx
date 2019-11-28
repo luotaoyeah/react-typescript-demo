@@ -31,7 +31,7 @@ class A extends React.Component<IAProps, IAState> {
     text: "A",
   };
 
-  public render(): React.ReactNode {
+  public render() {
     if (this.props.render) {
       return this.props.render(this.state);
     }
@@ -41,7 +41,7 @@ class A extends React.Component<IAProps, IAState> {
 }
 
 class CatButton extends React.Component<{ mouse: IMouseState }, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <Button
         style={{
@@ -80,7 +80,7 @@ class C021601 extends React.Component {
     );
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <React.Fragment>
         <A render={this.renderA} />

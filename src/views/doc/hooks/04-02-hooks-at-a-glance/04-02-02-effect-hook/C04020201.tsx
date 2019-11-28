@@ -37,7 +37,7 @@ function F01(): React.ReactElement<{}> {
 }
 
 class C04020201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <F01 />

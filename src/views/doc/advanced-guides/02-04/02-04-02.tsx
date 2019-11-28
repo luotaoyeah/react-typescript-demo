@@ -27,7 +27,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
     console.log(errorInfo.componentStack);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     if (this.state.hasError) {
       return <Button type={"danger"}>{this.state.errorMessage}</Button>;
     }
@@ -37,14 +37,14 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
 }
 
 class ErrorButton extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     throw new Error("some error");
     return "";
   }
 }
 
 class C020402 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ErrorBoundary>

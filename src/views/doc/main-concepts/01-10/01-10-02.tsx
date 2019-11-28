@@ -15,7 +15,7 @@ interface IProps {}
 interface IState {}
 
 class C011002 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

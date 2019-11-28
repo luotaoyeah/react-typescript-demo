@@ -27,14 +27,14 @@ class A extends React.Component {
     (this.refs.inputRef as HTMLInputElement).focus();
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <div>{/*<input type="text" ref={"inputRef"} />*/}</div>;
   }
 }
 
 /**  */
 class C021802 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <React.Fragment>
         <React.StrictMode>

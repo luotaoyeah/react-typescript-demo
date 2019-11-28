@@ -13,7 +13,7 @@ class B extends React.Component {
     return true;
   }
 
-  public render(): React.ReactNode {
+  public render() {
     console.log("B.render()");
     return <Button>B</Button>;
   }
@@ -44,7 +44,7 @@ class A extends React.Component<IProps, IState> {
     this.forceUpdate();
   }
 
-  public render(): React.ReactNode {
+  public render() {
     console.log("render()");
     return (
       <React.Fragment>
@@ -57,7 +57,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302031101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return <A />;
   }
 }

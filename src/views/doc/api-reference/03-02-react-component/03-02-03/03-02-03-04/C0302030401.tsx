@@ -42,13 +42,13 @@ class A extends React.Component<IProps, IState> {
      */
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button onClick={this.handleClick}>{this.state.count}</Button>;
   }
 }
 
 class C0302030401 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

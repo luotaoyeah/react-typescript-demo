@@ -16,7 +16,7 @@ class C010806 extends React.Component<IProps, IState> {
     return "hello world";
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>{"hello " + "world"}</p>

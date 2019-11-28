@@ -20,14 +20,14 @@ import { Divider } from "antd";
  */
 
 class A extends React.Component<{ name: string }> {
-  public render(): React.ReactNode {
+  public render() {
     console.log("A.render()");
     return <div>{this.props.name}</div>;
   }
 }
 
 class B extends React.PureComponent<{ name: string }> {
-  public render(): React.ReactNode {
+  public render() {
     console.log("B.render()");
     return <div>{this.props.name}</div>;
   }
@@ -48,7 +48,7 @@ class C030102 extends React.Component<{}, { name: string; time: Date }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {this.state.time.toISOString()}

@@ -9,7 +9,7 @@ interface IProps {}
 interface IState {}
 
 class Items extends React.Component<{ items: Array<string | number> }> {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 渲染列表组件时，需要给每一个组件设置 key 属性，
      * 否则会报错提示：
@@ -26,7 +26,7 @@ class Items extends React.Component<{ items: Array<string | number> }> {
 }
 
 class C010802 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <div>

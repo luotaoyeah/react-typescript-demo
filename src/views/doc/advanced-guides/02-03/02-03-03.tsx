@@ -30,7 +30,7 @@ class A extends React.Component<{}, { age: number }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 如果 Consumer 找不到匹配的 Provider，则使用 Context 的默认值；
      */
@@ -52,7 +52,7 @@ class A extends React.Component<{}, { age: number }> {
 }
 
 class B extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * Provider 可以嵌套，内层的值会覆盖上层的值；
      */
@@ -74,7 +74,7 @@ class B extends React.Component {
 }
 
 class C extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 上面有两个 AgeContext.Provider，选择最近的进行匹配，
      * 所以拿到的值为 20；
@@ -84,7 +84,7 @@ class C extends React.Component {
 }
 
 class C020303 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

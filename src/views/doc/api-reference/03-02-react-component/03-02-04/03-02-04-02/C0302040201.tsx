@@ -19,7 +19,7 @@ class A extends React.Component<IProps, IState> {
    */
   static displayName = "A-A-A";
 
-  public render(): React.ReactNode {
+  public render() {
     const MyButton = ((C) => {
       return class extends React.Component {
         /*
@@ -27,7 +27,7 @@ class A extends React.Component<IProps, IState> {
          */
         static displayName = `MyButton(${C.name})`;
 
-        public render(): React.ReactNode {
+        public render() {
           return <C {...this.props} style={{ color: "red" }} />;
         }
       };
@@ -38,7 +38,7 @@ class A extends React.Component<IProps, IState> {
 }
 
 class C0302040201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return <A />;
   }
 }

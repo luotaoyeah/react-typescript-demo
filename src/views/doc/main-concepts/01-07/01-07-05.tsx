@@ -12,7 +12,7 @@ interface IState {
 }
 
 class Info extends React.Component<{ visible: boolean }> {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 如果 render() 方法返回 null，则组件不会渲染内容，
      * 但是组件的声明周期不受影响，比如 componentDidUpdate 依然会正常触发；
@@ -41,7 +41,7 @@ class C010705 extends React.Component<IProps, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>

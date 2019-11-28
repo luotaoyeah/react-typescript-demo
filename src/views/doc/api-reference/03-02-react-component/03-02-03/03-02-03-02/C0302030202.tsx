@@ -31,13 +31,13 @@ class A extends React.Component<IProps, IState> {
     }
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button>A</Button>;
   }
 }
 
 class C0302030202 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

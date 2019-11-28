@@ -24,13 +24,13 @@ function C010401A(props: { name: string }) {
  * 也可以使用 class 来定义一个组件；
  */
 class C010401B extends React.Component<{ name: string }> {
-  public render(): React.ReactNode {
+  public render() {
     return <h3>{this.props.name}</h3>;
   }
 }
 
 class C010401 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <p>
         <C010401A name={"luotao"} />

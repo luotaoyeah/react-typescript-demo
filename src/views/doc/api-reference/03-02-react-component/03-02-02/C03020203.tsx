@@ -45,7 +45,7 @@ class C03020203 extends React.Component<IProps, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {this.state.show && <A />}

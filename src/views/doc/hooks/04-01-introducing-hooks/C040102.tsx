@@ -11,7 +11,7 @@ import React from "react";
  * 3. 之前的 concept 依然保留，如 props，state，context，refs，lifecycle 等；
  */
 class C040102 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

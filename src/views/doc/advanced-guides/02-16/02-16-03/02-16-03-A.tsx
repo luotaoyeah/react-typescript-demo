@@ -15,7 +15,7 @@ interface IAState {
 }
 
 class A extends React.PureComponent<IAProps, IAState> {
-  public render(): React.ReactNode {
+  public render() {
     if (this.props.children) {
       return this.props.children(this.state);
     }
@@ -30,7 +30,7 @@ class C021603A extends React.Component {
     return <Button>{state.text}</Button>;
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <React.Fragment>
         {/*

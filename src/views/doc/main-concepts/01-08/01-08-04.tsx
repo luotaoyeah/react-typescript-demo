@@ -19,7 +19,7 @@ interface IState {}
  * key 属性需要设置在循环项的最顶层标签上；
  */
 class C010804 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {["a", "b", "c"].map((n: string) => {

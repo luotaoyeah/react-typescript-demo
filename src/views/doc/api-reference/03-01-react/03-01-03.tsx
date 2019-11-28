@@ -9,7 +9,7 @@ import { Divider, Tag } from "antd";
 
 /**  */
 class C030103 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 第一个参数可以是字符串，表示一个 HTML 标签的名称；
      */

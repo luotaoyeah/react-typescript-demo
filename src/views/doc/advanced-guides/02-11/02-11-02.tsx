@@ -8,7 +8,7 @@ import ReactDOM from "react-dom";
 import { Alert, Button, Divider } from "antd";
 
 class PortalComponent extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return ReactDOM.createPortal(this.props.children, document.body);
   }
 }
@@ -33,7 +33,7 @@ class C021102 extends React.Component<{}, { num: number }> {
    * 但是在 VDOM 树上，portal 组件依然位于上级组件的下面，
    * 因此跟其他的组件一样，portal 组件上未被捕获的事件会冒泡到上级组件上去；
    */
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div onClick={this.handleClick}>
         <Alert message={this.state.num} />

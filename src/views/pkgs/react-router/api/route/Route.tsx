@@ -18,7 +18,7 @@ function B(props: any) {
 
 /**  */
 class ApiRoute extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ul>

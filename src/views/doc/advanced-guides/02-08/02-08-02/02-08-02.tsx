@@ -44,7 +44,7 @@ class C020802 extends React.Component<{}, IState> {
     }));
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
     return (
       <div>

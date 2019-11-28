@@ -11,7 +11,7 @@ import ico from "./ss.ico";
 console.log("\n-------------------------------------------------- 01");
 
 class C010205 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <h1>picture</h1>

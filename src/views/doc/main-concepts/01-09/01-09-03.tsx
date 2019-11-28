@@ -42,7 +42,7 @@ class C010903 extends React.Component<IProps, IState> {
     console.log(this.state.note);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>

@@ -19,7 +19,7 @@ class A extends React.Component {
     debugger;
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button>A</Button>;
   }
 }
@@ -45,7 +45,7 @@ class C0302030501 extends React.Component<IProps, IState> {
     });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {this.state.visible && <A />}

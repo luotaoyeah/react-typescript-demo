@@ -49,7 +49,7 @@ class C04040302 extends React.Component<{}, { visible: boolean }> {
     this.state = { visible: true };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         {this.state.visible && <F01 />}

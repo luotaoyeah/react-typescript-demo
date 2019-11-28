@@ -9,7 +9,7 @@ import { Link, Route, RouteComponentProps } from "react-router-dom";
 interface IAProps {}
 
 class A extends React.Component<IAProps & RouteComponentProps<any>> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Alert message={"A"} type={"error"} />
@@ -30,7 +30,7 @@ class A extends React.Component<IAProps & RouteComponentProps<any>> {
 interface IBProps {}
 
 class B extends React.Component<IBProps & RouteComponentProps<any>> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Alert message={"B"} type={"error"} />
@@ -41,7 +41,7 @@ class B extends React.Component<IBProps & RouteComponentProps<any>> {
 
 /**  */
 class C0102 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Button type={"dashed"}>

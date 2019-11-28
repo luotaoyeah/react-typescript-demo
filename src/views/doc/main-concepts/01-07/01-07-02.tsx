@@ -54,7 +54,7 @@ class C010702 extends React.Component<IProps, IState> {
     this.setState({ isLoggedIn: false });
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
      * 将 react 元素存储到变量中，根据不同的状态，
      * 渲染不同的组件；

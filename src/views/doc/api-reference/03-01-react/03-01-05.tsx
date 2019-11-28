@@ -24,7 +24,7 @@ class C030105 extends React.Component {
     console.log(React.isValidElement(<Button />)); // true
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return <div />;
   }
 }

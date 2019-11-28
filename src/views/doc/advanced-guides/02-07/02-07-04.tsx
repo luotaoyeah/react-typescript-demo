@@ -15,7 +15,7 @@ function withNothing<P>(Component: React.ComponentType<any>) {
      */
     static displayName: string = `WithNothing(${Component.displayName || Component.name || "Component"})`;
 
-    public render(): React.ReactNode {
+    public render() {
       return <Component {...this.props} />;
     }
   };
@@ -26,7 +26,7 @@ const ButtonWithNothing = withNothing<any>(Button);
 
 /**  */
 class C020704 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ButtonWithNothing>button</ButtonWithNothing>

@@ -31,7 +31,7 @@ const B = () => {
 
 /**  */
 class C0204 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Button>

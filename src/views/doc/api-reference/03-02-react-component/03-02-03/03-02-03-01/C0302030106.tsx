@@ -12,7 +12,7 @@ class A extends React.Component {
    * 此时，页面上不会渲染任何内容，
    * 主要用在条件渲染：根据某个 expression 是否为 true，来决定是否渲染某个 element；
    */
-  public render(): React.ReactNode {
+  public render() {
     return [true, false, null];
   }
 }
@@ -22,7 +22,7 @@ interface IProps {}
 interface IState {}
 
 class C0302030106 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A />

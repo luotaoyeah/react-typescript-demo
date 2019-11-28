@@ -26,7 +26,7 @@ function withNothing<P>(Component: React.ComponentType<any>) {
       console.log("componentDidMount()");
     }
 
-    public render(): React.ReactNode {
+    public render() {
       return <Component {...this.props} />;
     }
   };
@@ -49,7 +49,7 @@ class C020705 extends React.Component<{}, { date: Date }> {
     }, 1000);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     /*
      *   不能在 render() 方法中调用 HOC 函数；
      *

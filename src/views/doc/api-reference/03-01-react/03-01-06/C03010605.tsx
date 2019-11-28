@@ -10,7 +10,7 @@ import React from "react";
  *
  */
 class C030110 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     const element01 = (
       <div>
         <span>A</span>

@@ -22,13 +22,13 @@ class A extends React.Component<IProps, IState> {
    */
   static defaultProps = { color: "blue" };
 
-  public render(): React.ReactNode {
+  public render() {
     return <Button style={{ color: this.props.color }}>{this.props.color}</Button>;
   }
 }
 
 class C0302040101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return <A />;
   }
 }

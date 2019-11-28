@@ -57,7 +57,7 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
     window.removeEventListener("resize", this.handleWindowResize);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <Button
@@ -84,7 +84,7 @@ class C01 extends React.Component<{}, { count: number; size: { width: number; he
 }
 
 class C04040401 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <C01 />

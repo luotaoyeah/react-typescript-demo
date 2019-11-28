@@ -53,7 +53,7 @@ function F01(): React.ReactElement<{}> {
 
 // tslint:disable-next-line:max-classes-per-file
 class C04070201 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <F01 />

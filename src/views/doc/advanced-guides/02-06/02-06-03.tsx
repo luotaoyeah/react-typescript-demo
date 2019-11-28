@@ -5,7 +5,7 @@
 import * as React from "react";
 
 class C020603 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     /*
      * React.Fragment 可以设置一个属性 key，
      * 但是其简写形式 <></> 不支持设置任何属性；

@@ -44,7 +44,7 @@ class C03020201 extends React.Component<IProps, IState> {
     console.log("componentDidMount()");
   }
 
-  public render(): React.ReactNode {
+  public render() {
     console.log("render()");
     return (
       <div>

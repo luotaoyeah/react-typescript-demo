@@ -14,19 +14,19 @@ import { Input } from "antd";
  * 使用 props 层层传递的方式
  */
 class A extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
+  public render() {
     return <B name={this.props.name} age={this.props.age} />;
   }
 }
 
 class B extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
+  public render() {
     return <C name={this.props.name} age={this.props.age} />;
   }
 }
 
 class C extends React.Component<{ name: string; age: number }> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <p>
@@ -44,24 +44,24 @@ class C extends React.Component<{ name: string; age: number }> {
  * 传递整个组件
  */
 class A2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
+  public render() {
     return <B2 form={this.props.form} />;
   }
 }
 
 class B2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
+  public render() {
     return <C2 form={this.props.form} />;
   }
 }
 class C2 extends React.Component<{ form: React.ReactNode }> {
-  public render(): React.ReactNode {
+  public render() {
     return this.props.form;
   }
 }
 
 class C020302 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <A name={"tom"} age={18} />

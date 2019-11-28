@@ -24,7 +24,7 @@ interface IProps {}
 interface IState {}
 
 class C010701 extends React.Component<IProps, IState> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <ButtonOrInput type={"button"} />

@@ -34,7 +34,7 @@ class C01 extends React.Component<{}, { count: number }> {
     };
   }
 
-  public render(): React.ReactNode {
+  public render() {
     return (
       <Button
         onClick={() => {
@@ -52,7 +52,7 @@ class C01 extends React.Component<{}, { count: number }> {
 }
 
 class C04030101 extends React.Component<{}, {}> {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <F01 />

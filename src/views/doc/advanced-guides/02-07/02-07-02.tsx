@@ -25,7 +25,7 @@ const HocButton = HOC<any>(Button);
 
 /**  */
 class C020702 extends React.Component {
-  public render(): React.ReactNode {
+  public render() {
     return (
       <div>
         <HocButton>button</HocButton>

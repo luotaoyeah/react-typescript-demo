@@ -28,7 +28,7 @@ class C022003 extends React.Component {
     console.log(this.inputRef.current!.files);
   }
 
-  public render(): React.ReactNode {
+  public render() {
     const vm = this;
 
     return (
