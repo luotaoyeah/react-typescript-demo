@@ -3,11 +3,14 @@
 }
 
 .popover-content-menu {
+  .ant-popover-inner {
+    border-radius: 3px;
+  }
+
   .ant-menu-item,
   .ant-menu-submenu,
   .ant-menu-submenu-title,
-  .ant-menu-submenu-inline,
-  .ant-menu-submenu .ant-menu-sub {
+  .ant-menu-submenu-inline {
     transition: none !important;
   }
 
@@ -21,6 +24,7 @@
 
     & > .ant-menu {
       border-radius: 3px;
+      padding: 1px;
     }
   }
 
@@ -41,5 +45,19 @@
   .ant-menu-submenu-active,
   .ant-menu-submenu-title:hover {
     background: #e6f7ff;
+    border-radius: 3px;
+  }
+
+  .ant-menu-inline .ant-menu-item,
+  .ant-menu-inline .ant-menu-submenu-title {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  .ant-menu-vertical .ant-menu-item::after,
+  .ant-menu-vertical-left .ant-menu-item::after,
+  .ant-menu-vertical-right .ant-menu-item::after,
+  .ant-menu-inline .ant-menu-item::after {
+    border-right: none;
   }
 }
