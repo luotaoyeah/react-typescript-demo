@@ -50,7 +50,7 @@ class C020802 extends React.Component<{}, IState> {
       <div>
         <Chosen onChange={vm.handleChange}>
           <option>请选择</option>
-          {vm.state.items.map(item => (
+          {vm.state.items.map((item) => (
             <option key={item.value} value={item.value}>
               {item.name}
             </option>

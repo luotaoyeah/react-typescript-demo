@@ -13,7 +13,7 @@ console.log("\n-------------------------------------------------- 01");
 class C010203 extends React.Component {
   private getContent(multi: boolean): React.ReactNode {
     if (multi) {
-      return [1, 2, 3].map(item => <p key={item}>{item}</p>);
+      return [1, 2, 3].map((item) => <p key={item}>{item}</p>);
     } else {
       return <i>{multi.toString()}</i>;
     }

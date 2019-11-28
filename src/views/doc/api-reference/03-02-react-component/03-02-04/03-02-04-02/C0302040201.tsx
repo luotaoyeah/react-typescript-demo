@@ -20,7 +20,7 @@ class A extends React.Component<IProps, IState> {
   static displayName = "A-A-A";
 
   public render(): React.ReactNode {
-    const MyButton = (C => {
+    const MyButton = ((C) => {
       return class extends React.Component {
         /*
          * 在 HOC 中通常需要指定 displayName 属性

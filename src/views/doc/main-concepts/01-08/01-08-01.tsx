@@ -10,7 +10,7 @@ import * as React from "react";
  */
 const array: Array<number> = [1, 2, 3];
 /* [2, 4, 6] */
-console.log(array.map(i => i * 2));
+console.log(array.map((i) => i * 2));
 
 interface IProps {}
 

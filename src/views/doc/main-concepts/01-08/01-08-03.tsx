@@ -35,7 +35,7 @@ class C010803 extends React.Component<IProps, IState> {
          * 通常我们可以使用列表数据的某个唯一属性作为 key 的值，如 id 属性；
          */}
         <ul>
-          {strObj.map(i => (
+          {strObj.map((i) => (
             <li key={i.id}>{i.name}</li>
           ))}
         </ul>

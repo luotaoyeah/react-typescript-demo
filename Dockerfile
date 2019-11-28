@@ -23,7 +23,7 @@ WORKDIR /app
 COPY --from=stage-build /app/build .
 
 WORKDIR /app
-COPY /config/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY /nginx/nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80
 

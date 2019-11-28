@@ -3,7 +3,7 @@ import * as React from "react";
 import { Button, Dropdown, Menu } from "antd";
 import { Route } from "react-router";
 import { Link } from "react-router-dom";
-import { C010201 } from "./views/doc/01-main-concepts/01-02/01-02-01";
+import { C010201 } from "./views/doc/main-concepts/01-02/01-02-01";
 
 class App extends React.Component {
   public render() {
@@ -12,6 +12,7 @@ class App extends React.Component {
         <Menu.SubMenu title="DOC">
           <Menu.SubMenu title="MAIN CONCEPTS">
             <Menu.Item>Hello World</Menu.Item>
+
             <Menu.Item>
               <Link to={"/docs/introducing-jsx"}>Introducing JSX</Link>
             </Menu.Item>
@@ -29,7 +30,7 @@ class App extends React.Component {
     return (
       <div className="app">
         <Dropdown overlay={menu}>
-          <Button onClick={e => e.preventDefault()} style={{ margin: "10px" }}>
+          <Button onClick={(e) => e.preventDefault()} style={{ margin: "10px" }}>
             目录
           </Button>
         </Dropdown>

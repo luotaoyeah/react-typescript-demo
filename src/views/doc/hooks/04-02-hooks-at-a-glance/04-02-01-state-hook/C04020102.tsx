@@ -36,11 +36,7 @@ function F01() {
       <Divider />
       <Button
         onClick={() => {
-          setSequence(
-            Array.from(sequence)
-              .reverse()
-              .join(""),
-          );
+          setSequence(Array.from(sequence).reverse().join(""));
         }}
       >
         {sequence}

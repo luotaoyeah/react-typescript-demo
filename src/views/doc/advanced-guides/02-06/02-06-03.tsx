@@ -13,7 +13,7 @@ class C020603 extends React.Component {
     const tds = [
       { id: 1, name: "A" },
       { id: 2, name: "B" },
-    ].map(i => (
+    ].map((i) => (
       <React.Fragment key={i.id}>
         <dt>{i.id}</dt>
         <dd>{i.name}</dd>

@@ -23,7 +23,7 @@ class C010806 extends React.Component<IProps, IState> {
         <p>{"hello world"}</p>
         <p>{this.hello()}</p>
         <p>
-          {(function() {
+          {(function () {
             return "hello world";
           })()}
         </p>

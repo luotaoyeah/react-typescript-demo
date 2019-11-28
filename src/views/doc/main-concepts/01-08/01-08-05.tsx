@@ -55,7 +55,7 @@ class C010805 extends React.Component<IProps, IState> {
             name: "c",
             key: "c_3",
           },
-        ].map(i => (
+        ].map((i) => (
           <Item key={i.key} id={i.id} name={i.name} />
         ))}
       </div>
