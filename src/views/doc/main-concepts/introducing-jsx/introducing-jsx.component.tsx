@@ -7,6 +7,7 @@ import { EmbeddingExpressionsInJsxComponent } from "./embedding-expressions-in-j
 import { JsxIsAnExpressionTooComponent } from "./jsx-is-an-expression-too.component";
 import { SpecifyingAttributesWithJsxComponent } from "./specifying-attributes-with-jsx.component";
 import { SpecifyingChildrenWithJsxComponent } from "./specifying-children-with-jsx.component";
+import { JsxPreventsInjectionAttacksComponent } from "./jsx-prevents-injection-attacks.component";
 
 class IntroducingJsxComponent extends React.Component {
   public render() {
@@ -26,6 +27,10 @@ class IntroducingJsxComponent extends React.Component {
 
         <Collapse.Panel header="specifying-children-with-jsx" key="4">
           <SpecifyingChildrenWithJsxComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="jsx-prevents-injection-attacks" key="5">
+          <JsxPreventsInjectionAttacksComponent />
         </Collapse.Panel>
       </Collapse>
     );
