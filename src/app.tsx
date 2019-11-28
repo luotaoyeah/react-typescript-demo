@@ -1,18 +1,16 @@
 import "./app.less";
 import * as React from "react";
-import { Button, Dropdown, Menu } from "antd";
+import { Button, Menu, Popover } from "antd";
 import { Route } from "react-router";
 import { Link } from "react-router-dom";
-import { C010201 } from "./views/doc/main-concepts/01-02/01-02-01";
+import { EmbeddingExpressionsInJsxComponent } from "./views/doc/main-concepts/introducing-jsx/embedding-expressions-in-jsx.component";
 
 class App extends React.Component {
   public render() {
     const menu = (
-      <Menu>
+      <Menu openTransitionName="" openAnimation="" mode={"inline"}>
         <Menu.SubMenu title="DOC">
-          <Menu.SubMenu title="MAIN CONCEPTS">
-            <Menu.Item>Hello World</Menu.Item>
-
+          <Menu.SubMenu title={"MAIN CONCEPTS"}>
             <Menu.Item>
               <Link to={"/docs/introducing-jsx"}>Introducing JSX</Link>
             </Menu.Item>
@@ -29,14 +27,20 @@ class App extends React.Component {
 
     return (
       <div className="app">
-        <Dropdown overlay={menu}>
-          <Button onClick={(e) => e.preventDefault()} style={{ margin: "10px" }}>
+        <Popover
+          content={menu}
+          transitionName=""
+          placement="bottomLeft"
+          trigger="click"
+          overlayClassName="popover-content-menu"
+        >
+          <Button type="primary" style={{ margin: "10px", width: "calc(100% - 20px)" }}>
             目录
           </Button>
-        </Dropdown>
+        </Popover>
 
         <div style={{ height: "calc(100% - 52px)", padding: "10px" }}>
-          <Route path={"/docs/introducing-jsx"} component={C010201}></Route>
+          <Route path={"/docs/introducing-jsx"} component={EmbeddingExpressionsInJsxComponent}></Route>
         </div>
       </div>
     );

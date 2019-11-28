@@ -1,5 +1,5 @@
 import * as React from "react";
-import ico from "./01-02-05.ico";
+import ico from "./ss.ico";
 
 /*
  * Specifying Children with JSX
