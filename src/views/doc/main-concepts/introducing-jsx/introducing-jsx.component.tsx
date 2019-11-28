@@ -8,6 +8,7 @@ import { JsxIsAnExpressionTooComponent } from "./jsx-is-an-expression-too.compon
 import { SpecifyingAttributesWithJsxComponent } from "./specifying-attributes-with-jsx.component";
 import { SpecifyingChildrenWithJsxComponent } from "./specifying-children-with-jsx.component";
 import { JsxPreventsInjectionAttacksComponent } from "./jsx-prevents-injection-attacks.component";
+import { JsxRepresentsObjectsComponent } from "./jsx-represents-objects.component";
 
 class IntroducingJsxComponent extends React.Component {
   public render() {
@@ -31,6 +32,10 @@ class IntroducingJsxComponent extends React.Component {
 
         <Collapse.Panel header="jsx-prevents-injection-attacks" key="5">
           <JsxPreventsInjectionAttacksComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="jsx-represents-objects" key="6">
+          <JsxRepresentsObjectsComponent />
         </Collapse.Panel>
       </Collapse>
     );
