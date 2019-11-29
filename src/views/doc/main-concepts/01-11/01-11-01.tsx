@@ -50,7 +50,7 @@ class Panel extends React.Component<{
           padding: "10px",
         }}
       >
-        <div className="panel-heading">{this.props.header}</div>
+        <div className="panel-header">{this.props.header}</div>
         <div className="panel-body">{this.props.content}</div>
         <div className="panel-footer">{this.props.footer}</div>
       </div>

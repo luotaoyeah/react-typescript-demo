@@ -6,6 +6,7 @@ import { CaretRightOutlined } from "@ant-design/icons";
 import { FunctionAndClassComponentsComponent } from "./function-and-class-components.component";
 import { RenderingAComponentComponent } from "./rendering-a-component.component";
 import { ComposingComponentsComponent } from "./composing-components.component";
+import { ExtractingComponentsComponent } from "./extracting-components.component";
 
 class ComponentsAndPropsComponent extends React.Component {
   public render() {
@@ -21,6 +22,10 @@ class ComponentsAndPropsComponent extends React.Component {
 
         <Collapse.Panel header="composing-components" key="3">
           <ComposingComponentsComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="extracting-components" key="4">
+          <ExtractingComponentsComponent />
         </Collapse.Panel>
       </Collapse>
     );
