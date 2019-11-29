@@ -4,6 +4,7 @@ import * as React from "react";
 import { Collapse } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { FunctionAndClassComponentsComponent } from "./function-and-class-components.component";
+import { RenderingAComponentComponent } from "./rendering-a-component.component";
 
 class ComponentsAndPropsComponent extends React.Component {
   public render() {
@@ -11,6 +12,10 @@ class ComponentsAndPropsComponent extends React.Component {
       <Collapse expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} accordion={true}>
         <Collapse.Panel header="function-and-class-components" key="1">
           <FunctionAndClassComponentsComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="rendering-a-component" key="2">
+          <RenderingAComponentComponent />
         </Collapse.Panel>
       </Collapse>
     );
