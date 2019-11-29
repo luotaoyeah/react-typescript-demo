@@ -3,6 +3,13 @@
 }
 
 .popover-content-menu {
+  width: 100%;
+
+  .ant-popover-content {
+    width: calc(100% - 20px);
+    margin-left: 10px;
+  }
+
   .ant-popover-inner {
     border-radius: 3px;
   }
@@ -20,7 +27,6 @@
 
   .ant-popover-inner-content {
     padding: 0;
-    min-width: 600px;
 
     & > .ant-menu {
       border-radius: 3px;
