@@ -4,6 +4,7 @@ import { Button, Menu, Popover } from "antd";
 import { Route } from "react-router";
 import { Link } from "react-router-dom";
 import { IntroducingJsxComponent } from "./views/doc/main-concepts/introducing-jsx/introducing-jsx.component";
+import { RenderingElementsComponent } from "./views/doc/main-concepts/rendering-elements/rendering-elements.component";
 
 class App extends React.Component {
   public render() {
@@ -12,7 +13,10 @@ class App extends React.Component {
         <Menu.SubMenu title="DOC">
           <Menu.SubMenu title={"MAIN CONCEPTS"}>
             <Menu.Item>
-              <Link to={"/docs/introducing-jsx"}>Introducing JSX</Link>
+              <Link to={"/docs/introducing-jsx"}>introducing-jsx</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to={"/docs/rendering-elements"}>rendering-elements</Link>
             </Menu.Item>
           </Menu.SubMenu>
         </Menu.SubMenu>
@@ -41,6 +45,7 @@ class App extends React.Component {
 
         <div style={{ height: "calc(100% - 52px)", padding: "10px" }}>
           <Route path={"/docs/introducing-jsx"} component={IntroducingJsxComponent}></Route>
+          <Route path={"/docs/rendering-elements"} component={RenderingElementsComponent}></Route>
         </div>
       </div>
     );
