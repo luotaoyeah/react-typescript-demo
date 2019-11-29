@@ -7,6 +7,7 @@ import { FunctionAndClassComponentsComponent } from "./function-and-class-compon
 import { RenderingAComponentComponent } from "./rendering-a-component.component";
 import { ComposingComponentsComponent } from "./composing-components.component";
 import { ExtractingComponentsComponent } from "./extracting-components.component";
+import { PropsAreReadOnlyComponent } from "./props-are-read-only.component";
 
 class ComponentsAndPropsComponent extends React.Component {
   public render() {
@@ -26,6 +27,10 @@ class ComponentsAndPropsComponent extends React.Component {
 
         <Collapse.Panel header="extracting-components" key="4">
           <ExtractingComponentsComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="props-are-read-only" key="5">
+          <PropsAreReadOnlyComponent />
         </Collapse.Panel>
       </Collapse>
     );
