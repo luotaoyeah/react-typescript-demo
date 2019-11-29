@@ -5,6 +5,7 @@ import { Collapse } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { FunctionAndClassComponentsComponent } from "./function-and-class-components.component";
 import { RenderingAComponentComponent } from "./rendering-a-component.component";
+import { ComposingComponentsComponent } from "./composing-components.component";
 
 class ComponentsAndPropsComponent extends React.Component {
   public render() {
@@ -16,6 +17,10 @@ class ComponentsAndPropsComponent extends React.Component {
 
         <Collapse.Panel header="rendering-a-component" key="2">
           <RenderingAComponentComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="composing-components" key="3">
+          <ComposingComponentsComponent />
         </Collapse.Panel>
       </Collapse>
     );
