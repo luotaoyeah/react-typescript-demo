@@ -11,7 +11,12 @@ import { Bind } from "lodash-decorators";
 export class RenderingAnElementIntoTheDom extends React.Component {
   @Bind()
   private handleClick() {
-    ReactDOM.render(<span>{Date.now()}</span>, document.getElementById("rendering-an-element-into-the-dom-01"));
+    ReactDOM.render(
+      <div>
+        <span>current time: {Date.now()}</span>
+      </div>,
+      document.getElementById("rendering-an-element-into-the-dom-01"),
+    );
   }
 
   render() {

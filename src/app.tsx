@@ -5,6 +5,7 @@ import { Route } from "react-router";
 import { Link } from "react-router-dom";
 import { IntroducingJsxComponent } from "./views/doc/main-concepts/introducing-jsx/introducing-jsx.component";
 import { RenderingElementsComponent } from "./views/doc/main-concepts/rendering-elements/rendering-elements.component";
+import { ComponentsAndPropsComponent } from "./views/doc/main-concepts/components-and-props/components-and-props.component";
 
 class App extends React.Component {
   public render() {
@@ -17,6 +18,9 @@ class App extends React.Component {
             </Menu.Item>
             <Menu.Item>
               <Link to={"/docs/rendering-elements"}>rendering-elements</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to={"/docs/components-and-props"}>components-and-props</Link>
             </Menu.Item>
           </Menu.SubMenu>
         </Menu.SubMenu>
@@ -46,6 +50,7 @@ class App extends React.Component {
         <div style={{ height: "calc(100% - 52px)", padding: "10px" }}>
           <Route path={"/docs/introducing-jsx"} component={IntroducingJsxComponent}></Route>
           <Route path={"/docs/rendering-elements"} component={RenderingElementsComponent}></Route>
+          <Route path={"/docs/components-and-props"} component={ComponentsAndPropsComponent}></Route>
         </div>
       </div>
     );
