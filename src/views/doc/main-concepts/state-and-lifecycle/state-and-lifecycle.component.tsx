@@ -6,6 +6,7 @@ import { CaretRightOutlined } from "@ant-design/icons";
 import { ConvertingAFunctionToAClassComponent } from "./converting-a-function-to-a-class.component";
 import { AddingLocalStateToAClassComponent } from "./adding-local-state-to-a-class.component";
 import { AddingLifecycleMethodsToAClassComponent } from "./adding-lifecycle-methods-to-a-class.component";
+import { UsingStateCorrectlyComponent } from "./using-state-correctly.component";
 
 class StateAndLifecycleComponent extends React.Component {
   public render() {
@@ -21,6 +22,10 @@ class StateAndLifecycleComponent extends React.Component {
 
         <Collapse.Panel header="adding-lifecycle-methods-to-a-class" key="3">
           <AddingLifecycleMethodsToAClassComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="using-state-correctly" key="4">
+          <UsingStateCorrectlyComponent />
         </Collapse.Panel>
       </Collapse>
     );
