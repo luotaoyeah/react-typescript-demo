@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { IntroducingJsxComponent } from "./views/doc/main-concepts/introducing-jsx/introducing-jsx.component";
 import { RenderingElementsComponent } from "./views/doc/main-concepts/rendering-elements/rendering-elements.component";
 import { ComponentsAndPropsComponent } from "./views/doc/main-concepts/components-and-props/components-and-props.component";
+import { StateAndLifecycleComponent } from "./views/doc/main-concepts/state-and-lifecycle/state-and-lifecycle.component";
 
 class App extends React.Component {
   public render() {
@@ -21,6 +22,9 @@ class App extends React.Component {
             </Menu.Item>
             <Menu.Item>
               <Link to={"/docs/components-and-props"}>components-and-props</Link>
+            </Menu.Item>
+            <Menu.Item>
+              <Link to={"/docs/state-and-lifecycle"}>state-and-lifecycle</Link>
             </Menu.Item>
           </Menu.SubMenu>
         </Menu.SubMenu>
@@ -51,6 +55,7 @@ class App extends React.Component {
           <Route path={"/docs/introducing-jsx"} component={IntroducingJsxComponent}></Route>
           <Route path={"/docs/rendering-elements"} component={RenderingElementsComponent}></Route>
           <Route path={"/docs/components-and-props"} component={ComponentsAndPropsComponent}></Route>
+          <Route path={"/docs/state-and-lifecycle"} component={StateAndLifecycleComponent}></Route>
         </div>
       </div>
     );
