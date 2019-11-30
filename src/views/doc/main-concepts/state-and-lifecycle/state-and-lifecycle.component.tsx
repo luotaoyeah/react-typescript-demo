@@ -5,6 +5,7 @@ import { Collapse } from "antd";
 import { CaretRightOutlined } from "@ant-design/icons";
 import { ConvertingAFunctionToAClassComponent } from "./converting-a-function-to-a-class.component";
 import { AddingLocalStateToAClassComponent } from "./adding-local-state-to-a-class.component";
+import { AddingLifecycleMethodsToAClassComponent } from "./adding-lifecycle-methods-to-a-class.component";
 
 class StateAndLifecycleComponent extends React.Component {
   public render() {
@@ -16,6 +17,10 @@ class StateAndLifecycleComponent extends React.Component {
 
         <Collapse.Panel header="adding-local-state-to-a-class" key="2">
           <AddingLocalStateToAClassComponent />
+        </Collapse.Panel>
+
+        <Collapse.Panel header="adding-lifecycle-methods-to-a-class" key="3">
+          <AddingLifecycleMethodsToAClassComponent />
         </Collapse.Panel>
       </Collapse>
     );
