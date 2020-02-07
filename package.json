@@ -45,5 +45,6 @@
     "prettier": "2.0.4",
     "react-app-rewired": "2.1.5",
     "typescript": "3.5.2"
-  }
+  },
+  "config-overrides-path": "webpack.custom.config.js"
 }

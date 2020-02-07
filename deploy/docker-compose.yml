@@ -4,7 +4,7 @@ services:
   learning-react:
     build:
       context: ..
-      dockerfile: ../Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - 3031:80
 
