@@ -2,3 +2,7 @@
 /scripts
 /config
 .history
+config-overrides.js
+husky.config.js
+lint-staged.config.js
+prettier.config.js

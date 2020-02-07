@@ -3,8 +3,10 @@ version: '3.7'
 services:
   learning-react:
     build:
-      context: .
-      dockerfile: ./Dockerfile
+      context: ..
+      dockerfile: ../Dockerfile
+    ports:
+      - 3031:80
 
 networks:
   default:
