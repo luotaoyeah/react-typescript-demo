@@ -1,7 +1,9 @@
-import React from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Layout, Menu } from 'antd';
+import { Bind } from 'lodash-decorators';
+import React from 'react';
 import { Link, Route } from 'react-router-dom';
+import './index.less';
 import './app.less';
 import { ComponentsAndPropsComponent } from './views/doc/main-concepts/components-and-props/components-and-props.component';
 import { IntroducingJsxComponent } from './views/doc/main-concepts/introducing-jsx/introducing-jsx.component';
@@ -31,9 +33,9 @@ class App extends React.Component<IProps, IState> {
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
         >
-          <Menu theme="dark" openTransitionName="" openAnimation="" mode={'inline'}>
-            <Menu.SubMenu icon={<InfoCircleOutlined />} title="DOC">
-              <Menu.SubMenu title={'MAIN CONCEPTS'}>
+          <Menu theme="dark" mode={'inline'}>
+            <Menu.SubMenu key="doc" icon={<InfoCircleOutlined />} title="DOC">
+              <Menu.SubMenu key="main-concepts" title={'MAIN CONCEPTS'}>
                 <Menu.Item key="/docs/introducing-jsx">
                   <Link to={'/docs/introducing-jsx'}>INTRODUCING JSX</Link>
                 </Menu.Item>
@@ -78,6 +80,7 @@ class App extends React.Component<IProps, IState> {
     );
   }
 
+  @Bind()
   private onCollapse(collapsed: boolean) {
     this.setState({ collapsed });
   }
