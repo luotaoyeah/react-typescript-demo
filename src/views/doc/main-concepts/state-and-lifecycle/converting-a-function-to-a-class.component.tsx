@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {
   date: Date;

@@ -2,9 +2,9 @@
  * Accessibility
  */
 
-import * as React from "react";
-import { RefObject } from "react";
-import { Button } from "antd";
+import React from 'react';
+import { RefObject } from 'react';
+import { Button } from 'antd';
 
 interface IProps {}
 
@@ -39,7 +39,7 @@ class C020101 extends React.Component<IProps, IState> {
          * 定义了一系列的 HTML 属性，以 aria- 开头，
          * 在 JSX 中，这些属性依然使用 kebab-case 的形式，如：aria-required="true"；
          */}
-        <input id={"name"} type="text" aria-required={true} />
+        <input id={'name'} type="text" aria-required={true} />
         {/*
          * 同时，表单元素应该关联 label，
          * 在 JSX 中 htmlFor 对应 HTML 中的 for 属性；

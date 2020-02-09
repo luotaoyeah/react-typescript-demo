@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/state-and-lifecycle.html#using-state-correctly
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 
@@ -15,7 +15,7 @@ class UsingStateCorrectlyComponent extends React.Component<IProps, IState> {
 
     // 只能在 constructor 中直接对 state 进行赋值,
     // 在其他地方需要使用 `setState()` 方法进行更新
-    this.state = { name: "foo", age: 0 };
+    this.state = { name: 'foo', age: 0 };
   }
 
   public componentDidMount() {
@@ -37,7 +37,7 @@ class UsingStateCorrectlyComponent extends React.Component<IProps, IState> {
     );
 
     // `setState()` 会对 state 进行 shallow merge
-    this.setState({ name: "bar" });
+    this.setState({ name: 'bar' });
   }
 
   public render() {

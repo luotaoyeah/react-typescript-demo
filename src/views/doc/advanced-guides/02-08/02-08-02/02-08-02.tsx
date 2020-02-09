@@ -3,9 +3,9 @@
  *     Integrating with jQuery Chosen Plugin
  */
 
-import * as React from "react";
-import { Chosen } from "./Chosen";
-import { Button, Divider, message } from "antd";
+import React from 'react';
+import { Chosen } from './Chosen';
+import { Button, Divider, message } from 'antd';
 
 interface IState {
   items: Array<{ name: string; value: string }>;
@@ -17,16 +17,16 @@ class C020802 extends React.Component<{}, IState> {
     this.state = {
       items: [
         {
-          name: "A",
-          value: "a",
+          name: 'A',
+          value: 'a',
         },
         {
-          name: "B",
-          value: "b",
+          name: 'B',
+          value: 'b',
         },
         {
-          name: "C",
-          value: "c",
+          name: 'C',
+          value: 'c',
         },
       ],
     };
@@ -40,7 +40,7 @@ class C020802 extends React.Component<{}, IState> {
 
   handleOptionAdd() {
     this.setState((prevState: Readonly<IState>) => ({
-      items: prevState.items.concat([{ name: "D", value: "d" }]),
+      items: prevState.items.concat([{ name: 'D', value: 'd' }]),
     }));
   }
 

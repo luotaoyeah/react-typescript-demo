@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/components-and-props.html#composing-components
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {
   children: string;
@@ -8,7 +8,7 @@ interface IProps {
 
 function C01(props: IProps): React.ReactElement<IProps> {
   return (
-    <span style={{ border: "1px solid #ddd", borderRadius: "3px", padding: "8px 12px", marginRight: "10px" }}>
+    <span style={{ border: '1px solid #ddd', borderRadius: '3px', padding: '8px 12px', marginRight: '10px' }}>
       {props.children}
     </span>
   );

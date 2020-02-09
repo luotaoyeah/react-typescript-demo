@@ -2,8 +2,8 @@
  * Forms: The <select> Tag
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
+import React from 'react';
+import { SyntheticEvent } from 'react';
 
 class SelectOfHtml extends React.Component {
   public render() {
@@ -34,7 +34,7 @@ class C010904 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 
-    this.state = { option: "b", options: ["a", "c"] };
+    this.state = { option: 'b', options: ['a', 'c'] };
     this.handleChange01 = this.handleChange01.bind(this);
     this.handleChange02 = this.handleChange02.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

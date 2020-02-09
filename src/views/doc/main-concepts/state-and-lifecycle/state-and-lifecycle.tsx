@@ -1,14 +1,14 @@
 // https://reactjs.org/docs/state-and-lifecycle.html
 
-import * as React from "react";
-import { Collapse } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
-import { ConvertingAFunctionToAClassComponent } from "./converting-a-function-to-a-class.component";
-import { AddingLocalStateToAClassComponent } from "./adding-local-state-to-a-class.component";
-import { AddingLifecycleMethodsToAClassComponent } from "./adding-lifecycle-methods-to-a-class.component";
-import { UsingStateCorrectlyComponent } from "./using-state-correctly.component";
+import React from 'react';
+import { Collapse } from 'antd';
+import { CaretRightOutlined } from '@ant-design/icons';
+import { ConvertingAFunctionToAClassComponent } from './converting-a-function-to-a-class.component';
+import { AddingLocalStateToAClassComponent } from './adding-local-state-to-a-class.component';
+import { AddingLifecycleMethodsToAClassComponent } from './adding-lifecycle-methods-to-a-class.component';
+import { UsingStateCorrectlyComponent } from './using-state-correctly.component';
 
-class StateAndLifecycleComponent extends React.Component {
+class StateAndLifecycle extends React.Component {
   public render() {
     return (
       <Collapse expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} accordion={true}>
@@ -32,4 +32,4 @@ class StateAndLifecycleComponent extends React.Component {
   }
 }
 
-export { StateAndLifecycleComponent };
+export { StateAndLifecycle };

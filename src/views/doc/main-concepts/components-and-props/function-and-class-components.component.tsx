@@ -1,7 +1,7 @@
 // https://reactjs.org/docs/components-and-props.html#function-and-class-components
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 interface IProps {
   name: string;
@@ -30,11 +30,11 @@ class FunctionAndClassComponentsComponent extends React.Component {
   public render() {
     return (
       <div>
-        <C01 name={"luotao"} />
+        <C01 name={'luotao'} />
 
         <Divider />
 
-        <C02 name={"luotao"} />
+        <C02 name={'luotao'} />
       </div>
     );
   }

@@ -2,8 +2,8 @@
  * Error Boundaries: How About Event Handlers?
  */
 
-import * as React from "react";
-import { Button, message } from "antd";
+import React from 'react';
+import { Button, message } from 'antd';
 
 /*
  * ErrorBoundary 不会捕获事件回调函数中的错误，
@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
 
   public render() {
     if (this.state.hasError) {
-      return "ERROR";
+      return 'ERROR';
     }
     return this.props.children;
   }
@@ -50,8 +50,8 @@ class ErrorButton extends React.Component {
      * 捕获错误，并进行处理；
      */
     try {
-      message.success("click");
-      throw new Error("error in event handler");
+      message.success('click');
+      throw new Error('error in event handler');
     } catch (e) {
       console.log(e.message);
     }

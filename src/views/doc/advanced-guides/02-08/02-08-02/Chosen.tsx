@@ -2,9 +2,9 @@
  * 对 chosen-js 的封装
  */
 
-import * as React from "react";
-import "chosen-js";
-import "chosen-js/chosen.css";
+import React from 'react';
+import 'chosen-js';
+import 'chosen-js/chosen.css';
 
 interface IProps {
   onChange?: (value: string) => void;
@@ -21,22 +21,22 @@ class Chosen extends React.Component<IProps, IState> {
       vm.$el.chosen();
 
       vm.handleChange = vm.handleChange.bind(this);
-      vm.$el.on("change", vm.handleChange);
+      vm.$el.on('change', vm.handleChange);
     }
   }
 
   componentWillUnmount(): void {
     const vm = this;
     if (vm.$el) {
-      vm.$el.off("change");
-      vm.$el.chosen("destroy");
+      vm.$el.off('change');
+      vm.$el.chosen('destroy');
     }
   }
 
   componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any): void {
     const vm = this;
     if ((prevProps as any).children !== vm.props.children) {
-      vm.$el.trigger("chosen:updated");
+      vm.$el.trigger('chosen:updated');
     }
   }
 
@@ -48,7 +48,7 @@ class Chosen extends React.Component<IProps, IState> {
   }
 
   public render() {
-    console.log("render()");
+    console.log('render()');
     /*
      * 通过将所有的 DOM 元素包裹在一个 div 里面，
      * 保证 react 不会对该 div 进行任何的操作；
@@ -62,7 +62,7 @@ class Chosen extends React.Component<IProps, IState> {
             }
           }}
           style={{
-            minWidth: "100px",
+            minWidth: '100px',
           }}
         >
           {this.props.children}

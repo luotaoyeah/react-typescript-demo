@@ -1,9 +1,9 @@
 // https://reactjs.org/docs/rendering-elements.html#rendering-an-element-into-the-dom
 
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import { Button, Divider } from "antd";
-import { Bind } from "lodash-decorators";
+import React from 'react';
+import * as ReactDOM from 'react-dom';
+import { Button, Divider } from 'antd';
+import { Bind } from 'lodash-decorators';
 
 /**
  * 使用 `ReactDOM.render()` 方法, 将一个 element 挂载到 DOM 中去
@@ -15,7 +15,7 @@ export class RenderingAnElementIntoTheDom extends React.Component {
       <div>
         <span>current time: {Date.now()}</span>
       </div>,
-      document.getElementById("rendering-an-element-into-the-dom-01"),
+      document.getElementById('rendering-an-element-into-the-dom-01'),
     );
   }
 
@@ -29,8 +29,8 @@ export class RenderingAnElementIntoTheDom extends React.Component {
         <Divider />
 
         <div
-          id={"rendering-an-element-into-the-dom-01"}
-          style={{ border: "1px solid red", borderRadius: "3px", padding: "10px" }}
+          id={'rendering-an-element-into-the-dom-01'}
+          style={{ border: '1px solid red', borderRadius: '3px', padding: '10px' }}
         />
       </div>
     );

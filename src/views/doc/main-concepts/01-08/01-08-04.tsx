@@ -2,7 +2,7 @@
  * Lists and Keys: Extracting Components with Keys
  */
 
-import * as React from "react";
+import React from 'react';
 
 class MyLi extends React.Component<{ value: string }> {
   public render() {
@@ -22,7 +22,7 @@ class C010804 extends React.Component<IProps, IState> {
   public render() {
     return (
       <div>
-        {["a", "b", "c"].map((n: string) => {
+        {['a', 'b', 'c'].map((n: string) => {
           /*
            * key 属性设置在 <MyLi> 标签上，而不是它里面的 <li> 标签上；
            */

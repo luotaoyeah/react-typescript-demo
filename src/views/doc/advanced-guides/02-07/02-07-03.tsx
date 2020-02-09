@@ -3,8 +3,8 @@
  *     Convention: Pass Unrelated Props Through to the Wrapped Component
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 /*
  * HOC 的主要作用，是用来给组件添加功能，

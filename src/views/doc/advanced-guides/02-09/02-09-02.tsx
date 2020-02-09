@@ -7,8 +7,8 @@
  *     Choosing the Type at Runtime
  */
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 /*
  * JSX 标签如果首字母大写，表示该元素是一个组件，

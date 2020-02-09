@@ -3,8 +3,8 @@
  *     Integrating with DOM Manipulation Plugins
  */
 
-import * as React from "react";
-import $ from "jquery";
+import React from 'react';
+import $ from 'jquery';
 
 /*
  * 如果在 react 之外对 DOM 进行了操作（如：直接操作了 DOM 元素），

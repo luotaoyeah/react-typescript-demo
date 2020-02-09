@@ -2,9 +2,9 @@
  * Handling Events
  */
 
-import * as React from "react";
-import { MouseEvent } from "react";
-import { Button, message } from "antd";
+import React from 'react';
+import { MouseEvent } from 'react';
+import { Button, message } from 'antd';
 
 interface IProps {}
 
@@ -16,7 +16,7 @@ class C010601 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      name: "tom",
+      name: 'tom',
     };
 
     /*
@@ -69,7 +69,7 @@ class C010601 extends React.Component<IProps, IState> {
         </p>
         <p>
           <a href="https://www.google.com" onClick={this.handleClick01}>
-            {"https://www.google.com"}
+            {'https://www.google.com'}
           </a>
         </p>
         <p>

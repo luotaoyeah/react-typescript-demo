@@ -2,7 +2,7 @@
  * Forwarding Refs: Displaying a custom name in DevTools
  */
 
-import * as React from "react";
+import React from 'react';
 
 /*
  * 默认情况下，在 devtools 中，React.forwardRef() 创建的组件，
@@ -30,7 +30,7 @@ function MyForwardRef03(props: any, ref?: React.Ref<HTMLButtonElement>) {
   return <button ref={ref}>button</button>;
 }
 
-(MyForwardRef03 as React.RefForwardingComponent<any>).displayName = "MyForwardRef03DisplayName";
+(MyForwardRef03 as React.RefForwardingComponent<any>).displayName = 'MyForwardRef03DisplayName';
 const FancyButton03 = React.forwardRef(MyForwardRef03);
 
 /**

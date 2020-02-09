@@ -3,10 +3,10 @@
  *     <Route>
  */
 
-import * as React from "react";
-import { Button, Divider } from "antd";
-import { Route } from "react-router";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Button, Divider } from 'antd';
+import { Route } from 'react-router';
+import { Link } from 'react-router-dom';
 
 function A(props: any) {
   return <Button>A</Button>;
@@ -23,10 +23,10 @@ class ApiRoute extends React.Component {
       <div>
         <ul>
           <li>
-            <Link to={"/a"}>A</Link>
+            <Link to={'/a'}>A</Link>
           </li>
           <li>
-            <Link to={"/b"}>B</Link>
+            <Link to={'/b'}>B</Link>
           </li>
         </ul>
         <Divider />
@@ -42,8 +42,8 @@ class ApiRoute extends React.Component {
          * 一般情况下，使用 component，且无论使用哪种方式，
          * 都会被传递一个路由参数（类型为 RouteComponentProps 的对象）；
          */}
-        <Route path={"/a"} component={A} />
-        <Route path={"/b"} component={B} />
+        <Route path={'/a'} component={A} />
+        <Route path={'/b'} component={B} />
       </div>
     );
   }

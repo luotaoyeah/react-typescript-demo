@@ -2,9 +2,9 @@
  * Basic Components: Route Matching
  */
 
-import * as React from "react";
-import { Alert, Button, Divider } from "antd";
-import { Link, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { Alert, Button, Divider } from 'antd';
+import { Link, Route, Switch } from 'react-router-dom';
 
 /*
  * 路由匹配组件有两个：<Route> 和 <Switch>，
@@ -15,13 +15,13 @@ import { Link, Route, Switch } from "react-router-dom";
  */
 
 const A = () => {
-  return <Alert message={"A"} />;
+  return <Alert message={'A'} />;
 };
 const B = () => {
-  return <Alert message={"B"} />;
+  return <Alert message={'B'} />;
 };
 const NotFound = () => {
-  return <Alert message={"404"} type={"error"} />;
+  return <Alert message={'404'} type={'error'} />;
 };
 
 /**  */
@@ -31,13 +31,13 @@ class C0202 extends React.Component {
       <div>
         <p>
           <Button>
-            <Link to={"/a"}>a</Link>
+            <Link to={'/a'}>a</Link>
           </Button>
           <Button>
-            <Link to={"/b"}>b</Link>
+            <Link to={'/b'}>b</Link>
           </Button>
           <Button>
-            <Link to={"/c"}>c</Link>
+            <Link to={'/c'}>c</Link>
           </Button>
         </p>
         <Divider />
@@ -46,8 +46,8 @@ class C0202 extends React.Component {
          * 则只会渲染第一个匹配的 <Route>；
          */}
         <Switch>
-          <Route path={"/a"} component={A} />
-          <Route path={"/b"} component={B} />
+          <Route path={'/a'} component={A} />
+          <Route path={'/b'} component={B} />
           {/*
            * 如果 <Route> 没有指定 path 属性，
            * 则它的组件会始终渲染；

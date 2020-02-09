@@ -4,10 +4,10 @@
  *         render
  */
 
-import * as React from "react";
-import { Route, RouteComponentProps, RouteProps } from "react-router";
-import { Button, Card, Divider } from "antd";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Route, RouteComponentProps, RouteProps } from 'react-router';
+import { Button, Card, Divider } from 'antd';
+import { Link } from 'react-router-dom';
 
 interface IUserParam {
   name: string;
@@ -23,7 +23,7 @@ interface IUserState {}
 class User extends React.Component<IUserProps, IUserState> {
   public render() {
     return (
-      <Button type={"primary"}>
+      <Button type={'primary'}>
         {this.props.match.params.name}，{this.props.age}
       </Button>
     );
@@ -64,10 +64,10 @@ class ApiRouteRender extends React.Component {
       <div>
         <ul>
           <li>
-            <Link to={"/users/foo"}>foo</Link>
+            <Link to={'/users/foo'}>foo</Link>
           </li>
           <li>
-            <Link to={"/users/bar"}>bar</Link>
+            <Link to={'/users/bar'}>bar</Link>
           </li>
         </ul>
         <Divider />
@@ -75,8 +75,8 @@ class ApiRouteRender extends React.Component {
          * 使用 render 属性，可以自定义组件的渲染方式；
          * 此处用到了 React 的 render props 特性；
          */}
-        <Route path={"/users/:name"} render={this.renderUser} />
-        <MyRoute path={"/users/:name"} component={User} />
+        <Route path={'/users/:name'} render={this.renderUser} />
+        <MyRoute path={'/users/:name'} component={User} />
       </div>
     );
   }

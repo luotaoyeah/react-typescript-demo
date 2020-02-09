@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ColorContext } from "./ColorContext";
+import React from 'react';
+import { ColorContext } from './ColorContext';
 
 class ColorInput extends React.Component<{ color: string }> {
   inputRef = React.createRef<HTMLInputElement>();
@@ -14,9 +14,9 @@ class ColorInput extends React.Component<{ color: string }> {
         ref={this.inputRef}
         style={{
           color: this.props.color,
-          borderRadius: "3px",
-          outline: "none",
-          cursor: "pointer",
+          borderRadius: '3px',
+          outline: 'none',
+          cursor: 'pointer',
         }}
       />
     );

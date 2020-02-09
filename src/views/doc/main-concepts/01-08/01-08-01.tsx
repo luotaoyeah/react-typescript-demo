@@ -2,7 +2,7 @@
  * Lists and Keys: Rendering Multiple Components
  */
 
-import * as React from "react";
+import React from 'react';
 
 /*
  * 在 JS 中，对数组元素进行转换，
@@ -25,7 +25,7 @@ class C010801 extends React.Component<IProps, IState> {
          * 将数据数组转换为元素数组，并进行渲染；
          */}
         <ul>
-          {["a", "b", "c"].map((n: string) => (
+          {['a', 'b', 'c'].map((n: string) => (
             <li>{n}</li>
           ))}
         </ul>

@@ -2,15 +2,15 @@
  * Context: Consuming Multiple Contexts
  */
 
-import * as React from "react";
+import React from 'react';
 
 const COLORS = {
-  red: "#ff0000",
-  green: "#00ff00",
+  red: '#ff0000',
+  green: '#00ff00',
 };
 
 const ColorContext: React.Context<string> = React.createContext(COLORS.red);
-const NameContext: React.Context<string> = React.createContext("luotao");
+const NameContext: React.Context<string> = React.createContext('luotao');
 
 /*
  * 多个 Context 一起使用时，需要相互嵌套，
@@ -26,9 +26,9 @@ class ThemeButton extends React.Component {
               <button
                 style={{
                   color: color,
-                  borderRadius: "3px",
-                  outline: "none",
-                  cursor: "pointer",
+                  borderRadius: '3px',
+                  outline: 'none',
+                  cursor: 'pointer',
                 }}
               >
                 {name}
@@ -46,7 +46,7 @@ class C020306 extends React.Component {
     return (
       <div>
         <ColorContext.Provider value={COLORS.green}>
-          <NameContext.Provider value={"foo"}>
+          <NameContext.Provider value={'foo'}>
             <ThemeButton />
           </NameContext.Provider>
         </ColorContext.Provider>

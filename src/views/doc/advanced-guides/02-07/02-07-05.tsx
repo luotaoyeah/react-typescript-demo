@@ -2,8 +2,8 @@
  * Higher-Order Components: Caveats
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 /*
  * 使用 HOC 有一些需要注意的地方；
@@ -23,7 +23,7 @@ import { Button } from "antd";
 function withNothing<P>(Component: React.ComponentType<any>) {
   return class extends React.Component {
     componentDidMount(): void {
-      console.log("componentDidMount()");
+      console.log('componentDidMount()');
     }
 
     public render() {

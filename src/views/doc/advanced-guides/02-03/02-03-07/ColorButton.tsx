@@ -1,5 +1,5 @@
-import * as React from "react";
-import { ColorContext } from "./ColorContext";
+import React from 'react';
+import { ColorContext } from './ColorContext';
 
 class ColorButton extends React.Component<{ color: string }> {
   public render() {
@@ -7,9 +7,9 @@ class ColorButton extends React.Component<{ color: string }> {
       <button
         style={{
           color: this.props.color,
-          borderRadius: "3px",
-          outline: "none",
-          cursor: "pointer",
+          borderRadius: '3px',
+          outline: 'none',
+          cursor: 'pointer',
         }}
       >
         {this.props.color}

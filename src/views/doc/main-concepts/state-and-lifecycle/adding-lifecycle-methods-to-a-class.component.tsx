@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 

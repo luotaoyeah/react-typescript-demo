@@ -4,10 +4,10 @@
  *         component
  */
 
-import * as React from "react";
-import { Route, RouteComponentProps } from "react-router";
-import { Button, Divider } from "antd";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Route, RouteComponentProps } from 'react-router';
+import { Button, Divider } from 'antd';
+import { Link } from 'react-router-dom';
 
 interface IUserParam {
   name: string;
@@ -31,10 +31,10 @@ class ApiRouteComponent extends React.Component {
       <div>
         <ul>
           <li>
-            <Link to={"/users/foo"}>foo</Link>
+            <Link to={'/users/foo'}>foo</Link>
           </li>
           <li>
-            <Link to={"/users/bar"}>bar</Link>
+            <Link to={'/users/bar'}>bar</Link>
           </li>
         </ul>
         <Divider />
@@ -43,7 +43,7 @@ class ApiRouteComponent extends React.Component {
          * 当地址匹配时，会调用 React.createElement() 方法创建组件实例，
          * 同时传递三个 props 给该组件（match，location，history）；
          */}
-        <Route path={"/users/:name"} component={User} />
+        <Route path={'/users/:name'} component={User} />
       </div>
     );
   }

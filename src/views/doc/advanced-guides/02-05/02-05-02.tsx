@@ -2,7 +2,7 @@
  * Forwarding Refs: Forwarding refs in higher-order components
  */
 
-import * as React from "react";
+import React from 'react';
 
 /**
  *
@@ -30,7 +30,7 @@ function LoggerHOC<P extends JSX.IntrinsicClassAttributes<HTMLButtonElement>>(Co
     forwardRef: React.RefObject<HTMLButtonElement>;
   }> {
     componentDidMount() {
-      console.log("LOGGER");
+      console.log('LOGGER');
     }
 
     public render() {
@@ -64,8 +64,8 @@ class C020502 extends React.Component {
   handleClick() {
     const vm = this;
     if (vm.ref.current) {
-      vm.ref.current.style.color = "red";
-      vm.ref.current.style.borderRadius = "3px";
+      vm.ref.current.style.color = 'red';
+      vm.ref.current.style.borderRadius = '3px';
     }
   }
 

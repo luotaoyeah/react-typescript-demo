@@ -30,7 +30,7 @@ body {
   a {
     color: inherit;
     display: inline-block;
-    width: calc(100% - 0px);
+    width: calc(100% - 24px);
   }
 }
 
@@ -63,10 +63,8 @@ body {
   background-color: #40a9ff;
 }
 
-.ant-menu,
 .ant-menu-item,
 .ant-menu-submenu,
-.ant-menu-submenu .ant-menu-sub,
 .ant-menu-submenu-title,
 .ant-menu-submenu-inline,
 .ant-menu-vertical .ant-menu-item::after,
@@ -74,7 +72,6 @@ body {
 .ant-menu-vertical-right .ant-menu-item::after,
 .ant-menu-inline .ant-menu-item::after,
 .ant-motion-collapse-legacy-active,
-.ant-motion-collapse,
 .ant-collapse-anim-active,
 .ant-layout-sider,
 .ant-layout-sider-trigger,
@@ -92,7 +89,7 @@ body {
 .ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
 .ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow::after,
 .ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow::after {
-  //transition: none !important;
+  transition: none !important;
 }
 
 .ant-badge-zoom-appear,
@@ -129,4 +126,15 @@ body {
 
 .ant-layout-sider-children {
   overflow-y: auto;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding: 0 32px !important;
 }

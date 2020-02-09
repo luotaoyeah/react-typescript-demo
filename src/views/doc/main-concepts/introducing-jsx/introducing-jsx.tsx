@@ -1,16 +1,16 @@
 // https://reactjs.org/docs/introducing-jsx.html
 
-import * as React from "react";
-import { Collapse } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
-import { EmbeddingExpressionsInJsxComponent } from "./embedding-expressions-in-jsx.component";
-import { JsxIsAnExpressionTooComponent } from "./jsx-is-an-expression-too.component";
-import { SpecifyingAttributesWithJsxComponent } from "./specifying-attributes-with-jsx.component";
-import { SpecifyingChildrenWithJsxComponent } from "./specifying-children-with-jsx.component";
-import { JsxPreventsInjectionAttacksComponent } from "./jsx-prevents-injection-attacks.component";
-import { JsxRepresentsObjectsComponent } from "./jsx-represents-objects.component";
+import React from 'react';
+import { Collapse } from 'antd';
+import { CaretRightOutlined } from '@ant-design/icons';
+import { EmbeddingExpressionsInJsxComponent } from './embedding-expressions-in-jsx.component';
+import { JsxIsAnExpressionTooComponent } from './jsx-is-an-expression-too.component';
+import { SpecifyingAttributesWithJsxComponent } from './specifying-attributes-with-jsx.component';
+import { SpecifyingChildrenWithJsxComponent } from './specifying-children-with-jsx.component';
+import { JsxPreventsInjectionAttacksComponent } from './jsx-prevents-injection-attacks.component';
+import { JsxRepresentsObjectsComponent } from './jsx-represents-objects.component';
 
-class IntroducingJsxComponent extends React.Component {
+class IntroducingJsx extends React.Component {
   public render() {
     return (
       <Collapse expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} accordion={true}>
@@ -42,4 +42,4 @@ class IntroducingJsxComponent extends React.Component {
   }
 }
 
-export { IntroducingJsxComponent };
+export { IntroducingJsx };

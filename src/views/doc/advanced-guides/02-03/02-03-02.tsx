@@ -2,8 +2,8 @@
  * Context: Before You Use Context
  */
 
-import * as React from "react";
-import { Input } from "antd";
+import React from 'react';
+import { Input } from 'antd';
 
 /*
  * context 在多个不同层级的组件需要共享数据时使用，
@@ -64,16 +64,16 @@ class C020302 extends React.Component {
   public render() {
     return (
       <div>
-        <A name={"tom"} age={18} />
+        <A name={'tom'} age={18} />
         <hr />
         <A2
           form={
             <div>
               <p>
-                <Input addonBefore="name：" defaultValue={"tom"} />
+                <Input addonBefore="name：" defaultValue={'tom'} />
               </p>
               <p>
-                <Input addonBefore="age：" defaultValue={"18"} />
+                <Input addonBefore="age：" defaultValue={'18'} />
               </p>
             </div>
           }

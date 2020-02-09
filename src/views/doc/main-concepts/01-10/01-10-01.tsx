@@ -2,9 +2,9 @@
  * Lifting State Up
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
-import { Tag } from "antd";
+import React from 'react';
+import { SyntheticEvent } from 'react';
+import { Tag } from 'antd';
 
 /*
  * 如果多个组件需要共享状态数据，可以将状态数据放到离他们最近的相同父组件中；
@@ -29,7 +29,7 @@ class BoilingVerdict extends React.Component<{ celsius: number }> {
 }
 
 class TemperatureInput extends React.Component<{
-  scale: "C" | "F";
+  scale: 'C' | 'F';
   value: number;
   onChange: (temperature: number) => void;
 }> {
@@ -55,14 +55,14 @@ class TemperatureInput extends React.Component<{
 class Calculator extends React.Component<
   {},
   {
-    scale: "C" | "F";
+    scale: 'C' | 'F';
     temperature: number;
   }
 > {
   constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
-      scale: "C",
+      scale: 'C',
       temperature: 0,
     };
     this.handleCChange = this.handleCChange.bind(this);
@@ -70,20 +70,20 @@ class Calculator extends React.Component<
   }
 
   handleCChange(temperature: number) {
-    this.setState({ scale: "C", temperature });
+    this.setState({ scale: 'C', temperature });
   }
 
   handleFChange(temperature: number) {
-    this.setState({ scale: "F", temperature });
+    this.setState({ scale: 'F', temperature });
   }
 
   public render() {
-    const c = this.state.scale === "F" ? toC(this.state.temperature) : this.state.temperature;
-    const f = this.state.scale === "C" ? toF(this.state.temperature) : this.state.temperature;
+    const c = this.state.scale === 'F' ? toC(this.state.temperature) : this.state.temperature;
+    const f = this.state.scale === 'C' ? toF(this.state.temperature) : this.state.temperature;
     return (
       <div>
-        <TemperatureInput value={c} scale={"C"} onChange={this.handleCChange} />
-        <TemperatureInput value={f} scale={"F"} onChange={this.handleFChange} />
+        <TemperatureInput value={c} scale={'C'} onChange={this.handleCChange} />
+        <TemperatureInput value={f} scale={'F'} onChange={this.handleFChange} />
         <BoilingVerdict celsius={c} />
       </div>
     );

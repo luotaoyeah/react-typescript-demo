@@ -2,7 +2,7 @@
  * Fragments: Motivation
  */
 
-import * as React from "react";
+import React from 'react';
 
 class C020602 extends React.Component {
   public render() {

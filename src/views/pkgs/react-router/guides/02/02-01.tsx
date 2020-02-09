@@ -2,7 +2,7 @@
  * Basic Components: Routers
  */
 
-import * as React from "react";
+import React from 'react';
 
 /*
  * ReactRouter 里面的组件分成三类：

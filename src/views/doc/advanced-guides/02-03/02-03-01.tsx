@@ -2,8 +2,8 @@
  * Context: When to Use Context
  */
 
-import * as React from "react";
-import { Context } from "react";
+import React from 'react';
+import { Context } from 'react';
 
 /*
  * context 是一种传递数据的机制，
@@ -35,7 +35,7 @@ class Toolbar extends React.Component<{ theme: string }> {
 /*
  * 使用 React.createContext<T>() 方法创建一个 context；
  */
-const ThemeContext: Context<string> = React.createContext<string>("red");
+const ThemeContext: Context<string> = React.createContext<string>('red');
 
 class Button02 extends React.Component {
   public render() {
@@ -64,11 +64,11 @@ class C020301 extends React.Component {
   public render() {
     return (
       <div>
-        <Toolbar theme={"red"} />
+        <Toolbar theme={'red'} />
         {/*
          * 使用 React.Context.Provider 提供 context；
          */}
-        <ThemeContext.Provider value={"yellow"}>
+        <ThemeContext.Provider value={'yellow'}>
           <Toolbar02 />
         </ThemeContext.Provider>
       </div>

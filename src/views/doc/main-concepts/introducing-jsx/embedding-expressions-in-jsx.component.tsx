@@ -1,19 +1,19 @@
 // https://reactjs.org/docs/introducing-jsx.html#embedding-expressions-in-jsx
 
-import * as React from "react";
+import React from 'react';
 
 /**
  * 可以通过 `{}` 在 JSX 中嵌入任意的表达式
  */
 class EmbeddingExpressionsInJsxComponent extends React.Component {
-  private foo: string = "FOO";
+  private foo: string = 'FOO';
 
   private get bar() {
-    return "BAR";
+    return 'BAR';
   }
 
   private baz() {
-    return "BAZ";
+    return 'BAZ';
   }
 
   /**

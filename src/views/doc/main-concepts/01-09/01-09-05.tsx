@@ -2,8 +2,8 @@
  * Forms: Handling Multiple Inputs
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
+import React from 'react';
+import { SyntheticEvent } from 'react';
 
 interface IProps {}
 
@@ -33,11 +33,11 @@ class C010905 extends React.Component<IProps, IState> {
    */
   handleChange(e: SyntheticEvent) {
     const inputEl: HTMLInputElement = e.target as HTMLInputElement;
-    if (inputEl.type === "checkbox") {
+    if (inputEl.type === 'checkbox') {
       this.setState({
         loading: inputEl.checked,
       });
-    } else if (inputEl.type === "number") {
+    } else if (inputEl.type === 'number') {
       this.setState({
         age: Number(inputEl.value),
       });

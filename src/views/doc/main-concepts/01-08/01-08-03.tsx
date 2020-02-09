@@ -2,7 +2,7 @@
  * Lists and Keys: Keys
  */
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 
@@ -13,18 +13,18 @@ class C010803 extends React.Component<IProps, IState> {
     const strObj: Array<{ id: number; name: string }> = [
       {
         id: 1,
-        name: "foo",
+        name: 'foo',
       },
       {
         id: 2,
-        name: "bar",
+        name: 'bar',
       },
       {
         id: 3,
-        name: "baz",
+        name: 'baz',
       },
     ];
-    const strArray: Array<string> = ["a", "b", "c"];
+    const strArray: Array<string> = ['a', 'b', 'c'];
     return (
       <div>
         {/*

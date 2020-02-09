@@ -2,7 +2,7 @@
  * Forms
  */
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 
@@ -24,15 +24,15 @@ class C010901 extends React.Component<IProps, IState> {
               type="text"
               name="name"
               style={{
-                borderRadius: "3px",
+                borderRadius: '3px',
               }}
             />
           </label>
           <input
-            type={"submit"}
+            type={'submit'}
             value="Submit"
             style={{
-              borderRadius: "3px",
+              borderRadius: '3px',
             }}
           />
         </form>

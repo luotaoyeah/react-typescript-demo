@@ -2,9 +2,9 @@
  * Context: Consuming Context with a HOC
  */
 
-import * as React from "react";
+import React from 'react';
 
-const ColorContext: React.Context<string> = React.createContext("red");
+const ColorContext: React.Context<string> = React.createContext('red');
 
 /*
  * HOC（High Order Component）高阶组件，是一种特殊的函数，
@@ -29,9 +29,9 @@ class Button extends React.Component<{ color: string }> {
       <button
         style={{
           color: this.props.color,
-          borderRadius: "3px",
-          outline: "none",
-          cursor: "pointer",
+          borderRadius: '3px',
+          outline: 'none',
+          cursor: 'pointer',
         }}
       >
         {this.props.color}
@@ -44,12 +44,12 @@ class Input extends React.Component<{ color: string }> {
   public render() {
     return (
       <input
-        type={"text"}
+        type={'text'}
         style={{
           color: this.props.color,
-          borderRadius: "3px",
-          outline: "none",
-          cursor: "pointer",
+          borderRadius: '3px',
+          outline: 'none',
+          cursor: 'pointer',
         }}
       />
     );

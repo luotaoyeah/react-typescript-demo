@@ -2,8 +2,8 @@
  * Forms: Controlled Input Null Value
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
+import React from 'react';
+import { SyntheticEvent } from 'react';
 
 interface IProps {}
 
@@ -16,7 +16,7 @@ class C010906 extends React.Component<IProps, IState> {
     super(props);
 
     this.state = {
-      name: "",
+      name: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);

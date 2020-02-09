@@ -1,11 +1,11 @@
 // https://reactjs.org/docs/rendering-elements.html
 
-import * as React from "react";
-import { Collapse } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
-import { RenderingAnElementIntoTheDom } from "./rendering-an-element-into-the-dom";
+import React from 'react';
+import { Collapse } from 'antd';
+import { CaretRightOutlined } from '@ant-design/icons';
+import { RenderingAnElementIntoTheDom } from './rendering-an-element-into-the-dom';
 
-class RenderingElementsComponent extends React.Component {
+class RenderingElements extends React.Component {
   public render() {
     return (
       <Collapse expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} accordion={true}>
@@ -17,4 +17,4 @@ class RenderingElementsComponent extends React.Component {
   }
 }
 
-export { RenderingElementsComponent };
+export { RenderingElements };

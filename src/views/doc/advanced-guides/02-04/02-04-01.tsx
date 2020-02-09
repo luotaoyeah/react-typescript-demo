@@ -2,8 +2,8 @@
  * Error Boundaries: Introducing Error Boundaries
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 /*
  * 在 React@16.x 之前，组件中的一个 JS 错误会导致整个应用崩溃，
@@ -54,7 +54,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
 
   public render() {
     if (this.state.hasError) {
-      return <span style={{ color: "red" }}>ERROR</span>;
+      return <span style={{ color: 'red' }}>ERROR</span>;
     }
 
     return this.props.children;
@@ -63,7 +63,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean }> {
 
 class ButtonError extends React.Component {
   public render() {
-    throw new Error("some error from within render()");
+    throw new Error('some error from within render()');
     return <Button>button</Button>;
   }
 }

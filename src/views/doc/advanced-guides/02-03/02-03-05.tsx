@@ -2,8 +2,8 @@
  * Context: Updating Context from a Nested Component
  */
 
-import * as React from "react";
-import _ from "lodash";
+import React from 'react';
+import _ from 'lodash';
 
 interface IColorContext {
   color: string;
@@ -11,8 +11,8 @@ interface IColorContext {
 }
 
 const COLORS = {
-  red: "#ff0000",
-  green: "#00ff00",
+  red: '#ff0000',
+  green: '#00ff00',
 };
 
 /*
@@ -34,9 +34,9 @@ class ThemeButton extends React.Component {
             {...this.props}
             style={{
               color: colorContext.color,
-              borderRadius: "3px",
-              outline: "none",
-              cursor: "pointer",
+              borderRadius: '3px',
+              outline: 'none',
+              cursor: 'pointer',
             }}
             onClick={colorContext.toggleColor}
           />

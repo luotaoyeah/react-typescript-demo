@@ -3,8 +3,8 @@
  *     Children in JSX
  */
 
-import * as React from "react";
-import { Button, Divider } from "antd";
+import React from 'react';
+import { Button, Divider } from 'antd';
 
 /*
  * 在 JSX 中，标签中间的所有内容，

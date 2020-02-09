@@ -2,15 +2,15 @@
  * Context: Caveats
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 interface IColorContext {
   color: string;
 }
 
 const ColorContext: React.Context<IColorContext> = React.createContext({
-  color: "red",
+  color: 'red',
 });
 
 class ColorButton extends React.Component {
@@ -31,7 +31,7 @@ class C020310 extends React.Component<{}, { date: Date; colorContext: IColorCont
     this.state = {
       date: new Date(),
       colorContext: {
-        color: "green",
+        color: 'green',
       },
     };
 

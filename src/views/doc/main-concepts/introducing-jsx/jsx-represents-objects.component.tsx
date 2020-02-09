@@ -1,7 +1,7 @@
 // https://reactjs.org/docs/introducing-jsx.html#jsx-represents-objects
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 /**
  * JSX 编译之后,
@@ -15,7 +15,7 @@ class JsxRepresentsObjectsComponent extends React.Component {
       </div>
     );
 
-    const element02 = React.createElement("div", {}, React.createElement("span", { className: "active" }, Date.now()));
+    const element02 = React.createElement('div', {}, React.createElement('span', { className: 'active' }, Date.now()));
 
     return (
       <div>

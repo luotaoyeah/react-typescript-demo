@@ -3,12 +3,13 @@ import { Layout, Menu } from 'antd';
 import { Bind } from 'lodash-decorators';
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
-import './index.less';
 import './app.less';
-import { ComponentsAndPropsComponent } from './views/doc/main-concepts/components-and-props/components-and-props.component';
-import { IntroducingJsxComponent } from './views/doc/main-concepts/introducing-jsx/introducing-jsx.component';
-import { RenderingElementsComponent } from './views/doc/main-concepts/rendering-elements/rendering-elements.component';
-import { StateAndLifecycleComponent } from './views/doc/main-concepts/state-and-lifecycle/state-and-lifecycle.component';
+import './index.less';
+import { ComponentsAndProps } from './views/doc/main-concepts/components-and-props/components-and-props';
+import { IntroducingJsx } from './views/doc/main-concepts/introducing-jsx/introducing-jsx';
+import { RenderingElements } from './views/doc/main-concepts/rendering-elements/rendering-elements';
+import { StateAndLifecycle } from './views/doc/main-concepts/state-and-lifecycle/state-and-lifecycle';
+import Home from './views/home';
 
 interface IProps {}
 
@@ -27,13 +28,17 @@ class App extends React.Component<IProps, IState> {
     return (
       <Layout style={{ height: '100%' }}>
         <Layout.Sider
-          collapsible
+          collapsible={true}
           style={{ paddingTop: '64px' }}
           width={400}
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
         >
-          <Menu theme="dark" mode={'inline'}>
+          <Menu theme="dark" mode={'inline'} defaultSelectedKeys={['/home']}>
+            <Menu.Item icon={<InfoCircleOutlined />} key="/home">
+              <Link to={'/home'}>HOME</Link>
+            </Menu.Item>
+
             <Menu.SubMenu key="doc" icon={<InfoCircleOutlined />} title="DOC">
               <Menu.SubMenu key="main-concepts" title={'MAIN CONCEPTS'}>
                 <Menu.Item key="/docs/introducing-jsx">
@@ -69,10 +74,11 @@ class App extends React.Component<IProps, IState> {
             }}
           >
             <div style={{ padding: 24, minHeight: 360 }}>
-              <Route path={'/docs/introducing-jsx'} component={IntroducingJsxComponent}></Route>
-              <Route path={'/docs/rendering-elements'} component={RenderingElementsComponent}></Route>
-              <Route path={'/docs/components-and-props'} component={ComponentsAndPropsComponent}></Route>
-              <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycleComponent}></Route>
+              <Route path={'/home'} component={Home}></Route>
+              <Route path={'/docs/introducing-jsx'} component={IntroducingJsx}></Route>
+              <Route path={'/docs/rendering-elements'} component={RenderingElements}></Route>
+              <Route path={'/docs/components-and-props'} component={ComponentsAndProps}></Route>
+              <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycle}></Route>
             </div>
           </Layout.Content>
         </Layout>

@@ -2,7 +2,7 @@
  * Fragments: Usage
  */
 
-import * as React from "react";
+import React from 'react';
 
 class C020603 extends React.Component {
   public render() {
@@ -11,8 +11,8 @@ class C020603 extends React.Component {
      * 但是其简写形式 <></> 不支持设置任何属性；
      */
     const tds = [
-      { id: 1, name: "A" },
-      { id: 2, name: "B" },
+      { id: 1, name: 'A' },
+      { id: 2, name: 'B' },
     ].map((i) => (
       <React.Fragment key={i.id}>
         <dt>{i.id}</dt>

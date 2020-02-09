@@ -2,8 +2,8 @@
  * Context: API
  */
 
-import * as React from "react";
-import { Context, Fragment } from "react";
+import React from 'react';
+import { Context, Fragment } from 'react';
 
 /*
  * React.createContext() 方法创建一个 Context 对象，

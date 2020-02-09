@@ -2,9 +2,9 @@
  * Philosophy: Dynamic Routing
  */
 
-import * as React from "react";
-import { Button, Divider, Tag } from "antd";
-import { Link, Route, RouteComponentProps } from "react-router-dom";
+import React from 'react';
+import { Button, Divider, Tag } from 'antd';
+import { Link, Route, RouteComponentProps } from 'react-router-dom';
 
 interface IDashboardProps {}
 class Dashboard extends React.Component<IDashboardProps & RouteComponentProps<any>> {
@@ -26,7 +26,7 @@ class C0101 extends React.Component {
           <Link to="/dashboard">Dashboard</Link>
         </Button>
         <Divider />
-        <Route path={"/dashboard"} component={Dashboard} />
+        <Route path={'/dashboard'} component={Dashboard} />
       </div>
     );
   }

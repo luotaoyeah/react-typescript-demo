@@ -1,7 +1,7 @@
 // https://reactjs.org/docs/introducing-jsx.html#jsx-is-an-expression-too
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 /**
  * JSX 本身也是表达式

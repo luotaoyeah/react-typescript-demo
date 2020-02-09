@@ -1,8 +1,8 @@
 // https://reactjs.org/docs/components-and-props.html#extracting-components
 
-import * as React from "react";
-import { Divider } from "antd";
-import "./extracting-components.component.less";
+import React from 'react';
+import { Divider } from 'antd';
+import './extracting-components.component.less';
 
 class PanelBad extends React.Component<{
   title: string;
@@ -63,11 +63,11 @@ class ExtractingComponentsComponent extends React.Component {
   public render() {
     return (
       <div>
-        <PanelBad title={"title"} body={"body"} footer={"footer"} />
+        <PanelBad title={'title'} body={'body'} footer={'footer'} />
 
         <Divider />
 
-        <PanelGood title={"title"} body={"body"} footer={"footer"} />
+        <PanelGood title={'title'} body={'body'} footer={'footer'} />
       </div>
     );
   }

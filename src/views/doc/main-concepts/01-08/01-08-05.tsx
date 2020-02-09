@@ -2,7 +2,7 @@
  * Lists and Keys: Keys Must Only Be Unique Among Siblings
  */
 
-import * as React from "react";
+import React from 'react';
 
 class Item extends React.Component<{ id: string; key: string; name: string }> {
   public render() {
@@ -41,19 +41,19 @@ class C010805 extends React.Component<IProps, IState> {
       <div>
         {[
           {
-            id: "1",
-            name: "a",
-            key: "a_1",
+            id: '1',
+            name: 'a',
+            key: 'a_1',
           },
           {
-            id: "2",
-            name: "b",
-            key: "b_2",
+            id: '2',
+            name: 'b',
+            key: 'b_2',
           },
           {
-            id: "3",
-            name: "c",
-            key: "c_3",
+            id: '3',
+            name: 'c',
+            key: 'c_3',
           },
         ].map((i) => (
           <Item key={i.key} id={i.id} name={i.name} />

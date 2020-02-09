@@ -2,9 +2,9 @@
  * Context: Forwarding Refs to Context Consumers
  */
 
-import * as React from "react";
-import ColorInput from "./ColorInput";
-import { Button } from "antd";
+import React from 'react';
+import ColorInput from './ColorInput';
+import { Button } from 'antd';
 
 class C020309 extends React.Component {
   inputRef = React.createRef<any>();

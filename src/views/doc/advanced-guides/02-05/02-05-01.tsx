@@ -2,7 +2,7 @@
  * Forwarding Refs: Forwarding refs to DOM components
  */
 
-import * as React from "react";
+import React from 'react';
 
 /*
  * React.forwardRef() 可以将 ref 自动传递给组件的下级组件；
@@ -31,8 +31,8 @@ class C020501 extends React.Component {
   onClick() {
     const vm = this;
     if (vm.ref.current) {
-      vm.ref.current.style.borderRadius = "3px";
-      vm.ref.current.style.color = "#ff0000";
+      vm.ref.current.style.borderRadius = '3px';
+      vm.ref.current.style.color = '#ff0000';
     }
   }
 

@@ -2,11 +2,11 @@
  * Context: Dynamic Context
  */
 
-import * as React from "react";
+import React from 'react';
 
 const COLORS = {
-  red: "#ff0000",
-  green: "#00ff00",
+  red: '#ff0000',
+  green: '#00ff00',
 };
 
 const ColorContext: React.Context<string> = React.createContext(COLORS.red);
@@ -20,9 +20,9 @@ class ThemeButton extends React.Component<{ onClick: () => void }> {
             {...this.props}
             style={{
               color,
-              borderRadius: "3px",
-              outline: "none",
-              cursor: "pointer",
+              borderRadius: '3px',
+              outline: 'none',
+              cursor: 'pointer',
             }}
             onClick={this.props.onClick}
           />

@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/components-and-props.html#rendering-a-component
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {
   name: string;
@@ -26,8 +26,8 @@ class RenderingAComponentComponent extends React.Component {
   public render() {
     return (
       <div>
-        <C01 name={"react"}>
-          <div style={{ color: "red" }}>react</div>
+        <C01 name={'react'}>
+          <div style={{ color: 'red' }}>react</div>
         </C01>
       </div>
     );

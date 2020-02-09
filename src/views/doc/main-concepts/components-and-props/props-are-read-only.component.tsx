@@ -1,7 +1,7 @@
 // https://reactjs.org/docs/components-and-props.html#props-are-read-only
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 interface IProps {
   name: string;
@@ -10,7 +10,7 @@ interface IProps {
 function C01(props: IProps) {
   try {
     // 修改 props 的属性会运行报错
-    props.name = "foo";
+    props.name = 'foo';
   } catch (e) {
     console.assert(e instanceof TypeError);
     console.warn(e.message);
@@ -34,7 +34,7 @@ class PropsAreReadOnlyComponent extends React.Component {
   public render() {
     return (
       <div>
-        <C01 name={"react"} />
+        <C01 name={'react'} />
 
         <Divider />
 

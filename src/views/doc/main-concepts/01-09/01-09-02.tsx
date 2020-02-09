@@ -2,8 +2,8 @@
  * Forms: Controlled Components
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
+import React from 'react';
+import { SyntheticEvent } from 'react';
 
 /*
  * 表单元素 <input> <select> <texxtarea>，会维护自己的状态，
@@ -25,7 +25,7 @@ class C010902 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
 
-    this.state = { name: "" };
+    this.state = { name: '' };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -48,7 +48,7 @@ class C010902 extends React.Component<IProps, IState> {
     /*
      * 获取表单数据
      */
-    alert("name: " + this.state.name);
+    alert('name: ' + this.state.name);
   }
 
   public render() {

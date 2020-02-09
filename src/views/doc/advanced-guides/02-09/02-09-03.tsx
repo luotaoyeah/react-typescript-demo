@@ -3,8 +3,8 @@
  *     Props in JSX
  */
 
-import * as React from "react";
-import { Button, Divider } from "antd";
+import React from 'react';
+import { Button, Divider } from 'antd';
 
 /*
  * JSX 的 props 可以有多种形式；
@@ -19,8 +19,8 @@ class C020903 extends React.Component {
      *     可能会传递一些多余的属性；
      */
     const someProps = {
-      id: "A",
-      name: "B",
+      id: 'A',
+      name: 'B',
     };
 
     const button01 = <button {...someProps}>button</button>;
@@ -41,7 +41,7 @@ class C020903 extends React.Component {
         {/*
          * props 可以是任意的字符串；
          */}
-        <Button type={"dashed"} id="btn01">
+        <Button type={'dashed'} id="btn01">
           button
         </Button>
         <Divider />

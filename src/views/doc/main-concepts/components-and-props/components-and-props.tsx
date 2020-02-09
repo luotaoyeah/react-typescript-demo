@@ -1,15 +1,15 @@
 // https://reactjs.org/docs/components-and-props.html
 
-import * as React from "react";
-import { Collapse } from "antd";
-import { CaretRightOutlined } from "@ant-design/icons";
-import { FunctionAndClassComponentsComponent } from "./function-and-class-components.component";
-import { RenderingAComponentComponent } from "./rendering-a-component.component";
-import { ComposingComponentsComponent } from "./composing-components.component";
-import { ExtractingComponentsComponent } from "./extracting-components.component";
-import { PropsAreReadOnlyComponent } from "./props-are-read-only.component";
+import React from 'react';
+import { Collapse } from 'antd';
+import { CaretRightOutlined } from '@ant-design/icons';
+import { FunctionAndClassComponentsComponent } from './function-and-class-components.component';
+import { RenderingAComponentComponent } from './rendering-a-component.component';
+import { ComposingComponentsComponent } from './composing-components.component';
+import { ExtractingComponentsComponent } from './extracting-components.component';
+import { PropsAreReadOnlyComponent } from './props-are-read-only.component';
 
-class ComponentsAndPropsComponent extends React.Component {
+class ComponentsAndProps extends React.Component {
   public render() {
     return (
       <Collapse expandIcon={({ isActive }) => <CaretRightOutlined rotate={isActive ? 90 : 0} />} accordion={true}>
@@ -37,4 +37,4 @@ class ComponentsAndPropsComponent extends React.Component {
   }
 }
 
-export { ComponentsAndPropsComponent };
+export { ComponentsAndProps };

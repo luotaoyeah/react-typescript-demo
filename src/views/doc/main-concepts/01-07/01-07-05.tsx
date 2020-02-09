@@ -2,8 +2,8 @@
  * Conditional Rendering: Preventing Component from Rendering
  */
 
-import * as React from "react";
-import { Alert, Button } from "antd";
+import React from 'react';
+import { Alert, Button } from 'antd';
 
 interface IProps {}
 
@@ -45,7 +45,7 @@ class C010705 extends React.Component<IProps, IState> {
     return (
       <div>
         <p>
-          <Button onClick={this.handleToggle}>{this.state.visible ? "隐藏" : "显示"}</Button>
+          <Button onClick={this.handleToggle}>{this.state.visible ? '隐藏' : '显示'}</Button>
         </p>
         <Info visible={this.state.visible} />
       </div>

@@ -2,8 +2,8 @@
  * Higher-Order Components: Don’t Mutate the Original Component. Use Composition
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 /*
  * 在 HOC 中，不要对参数组件做任何修改，
@@ -14,7 +14,7 @@ function HOC<P>(Component: React.ComponentType<P>) {
    * 修改了参数组件的原型对象；
    */
   Component.prototype.componentDidMount = () => {
-    console.log("LOG");
+    console.log('LOG');
   };
 
   return Component;

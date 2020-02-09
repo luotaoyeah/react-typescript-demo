@@ -1,3 +1,3 @@
-import * as React from "react";
+import React from 'react';
 
-export const ColorContext: React.Context<string> = React.createContext("red");
+export const ColorContext: React.Context<string> = React.createContext('red');

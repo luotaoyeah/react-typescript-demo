@@ -4,10 +4,10 @@
  *         children
  */
 
-import * as React from "react";
-import { Route, RouteComponentProps } from "react-router";
-import { Button, Divider } from "antd";
-import { Link, LinkProps } from "react-router-dom";
+import React from 'react';
+import { Route, RouteComponentProps } from 'react-router';
+import { Button, Divider } from 'antd';
+import { Link, LinkProps } from 'react-router-dom';
 
 /*
  * 使用 RouteProps.children 可以实现个性化的导航链接，
@@ -20,7 +20,7 @@ class MyLink extends React.Component<LinkProps> {
       <Route path={to as any}>
         {({ match }: RouteComponentProps) => {
           return (
-            <Button type={match ? "primary" : "default"}>
+            <Button type={match ? 'primary' : 'default'}>
               <Link {...this.props} />
             </Button>
           );
@@ -33,7 +33,7 @@ class MyLink extends React.Component<LinkProps> {
 /**  */
 class ApiRouteChildren extends React.Component {
   render01(props: RouteComponentProps) {
-    return <Button>{props.match ? "MATCH" : "NOT MATCH"}</Button>;
+    return <Button>{props.match ? 'MATCH' : 'NOT MATCH'}</Button>;
   }
 
   render02(props: RouteComponentProps) {
@@ -43,7 +43,7 @@ class ApiRouteChildren extends React.Component {
   public render() {
     return (
       <div>
-        <MyLink to={"/a"}>a</MyLink>
+        <MyLink to={'/a'}>a</MyLink>
         <Divider />
         {/*
          * RouteProps.children 和 RouteProps.render 类似，
@@ -52,8 +52,8 @@ class ApiRouteChildren extends React.Component {
          *     对于 children，当路径不匹配时，也会渲染组件，此时的 match 为 null，
          *         因此可以根据是否匹配，渲染不同的组件；
          */}
-        <Route path={"/a"} children={this.render01} />
-        <Route path={"/a"} render={this.render02} />
+        <Route path={'/a'} children={this.render01} />
+        <Route path={'/a'} render={this.render02} />
       </div>
     );
   }

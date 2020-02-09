@@ -2,7 +2,7 @@
  * Lists and Keys: Basic List Component
  */
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 
@@ -33,7 +33,7 @@ class C010802 extends React.Component<IProps, IState> {
           <Items items={[1, 2, 3]} />
         </div>
         <div>
-          <Items items={["a", "b", "c"]} />
+          <Items items={['a', 'b', 'c']} />
         </div>
       </div>
     );

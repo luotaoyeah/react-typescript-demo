@@ -1,7 +1,7 @@
 // https://reactjs.org/docs/introducing-jsx.html#specifying-children-with-jsx
 
-import * as React from "react";
-import { Divider } from "antd";
+import React from 'react';
+import { Divider } from 'antd';
 
 /**
  * children 有两种设置方式:

@@ -2,7 +2,7 @@
  * State and Lifecycle: The Data Flows Down
  */
 
-import * as React from "react";
+import React from 'react';
 
 interface IProps {}
 
@@ -32,7 +32,7 @@ class C010506A extends React.Component<{ username: string }> {
 class C010506 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
-    this.state = { name: "foo" };
+    this.state = { name: 'foo' };
   }
 
   public render() {

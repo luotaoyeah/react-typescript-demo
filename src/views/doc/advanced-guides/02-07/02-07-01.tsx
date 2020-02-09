@@ -2,9 +2,9 @@
  * Higher-Order Components
  */
 
-import * as React from "react";
-import { HTMLAttributes } from "react";
-import { Button, Input } from "antd";
+import React from 'react';
+import { HTMLAttributes } from 'react';
+import { Button, Input } from 'antd';
 
 /*
  * HOC 是一个函数，其参数是一个组件，返回值也是一个组件；
@@ -34,7 +34,7 @@ class C020701 extends React.Component {
   public render() {
     return (
       <div>
-        <RadiusButton radius={"50%"}>button</RadiusButton>
+        <RadiusButton radius={'50%'}>button</RadiusButton>
         <RadiusInput radius={15} />
       </div>
     );

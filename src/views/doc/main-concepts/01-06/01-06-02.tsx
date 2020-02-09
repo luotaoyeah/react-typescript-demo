@@ -2,9 +2,9 @@
  * Handling Events: Pass Arguments to Event Handlers
  */
 
-import * as React from "react";
-import { Button, message } from "antd";
-import { MouseEvent } from "react";
+import React from 'react';
+import { Button, message } from 'antd';
+import { MouseEvent } from 'react';
 
 interface IProps {}
 
@@ -16,7 +16,7 @@ class C010602 extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      name: "tom",
+      name: 'tom',
     };
   }
 

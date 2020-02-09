@@ -2,8 +2,8 @@
  * Forms: The <textarea> Tag
  */
 
-import * as React from "react";
-import { SyntheticEvent } from "react";
+import React from 'react';
+import { SyntheticEvent } from 'react';
 
 /*
  * 在 HTML 中，<textarea> 标签的内容是定义在标签之间的，
@@ -24,7 +24,7 @@ class C010903 extends React.Component<IProps, IState> {
     super(props);
 
     this.state = {
-      note: "",
+      note: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -53,8 +53,8 @@ class C010903 extends React.Component<IProps, IState> {
             rows={10}
             placeholder="note"
             style={{
-              outline: "none",
-              borderRadius: "3px",
+              outline: 'none',
+              borderRadius: '3px',
             }}
             value={this.state.note}
             onChange={this.handleChange}

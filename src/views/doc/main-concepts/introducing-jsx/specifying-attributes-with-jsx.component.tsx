@@ -1,6 +1,6 @@
 // https://reactjs.org/docs/introducing-jsx.html#specifying-attributes-with-jsx
 
-import * as React from "react";
+import React from 'react';
 
 /**
  * 因为 JSX 本质上是 JS,
