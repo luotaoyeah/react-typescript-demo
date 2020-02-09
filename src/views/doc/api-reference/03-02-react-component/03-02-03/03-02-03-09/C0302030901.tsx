@@ -4,8 +4,8 @@
  *         componentDidCatch()
  */
 
-import React from "react";
-import { Button } from "antd";
+import React from 'react';
+import { Button } from 'antd';
 
 interface IProps {}
 
@@ -28,7 +28,7 @@ class A extends React.Component<IProps, IState> {
 
   public render() {
     if (this.state.count > 5) {
-      throw new Error("GREATOR THAN FIVE");
+      throw new Error('GREATOR THAN FIVE');
     }
     return <Button onClick={this.handlelClick}>{this.state.count}</Button>;
   }
@@ -55,7 +55,7 @@ class C0302030901 extends React.Component<{}, { hasError: boolean }> {
 
   public render() {
     if (this.state.hasError) {
-      return <Button type="danger">ERROR</Button>;
+      return <Button danger={true}>ERROR</Button>;
     }
 
     return <A />;

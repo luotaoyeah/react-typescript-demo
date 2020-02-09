@@ -2,8 +2,8 @@
  * Composition vs Inheritance: Containment
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 /*
  * 在 react 中，应该尽量使用 composition 而不是 inheritance；
@@ -20,9 +20,9 @@ class Dialog extends React.Component {
     return (
       <div
         style={{
-          borderRadius: "3px",
-          border: "2px solid red",
-          padding: "10px",
+          borderRadius: '3px',
+          border: '2px solid red',
+          padding: '10px',
         }}
       >
         {this.props.children}
@@ -43,11 +43,11 @@ class Panel extends React.Component<{
   public render() {
     return (
       <div
-        className={"panel"}
+        className={'panel'}
         style={{
-          borderRadius: "3px",
-          border: "2px solid red",
-          padding: "10px",
+          borderRadius: '3px',
+          border: '2px solid red',
+          padding: '10px',
         }}
       >
         <div className="panel-header">{this.props.header}</div>
@@ -69,7 +69,7 @@ class C011101 extends React.Component<IProps, IState> {
   }
 
   handleClick() {
-    console.log("click");
+    console.log('click');
   }
 
   public render() {
@@ -80,13 +80,13 @@ class C011101 extends React.Component<IProps, IState> {
           <div>
             <i>content</i>
           </div>
-          <Button type={"danger"}>OK</Button>
+          <Button danger={true}>OK</Button>
         </Dialog>
         <Panel
           header={<h1>title</h1>}
           content={<i>content</i>}
           footer={
-            <Button type={"dashed"} onClick={this.handleClick}>
+            <Button type={'dashed'} onClick={this.handleClick}>
               footer
             </Button>
           }

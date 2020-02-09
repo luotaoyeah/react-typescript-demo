@@ -2,8 +2,8 @@
  * Conditional Rendering: Inline If with Logical && Operator
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 interface IProps {}
 
@@ -41,12 +41,12 @@ class C010703 extends React.Component<IProps, IState> {
          * 可以使用逻辑与操作符 && 实现组件的条件渲染
          */}
         {this.state.isLoggedIn && (
-          <Button type={"danger"} onClick={this.handleLogout}>
+          <Button danger={true} onClick={this.handleLogout}>
             退出
           </Button>
         )}
         {!this.state.isLoggedIn && (
-          <Button type={"primary"} onClick={this.handleLogin}>
+          <Button type={'primary'} onClick={this.handleLogin}>
             登录
           </Button>
         )}

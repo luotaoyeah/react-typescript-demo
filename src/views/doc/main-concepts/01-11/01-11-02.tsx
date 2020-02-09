@@ -2,8 +2,8 @@
  * Composition vs Inheritance: Specialization
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 /*
  * 有时候，需要在一个组件的基础上，个性化一些东西，
@@ -13,13 +13,13 @@ import { Button } from "antd";
 
 class PrimaryButton extends React.Component {
   public render() {
-    return <Button type={"primary"}>PRIMARY</Button>;
+    return <Button type={'primary'}>PRIMARY</Button>;
   }
 }
 
 class DangerButton extends React.Component {
   public render() {
-    return <Button type={"danger"}>DANGER</Button>;
+    return <Button danger={true}>DANGER</Button>;
   }
 }
 
@@ -34,7 +34,7 @@ class C011102 extends React.Component<IProps, IState> {
   }
 
   handleClick() {
-    console.log("click");
+    console.log('click');
   }
 
   public render() {

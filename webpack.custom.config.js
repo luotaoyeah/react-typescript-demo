@@ -7,7 +7,9 @@ module.exports = override(
     style: true,
   }),
   addLessLoader({
-    javascriptEnabled: true,
-    modifyVars: { '@border-radius-base': '3px' },
+    lessOptions: {
+      javascriptEnabled: true,
+      modifyVars: { '@border-radius-base': '3px' },
+    },
   }),
 );

@@ -2,8 +2,8 @@
  * Conditional Rendering: Inline If-Else with Conditional Operator
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 interface IProps {}
 
@@ -41,11 +41,11 @@ class C010704 extends React.Component<IProps, IState> {
          * 在 JSX 中，可以使用（?:）条件操作符，实现 if-else 的效果；
          */}
         {this.state.isLoggedIn ? (
-          <Button type={"danger"} onClick={this.handleLogout}>
+          <Button danger={true} onClick={this.handleLogout}>
             退出
           </Button>
         ) : (
-          <Button type={"primary"} onClick={this.handleLogin}>
+          <Button type={'primary'} onClick={this.handleLogin}>
             登录
           </Button>
         )}

@@ -4,9 +4,9 @@
  *         componentDidMount()
  */
 
-import React from "react";
-import { Button, Card, Divider, message } from "antd";
-import ReactDOM from "react-dom";
+import React from 'react';
+import { Button, Card, Divider, message } from 'antd';
+import ReactDOM from 'react-dom';
 
 interface IProps {}
 
@@ -17,14 +17,14 @@ interface IState {
 }
 
 class A extends React.Component<IProps, IState> {
-  buttonRef: React.RefObject<Button> = React.createRef();
+  buttonRef: React.RefObject<any> = React.createRef();
 
   constructor(props: IProps) {
     super(props);
     this.state = {
-      avatar: "",
-      name: "",
-      url: "",
+      avatar: '',
+      name: '',
+      url: '',
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -47,7 +47,7 @@ class A extends React.Component<IProps, IState> {
     if (vm.buttonRef.current) {
       const button = ReactDOM.findDOMNode(vm.buttonRef.current);
       if (button) {
-        (button as HTMLButtonElement).addEventListener("click", vm.handleClick);
+        (button as HTMLButtonElement).addEventListener('click', vm.handleClick);
       }
     }
   }
@@ -58,20 +58,20 @@ class A extends React.Component<IProps, IState> {
     if (vm.buttonRef.current) {
       const button = ReactDOM.findDOMNode(vm.buttonRef.current);
       if (button) {
-        (button as HTMLButtonElement).removeEventListener("click", vm.handleClick);
+        (button as HTMLButtonElement).removeEventListener('click', vm.handleClick);
       }
     }
   }
 
   handleClick() {
-    message.info("hello");
+    message.info('hello');
   }
 
   /**
    * 加载用户信息
    */
   async initUserInfo() {
-    const user = await (await fetch("https://api.github.com/users/luotaoyeah")).json();
+    const user = await (await fetch('https://api.github.com/users/luotaoyeah')).json();
 
     this.setState({
       avatar: user.avatar_url,

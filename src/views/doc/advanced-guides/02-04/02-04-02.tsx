@@ -2,15 +2,15 @@
  * Error Boundaries: componentDidCatch Parameters
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessage: string }> {
   constructor(props: {}, context: any) {
     super(props, context);
     this.state = {
       hasError: false,
-      errorMessage: "",
+      errorMessage: '',
     };
   }
 
@@ -29,7 +29,7 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
 
   public render() {
     if (this.state.hasError) {
-      return <Button type={"danger"}>{this.state.errorMessage}</Button>;
+      return <Button danger={true}>{this.state.errorMessage}</Button>;
     }
 
     return this.props.children;
@@ -38,8 +38,8 @@ class ErrorBoundary extends React.Component<{}, { hasError: boolean; errorMessag
 
 class ErrorButton extends React.Component {
   public render() {
-    throw new Error("some error");
-    return "";
+    throw new Error('some error');
+    return '';
   }
 }
 

@@ -2,8 +2,8 @@
  * Conditional Rendering: Element Variables
  */
 
-import * as React from "react";
-import { Button } from "antd";
+import * as React from 'react';
+import { Button } from 'antd';
 
 class LoginButton extends React.Component<{ onClick: () => void }> {
   public render() {
@@ -11,7 +11,7 @@ class LoginButton extends React.Component<{ onClick: () => void }> {
      * 通过 props 传入事件回调函数
      */
     return (
-      <Button type={"primary"} onClick={this.props.onClick}>
+      <Button type={'primary'} onClick={this.props.onClick}>
         登录
       </Button>
     );
@@ -21,7 +21,7 @@ class LoginButton extends React.Component<{ onClick: () => void }> {
 class LogoutButton extends React.Component<{ onClick: () => void }> {
   public render() {
     return (
-      <Button type={"danger"} onClick={this.props.onClick}>
+      <Button danger={true} onClick={this.props.onClick}>
         退出
       </Button>
     );

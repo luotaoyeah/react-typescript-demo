@@ -1,64 +1,85 @@
+import React from 'react';
+import { InfoCircleOutlined } from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
+import { Link, Route } from 'react-router-dom';
 import './app.less';
-import * as React from 'react';
-import { Button, Menu, Popover } from 'antd';
-import { Route } from 'react-router';
-import { Link } from 'react-router-dom';
+import { ComponentsAndPropsComponent } from './views/doc/main-concepts/components-and-props/components-and-props.component';
 import { IntroducingJsxComponent } from './views/doc/main-concepts/introducing-jsx/introducing-jsx.component';
 import { RenderingElementsComponent } from './views/doc/main-concepts/rendering-elements/rendering-elements.component';
-import { ComponentsAndPropsComponent } from './views/doc/main-concepts/components-and-props/components-and-props.component';
 import { StateAndLifecycleComponent } from './views/doc/main-concepts/state-and-lifecycle/state-and-lifecycle.component';
 
-class App extends React.Component {
+interface IProps {}
+
+interface IState {
+  collapsed: boolean;
+}
+
+class App extends React.Component<IProps, IState> {
+  constructor(props: Readonly<IProps>) {
+    super(props);
+
+    this.state = { collapsed: false };
+  }
+
   public render() {
-    const menu = (
-      <Menu openTransitionName="" openAnimation="" mode={'inline'}>
-        <Menu.SubMenu title="DOC">
-          <Menu.SubMenu title={'MAIN CONCEPTS'}>
-            <Menu.Item>
-              <Link to={'/docs/introducing-jsx'}>introducing-jsx</Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link to={'/docs/rendering-elements'}>rendering-elements</Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link to={'/docs/components-and-props'}>components-and-props</Link>
-            </Menu.Item>
-            <Menu.Item>
-              <Link to={'/docs/state-and-lifecycle'}>state-and-lifecycle</Link>
-            </Menu.Item>
-          </Menu.SubMenu>
-        </Menu.SubMenu>
-
-        <Menu.SubMenu title="PACKAGES">
-          <Menu.SubMenu title="react-router">
-            <Menu.Item>TODO</Menu.Item>
-          </Menu.SubMenu>
-        </Menu.SubMenu>
-      </Menu>
-    );
-
     return (
-      <div className="app">
-        <Popover
-          content={menu}
-          transitionName=""
-          placement="bottomLeft"
-          trigger="click"
-          overlayClassName="popover-content-menu"
+      <Layout style={{ height: '100%' }}>
+        <Layout.Sider
+          collapsible
+          style={{ paddingTop: '64px' }}
+          width={400}
+          collapsed={this.state.collapsed}
+          onCollapse={this.onCollapse}
         >
-          <Button type="primary" style={{ margin: '10px', width: 'calc(100% - 20px)' }}>
-            目录
-          </Button>
-        </Popover>
+          <Menu theme="dark" openTransitionName="" openAnimation="" mode={'inline'}>
+            <Menu.SubMenu icon={<InfoCircleOutlined />} title="DOC">
+              <Menu.SubMenu title={'MAIN CONCEPTS'}>
+                <Menu.Item key="/docs/introducing-jsx">
+                  <Link to={'/docs/introducing-jsx'}>INTRODUCING JSX</Link>
+                </Menu.Item>
+                <Menu.Item key="/docs/rendering-elements">
+                  <Link to={'/docs/rendering-elements'}>RENDERING ELEMENTS</Link>
+                </Menu.Item>
+                <Menu.Item key="/docs/components-and-props">
+                  <Link to={'/docs/components-and-props'}>COMPONENTS AND PROPS</Link>
+                </Menu.Item>
+                <Menu.Item key="/docs/state-and-lifecycle">
+                  <Link to={'/docs/state-and-lifecycle'}>STATE AND LIFECYCLE</Link>
+                </Menu.Item>
+              </Menu.SubMenu>
+            </Menu.SubMenu>
+          </Menu>
+        </Layout.Sider>
 
-        <div style={{ height: 'calc(100% - 52px)', padding: '10px' }}>
-          <Route path={'/docs/introducing-jsx'} component={IntroducingJsxComponent}></Route>
-          <Route path={'/docs/rendering-elements'} component={RenderingElementsComponent}></Route>
-          <Route path={'/docs/components-and-props'} component={ComponentsAndPropsComponent}></Route>
-          <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycleComponent}></Route>
-        </div>
-      </div>
+        <Layout style={{ height: '100%' }}>
+          <Layout.Header style={{ position: 'fixed', zIndex: 1, width: '100%', padding: '0 24px' }}>
+            <div style={{ color: '#ffffff', fontSize: '20px' }}>@luotao/learning-react</div>
+          </Layout.Header>
+
+          <Layout.Content
+            style={{
+              margin: '64px 0 0 0',
+              padding: '12px',
+              background: '#ffffff',
+              height: '100%',
+              overflowY: 'scroll',
+              overflowX: 'auto',
+            }}
+          >
+            <div style={{ padding: 24, minHeight: 360 }}>
+              <Route path={'/docs/introducing-jsx'} component={IntroducingJsxComponent}></Route>
+              <Route path={'/docs/rendering-elements'} component={RenderingElementsComponent}></Route>
+              <Route path={'/docs/components-and-props'} component={ComponentsAndPropsComponent}></Route>
+              <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycleComponent}></Route>
+            </div>
+          </Layout.Content>
+        </Layout>
+      </Layout>
     );
+  }
+
+  private onCollapse(collapsed: boolean) {
+    this.setState({ collapsed });
   }
 }
 

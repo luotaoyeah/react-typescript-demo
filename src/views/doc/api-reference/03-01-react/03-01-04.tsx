@@ -4,12 +4,12 @@
  *         React.cloneElement()
  */
 
-import React from "react";
-import { Button, Divider, message } from "antd";
+import React from 'react';
+import { Button, Divider, message } from 'antd';
 
 /**  */
 class C030104 extends React.Component {
-  buttonRef = React.createRef<Button>();
+  buttonRef = React.createRef<any>();
 
   constructor(props: any, context: any) {
     super(props, context);
@@ -17,33 +17,32 @@ class C030104 extends React.Component {
   }
 
   handleClick() {
-    const vm = this;
     /*
      * 使用 React.cloneElement() 克隆的元素保留了 ref 属性；
      */
-    if (vm.buttonRef.current) {
-      message.info(vm.buttonRef.current.props!.children![0]);
+    if (this.buttonRef.current) {
+      message.info(this.buttonRef.current.props!.children![0]);
     }
   }
 
   public render() {
     const element01 = (
-      <Button type={"primary"} style={{ color: "red", fontSize: "18px" }} ref={this.buttonRef}>
+      <Button type={'primary'} style={{ color: 'red', fontSize: '18px' }} ref={this.buttonRef}>
         button01
       </Button>
     );
 
-    /*
+    /*----------------------------------------------------------------------------------------------------
      * 使用 React.cloneElement() 克隆元素，
      * 新的 props 会使用浅拷贝进行合并，
      * 新的 children 会覆盖源元素的 children；
-     */
+     *----------------------------------------------------------------------------------------------------*/
     const element02 = React.cloneElement(
       element01,
       {
-        style: { color: "blue" },
+        style: { color: 'blue' },
       },
-      ["button02"],
+      ['button02'],
     );
     return (
       <div>
