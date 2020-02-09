@@ -29,7 +29,7 @@ class App extends React.Component<IProps, IState> {
       <Layout style={{ height: '100%' }}>
         <Layout.Sider
           collapsible={true}
-          style={{ paddingTop: '64px' }}
+          style={{ paddingTop: '50px' }}
           width={400}
           collapsed={this.state.collapsed}
           onCollapse={this.onCollapse}
@@ -65,7 +65,7 @@ class App extends React.Component<IProps, IState> {
 
           <Layout.Content
             style={{
-              margin: '64px 0 0 0',
+              margin: '50px 0 0 0',
               padding: '12px',
               background: '#ffffff',
               height: '100%',
@@ -73,13 +73,11 @@ class App extends React.Component<IProps, IState> {
               overflowX: 'auto',
             }}
           >
-            <div style={{ padding: 24, minHeight: 360 }}>
-              <Route path={'/home'} component={Home}></Route>
-              <Route path={'/docs/introducing-jsx'} component={IntroducingJsx}></Route>
-              <Route path={'/docs/rendering-elements'} component={RenderingElements}></Route>
-              <Route path={'/docs/components-and-props'} component={ComponentsAndProps}></Route>
-              <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycle}></Route>
-            </div>
+            <Route path={'/home'} component={Home}></Route>
+            <Route path={'/docs/introducing-jsx'} component={IntroducingJsx}></Route>
+            <Route path={'/docs/rendering-elements'} component={RenderingElements}></Route>
+            <Route path={'/docs/components-and-props'} component={ComponentsAndProps}></Route>
+            <Route path={'/docs/state-and-lifecycle'} component={StateAndLifecycle}></Route>
           </Layout.Content>
         </Layout>
       </Layout>
